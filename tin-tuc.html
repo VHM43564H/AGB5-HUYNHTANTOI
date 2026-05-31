@@ -27,23 +27,25 @@
       <!-- Tab Tin Tức -->
       <div class="tab-pane fade show active" id="tin-tuc">
         <div id="tin-tuc-content" class="row"></div>
-        <small class="text-muted">Cập nhật tự động mỗi 30 phút</small>
+        <small class="text-muted">Tự động cập nhật mỗi 30 phút</small>
       </div>
 
       <!-- Tab Chính Sách -->
       <div class="tab-pane fade" id="chinh-sach">
         <div id="chinh-sach-content" class="row"></div>
-        <small class="text-muted">Cập nhật tự động mỗi 30 phút</small>
+        <small class="text-muted">Tự động cập nhật mỗi 30 phút</small>
       </div>
 
       <!-- Tab Phân Tích VN30 -->
       <div class="tab-pane fade" id="phan-tich">
         <div class="mb-3">
-          <label class="form-label"><strong>Chọn cổ phiếu VN30:</strong></label>
-          <select id="stock-select" class="form-select" style="max-width: 300px;"></select>
+          <label><strong>Chọn cổ phiếu VN30:</strong></label>
+          <select id="stock-select" class="form-select" style="max-width: 280px;">
+            <option value="VNINDEX">VNINDEX (Toàn thị trường)</option>
+          </select>
+          <small class="text-muted">Hiện tại chỉ hỗ trợ VNINDEX. Các mã khác sẽ cập nhật sau.</small>
         </div>
         <div id="chart-container" style="height: 620px; width: 100%;"></div>
-        <small class="text-muted">Biểu đồ có Nến + MA + RSI + MACD + Ichimoku (cập nhật mỗi 30 phút)</small>
       </div>
     </div>
   </div>
@@ -58,7 +60,6 @@
         const res = await fetch('data/news.json?' + Date.now());
         const data = await res.json();
 
-        // Tin Tức
         document.getElementById('tin-tuc-content').innerHTML = data.tin_tuc.map(item => `
           <div class="col-md-6 mb-3">
             <div class="card h-100">
@@ -72,7 +73,6 @@
           </div>
         `).join('');
 
-        // Chính Sách
         document.getElementById('chinh-sach-content').innerHTML = data.chinh_sach.map(item => `
           <div class="col-md-6 mb-3">
             <div class="card h-100">
@@ -88,27 +88,12 @@
       } catch(e) { console.error(e); }
     }
 
-    // Tự động reload tin tức mỗi 30 phút
     setInterval(loadNews, 30 * 60 * 1000);
 
-    // ==================== PHÂN TÍCH VN30 ====================
+    // ==================== BIỂU ĐỒ VN30 ====================
     let currentChart = null;
 
-    async function loadVN30Stocks() {
-      // Danh sách VN30 (có thể mở rộng sau)
-      const vn30 = ["VNINDEX", "VNM", "HPG", "FPT", "VIC", "VHM", "MSN", "TCB", "BID", "CTG", 
-                    "MBB", "HDB", "STB", "VIB", "ACB", "EIB", "LPB", "SHB", "TPB", "PDR", 
-                    "KDH", "NLG", "DXG", "DIG", "GVR", "PLX", "GAS", "POW", "REE", "VJC"];
-      
-      const select = document.getElementById('stock-select');
-      select.innerHTML = vn30.map(s => `<option value="${s}">${s}</option>`).join('');
-      
-      // Mặc định chọn VNINDEX
-      select.value = "VNINDEX";
-      select.onchange = () => renderAdvancedChart(select.value);
-    }
-
-    async function renderAdvancedChart(symbol = "VNINDEX") {
+    async function renderChart() {
       if (currentChart) currentChart.remove();
 
       const container = document.getElementById('chart-container');
@@ -118,8 +103,11 @@
         const res = await fetch('data/stocks.json?' + Date.now());
         const data = await res.json();
 
-        // TODO: Hiện tại dùng chung dữ liệu. Sau này sẽ tách file theo mã.
-        // Tạm thời hiển thị VNINDEX + cảnh báo
+        if (!data.candles || data.candles.length === 0) {
+          container.innerHTML = '<p class="text-warning">Chưa có dữ liệu biểu đồ.</p>';
+          return;
+        }
+
         const chart = LightweightCharts.createChart(container, {
           width: container.clientWidth,
           height: 580,
@@ -129,34 +117,33 @@
         const candleSeries = chart.addCandlestickSeries();
         candleSeries.setData(data.candles);
 
-        // Thêm MA7
-        const ma7 = chart.addLineSeries({ color: '#2962FF', lineWidth: 2 });
-        ma7.setData(data.candles.map((c, i) => ({ time: c.time, value: calculateMA(data.candles, i, 7) })));
+        // MA7
+        const ma7 = chart.addLineSeries({ color: '#2962FF', lineWidth: 2, title: 'MA7' });
+        const ma7Data = data.candles.map((c, i) => ({
+          time: c.time,
+          value: calculateMA(data.candles, i, 7)
+        })).filter(d => d.value !== null);
+        ma7.setData(ma7Data);
 
         currentChart = chart;
 
-        // TODO: Thêm RSI, MACD, Ichimoku ở phiên bản nâng cao sau
-        alert("Phiên bản hiện tại chỉ có Nến + MA7. Phiên bản đầy đủ (RSI + MACD + Ichimoku) thầy sẽ cập nhật tiếp trong lần sau.");
       } catch(e) {
         console.error(e);
-        container.innerHTML = '<p class="text-danger">Lỗi tải biểu đồ.</p>';
+        container.innerHTML = '<p class="text-danger">Lỗi tải biểu đồ. Vui lòng thử lại sau.</p>';
       }
     }
 
     function calculateMA(candles, index, period) {
       if (index < period - 1) return null;
       let sum = 0;
-      for (let i = 0; i < period; i++) {
-        sum += candles[index - i].close;
-      }
+      for (let i = 0; i < period; i++) sum += candles[index - i].close;
       return sum / period;
     }
 
     // Khởi chạy
     window.onload = () => {
       loadNews();
-      loadVN30Stocks();
-      renderAdvancedChart("VNINDEX");
+      renderChart();
     };
   </script>
 </body>
