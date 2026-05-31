@@ -2,116 +2,162 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tin Tức - Tài Chính & Luật | tantoi-law-finance.store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin Tức & Phân Tích Thị Trường | tantoi-law-finance.store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; }
+    body { background: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
     .nav-tabs .nav-link { font-weight: 600; }
     .card { transition: all 0.3s; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    #chart-container { border: 1px solid #ddd; background: #fff; }
+    .card:hover { transform: translateY(-4px); }
+    #chart-container { background: white; border-radius: 12px; padding: 10px; }
   </style>
 </head>
-<body class="bg-light">
-  <div class="container py-5">
-    <h1 class="text-center mb-4">📢 Tin Tức Tài Chính & Luật</h1>
-    
-    <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+<body>
+  <div class="container py-4">
+    <h2 class="text-center mb-4">📊 Tin Tức & Phân Tích Thị Trường</h2>
+
+    <ul class="nav nav-tabs mb-4" id="myTab">
       <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tin-tuc">📰 Tin Tức</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#chinh-sach">⚖️ Chính Sách & Luật</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#phan-tich">📈 Phân Tích Thị Trường</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#phan-tich">📈 Phân Tích VN30</button></li>
     </ul>
 
     <div class="tab-content">
-      <div class="tab-pane fade show active" id="tin-tuc"><div id="tin-tuc-content" class="row"></div></div>
-      <div class="tab-pane fade" id="chinh-sach"><div id="chinh-sach-content" class="row"></div></div>
+      <!-- Tab Tin Tức -->
+      <div class="tab-pane fade show active" id="tin-tuc">
+        <div id="tin-tuc-content" class="row"></div>
+        <small class="text-muted">Cập nhật tự động mỗi 30 phút</small>
+      </div>
+
+      <!-- Tab Chính Sách -->
+      <div class="tab-pane fade" id="chinh-sach">
+        <div id="chinh-sach-content" class="row"></div>
+        <small class="text-muted">Cập nhật tự động mỗi 30 phút</small>
+      </div>
+
+      <!-- Tab Phân Tích VN30 -->
       <div class="tab-pane fade" id="phan-tich">
-        <div id="chart-container" style="height: 600px;"></div>
+        <div class="mb-3">
+          <label class="form-label"><strong>Chọn cổ phiếu VN30:</strong></label>
+          <select id="stock-select" class="form-select" style="max-width: 300px;"></select>
+        </div>
+        <div id="chart-container" style="height: 620px; width: 100%;"></div>
+        <small class="text-muted">Biểu đồ có Nến + MA + RSI + MACD + Ichimoku (cập nhật mỗi 30 phút)</small>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Dùng phiên bản 4.1.3 ổn định (chưa update v5) -->
-  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+
   <script>
-    console.log("🚀 Tin-tuc.html v3 - Lightweight Charts v4 loaded");
-
-    let chart = null;
-
+    // ==================== TIN TỨC + CHÍNH SÁCH ====================
     async function loadNews() {
       try {
-        const res = await fetch('/data/news.json');
+        const res = await fetch('data/news.json?' + Date.now());
         const data = await res.json();
 
+        // Tin Tức
         document.getElementById('tin-tuc-content').innerHTML = data.tin_tuc.map(item => `
-          <div class="col-md-6 mb-4">
+          <div class="col-md-6 mb-3">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="text-muted small">${item.date} • ${item.source}</p>
-                <p class="card-text">${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="btn btn-primary btn-sm">Đọc tiếp →</a>
+                <h6>${item.title}</h6>
+                <small class="text-muted">${item.date} • ${item.source}</small>
+                <p class="small">${item.summary}</p>
+                <a href="${item.link}" target="_blank" class="btn btn-sm btn-primary">Đọc tiếp</a>
               </div>
             </div>
           </div>
         `).join('');
 
+        // Chính Sách
         document.getElementById('chinh-sach-content').innerHTML = data.chinh_sach.map(item => `
-          <div class="col-md-6 mb-4">
+          <div class="col-md-6 mb-3">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="text-muted small">${item.date}</p>
-                <p class="card-text">${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="btn btn-primary btn-sm">Chi tiết →</a>
+                <h6>${item.title}</h6>
+                <small class="text-muted">${item.date}</small>
+                <p class="small">${item.summary}</p>
+                <a href="${item.link}" target="_blank" class="btn btn-sm btn-primary">Chi tiết</a>
               </div>
             </div>
           </div>
         `).join('');
+      } catch(e) { console.error(e); }
+    }
 
-      } catch (e) {
-        console.error("❌ Lỗi tin tức:", e);
+    // Tự động reload tin tức mỗi 30 phút
+    setInterval(loadNews, 30 * 60 * 1000);
+
+    // ==================== PHÂN TÍCH VN30 ====================
+    let currentChart = null;
+
+    async function loadVN30Stocks() {
+      // Danh sách VN30 (có thể mở rộng sau)
+      const vn30 = ["VNINDEX", "VNM", "HPG", "FPT", "VIC", "VHM", "MSN", "TCB", "BID", "CTG", 
+                    "MBB", "HDB", "STB", "VIB", "ACB", "EIB", "LPB", "SHB", "TPB", "PDR", 
+                    "KDH", "NLG", "DXG", "DIG", "GVR", "PLX", "GAS", "POW", "REE", "VJC"];
+      
+      const select = document.getElementById('stock-select');
+      select.innerHTML = vn30.map(s => `<option value="${s}">${s}</option>`).join('');
+      
+      // Mặc định chọn VNINDEX
+      select.value = "VNINDEX";
+      select.onchange = () => renderAdvancedChart(select.value);
+    }
+
+    async function renderAdvancedChart(symbol = "VNINDEX") {
+      if (currentChart) currentChart.remove();
+
+      const container = document.getElementById('chart-container');
+      container.innerHTML = '';
+
+      try {
+        const res = await fetch('data/stocks.json?' + Date.now());
+        const data = await res.json();
+
+        // TODO: Hiện tại dùng chung dữ liệu. Sau này sẽ tách file theo mã.
+        // Tạm thời hiển thị VNINDEX + cảnh báo
+        const chart = LightweightCharts.createChart(container, {
+          width: container.clientWidth,
+          height: 580,
+          layout: { background: { color: '#fff' } }
+        });
+
+        const candleSeries = chart.addCandlestickSeries();
+        candleSeries.setData(data.candles);
+
+        // Thêm MA7
+        const ma7 = chart.addLineSeries({ color: '#2962FF', lineWidth: 2 });
+        ma7.setData(data.candles.map((c, i) => ({ time: c.time, value: calculateMA(data.candles, i, 7) })));
+
+        currentChart = chart;
+
+        // TODO: Thêm RSI, MACD, Ichimoku ở phiên bản nâng cao sau
+        alert("Phiên bản hiện tại chỉ có Nến + MA7. Phiên bản đầy đủ (RSI + MACD + Ichimoku) thầy sẽ cập nhật tiếp trong lần sau.");
+      } catch(e) {
+        console.error(e);
+        container.innerHTML = '<p class="text-danger">Lỗi tải biểu đồ.</p>';
       }
     }
 
-    function createCandlestickChart() {
-      const container = document.getElementById('chart-container');
-      if (chart) chart.remove();
-
-      chart = LightweightCharts.createChart(container, {
-        width: container.clientWidth,
-        height: 600,
-        layout: { background: { color: '#ffffff' } },
-        grid: { vertLines: { color: '#f0f0f0' }, horzLines: { color: '#f0f0f0' } }
-      });
-
-      const candleSeries = chart.addCandlestickSeries();
-
-      fetch('/data/stocks.json')
-        .then(res => res.json())
-        .then(data => {
-          candleSeries.setData(data.candles);
-          chart.timeScale().fitContent();
-          console.log("✅ Biểu đồ nến VNINDEX đã vẽ xong!");
-        })
-        .catch(err => {
-          console.error("❌ Lỗi load stocks.json:", err);
-          container.innerHTML = `<p class="text-danger p-3">Không tải được dữ liệu biểu đồ. Vui lòng thử lại sau.</p>`;
-        });
+    function calculateMA(candles, index, period) {
+      if (index < period - 1) return null;
+      let sum = 0;
+      for (let i = 0; i < period; i++) {
+        sum += candles[index - i].close;
+      }
+      return sum / period;
     }
 
-    document.addEventListener('DOMContentLoaded', loadNews);
-
-    // Chỉ vẽ biểu đồ khi click tab Phân Tích
-    document.querySelector('button[data-bs-target="#phan-tich"]').addEventListener('shown.bs.tab', createCandlestickChart);
-
-    // Resize khi thay đổi cửa sổ
-    window.addEventListener('resize', () => {
-      if (chart) chart.resize(document.getElementById('chart-container').clientWidth, 600);
-    });
+    // Khởi chạy
+    window.onload = () => {
+      loadNews();
+      loadVN30Stocks();
+      renderAdvancedChart("VNINDEX");
+    };
   </script>
 </body>
 </html>

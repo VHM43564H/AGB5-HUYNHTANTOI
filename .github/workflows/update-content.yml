@@ -1,32 +1,32 @@
-name: Cập nhật Tin Tức & Biểu Đồ
+name: Cập nhật Tin Tức & Biểu Đồ (mỗi 30 phút)
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # Chạy lúc 2h sáng hàng ngày (giờ VN = UTC+7)
-  workflow_dispatch:       # Có thể chạy thủ công
+    - cron: '*/30 * * * *'   # Chạy mỗi 30 phút
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
       - name: Cài thư viện
         run: |
           pip install feedparser vnstock
-      
+
       - name: Chạy fetch tin tức
         run: python scripts/fetch_news.py
-      
-      - name: Chạy fetch biểu đồ
+
+      - name: Chạy fetch biểu đồ VN30 + cổ phiếu
         run: python scripts/fetch_charts.py
-      
-      - name: Commit & Push thay đổi
+
+      - name: Commit & Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🔄 Auto update tin tức & biểu đồ"
+          commit_message: "🔄 Auto update tin tức & biểu đồ VN30 (30 phút)"
