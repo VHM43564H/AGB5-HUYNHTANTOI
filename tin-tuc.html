@@ -1,137 +1,76 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tin Tức - Tài Chính & Luật | tantoi-law-finance.store</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; }
-    .nav-tabs .nav-link { font-weight: 600; }
-    .card { transition: all 0.3s; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-  </style>
-</head>
-<body class="bg-light">
-  <div class="container py-5">
-    <h1 class="text-center mb-4">📢 Tin Tức Tài Chính & Luật</h1>
-    
-    <!-- Tabs -->
-    <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="tin-tuc-tab" data-bs-toggle="tab" data-bs-target="#tin-tuc" type="button">📰 Tin Tức</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="chinh-sach-tab" data-bs-toggle="tab" data-bs-target="#chinh-sach" type="button">⚖️ Chính Sách & Luật</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="phan-tich-tab" data-bs-toggle="tab" data-bs-target="#phan-tich" type="button">📈 Phân Tích Thị Trường</button>
-      </li>
-    </ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 
-    <div class="tab-content">
-      <!-- Tab 1: Tin Tức -->
-      <div class="tab-pane fade show active" id="tin-tuc" role="tabpanel">
-        <div id="tin-tuc-content" class="row"></div>
-      </div>
-      
-      <!-- Tab 2: Chính Sách & Luật -->
-      <div class="tab-pane fade" id="chinh-sach" role="tabpanel">
-        <div id="chinh-sach-content" class="row"></div>
-      </div>
-      
-      <!-- Tab 3: Phân Tích Thị Trường -->
-      <div class="tab-pane fade" id="phan-tich" role="tabpanel">
-        <div class="row">
-          <div class="col-12">
-            <div id="chart-container" style="height: 600px;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-  <script>
-    // Load data từ JSON (sẽ được Python sinh ra)
+<script>
     async function loadData() {
       try {
         const newsRes = await fetch('data/news.json');
         const newsData = await newsRes.json();
-        
+
         // Tab Tin Tức
-        const tinTucHTML = newsData.tin_tuc.map(item => `
-          <div class="col-md-6 mb-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="card-text text-muted small">${item.date} • ${item.source}</p>
-                <p class="card-text">${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="btn btn-primary btn-sm">Đọc tiếp →</a>
+        let html = '';
+        newsData.tin_tuc.forEach(item => {
+          html += `
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">${item.title}</h5>
+                  <p class="card-text text-muted small">${item.date} • ${item.source}</p>
+                  <p class="card-text">${item.summary}</p>
+                  <a href="${item.link}" target="_blank" class="btn btn-primary btn-sm">Đọc tiếp →</a>
+                </div>
               </div>
-            </div>
-          </div>
-        `).join('');
-        document.getElementById('tin-tuc-content').innerHTML = tinTucHTML;
+            </div>`;
+        });
+        document.getElementById('tin-tuc-content').innerHTML = html;
 
         // Tab Chính Sách & Luật
-        const chinhSachHTML = newsData.chinh_sach.map(item => `
-          <div class="col-md-6 mb-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="card-text text-muted small">${item.date}</p>
-                <p class="card-text">${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="btn btn-primary btn-sm">Chi tiết →</a>
+        html = '';
+        newsData.chinh_sach.forEach(item => {
+          html += `
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">${item.title}</h5>
+                  <p class="card-text text-muted small">${item.date}</p>
+                  <p class="card-text">${item.summary}</p>
+                  <a href="${item.link}" target="_blank" class="btn btn-primary btn-sm">Chi tiết →</a>
+                </div>
               </div>
-            </div>
-          </div>
-        `).join('');
-        document.getElementById('chinh-sach-content').innerHTML = chinhSachHTML;
+            </div>`;
+        });
+        document.getElementById('chinh-sach-content').innerHTML = html;
 
-      } catch(e) { console.log("Chưa có dữ liệu"); }
+      } catch(e) {
+        console.error(e);
+        document.getElementById('tin-tuc-content').innerHTML = '<p class="text-danger">Lỗi tải tin tức. Vui lòng thử lại sau.</p>';
+      }
     }
 
-    // Biểu đồ nến
-    <script>
     async function renderCandlestick() {
       try {
-        const response = await fetch('data/stocks.json');
-        if (!response.ok) throw new Error("Không tìm thấy file dữ liệu");
-        
-        const data = await response.json();
-        
+        const res = await fetch('data/stocks.json');
+        const data = await res.json();
+
         if (!data.candles || data.candles.length === 0) {
-          document.getElementById('chart-container').innerHTML = 
-            '<p class="text-center text-danger">Chưa có dữ liệu biểu đồ. Vui lòng chạy script fetch_charts.py lại.</p>';
+          document.getElementById('chart-container').innerHTML = '<p class="text-center text-warning">Chưa có dữ liệu biểu đồ.</p>';
           return;
         }
 
         const chart = LightweightCharts.createChart(document.getElementById('chart-container'), {
-          width: document.getElementById('chart-container').clientWidth,
+          width: 900,
           height: 550,
-          layout: { background: { color: '#f8f9fa' } },
-          grid: { vertLines: { color: '#e0e0e0' }, horzLines: { color: '#e0e0e0' } }
+          layout: { background: { color: '#f8f9fa' } }
         });
 
-        const candleSeries = chart.addCandlestickSeries({
-          upColor: '#26a69a',
-          downColor: '#ef5350',
-          borderVisible: false,
-          wickUpColor: '#26a69a',
-          wickDownColor: '#ef5350'
-        });
-
+        const candleSeries = chart.addCandlestickSeries();
         candleSeries.setData(data.candles);
         chart.timeScale().fitContent();
 
-        console.log("✅ Biểu đồ đã render thành công với " + data.candles.length + " nến");
-      } catch (e) {
+        console.log("✅ Biểu đồ VN-Index đã render thành công");
+      } catch(e) {
         console.error(e);
-        document.getElementById('chart-container').innerHTML = 
-          '<p class="text-center text-danger">Lỗi tải biểu đồ: ' + e.message + '</p>';
+        document.getElementById('chart-container').innerHTML = '<p class="text-danger">Lỗi tải biểu đồ. Vui lòng thử lại.</p>';
       }
     }
 
@@ -140,5 +79,3 @@
       renderCandlestick();
     };
   </script>
-</body>
-</html>
