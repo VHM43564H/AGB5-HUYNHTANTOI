@@ -34,18 +34,18 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  <!-- Dùng phiên bản 4.1.3 ổn định (chưa update v5) -->
+  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
   <script>
-    console.log("🚀 Tin-tuc.html v2 loaded");
+    console.log("🚀 Tin-tuc.html v3 - Lightweight Charts v4 loaded");
 
-    let chart = null;   // lưu chart để resize sau
+    let chart = null;
 
     async function loadNews() {
       try {
         const res = await fetch('/data/news.json');
         const data = await res.json();
 
-        // Tab Tin Tức
         document.getElementById('tin-tuc-content').innerHTML = data.tin_tuc.map(item => `
           <div class="col-md-6 mb-4">
             <div class="card h-100">
@@ -59,7 +59,6 @@
           </div>
         `).join('');
 
-        // Tab Chính Sách & Luật
         document.getElementById('chinh-sach-content').innerHTML = data.chinh_sach.map(item => `
           <div class="col-md-6 mb-4">
             <div class="card h-100">
@@ -74,16 +73,12 @@
         `).join('');
 
       } catch (e) {
-        console.error("❌ Lỗi load tin tức:", e);
-        document.getElementById('tin-tuc-content').innerHTML = `<p class="text-danger p-3">Không tải được tin tức. Vui lòng thử lại sau.</p>`;
+        console.error("❌ Lỗi tin tức:", e);
       }
     }
 
     function createCandlestickChart() {
       const container = document.getElementById('chart-container');
-      if (!container) return;
-
-      // Xóa chart cũ nếu có
       if (chart) chart.remove();
 
       chart = LightweightCharts.createChart(container, {
@@ -94,29 +89,26 @@
       });
 
       const candleSeries = chart.addCandlestickSeries();
-      
+
       fetch('/data/stocks.json')
         .then(res => res.json())
         .then(data => {
           candleSeries.setData(data.candles);
           chart.timeScale().fitContent();
-          console.log("✅ Biểu đồ nến đã vẽ thành công!");
+          console.log("✅ Biểu đồ nến VNINDEX đã vẽ xong!");
         })
-        .catch(err => console.error("❌ Lỗi load stocks.json:", err));
+        .catch(err => {
+          console.error("❌ Lỗi load stocks.json:", err);
+          container.innerHTML = `<p class="text-danger p-3">Không tải được dữ liệu biểu đồ. Vui lòng thử lại sau.</p>`;
+        });
     }
 
-    // Khởi tạo khi trang load
-    document.addEventListener('DOMContentLoaded', () => {
-      loadNews();                    // Tab Tin Tức & Chính sách load ngay
-    });
+    document.addEventListener('DOMContentLoaded', loadNews);
 
-    // Tạo biểu đồ CHỈ khi tab Phân Tích được click (fix lỗi hidden tab)
-    const phanTichTab = document.querySelector('button[data-bs-target="#phan-tich"]');
-    phanTichTab.addEventListener('shown.bs.tab', () => {
-      createCandlestickChart();
-    });
+    // Chỉ vẽ biểu đồ khi click tab Phân Tích
+    document.querySelector('button[data-bs-target="#phan-tich"]').addEventListener('shown.bs.tab', createCandlestickChart);
 
-    // Resize chart khi thay đổi kích thước cửa sổ
+    // Resize khi thay đổi cửa sổ
     window.addEventListener('resize', () => {
       if (chart) chart.resize(document.getElementById('chart-container').clientWidth, 600);
     });
