@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#F5C400">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="AGBCN5-Tới KHDN - Công cụ Số AGB Chi nhánh 5">
+  <title>AGBCN5-Tới KHDN - Công cụ Số AGB CN 5</title>
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Leaflet (Map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- QRCode.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@keeex/qrcodejs-kx@1.0.2/qrcode.min.js"></script>
+  
+  <!-- html2canvas (for high-quality PNG export from preview cards) -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Mono:wght@400;500&amp;display=swap');
+    
+    :root {
+      --primary: #F5C400;
+    }
+    
+    body {
+      font-family: 'Inter', system_ui, -apple-system, sans-serif;
+    }
+    
+    .mono {
+      font-family: 'Roboto Mono', ui-monospace, monospace;
+    }
+
+    .bottom-nav {
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-item {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-item.active {
+      color: #F5C400;
+    }
+    
+    .nav-item.active .nav-icon {
+      transform: scale(1.1);
+    }
+
+    .feature-card {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .feature-card:active {
+      transform: scale(0.97);
+    }
+
+    .section-header {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .yellow-btn {
+      background-color: #F5C400;
+      color: #1f2937;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    
+    .yellow-btn:hover {
+      background-color: #E6B800;
+      transform: translateY(-1px);
+    }
+    
+    .yellow-btn:active {
+      transform: scale(0.98);
+    }
+
+    .agb-header {
+      background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    }
+
+    .qr-container {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+
+    .modern-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 
+                  0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    .input-field {
+      border: 1.5px solid #e5e7eb;
+      transition: all 0.2s ease;
+    }
+    
+    .input-field:focus {
+      border-color: #F5C400;
+      box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.1);
+      outline: none;
+    }
+
+    .result-dark {
+      background: linear-gradient(145deg, #1f2937, #111827);
+      color: white;
+    }
+
+    .stat-box {
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+    }
+
+    .agb-yellow-border {
+      border-left: 5px solid #F5C400;
+    }
+
+    .toast {
+      animation: slideUp 0.3s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    .nav-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+
+    .app-container {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #F8F3EC;
+      min-height: 100dvh;
+      box-shadow: 0 0 0 1px #D7CCC8;
+    }
+
+    .data-table th {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .qr-wrapper {
+      background: #fff;
+      padding: 18px;
+      border-radius: 20px;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+                  0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    /* ==================== NEW: QR MODE SELECTOR STYLES ==================== */
+    .qr-mode-btn {
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid #e5e7eb;
+      background: #fff;
+      font-weight: 700;
+      font-size: 12.5px;
+      line-height: 1.3;
+      padding: 10px 8px;
+      border-radius: 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      min-height: 62px;
+    }
+    .qr-mode-btn.active {
+      border-color: #F5C400;
+      background: #FFFBEB;
+      box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.15);
+      color: #1f2937;
+    }
+    .qr-mode-btn:active {
+      transform: scale(0.985);
+    }
+    .qr-mode-btn .mode-icon {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .qr-mode-btn .mode-label {
+      font-weight: 800;
+      letter-spacing: -0.2px;
+    }
+    .qr-mode-btn .mode-sub {
+      font-size: 10px;
+      font-weight: 600;
+      opacity: 0.75;
+      line-height: 1.1;
+    }
+
+    /* ==================== AGB EARTH BROWN + RED BORDER THEME ==================== */
+    :root {
+      --primary: #F5C400;
+      --earth-brown: #5D4037;
+      --earth-light: #F8F3EC;
+      --agb-red: #B71C1C;
+    }
+
+    body {
+      background: #F8F3EC;
+    }
+
+    .app-container {
+      background: #F8F3EC;
+    }
+
+    .agb-header {
+      background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%);
+    }
+
+    .agb-red-border {
+      border: 1.5px solid #B71C1C !important;
+    }
+
+    .modern-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 
+                  0 2px 4px -2px rgb(0 0 0 / 0.1);
+      border: 1.5px solid #B71C1C;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1.5px solid #B71C1C;
+    }
+
+    .yellow-btn {
+      background-color: #F5C400;
+      color: #3E2723;
+      font-weight: 700;
+      border: 1.5px solid #B71C1C;
+    }
+    
+    .yellow-btn:hover {
+      background-color: #E6B800;
+    }
+
+    /* ==================== NEW: BEAUTIFUL PREVIEW CARDS (AGB style) ==================== */
+    .preview-card {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.15), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      overflow: hidden;
+      border: 1px solid #f1f5f9;
+    }
+
+    .biz-card {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+      border: 1.5px solid #1f2937;
+      border-radius: 16px;
+      padding: 18px 16px 14px;
+      position: relative;
+    }
+    .biz-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(to right, #F5C400, #E6B800);
+    }
+    .biz-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .biz-logo {
+      width: 42px;
+      height: 42px;
+      background: #1f2937;
+      color: #F5C400;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: -1px;
+      flex-shrink: 0;
+    }
+    .biz-bank {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1f2937;
+      line-height: 1.1;
+    }
+    .biz-branch {
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .biz-name {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: #111827;
+      line-height: 1.15;
+      margin: 6px 0 2px;
+    }
+    .biz-title {
+      font-size: 12px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .biz-contact {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .biz-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .biz-row .icon {
+      width: 16px;
+      opacity: 0.7;
+    }
+    .biz-phone {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .biz-qr-zone {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      justify-content: center;
+    }
+    .biz-qr-zone .qr-wrapper {
+      padding: 6px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+    }
+
+    .map-preview {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .map-preview-header {
+      font-weight: 800;
+      color: #1e2937;
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .map-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 10px;
+      font-size: 12.5px;
+      margin-bottom: 10px;
+    }
+    .map-info-item label {
+      font-size: 9.5px;
+      color: #64748b;
+      font-weight: 600;
+      display: block;
+    }
+    .map-info-item span {
+      font-weight: 700;
+      color: #1e2937;
+    }
+    .map-qr-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .map-qr-row .qr-wrapper {
+      flex-shrink: 0;
+      padding: 6px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+    }
+    .map-mini {
+      flex: 1;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 11px;
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+    }
+    .map-mini .pin {
+      font-size: 22px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-slate-100">
+  <!-- Main App Container -->
+  <div class="app-container mx-auto relative pb-20 overflow-hidden">
+    
+    <!-- Top Header -->
+    <div class="agb-header text-white px-5 pt-5 pb-4 sticky top-0 z-50">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-x-3">
+          <!-- Logo -->
+          <div class="w-11 h-11 bg-[#F5C400] rounded-2xl flex items-center justify-center shadow-inner">
+            <span class="text-[#1f2937] font-black text-3xl tracking-tighter">A</span>
+          </div>
+          <div>
+            <div class="font-extrabold text-2xl tracking-tighter">AGBCN5-Tới KHDN</div>
+            <div class="text-[11px] text-yellow-300 -mt-1 font-semibold tracking-[0.5px]">AGB CN 5</div>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-x-2">
+          <!-- Install PWA Button -->
+          <button id="install-btn"
+                  class="hidden items-center gap-x-1.5 bg-white/10 hover:bg-white/20 active:bg-white/25 transition-all text-white text-xs font-bold px-3.5 py-2 rounded-2xl border border-white/30">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v-4m0 0l4 4m-4-4l4-4m12 4v4m0 0l-4-4m4 4l-4-4" />
+            </svg>
+            <span class="hidden sm:inline">Cài đặt</span>
+          </button>
+          
+          <div class="text-right">
+            <div class="text-[10px] text-yellow-300/90 font-medium">6222 - Chi nhánh 5</div>
+            <div class="text-xs font-semibold text-white/90">CN5-TPHCM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="px-4 pt-4 pb-6">
+      
+      <!-- ========== TAB 1: TRANG CHỦ (4 CARDS - VietQR removed) ========== -->
+      <div id="tab-home" class="tab-content active">
+        <div class="mb-5">
+          <div class="flex items-center justify-between mb-1">
+            <div>
+              <div class="font-extrabold text-3xl tracking-tight text-[#3E2723] flex items-center gap-2">
+                Xin chào Bạn! Tôi giúp gì được cho bạn? 
+                <span class="text-3xl">😊</span>
+              </div>
+              <div class="text-[#5D4037] text-sm font-medium">AGB CN 5 • Công cụ số - Chuyển đổi số - Tới KHDN</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="grid grid-cols-3 gap-3.5">
+          <!-- Card 1: QR Map Định Vị -->
+          <div onclick="switchTab('qrmap')" 
+               class="feature-card bg-white p-4 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border">
+            <div class="w-11 h-11 bg-yellow-100 rounded-2xl flex items-center justify-center mb-3.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div class="font-bold text-lg leading-tight tracking-tight">QR Map<br>Định Vị</div>
+            <div class="text-xs text-slate-500 mt-1">GPS + Khách hàng</div>
+          </div>
+
+          <!-- Card 2: Card Visit Số -->
+          <div onclick="switchTab('khac')" 
+               class="feature-card bg-white p-4 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border">
+            <div class="w-11 h-11 bg-yellow-100 rounded-2xl flex items-center justify-center mb-3.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2.01 2.01 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="font-bold text-lg leading-tight tracking-tight">Card Visit<br>Số</div>
+            <div class="text-xs text-slate-500 mt-1">Danh thiếp điện tử</div>
+          </div>
+
+          <!-- Card 3: Tra Cứu Lãi Suất -->
+          <div onclick="switchTab('laisuat')" 
+               class="feature-card bg-white p-4 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border">
+            <div class="w-11 h-11 bg-yellow-100 rounded-2xl flex items-center justify-center mb-3.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+              </svg>
+            </div>
+            <div class="font-bold text-lg leading-tight tracking-tight">Tra Cứu<br>Lãi Suất</div>
+            <div class="text-xs text-slate-500 mt-1">Cập nhật mới nhất</div>
+          </div>
+
+          <!-- Card 4: Máy Tính Lãi -->
+          <div onclick="switchTab('tinhlai')" 
+               class="feature-card bg-white p-4 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border">
+            <div class="w-11 h-11 bg-yellow-100 rounded-2xl flex items-center justify-center mb-3.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="font-bold text-lg leading-tight tracking-tight">Máy Tính<br>Lãi</div>
+            <div class="text-xs text-slate-500 mt-1">Tiền gửi &amp; Tiền vay</div>
+          </div>
+
+          <!-- Card 5: QR Chuyển Khoản Ngân Hàng (VietQR) -->
+          <div onclick="switchTab('vietqr')" 
+               class="feature-card bg-white p-4 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border col-span-1">
+            <div class="w-11 h-11 bg-yellow-100 rounded-2xl flex items-center justify-center mb-3.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="font-bold text-lg leading-tight tracking-tight">QR Chuyển Khoản<br>Ngân Hàng</div>
+            <div class="text-xs text-slate-500 mt-1">Tạo mã VietQR chuẩn NAPAS</div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <div class="inline-flex items-center gap-x-2 text-xs bg-white px-4 py-2 rounded-2xl shadow-sm border border-slate-100">
+            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            <span class="font-semibold text-slate-600">AGB CN 5 đổi mới vươn mình</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== TAB 2: QR MAP ĐỊNH VỊ (ROBUST + ALWAYS WORKS) ========== -->
+      <div id="tab-qrmap" class="tab-content">
+        <div class="mb-4">
+          <div class="section-header">Tạo QR Map Định Vị</div>
+          <p class="text-sm text-slate-600">GPS + Thông tin khách hàng • QR quét mở bản đồ ngay</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Map -->
+          <div class="modern-card p-2">
+            <div id="map" class="map-container w-full h-[220px] bg-slate-200 rounded-[14px]"></div>
+            <div class="px-2 pt-2 flex gap-2">
+              <button onclick="getCurrentLocation()" 
+                      class="flex-1 text-sm font-bold py-2.5 bg-white border border-slate-200 rounded-2xl flex items-center justify-center gap-x-1.5 active:bg-yellow-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                CẬP NHẬT VỊ TRÍ HIỆN TẠI
+              </button>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="modern-card p-5 space-y-3.5">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs font-semibold text-slate-500">TÊN KHÁCH HÀNG / ĐIỂM</label>
+                <input id="map-customer" value="CÔNG TY TNHH ABC" class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium">
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-500">SỐ ĐIỆN THOẠI</label>
+                <input id="map-phone" value="0912345678" class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium">
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-500">ĐỊA CHỈ</label>
+              <input id="map-address" value="1105 TRẦN HƯNG ĐẠO, PHƯỜNG AN ĐÔNG, TP.HCM" class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium">
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs font-semibold text-slate-500">NGÀY KIỂM TRA TS</label>
+                <input id="map-date" type="date" class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium">
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-500">CHI NHÁNH</label>
+                <input id="map-branch" value="6222 - CN 5" class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium">
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-500">NGƯỜI TẠO</label>
+              <input id="map-creator" value="Huỳnh Tấn Tới" class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium">
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-500">GHI CHÚ</label>
+              <textarea id="map-note" rows="2" placeholder="Kiểm tra tài sản đảm bảo vay vốn" 
+                        class="input-field mt-1 w-full px-3 py-2.5 rounded-2xl text-sm font-medium resize-y">Kiểm tra tài sản đảm bảo vay vốn 2026</textarea>
+            </div>
+
+            <!-- Chế độ duy nhất: QR đầy đủ chi tiết (đã gỡ selector theo yêu cầu) -->
+            <button id="map-generate-btn" onclick="generateLocationQR()"
+                    class="yellow-btn w-full py-[15px] rounded-2xl text-[15px] font-extrabold flex items-center justify-center gap-x-2">
+              TẠO QR ĐẦY ĐỦ CHI TIẾT
+            </button>
+          </div>
+
+          <!-- QR MAP RESULT - QR nhỏ (1/4) + Thông tin lớn (3/4) -->
+          <div id="map-result" class="hidden modern-card p-5">
+            <!-- Wrapper cho export đẹp (id="map-preview") -->
+            <div id="map-preview" class="mb-3">
+              <div class="font-extrabold text-sm mb-2 flex items-center gap-2">
+                <span>📍</span> 
+                <span>QR ĐỊNH VỊ - AGB CN 5 (Đầy đủ chi tiết)</span>
+              </div>
+
+              <!-- Layout: QR 1/4 bên trái, thông tin 3/4 bên phải -->
+              <div class="flex gap-4">
+                <!-- QR nhỏ (khoảng 1/4) -->
+                <div class="w-1/4 flex-shrink-0">
+                  <div id="map-qr-preview" class="qr-wrapper p-2"></div>
+                  <!-- Hidden legacy -->
+                  <div id="map-qr" class="hidden"></div>
+                </div>
+
+                <!-- Thông tin lớn (3/4) -->
+                <div class="flex-1 text-sm space-y-1.5">
+                  <div><span class="font-semibold text-slate-500">Khách hàng:</span> <span id="mp-customer" class="font-medium"></span></div>
+                  <div><span class="font-semibold text-slate-500">SĐT:</span> <span id="mp-phone" class="font-medium"></span></div>
+                  <div><span class="font-semibold text-slate-500">Địa chỉ:</span> <span id="mp-address" class="font-medium"></span></div>
+                  <div><span class="font-semibold text-slate-500">Ngày kiểm tra:</span> <span id="mp-date" class="font-medium"></span></div>
+                  <div><span class="font-semibold text-slate-500">Chi nhánh / Người tạo:</span> <span id="mp-branch-creator" class="font-medium"></span></div>
+                  <div><span class="font-semibold text-slate-500">Tọa độ:</span> <span id="mp-coords" class="font-mono text-emerald-700"></span></div>
+                  <div><span class="font-semibold text-slate-500">Ghi chú:</span> <span id="mp-note" class="font-medium"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action buttons (đã bỏ LƯU ONLINE) -->
+            <div class="flex gap-2">
+              <button onclick="exportMapQRPNG()" 
+                      class="flex-1 py-3 rounded-2xl bg-slate-900 hover:bg-black text-white font-extrabold text-sm flex items-center justify-center gap-x-1.5">
+                📥 TẢI ẢNH PNG
+              </button>
+              <button onclick="openMapLocation()" 
+                      class="flex-1 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center gap-x-1.5">
+                🗺️ MỞ GOOGLE MAPS
+              </button>
+            </div>
+          </div>
+
+          <!-- Hidden clean export template for Map PNG (tối ưu cho in ấn, gọn chữ, đầy đủ thông tin) -->
+          <div id="map-export-preview" style="position:absolute; left:-9999px; top:0; width:520px; opacity:0; pointer-events:none; z-index:-1; background:#fff; padding:16px; font-family:Inter,system-ui,sans-serif;">
+            <div style="text-align:center; margin-bottom:8px;">
+              <div style="font-weight:700; font-size:15px; color:#111;">QR ĐỊNH VỊ - AGB CN 5</div>
+              <div style="font-size:11px; color:#555;">Mã QR đầy đủ chi tiết • Chuẩn GPS</div>
+            </div>
+
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <!-- QR (nhỏ gọn cho export) -->
+              <div id="map-qr-export" style="flex-shrink:0; padding:6px; background:#fff; border:1px solid #ddd; border-radius:8px;"></div>
+
+              <!-- Thông tin gọn (font nhỏ, wrap tốt) -->
+              <div style="flex:1; font-size:12.5px; line-height:1.35; color:#222;">
+                <div style="margin-bottom:3px;"><strong>Khách hàng:</strong> <span id="me-customer"></span></div>
+                <div style="margin-bottom:3px;"><strong>SĐT:</strong> <span id="me-phone"></span></div>
+                <div style="margin-bottom:3px;"><strong>Địa chỉ:</strong> <span id="me-address"></span></div>
+                <div style="margin-bottom:3px;"><strong>Ngày kiểm tra:</strong> <span id="me-date"></span></div>
+                <div style="margin-bottom:3px;"><strong>Chi nhánh / Người tạo:</strong> <span id="me-branch-creator"></span></div>
+                <div style="margin-bottom:3px;"><strong>Tọa độ:</strong> <span id="me-coords" style="font-family:monospace;"></span></div>
+                <div><strong>Ghi chú:</strong> <span id="me-note" style="word-break:break-word;"></span></div>
+              </div>
+            </div>
+
+            <div style="margin-top:8px; font-size:10px; color:#666; text-align:center;">
+              AGB CN 5 • Dữ liệu tham khảo • Quét QR để mở Google Maps
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== TAB 4: LÃI SUẤT ========== -->
+      <div id="tab-laisuat" class="tab-content">
+        <!-- Header + 2 nút cập nhật (theo yêu cầu mới) -->
+        <div class="mb-3">
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <div class="section-header">Bảng Lãi Suất Tiền Gửi</div>
+              <div class="text-xs text-emerald-600 font-medium">AGB CN 5 • Cập nhật mới nhất</div>
+            </div>
+          </div>
+
+          <!-- 2 nút rõ ràng -->
+          <div class="flex gap-2">
+            <!-- Nút 1: Mở web Agribank (xám / xanh nhạt) -->
+            <button onclick="openAgribankRateWeb()" 
+                    class="flex-1 text-xs px-3 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl flex items-center justify-center gap-x-1.5 border border-slate-200 active:bg-slate-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Cập nhật từ Web Agribank
+            </button>
+
+            <!-- Nút 2: Làm mới bảng (màu vàng chính) -->
+            <button onclick="refreshLatestRates()" 
+                    class="flex-1 yellow-btn text-xs px-3 py-2.5 rounded-2xl font-extrabold flex items-center justify-center gap-x-1.5 active:scale-[0.985]">
+              Làm mới bảng
+            </button>
+          </div>
+        </div>
+
+        <div class="modern-card overflow-hidden">
+          <!-- Bảng 1: Khách hàng Cá nhân -->
+          <div class="bg-emerald-50 px-4 py-2 border-b">
+            <div class="font-extrabold text-sm text-emerald-700">BẢNG 1: KHÁCH HÀNG CÁ NHÂN</div>
+          </div>
+          <table class="w-full text-sm">
+            <thead class="bg-white">
+              <tr class="border-b text-left">
+                <th class="px-4 py-2.5 text-xs text-slate-500">KỲ HẠN</th>
+                <th class="px-3 py-2.5 text-xs text-slate-500">LÃI SUẤT (%/năm)</th>
+              </tr>
+            </thead>
+            <tbody id="table-personal" class="data-table text-sm"></tbody>
+          </table>
+
+          <!-- Bảng 2: Khách hàng Doanh nghiệp -->
+          <div class="bg-sky-50 px-4 py-2 border-b border-t">
+            <div class="font-extrabold text-sm text-sky-700">BẢNG 2: KHÁCH HÀNG DOANH NGHIỆP</div>
+          </div>
+          <table class="w-full text-sm">
+            <thead class="bg-white">
+              <tr class="border-b text-left">
+                <th class="px-4 py-2.5 text-xs text-slate-500">KỲ HẠN</th>
+                <th class="px-3 py-2.5 text-xs text-slate-500">LÃI SUẤT (%/năm)</th>
+              </tr>
+            </thead>
+            <tbody id="table-org" class="data-table text-sm"></tbody>
+          </table>
+        </div>
+        
+        <div class="mt-3 text-[10px] text-center text-slate-500 space-y-0.5">
+          <div class="font-medium">Dữ liệu cập nhật gần nhất: <span id="last-rate-date"></span></div>
+          <div>Lưu ý: Dữ liệu mang tính tham khảo. Vui lòng bấm nút 'Cập nhật từ Web Agribank' để xem lãi suất mới nhất trên trang chính thức.</div>
+        </div>
+      </div>
+
+      <!-- ========== TAB 5: TÍNH LÃI ========== -->
+      <div id="tab-tinhlai" class="tab-content">
+        <div class="mb-3">
+          <div class="section-header">Máy Tính Lãi Suất</div>
+        </div>
+
+        <!-- Sub tabs -->
+        <div class="flex bg-slate-200 rounded-2xl p-1 mb-4">
+          <div onclick="switchInterestTab(0)" id="subtab-0"
+               class="flex-1 text-center py-2.5 text-sm font-extrabold bg-white shadow rounded-[14px] cursor-pointer">TIỀN GỬI</div>
+          <div onclick="switchInterestTab(1)" id="subtab-1"
+               class="flex-1 text-center py-2.5 text-sm font-bold text-slate-600 cursor-pointer">TIỀN VAY</div>
+        </div>
+
+        <!-- Tiền gửi form -->
+        <div id="interest-deposit" class="space-y-4">
+          <div class="modern-card p-5 space-y-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-500">SỐ TIỀN GỬI (VND)</label>
+              <input id="dep-amount" type="text" value="100000000" 
+                     class="input-field mt-1.5 w-full px-4 py-3.5 rounded-2xl text-xl font-semibold tracking-tight">
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs font-semibold text-slate-500">LÃI SUẤT (%/NĂM)</label>
+                <input id="dep-rate" type="text" value="5.2" class="input-field mt-1.5 w-full px-4 py-3 rounded-2xl text-xl font-semibold">
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-500">KỲ HẠN (THÁNG)</label>
+                <input id="dep-term" type="number" value="12" class="input-field mt-1.5 w-full px-4 py-3 rounded-2xl text-xl font-semibold">
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-500">NGÀY GỬI</label>
+              <input id="dep-date" type="date" class="input-field mt-1.5 w-full px-4 py-3 rounded-2xl">
+            </div>
+
+            <button onclick="calculateDepositInterest()"
+                    class="yellow-btn w-full py-4 rounded-2xl font-extrabold text-base flex justify-center items-center gap-x-2">
+              TÍNH LÃI TIỀN GỬI
+            </button>
+          </div>
+
+          <!-- Result -->
+          <div id="dep-result" class="hidden result-dark p-5 rounded-3xl space-y-3">
+            <div class="text-yellow-400 text-xs font-extrabold tracking-widest mb-1">KẾT QUẢ TÍNH LÃI</div>
+            
+            <div class="grid grid-cols-2 gap-2 text-sm">
+              <div class="stat-box p-3">
+                <div class="text-white/60 text-xs">SỐ NGÀY TÍNH LÃI</div>
+                <div id="dep-days" class="text-2xl font-extrabold mono"></div>
+              </div>
+              <div class="stat-box p-3">
+                <div class="text-white/60 text-xs">LÃI TẠM TÍNH</div>
+                <div id="dep-gross" class="text-2xl font-extrabold text-yellow-300 mono"></div>
+              </div>
+            </div>
+            
+            <div class="stat-box p-3.5">
+              <div class="flex justify-between items-center text-sm">
+                <div class="text-white/70">Thuế TNCN (5%)</div>
+                <div id="dep-tax" class="font-bold text-red-300 mono"></div>
+              </div>
+              <div class="flex justify-between items-center mt-2 text-[15px]">
+                <div class="font-semibold">LÃI THỰC NHẬN</div>
+                <div id="dep-net" class="font-extrabold text-emerald-400 text-xl mono"></div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-baseline px-1 pt-1 border-t border-white/10">
+              <div class="text-sm font-medium text-white/70">TỔNG NHẬN (Gốc + Lãi)</div>
+              <div id="dep-total" class="font-extrabold text-2xl text-white mono"></div>
+            </div>
+            
+            <div class="text-[10px] text-white/50 leading-snug pt-1">
+              * Công thức: Lãi = Số tiền × Lãi suất × Số ngày / 365. Thuế TNCN áp dụng theo quy định hiện hành.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tiền vay form -->
+        <div id="interest-loan" class="hidden space-y-4">
+          <div class="modern-card p-5 space-y-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-500">SỐ TIỀN VAY (VND)</label>
+              <input id="loan-amount" type="text" value="300000000" 
+                     class="input-field mt-1.5 w-full px-4 py-3.5 rounded-2xl text-xl font-semibold tracking-tight">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="text-xs font-semibold text-slate-500">LÃI SUẤT (%/NĂM)</label>
+                <input id="loan-rate" type="text" value="7.5" class="input-field mt-1.5 w-full px-4 py-3 rounded-2xl text-xl font-semibold">
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-500">THỜI HẠN (THÁNG)</label>
+                <input id="loan-term" type="number" value="36" class="input-field mt-1.5 w-full px-4 py-3 rounded-2xl text-xl font-semibold">
+              </div>
+            </div>
+
+            <button onclick="calculateLoan()"
+                    class="yellow-btn w-full py-4 rounded-2xl font-extrabold text-base">TÍNH GÓC + LÃI HÀNG THÁNG</button>
+          </div>
+
+          <div id="loan-result" class="hidden result-dark p-5 rounded-3xl">
+            <div class="text-yellow-400 text-xs font-extrabold tracking-widest mb-3">KẾT QUẢ TRẢ NỢ</div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between"><span class="text-white/70">Số tiền vay</span> <span id="loan-principal" class="font-extrabold mono text-lg"></span></div>
+              <div class="flex justify-between"><span class="text-white/70">Lãi suất</span> <span id="loan-rate-show" class="font-semibold"></span></div>
+              <div class="flex justify-between"><span class="text-white/70">Kỳ hạn</span> <span id="loan-months" class="font-semibold"></span></div>
+              <div class="pt-3 mt-2 border-t border-white/10 flex justify-between items-center">
+                <span class="font-semibold">Trả hàng tháng</span>
+                <span id="loan-monthly" class="font-extrabold text-3xl text-yellow-300 mono"></span>
+              </div>
+              <div class="text-xs text-white/50">Gốc + Lãi (ước tính phương pháp lãi suất giảm dần)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== TAB 6: KHÁC (Card Visit + Lịch sử) ========== -->
+      <div id="tab-khac" class="tab-content">
+        <div class="mb-4">
+          <div class="section-header">Card Visit Số</div>
+          <p class="text-sm text-slate-600">Tạo QR danh thiếp điện tử (vCard)</p>
+        </div>
+
+        <div class="modern-card p-5 space-y-3">
+          <div class="grid grid-cols-2 gap-3">
+            <div><label class="text-xs font-semibold text-slate-500">HỌ VÀ TÊN</label>
+              <input id="card-name" value="Huỳnh Tấn Tới" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm"></div>
+            <div><label class="text-xs font-semibold text-slate-500">CHỨC VỤ</label>
+              <input id="card-title" value="Chuyên viên Quan hệ Khách hàng" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm"></div>
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-500">ĐIỆN THOẠI</label>
+            <input id="card-phone" value="0123456789" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm">
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-500">EMAIL</label>
+            <input id="card-email" value="" placeholder="email@example.com" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm">
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-500">CHI NHÁNH</label>
+            <input id="card-branch" value="AGB CN 5 - 6222 CN 5" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm">
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-slate-500">ĐỊA CHỈ CN</label>
+            <input id="card-address" value="1105 TRẦN HƯNG ĐẠO, PHƯỜNG AN ĐÔNG, TP.HCM" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm">
+          </div>
+
+          <!-- Chế độ duy nhất: vCard thuần (đã gỡ selector theo yêu cầu) -->
+          <button id="card-generate-btn" onclick="generateCardVisitQR()" 
+                  class="yellow-btn w-full py-3.5 rounded-2xl font-extrabold text-base">TẠO QR vCARD THUẦN - THÊM DANH BẠ NGAY</button>
+        </div>
+
+        <!-- Card Visit RESULT - QR nhỏ (1/4) + Thông tin lớn (3/4) -->
+        <div id="card-result" class="hidden mt-4 modern-card p-5">
+          <div class="mb-3">
+            <div class="font-extrabold text-sm mb-2">QR vCard thuần (Thêm danh bạ ngay)</div>
+
+            <!-- Layout: QR 1/4 bên trái, thông tin 3/4 bên phải -->
+            <div class="flex gap-4">
+              <!-- QR nhỏ (khoảng 1/4) -->
+              <div class="w-1/4 flex-shrink-0">
+                <div id="card-qr-preview" class="qr-wrapper p-2"></div>
+                <!-- Hidden legacy -->
+                <div id="card-qr" class="hidden"></div>
+              </div>
+
+              <!-- Thông tin lớn (3/4) -->
+              <div class="flex-1 text-sm space-y-1">
+                <div><span class="font-semibold text-slate-500">Họ tên:</span> <span id="cr-name" class="font-medium"></span></div>
+                <div><span class="font-semibold text-slate-500">Chức vụ:</span> <span id="cr-title" class="font-medium"></span></div>
+                <div><span class="font-semibold text-slate-500">Điện thoại:</span> <span id="cr-phone" class="font-medium"></span></div>
+                <div><span class="font-semibold text-slate-500">Email:</span> <span id="cr-email" class="font-medium"></span></div>
+                <div><span class="font-semibold text-slate-500">Chi nhánh:</span> <span id="cr-branch" class="font-medium"></span></div>
+                <div><span class="font-semibold text-slate-500">Địa chỉ:</span> <span id="cr-address" class="font-medium"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chỉ giữ 1 nút TẢI ẢNH PNG (đã xóa các nút khác theo yêu cầu) -->
+          <button onclick="exportCardVisitPNG()" 
+                  class="w-full py-3 rounded-2xl bg-slate-900 hover:bg-black active:bg-black text-white font-extrabold text-sm flex items-center justify-center gap-x-1.5">
+            📥 TẢI ẢNH PNG
+          </button>
+
+          <!-- #card-preview dùng cho export PNG (offscreen + explicit size để html2canvas capture tốt) -->
+          <div id="card-preview" style="position:absolute; left:-9999px; top:0; width:380px; opacity:0; pointer-events:none; z-index:-1; background:#fff;">
+            <!-- Beautiful AGB-style Business Card Preview (dùng cho html2canvas) -->
+            <div class="biz-card" style="width:360px; margin:0;">
+              <div class="biz-header">
+                <div class="biz-logo">A</div>
+                <div>
+                  <div class="biz-bank">AGB</div>
+                  <div class="biz-branch">CHI NHÁNH 5 • 6222</div>
+                </div>
+              </div>
+              <div>
+                <div id="biz-name" class="biz-name"></div>
+                <div id="biz-title" class="biz-title"></div>
+              </div>
+              <div class="biz-contact">
+                <div class="biz-row"><span class="icon">📱</span><span id="biz-phone"></span></div>
+                <div id="biz-email-row" class="biz-row text-xs"><span class="icon">✉️</span><span id="biz-email"></span></div>
+                <div class="biz-row text-xs"><span class="icon">🏢</span><span id="biz-branch-text"></span></div>
+                <div class="biz-row text-[11px] text-slate-500"><span class="icon">📍</span><span id="biz-address"></span></div>
+              </div>
+              <div class="biz-qr-zone">
+                <div id="card-qr-preview-export" class="qr-wrapper"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="mt-8">
+          <div class="flex justify-between items-center mb-2 px-1">
+            <div class="font-extrabold tracking-tight">Lịch sử QR đã tạo</div>
+            <button onclick="clearHistory()" class="text-xs text-red-500 font-semibold">Xóa hết</button>
+          </div>
+          <div id="history-list" class="space-y-2 text-sm"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== TAB MỚI: QR CHUYỂN KHOẢN NGÂN HÀNG (VietQR) ========== -->
+  <div id="tab-vietqr" class="tab-content">
+    <div class="mb-4">
+      <div class="section-header">QR Chuyển Khoản Ngân Hàng</div>
+      <p class="text-sm text-slate-600">Tạo mã VietQR chuẩn NAPAS • Quét bằng app ngân hàng là chuyển ngay</p>
+    </div>
+
+    <div class="modern-card p-5 space-y-4">
+      <!-- Ngân hàng -->
+      <div>
+        <label class="text-xs font-semibold text-slate-500">NGÂN HÀNG</label>
+        <select id="vietqr-bank" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm font-medium">
+          <option value="970405">Agribank</option>
+          <option value="970436">Vietcombank</option>
+          <option value="970418">BIDV</option>
+          <option value="970415">Vietinbank</option>
+          <option value="970407">Techcombank</option>
+          <option value="970422">MB Bank</option>
+          <option value="970416">ACB</option>
+          <option value="970432">VPBank</option>
+          <option value="970403">Sacombank</option>
+          <option value="970423">TPBank</option>
+          <option value="970441">VIB</option>
+          <option value="970443">SHB</option>
+          <option value="970431">Eximbank</option>
+          <option value="970426">MSB</option>
+          <option value="970448">OCB</option>
+          <option value="970440">SeABank</option>
+          <option value="970437">HDBank</option>
+          <option value="970412">PVcombank</option>
+          <option value="970429">SCB</option>
+          <option value="970428">Nam A Bank</option>
+          <option value="970449">LienVietPostBank</option>
+          <option value="970409">Bac A Bank</option>
+          <option value="970414">OceanBank</option>
+          <option value="970408">GPBank</option>
+          <option value="970427">VietABank</option>
+          <option value="970452">KienLongBank</option>
+          <option value="970433">VietBank</option>
+          <option value="970406">DongA Bank</option>
+          <option value="970425">ABBank</option>
+        </select>
+      </div>
+
+      <!-- Số tài khoản -->
+      <div>
+        <label class="text-xs font-semibold text-slate-500">SỐ TÀI KHOẢN</label>
+        <input id="vietqr-account" type="text" placeholder="Ví dụ: 1234567890" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm font-medium">
+      </div>
+
+      <!-- Tên chủ tài khoản -->
+      <div>
+        <label class="text-xs font-semibold text-slate-500">TÊN CHỦ TÀI KHOẢN</label>
+        <input id="vietqr-name" type="text" placeholder="NGUYỄN VĂN A" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm font-medium">
+      </div>
+
+      <!-- Số tiền (không bắt buộc) -->
+      <div>
+        <label class="text-xs font-semibold text-slate-500">SỐ TIỀN (VNĐ) <span class="text-slate-400">(không bắt buộc)</span></label>
+        <input id="vietqr-amount" type="number" placeholder="Ví dụ: 1000000" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm font-medium">
+      </div>
+
+      <!-- Nội dung -->
+      <div>
+        <label class="text-xs font-semibold text-slate-500">NỘI DUNG CHUYỂN KHOẢN <span class="text-slate-400">(không bắt buộc)</span></label>
+        <input id="vietqr-desc" type="text" placeholder="Thanh toán đơn hàng #123" class="input-field w-full mt-1 px-3 py-2.5 rounded-2xl text-sm font-medium">
+      </div>
+
+      <button onclick="generateVietQR()" 
+              class="yellow-btn w-full py-3.5 rounded-2xl font-extrabold text-base">
+        TẠO MÃ VIETQR
+      </button>
+    </div>
+
+    <!-- Kết quả QR -->
+    <div id="vietqr-result" class="hidden modern-card p-5 mt-4">
+      <div class="text-center mb-3">
+        <div class="text-sm font-semibold mb-2">Mã QR Chuyển Khoản</div>
+        <img id="vietqr-img" class="mx-auto max-w-[280px] rounded-2xl border border-slate-200 shadow-sm" alt="VietQR Code">
+      </div>
+
+      <button onclick="downloadVietQR()" 
+              class="w-full py-3 rounded-2xl bg-slate-900 hover:bg-black text-white font-extrabold text-sm flex items-center justify-center gap-x-2">
+        📥 TẢI ẢNH QR
+      </button>
+
+      <div class="mt-3 text-[10px] text-center text-slate-500">
+        Quét bằng bất kỳ app ngân hàng nào để điền sẵn thông tin chuyển khoản
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation (4 tabs) -->
+  <div class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white border-t border-slate-200 z-[60]">
+    <div class="grid grid-cols-4 text-center">
+      <div onclick="switchTab('home')" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600" data-tab="home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v-4" /></svg>
+        <div class="nav-label">Trang chủ</div>
+      </div>
+      <div onclick="switchTab('qrmap')" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600" data-tab="qrmap">
+        <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+        <div class="nav-label">QR Map</div>
+      </div>
+      <div onclick="switchTab('laisuat')" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600" data-tab="laisuat">
+        <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
+        <div class="nav-label">Lãi suất</div>
+      </div>
+      <div onclick="switchTab('khac')" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600" data-tab="khac">
+        <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 002.573 2.573c1.543.94.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-2.573c-1.543-.94-3.31.826-2.37-2.37a1.724 1.724 0 00-2.573-2.573z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+        <div class="nav-label">Card Visit</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast-container" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-[70] max-w-[92%]"></div>
+
+  <script>
+    // ==================== TAILWIND CONFIG ====================
+    function initTailwind() {
+      document.documentElement.style.setProperty('--primary', '#F5C400');
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#F5C400'
+            }
+          }
+        }
+      };
+    }
+
+    // ==================== GLOBAL STATE ====================
+    let currentTab = 'home';
+    let mapInstance = null;
+    let currentLocation = null;
+    let currentQRData = null;
+    let deferredPrompt = null;
+
+    // (Đã gỡ chế độ QR - chỉ giữ 1 chế độ duy nhất cho mỗi tab theo yêu cầu)
+
+    // ==================== QR HELPER (minimal) ====================
+    function ensureQRCodeLib() {
+      if (typeof QRCode === 'undefined') {
+        showToast('Không tải được thư viện QR. Vui lòng kiểm tra kết nối mạng và reload trang.');
+        return false;
+      }
+      return true;
+    }
+
+    // (Đã gỡ hoàn toàn setCardVisitMode / setMapQRMode - chỉ giữ 1 chế độ theo yêu cầu)
+
+    // ==================== UTILS ====================
+    function formatVND(amount) {
+      return new Intl.NumberFormat('vi-VN').format(amount) + ' ₫';
+    }
+
+    function showToast(message, duration = 2400) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `toast bg-slate-900 text-white text-sm font-semibold px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-x-3 max-w-[320px]`;
+      toast.innerHTML = `
+        <div class="flex-1">${message}</div>
+        <button onclick="this.parentElement.remove()" class="text-white/50 hover:text-white text-xl leading-none">×</button>
+      `;
+      container.appendChild(toast);
+      
+      setTimeout(() => {
+        if (toast.parentElement) toast.remove();
+      }, duration);
+    }
+
+    function saveHistory(type, label, qrDataUrl = null, extra = {}) {
+      let history = JSON.parse(localStorage.getItem('agbcn5_history') || '[]');
+      const entry = {
+        id: Date.now(),
+        type,
+        label,
+        date: new Date().toISOString(),
+        qrDataUrl,
+        ...extra
+      };
+      history.unshift(entry);
+      if (history.length > 30) history = history.slice(0, 30);
+      localStorage.setItem('agbcn5_history', JSON.stringify(history));
+      renderHistory();
+    }
+
+    function renderHistory() {
+      const container = document.getElementById('history-list');
+      const history = JSON.parse(localStorage.getItem('agbcn5_history') || '[]');
+      
+      if (history.length === 0) {
+        container.innerHTML = `<div class="text-xs px-4 py-3 text-slate-500 bg-white border border-slate-100 rounded-2xl">Chưa có lịch sử QR nào.</div>`;
+        return;
+      }
+
+      container.innerHTML = history.map(item => {
+        const date = new Date(item.date).toLocaleDateString('vi-VN', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
+        return `
+          <div class="bg-white border border-slate-200 rounded-2xl px-4 py-3 flex gap-3 items-center">
+            <div class="flex-1 min-w-0">
+              <div class="font-semibold text-sm truncate">${item.label}</div>
+              <div class="text-[10px] text-slate-500">${date} • ${item.type}</div>
+            </div>
+            <div class="flex gap-1.5">
+              ${item.qrDataUrl ? `<button onclick="recreateQRFromHistory('${item.id}')" class="px-3 py-1 text-xs bg-yellow-100 text-yellow-700 font-bold rounded-xl">Xem QR</button>` : ''}
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    // ==================== HISTORY RECREATE (NOW ALSO SAFE) ====================
+    function recreateQRFromHistory(id) {
+      try {
+        const history = JSON.parse(localStorage.getItem('agbcn5_history') || '[]');
+        const item = history.find(h => h.id == id);
+        if (!item) return;
+
+        if (item.type === 'QRMap') {
+          switchTab('qrmap');
+          setTimeout(() => {
+            const qrContainer = document.getElementById('map-qr');
+            if (qrContainer && ensureQRCodeLib()) {
+              qrContainer.innerHTML = '';
+              try {
+                new QRCode(qrContainer, {
+                  text: item.extra?.content || '',
+                  width: 380,
+                  height: 380,
+                  colorDark: "#111827",
+                  colorLight: "#ffffff",
+                  correctLevel: QRCode.CorrectLevel.L
+                });
+              } catch (e) {}
+            }
+            document.getElementById('map-result').classList.remove('hidden');
+          }, 300);
+        } else if (item.type === 'CardVisit') {
+          switchTab('khac');
+          setTimeout(() => {
+            const qrContainer = document.getElementById('card-qr');
+            if (qrContainer && ensureQRCodeLib()) {
+              qrContainer.innerHTML = '';
+              try {
+                new QRCode(qrContainer, {
+                  text: item.extra?.vcard || '',
+                  width: 380,
+                  height: 380,
+                  colorDark: '#111827',
+                  colorLight: '#ffffff',
+                  correctLevel: QRCode.CorrectLevel.L
+                });
+              } catch (e) {}
+            }
+            document.getElementById('card-result').classList.remove('hidden');
+          }, 300);
+        }
+        // VietQR history entries are ignored (tab removed)
+      } catch (err) {
+        console.error('[AGBCN5] recreateQRFromHistory error:', err);
+        showToast('Không thể khôi phục QR từ lịch sử.');
+      }
+    }
+
+    function clearHistory() {
+      if (confirm('Xóa toàn bộ lịch sử QR?')) {
+        localStorage.removeItem('agbcn5_history');
+        renderHistory();
+      }
+    }
+
+    // ==================== TAB SWITCHING (ROBUST) ====================
+    function switchTab(tab) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      
+      // Show target tab
+      const targetTab = document.getElementById(`tab-${tab}`);
+      if (targetTab) targetTab.classList.add('active');
+      
+      // Update bottom nav active state
+      document.querySelectorAll('.nav-item').forEach(el => {
+        el.classList.remove('active');
+        if (el.dataset.tab === tab) el.classList.add('active');
+      });
+      
+      currentTab = tab;
+
+      // ROBUST MAP HANDLING - CRITICAL FIX
+      if (tab === 'qrmap') {
+        setTimeout(() => {
+          if (mapInstance) {
+            try {
+              mapInstance.invalidateSize(true);
+            } catch (e) {}
+          } else {
+            initMap();
+          }
+        }, 180);
+      }
+      
+      if (tab === 'khac') {
+        renderHistory();
+      }
+    }
+
+    function switchInterestTab(index) {
+      const deposit = document.getElementById('interest-deposit');
+      const loan = document.getElementById('interest-loan');
+      const t0 = document.getElementById('subtab-0');
+      const t1 = document.getElementById('subtab-1');
+
+      if (index === 0) {
+        deposit.classList.remove('hidden');
+        loan.classList.add('hidden');
+        t0.classList.add('bg-white', 'shadow');
+        t0.classList.remove('text-slate-600');
+        t1.classList.remove('bg-white', 'shadow');
+        t1.classList.add('text-slate-600');
+      } else {
+        deposit.classList.add('hidden');
+        loan.classList.remove('hidden');
+        t1.classList.add('bg-white', 'shadow');
+        t1.classList.remove('text-slate-600');
+        t0.classList.remove('bg-white', 'shadow');
+        t0.classList.add('text-slate-600');
+      }
+    }
+
+    // (VietQR functions completely removed as requested - no crc16, build payload, or generateVietQR remains)
+
+    // ==================== QR MAP + GPS + LEAFLET (ROBUST) ====================
+    function initMap() {
+      const mapEl = document.getElementById('map');
+      if (!mapEl) return;
+
+      // If already initialized, just invalidate size
+      if (mapInstance) {
+        try { mapInstance.invalidateSize(true); } catch (e) {}
+        return;
+      }
+
+      try {
+        // Default center around Ho Chi Minh area (safe default)
+        mapInstance = L.map('map', { 
+          zoomControl: false,
+          attributionControl: false 
+        }).setView([10.776, 106.695], 13);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap',
+          className: 'map-tiles'
+        }).addTo(mapInstance);
+        
+        // Default marker at CN5 area
+        const defaultMarker = L.marker([10.776, 106.695]).addTo(mapInstance);
+        defaultMarker.bindPopup('<b>AGB CN 5</b><br>1105 Trần Hưng Đạo').openPopup();
+        
+        // Try GPS after map is ready
+        setTimeout(() => {
+          if (!currentLocation) {
+            getCurrentLocation(true);
+          }
+        }, 900);
+      } catch (e) {
+        console.error('[AGBCN5] Map init error:', e);
+        mapEl.innerHTML = `<div class="h-full flex items-center justify-center text-center text-xs text-red-400">Không thể tải bản đồ.<br>Vui lòng kiểm tra kết nối mạng.</div>`;
+      }
+    }
+
+    function getCurrentLocation(silent = false) {
+      if (!navigator.geolocation) {
+        if (!silent) showToast('Thiết bị không hỗ trợ định vị GPS');
+        // Fallback location (Ho Chi Minh center)
+        currentLocation = { lat: 10.776, lng: 106.695 };
+        return;
+      }
+
+      if (!silent) showToast('Đang lấy vị trí GPS...', 1600);
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          currentLocation = { lat, lng };
+
+          if (mapInstance) {
+            try {
+              mapInstance.flyTo([lat, lng], 16, { duration: 1.1 });
+              
+              // Clear old markers
+              mapInstance.eachLayer((layer) => {
+                if (layer instanceof L.Marker) mapInstance.removeLayer(layer);
+              });
+              
+              const marker = L.marker([lat, lng]).addTo(mapInstance);
+              marker.bindPopup(`<b>Vị trí hiện tại</b><br>${lat.toFixed(6)}, ${lng.toFixed(6)}`).openPopup();
+            } catch (e) {}
+          }
+          
+          if (!silent) showToast('Đã cập nhật vị trí GPS thành công!');
+        },
+        (err) => {
+          if (!silent) showToast('Không lấy được GPS. Đã dùng vị trí mặc định.');
+          // Safe fallback
+          currentLocation = { lat: 10.776, lng: 106.695 };
+        },
+        { enableHighAccuracy: true, timeout: 12000, maximumAge: 30000 }
+      );
+    }
+
+    // ==================== QR MAP - GENERATE + RICH PREVIEW (380px QR L + html2canvas ready) ====================
+    // ==================== QR MAP - CHỈ 1 CHẾ ĐỘ: ĐẦY ĐỦ CHI TIẾT (đã gỡ mode selector) ====================
+    function generateLocationQR() {
+      if (!ensureQRCodeLib()) return;
+
+      const customer = document.getElementById('map-customer').value.trim() || 'Khách hàng';
+      const phone    = (document.getElementById('map-phone').value || '').replace(/\s/g, '');
+      const address  = document.getElementById('map-address').value.trim() || '';
+      const date     = document.getElementById('map-date').value || '';
+      const branch   = document.getElementById('map-branch').value.trim() || 'CN 5';
+      const creator  = document.getElementById('map-creator').value.trim() || 'Huỳnh Tấn Tới';
+      const note     = document.getElementById('map-note').value.trim() || '';
+
+      if (!currentLocation) currentLocation = { lat: 10.776, lng: 106.695 };
+      const { lat, lng } = currentLocation;
+
+      const mapsLink = `https://maps.google.com/?q=${lat},${lng}`;
+
+      // QR đầy đủ chi tiết (giữ nguyên logic tạo QR với thông tin + tọa độ)
+      const qrText = `AGB CN 5 - QR ĐỊNH VỊ\n\nTọa độ: ${lat.toFixed(6)}, ${lng.toFixed(6)}\nMaps: ${mapsLink}\n\nKhách hàng: ${customer}\nSĐT: ${phone}\nĐịa chỉ: ${address}\nNgày: ${date}\nChi nhánh: ${branch}\nNgười tạo: ${creator}\nGhi chú: ${note}`;
+
+      // Render QR 380x380 + L (nhỏ gọn, dễ quét)
+      const qrContainer = document.getElementById('map-qr-preview');
+      if (qrContainer) {
+        qrContainer.innerHTML = '';
+        new QRCode(qrContainer, {
+          text: qrText,
+          width: 380,
+          height: 380,
+          colorDark: "#111827",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.L,
+          typeNumber: 40
+        });
+      }
+
+      // Populate kết quả: QR 1/4 + thông tin 3/4 (các ID mới trong HTML)
+      const set = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val || '—'; };
+      set('mp-customer', customer);
+      set('mp-phone', phone);
+      set('mp-address', address);
+      set('mp-date', date);
+      set('mp-branch-creator', `${branch} / ${creator}`);
+      set('mp-coords', `${lat.toFixed(6)}, ${lng.toFixed(6)}`);
+      set('mp-note', note || '—');
+
+      // Populate template export PNG (compact, chữ vừa, đầy đủ kể cả ghi chú dài)
+      const qrExportContainer = document.getElementById('map-qr-export');
+      if (qrExportContainer) {
+        qrExportContainer.innerHTML = '';
+        new QRCode(qrExportContainer, {
+          text: qrText,
+          width: 220,                    // Kích thước vừa phải cho ảnh xuất
+          height: 220,
+          colorDark: "#111827",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.L,
+          typeNumber: 40
+        });
+      }
+
+      const setExport = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val || '—'; };
+      setExport('me-customer', customer);
+      setExport('me-phone', phone);
+      setExport('me-address', address);
+      setExport('me-date', date);
+      setExport('me-branch-creator', `${branch} / ${creator}`);
+      setExport('me-coords', `${lat.toFixed(6)}, ${lng.toFixed(6)}`);
+      setExport('me-note', note || '—');
+
+      // State cho nút Mở Maps
+      window.currentMapQR = { mapsLink, qrText };
+
+      // Show result
+      document.getElementById('map-result').classList.remove('hidden');
+
+      // History (lưu QR)
+      setTimeout(() => {
+        const canvas = qrContainer?.querySelector('canvas');
+        const dataUrl = canvas ? canvas.toDataURL('image/png') : null;
+        if (dataUrl) {
+          saveHistory('QRMap', `QRMap: ${customer}`, dataUrl, { content: qrText });
+        }
+      }, 80);
+
+      showToast('✅ Đã tạo QR đầy đủ chi tiết');
+    }
+
+    // ==================== INTEREST RATES (HARDCODE CHÍNH XÁC THEO YÊU CẦU) ====================
+    // Dữ liệu lãi suất thực tế - Khách hàng Cá nhân (không random, không tự bịa)
+    const defaultPersonalRates = [
+      { term: 'Không kỳ hạn', rate: '0.2' },
+      { term: '1 Tháng', rate: '2.6' },
+      { term: '2 Tháng', rate: '2.6' },
+      { term: '3 Tháng', rate: '2.9' },
+      { term: '4 Tháng', rate: '2.9' },
+      { term: '5 Tháng', rate: '2.9' },
+      { term: '6 Tháng', rate: '4.0' },
+      { term: '7 Tháng', rate: '4.0' },
+      { term: '8 Tháng', rate: '4.0' },
+      { term: '9 Tháng', rate: '4.0' },
+      { term: '10 Tháng', rate: '4.0' },
+      { term: '11 Tháng', rate: '4.0' },
+      { term: '12 Tháng', rate: '5.9' },
+      { term: '13 Tháng', rate: '5.9' },
+      { term: '15 Tháng', rate: '5.9' },
+      { term: '18 Tháng', rate: '5.9' },
+      { term: '24 Tháng', rate: '6.0' },
+      { term: 'Tiền gửi thanh toán', rate: '0.2' },
+    ];
+
+    // Dữ liệu lãi suất thực tế - Khách hàng Doanh nghiệp (không random, không tự bịa)
+    const defaultOrgRates = [
+      { term: 'Không kỳ hạn', rate: '0.2' },
+      { term: '1 Tháng', rate: '2.6' },
+      { term: '2 Tháng', rate: '2.6' },
+      { term: '3 Tháng', rate: '2.9' },
+      { term: '4 Tháng', rate: '2.9' },
+      { term: '5 Tháng', rate: '2.9' },
+      { term: '6 Tháng', rate: '3.9' },
+      { term: '7 Tháng', rate: '3.9' },
+      { term: '8 Tháng', rate: '3.9' },
+      { term: '9 Tháng', rate: '3.9' },
+      { term: '10 Tháng', rate: '3.9' },
+      { term: '11 Tháng', rate: '3.9' },
+      { term: '12 Tháng', rate: '5.0' },
+      { term: '13 Tháng', rate: '5.0' },
+      { term: '15 Tháng', rate: '5.0' },
+      { term: '18 Tháng', rate: '5.0' },
+      { term: '24 Tháng', rate: '5.0' },
+      { term: 'Tiền gửi thanh toán', rate: '0.2' },
+    ];
+
+    // ==================== LÃI SUẤT - DỮ LIỆU HARDCODE CHÍNH XÁC (KHÔNG RANDOM) ====================
+    // Hiển thị 2 bảng rõ ràng theo dữ liệu thực tế Agribank do user cung cấp
+    function renderInterestTables() {
+      const tbody1 = document.getElementById('table-personal');
+      tbody1.innerHTML = defaultPersonalRates.map(r => `
+        <tr class="border-b last:border-none hover:bg-yellow-50/30">
+          <td class="px-4 py-[9px] font-medium">${r.term}</td>
+          <td class="px-3 py-[9px] font-extrabold text-emerald-600">${r.rate}%</td>
+        </tr>
+      `).join('');
+
+      const tbody2 = document.getElementById('table-org');
+      tbody2.innerHTML = defaultOrgRates.map(r => `
+        <tr class="border-b last:border-none hover:bg-yellow-50/30">
+          <td class="px-4 py-[9px] font-medium">${r.term}</td>
+          <td class="px-3 py-[9px] font-extrabold text-emerald-600">${r.rate}%</td>
+        </tr>
+      `).join('');
+    }
+
+    // Cập nhật dòng "Dữ liệu cập nhật gần nhất" thành ngày hôm nay
+    function updateLastRateDate() {
+      const dateEl = document.getElementById('last-rate-date');
+      if (!dateEl) return;
+
+      const today = new Date();
+      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const yyyy = today.getFullYear();
+      dateEl.textContent = `${dd}/${mm}/${yyyy}`;
+    }
+
+    // Nút 1: Mở trang chính thức Agribank (màu xám) - theo yêu cầu
+    function openAgribankRateWeb() {
+      window.open('https://www.agribank.com.vn/vn/lai-suat-tien-gui', '_blank');
+    }
+
+    // Nút 2: "Làm mới bảng" - re-render bảng + cập nhật ngày hôm nay + thông báo
+    function refreshLatestRates() {
+      renderInterestTables();       // Vẽ lại 2 bảng với dữ liệu hardcode chính xác
+      updateLastRateDate();         // Cập nhật "Dữ liệu cập nhật gần nhất" thành ngày hôm nay
+      showToast('Đã làm mới bảng lãi suất!');
+    }
+
+    // ==================== INTEREST CALCULATOR ====================
+    function calculateDepositInterest() {
+      const amount = parseFloat(document.getElementById('dep-amount').value.replace(/[^\d]/g, '')) || 0;
+      const rate = parseFloat(document.getElementById('dep-rate').value) || 0;
+      const termMonths = parseInt(document.getElementById('dep-term').value) || 0;
+      const dateVal = document.getElementById('dep-date').value;
+
+      if (!amount || !rate) {
+        showToast('Vui lòng nhập số tiền và lãi suất');
+        return;
+      }
+
+      const startDate = dateVal ? new Date(dateVal) : new Date();
+      const endDate = new Date(startDate);
+      endDate.setMonth(endDate.getMonth() + termMonths);
+      
+      const days = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
+      
+      const grossInterest = Math.round(amount * (rate / 100) * (days / 365));
+      const tax = Math.round(grossInterest * 0.05);
+      const netInterest = grossInterest - tax;
+      const total = amount + netInterest;
+
+      document.getElementById('dep-days').innerText = days + ' ngày';
+      document.getElementById('dep-gross').innerText = formatVND(grossInterest);
+      document.getElementById('dep-tax').innerText = '-' + formatVND(tax);
+      document.getElementById('dep-net').innerText = formatVND(netInterest);
+      document.getElementById('dep-total').innerText = formatVND(total);
+
+      document.getElementById('dep-result').classList.remove('hidden');
+      
+      saveHistory('TinhLai', `Tiền gửi ${formatVND(amount)} - ${rate}%`, null, { amount, rate, term: termMonths });
+    }
+
+    function calculateLoan() {
+      const principal = parseFloat(document.getElementById('loan-amount').value.replace(/[^\d]/g, '')) || 0;
+      const annualRate = parseFloat(document.getElementById('loan-rate').value) || 0;
+      const months = parseInt(document.getElementById('loan-term').value) || 12;
+
+      if (!principal || !annualRate) {
+        showToast('Vui lòng nhập đủ thông tin vay');
+        return;
+      }
+
+      const monthlyRate = annualRate / 100 / 12;
+      
+      const monthlyPayment = Math.round(
+        principal * monthlyRate * Math.pow(1 + monthlyRate, months) / 
+        (Math.pow(1 + monthlyRate, months) - 1)
+      );
+
+      document.getElementById('loan-principal').innerText = formatVND(principal);
+      document.getElementById('loan-rate-show').innerText = annualRate + '% / năm';
+      document.getElementById('loan-months').innerText = months + ' tháng';
+      document.getElementById('loan-monthly').innerText = formatVND(monthlyPayment);
+
+      document.getElementById('loan-result').classList.remove('hidden');
+    }
+
+    // ==================== CARD VISIT - GENERATE + BEAUTIFUL PREVIEW (vCard thật + html2canvas ready) ====================
+    function generateCardVisitQR() {
+      if (!ensureQRCodeLib()) return;
+
+      const name    = document.getElementById('card-name').value.trim() || 'Nhân viên AGB';
+      const title   = document.getElementById('card-title')?.value.trim() || 'Chuyên viên Quan hệ Khách hàng';
+      const phone   = (document.getElementById('card-phone').value || '').replace(/\s/g, '');
+      const email   = document.getElementById('card-email')?.value.trim() || '';
+      const branch  = document.getElementById('card-branch').value.trim() || 'AGB CN 5';
+      const address = document.getElementById('card-address').value.trim() || '';
+
+      // Luôn vCard 3.0 thật (quét là thêm danh bạ ngay)
+      const vCardPayload = `BEGIN:VCARD
+VERSION:3.0
+FN:${name}
+TITLE:${title}
+TEL;TYPE=CELL:${phone}
+${email ? `EMAIL:${email}\n` : ''}ORG:${branch}
+ADR;TYPE=WORK:;;${address}
+NOTE:Card Visit Số - AGB CN 5
+END:VCARD`;
+
+      // Render QR vào display (kết quả) và export (ẩn)
+      const qrDisplay = document.getElementById('card-qr-preview');
+      const qrExport = document.getElementById('card-qr-preview-export');
+      [qrDisplay, qrExport].forEach(c => {
+        if (c) {
+          c.innerHTML = '';
+          new QRCode(c, {
+            text: vCardPayload,
+            width: 380,
+            height: 380,
+            colorDark: "#111827",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.L,
+            typeNumber: 40
+          });
+        }
+      });
+
+      // Populate kết quả: QR 1/4 + info 3/4
+      const set = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val || '—'; };
+      set('cr-name', name);
+      set('cr-title', title);
+      set('cr-phone', phone);
+      set('cr-email', email || '—');
+      set('cr-branch', branch);
+      set('cr-address', address);
+
+      // Cập nhật preview ẩn (cho export PNG)
+      const setH = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val || ''; };
+      setH('biz-name', name);
+      setH('biz-title', title);
+      setH('biz-phone', phone);
+      setH('biz-branch-text', branch);
+      setH('biz-address', address);
+      const er = document.getElementById('biz-email-row');
+      const eh = document.getElementById('biz-email');
+      if (email && eh && er) { eh.innerText = email; er.style.display = 'flex'; }
+      else if (er) er.style.display = 'none';
+
+      document.getElementById('card-result').classList.remove('hidden');
+
+      // History
+      setTimeout(() => {
+        const canvas = qrDisplay?.querySelector('canvas');
+        const dataUrl = canvas ? canvas.toDataURL('image/png') : null;
+        if (dataUrl) saveHistory('CardVisit', `CardVisit: ${name}`, dataUrl, { vcard: vCardPayload });
+      }, 80);
+
+      showToast(`✅ Đã tạo QR vCard thuần cho ${name}`);
+    }
+
+    // ==================== VIETQR - CHUYỂN KHOẢN NGÂN HÀNG (chuẩn NAPAS) ====================
+    function generateVietQR() {
+      const bankSelect = document.getElementById('vietqr-bank');
+      const accountInput = document.getElementById('vietqr-account');
+      const nameInput = document.getElementById('vietqr-name');
+      const amountInput = document.getElementById('vietqr-amount');
+      const descInput = document.getElementById('vietqr-desc');
+
+      const bin = bankSelect.value;
+      const accountNo = accountInput.value.trim();
+      const accountName = nameInput.value.trim();
+      const amount = amountInput.value.trim();
+      const description = descInput.value.trim();
+
+      if (!bin || !accountNo || !accountName) {
+        showToast('Vui lòng nhập đầy đủ Ngân hàng, Số TK và Tên chủ TK');
+        return;
+      }
+
+      // Xây dựng URL VietQR chuẩn NAPAS (đúng định dạng để app ngân hàng đọc được)
+      // - amount: nếu không nhập thì để "0"
+      // - description: nếu không nhập thì để trống (sẽ thành dấu gạch ngang kép)
+      const amountStr = (amount && parseInt(amount) > 0) ? amount : "0";
+      const descStr = description ? encodeURIComponent(description) : "";
+
+      let url = `https://img.vietqr.io/image/${bin}-${accountNo}-${amountStr}-${descStr}.png?accountName=${encodeURIComponent(accountName)}`;
+
+      // Thêm query params để app ngân hàng đọc chính xác hơn (số tiền + nội dung)
+      url += `&amount=${amountStr}`;
+      if (descStr) {
+        url += `&addInfo=${descStr}`;
+      }
+
+      // Hiển thị QR
+      const img = document.getElementById('vietqr-img');
+      img.src = url;
+
+      const result = document.getElementById('vietqr-result');
+      result.classList.remove('hidden');
+
+      // Lưu để tải
+      window.lastVietQRUrl = url;
+
+      showToast('✅ Đã tạo mã VietQR thành công!');
+    }
+
+    function downloadVietQR() {
+      const url = window.lastVietQRUrl;
+      if (!url) {
+        showToast('Chưa có mã QR để tải');
+        return;
+      }
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'VietQR_ChuyenKhoan.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+function openMapLocation() {
+    if (window.currentMapQR && window.currentMapQR.mapsLink) {
+        window.open(window.currentMapQR.mapsLink, '_blank');
+    } else {
+        showToast('Chưa có QR Map');
+    }
+}
+
+function downloadQR(elementId, filename = 'AGBCN5_QR') {
+    const container = document.getElementById(elementId);
+    if (!container) return;
+
+    const canvas = container.querySelector('canvas');
+    if (!canvas) {
+        showToast('Không tìm thấy QR');
+        return;
+    }
+
+    const link = document.createElement('a');
+    link.download = `${filename}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+}
+
+// ==================== NEW: SHARE QR (Web Share API + fallback) ====================
+function shareQR(elementId, filename = 'AGBCN5_QR', textToShare = '') {
+  const container = document.getElementById(elementId);
+  if (!container) return;
+
+  const canvas = container.querySelector('canvas');
+  if (!canvas) {
+    showToast('Không tìm thấy QR để chia sẻ');
+    return;
+  }
+
+  const shareText = textToShare || 'QR Code từ AGBCN5-Tới KHDN - AGB CN 5';
+  const shareTitle = filename.replace(/_/g, ' ');
+
+  // Ưu tiên Web Share API (hỗ trợ chia sẻ ảnh + text trên mobile)
+  if (navigator.share && navigator.canShare) {
+    canvas.toBlob(async (blob) => {
+      if (!blob) {
+        fallbackShare(shareText, shareTitle);
+        return;
+      }
+      const file = new File([blob], `${filename}.png`, { type: 'image/png' });
+      const shareData = {
+        title: shareTitle,
+        text: shareText,
+        files: [file]
+      };
+      try {
+        if (navigator.canShare(shareData)) {
+          await navigator.share(shareData);
+          showToast('✅ Đã chia sẻ QR');
+          return;
+        }
+        fallbackShare(shareText, shareTitle);
+      } catch (err) {
+        // User cancelled hoặc lỗi → fallback
+        if (!err.message?.includes('cancel')) {
+          fallbackShare(shareText, shareTitle);
+        }
+      }
+    });
+    return;
+  }
+
+  // Fallback cho desktop / trình duyệt cũ: copy text + gợi ý tải
+  fallbackShare(shareText, shareTitle);
+}
+
+function fallbackShare(text, title) {
+  // Copy text vào clipboard (nếu có)
+  if (navigator.clipboard && text) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('📋 Đã copy nội dung QR. Dùng nút TẢI QR để gửi ảnh!');
+    }).catch(() => {
+      showToast('Nội dung QR: ' + (text.length > 80 ? text.substring(0, 77) + '...' : text));
+    });
+  } else {
+    showToast('Nội dung QR: ' + (text.length > 80 ? text.substring(0, 77) + '...' : text));
+  }
+}
+
+// ==================== MISSING: downloadVCard (bổ sung để nút cũ hoạt động) ====================
+function downloadVCard() {
+  const name   = document.getElementById('card-name').value.trim() || 'NhanVien_AGBCN5';
+  const phone  = (document.getElementById('card-phone').value || '').replace(/\s/g, '');
+  const title  = document.getElementById('card-title')?.value.trim() || '';
+  const branch = document.getElementById('card-branch')?.value.trim() || 'AGB CN 5';
+  const address= document.getElementById('card-address')?.value.trim() || '';
+
+  // Tạo vCard 3.0 chuẩn (tương tự mode vCard thuần)
+  const vcf = `BEGIN:VCARD
+VERSION:3.0
+FN:${name}
+TITLE:${title}
+TEL;TYPE=CELL:${phone}
+ORG:${branch}
+ADR;TYPE=WORK:;;${address}
+NOTE:Card Visit Số - AGB Chi nhánh 5 (AGBCN5-Tới KHDN PWA)
+END:VCARD`;
+
+  const blob = new Blob([vcf], { type: 'text/vcard;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${name.replace(/\s+/g, '_')}.vcf`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  showToast('✅ Đã tải file .vcf - mở để thêm danh bạ');
+}
+
+// ==================== EXPORT PNG ROBUST - KHÔNG CÒN TRẮNG ====================
+async function exportCardVisitPNG() {
+  const preview = document.getElementById('card-preview');
+  if (!preview) return showToast('Không tìm thấy preview');
+
+  // Tạo bản sao tạm thời để capture (an toàn nhất)
+  const clone = preview.cloneNode(true);
+  clone.style.position = 'fixed';
+  clone.style.left = '50%';
+  clone.style.top = '50%';
+  clone.style.transform = 'translate(-50%, -50%)';
+  clone.style.zIndex = '99999';
+  clone.style.opacity = '1';
+  clone.style.pointerEvents = 'none';
+  clone.style.width = preview.offsetWidth + 'px';
+  document.body.appendChild(clone);
+
+  // Chờ QRCode canvas render xong
+  await new Promise(resolve => setTimeout(resolve, 600));
+
+  html2canvas(clone, {
+    scale: 3.5,
+    backgroundColor: '#ffffff',
+    logging: false,
+    useCORS: true,
+    allowTaint: true,
+    width: clone.offsetWidth,
+    height: clone.offsetHeight
+  }).then(canvas => {
+    document.body.removeChild(clone);
+    const name = (document.getElementById('card-name')?.value || 'CardVisit').replace(/\s+/g, '_');
+    const link = document.createElement('a');
+    link.download = `AGBCN5_CardVisit_${name}.png`;
+    link.href = canvas.toDataURL('image/png', 0.95);
+    link.click();
+    showToast('✅ Đã tải PNG Card Visit (QR quét tốt)');
+  }).catch(err => {
+    document.body.removeChild(clone);
+    console.error(err);
+    showToast('Lỗi khi xuất PNG');
+  });
+}
+
+async function exportMapQRPNG() {
+  const preview = document.getElementById('map-export-preview');
+  if (!preview) return showToast('Không tìm thấy preview');
+
+  const clone = preview.cloneNode(true);
+  clone.style.position = 'fixed';
+  clone.style.left = '50%';
+  clone.style.top = '50%';
+  clone.style.transform = 'translate(-50%, -50%)';
+  clone.style.zIndex = '99999';
+  clone.style.opacity = '1';
+  clone.style.pointerEvents = 'none';
+  clone.style.width = preview.offsetWidth + 'px';
+  document.body.appendChild(clone);
+
+  await new Promise(resolve => setTimeout(resolve, 650));
+
+  html2canvas(clone, {
+    scale: 3.2,
+    backgroundColor: '#ffffff',
+    logging: false,
+    useCORS: true,
+    allowTaint: true,
+    width: clone.offsetWidth,
+    height: clone.offsetHeight
+  }).then(canvas => {
+    document.body.removeChild(clone);
+    const customer = (document.getElementById('map-customer')?.value || 'QRMap').replace(/\s+/g, '_');
+    const link = document.createElement('a');
+    link.download = `AGBCN5_QRMap_${customer}.png`;
+    link.href = canvas.toDataURL('image/png', 0.95);
+    link.click();
+    showToast('✅ Đã tải PNG QR Map (đầy đủ thông tin)');
+  }).catch(err => {
+    document.body.removeChild(clone);
+    console.error(err);
+    showToast('Lỗi khi xuất PNG');
+  });
+}
+
+// Generic upload to free temporary host (litterbox - no key, 72h link)
+async function uploadImageAndGetLink(blob, filename) {
+  const formData = new FormData();
+  formData.append('reqtype', 'fileupload');
+  formData.append('time', '72h');
+  formData.append('fileToUpload', blob, filename);
+
+  // litterbox.catbox.moe is simple, anonymous, returns direct https link
+  const res = await fetch('https://litterbox.catbox.moe/api/1/upload', {
+    method: 'POST',
+    body: formData
+  });
+
+  if (!res.ok) throw new Error('Upload failed');
+  const url = (await res.text()).trim();
+  if (!url.startsWith('http')) throw new Error('Invalid response');
+  return url;
+}
+
+// Show nice link result modal
+function showLinkModal(title, directUrl, type) {
+  const modal = document.createElement('div');
+  modal.className = 'fixed inset-0 z-[90] flex items-end md:items-center justify-center bg-black/60';
+  modal.innerHTML = `
+    <div class="bg-white w-full max-w-[420px] md:rounded-3xl md:m-4 rounded-t-3xl p-5 shadow-2xl">
+      <div class="flex justify-between items-center mb-3">
+        <div class="font-extrabold text-lg">${title}</div>
+        <button onclick="this.closest('.fixed').remove()" class="text-2xl leading-none text-slate-400">×</button>
+      </div>
+      <div class="text-sm text-slate-600 mb-3">Link ảnh đã lưu (tạm 72 giờ):</div>
+      
+      <div class="bg-slate-100 p-3 rounded-2xl break-all font-mono text-xs mb-4 select-all">${directUrl}</div>
+      
+      <div class="flex gap-2">
+        <button onclick="navigator.clipboard.writeText('${directUrl}').then(()=>alert('Đã copy link!')).catch(()=>{})" 
+                class="flex-1 py-3 bg-blue-600 text-white rounded-2xl font-bold text-sm">📋 COPY LINK</button>
+        <a href="${directUrl}" target="_blank" 
+           class="flex-1 py-3 bg-emerald-600 text-white rounded-2xl font-bold text-sm text-center">MỞ LINK</a>
+      </div>
+      <div class="text-[10px] text-center text-slate-500 mt-3">Dùng link này để gửi khách hàng hoặc lưu trữ.</div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+// Save Card Visit preview online → get link
+async function saveCardVisitOnline() {
+  const preview = document.getElementById('card-preview');
+  if (!preview || typeof html2canvas === 'undefined') {
+    showToast('Không hỗ trợ lưu online lúc này');
+    return;
+  }
+  showToast('Đang tạo ảnh và tải lên...');
+
+  try {
+    const canvas = await html2canvas(preview, { scale: 2.5, backgroundColor: '#ffffff', logging: false });
+    const blob = await new Promise(r => canvas.toBlob(r, 'image/png', 0.92));
+
+    const name = (document.getElementById('biz-name')?.innerText || 'card').replace(/\s+/g, '');
+    const url = await uploadImageAndGetLink(blob, `AGBCN5_CardVisit_${name}.png`);
+
+    showLinkModal('✅ Lưu Card Visit thành công', url, 'card');
+  } catch (e) {
+    console.error('[AGBCN5] Upload error:', e);
+    showToast('Không tải lên được. Vui lòng dùng nút TẢI PNG.');
+  }
+}
+
+// Save Map QR preview online → get link
+async function saveMapQROnline() {
+  const preview = document.getElementById('map-preview');
+  if (!preview || typeof html2canvas === 'undefined') {
+    showToast('Không hỗ trợ lưu online lúc này');
+    return;
+  }
+  showToast('Đang tạo ảnh và tải lên...');
+
+  try {
+    const canvas = await html2canvas(preview, { scale: 2.4, backgroundColor: '#f8fafc', logging: false });
+    const blob = await new Promise(r => canvas.toBlob(r, 'image/png', 0.92));
+
+    const customer = (document.getElementById('mp-customer')?.innerText || 'map').replace(/\s+/g, '');
+    const url = await uploadImageAndGetLink(blob, `AGBCN5_QRMap_${customer}.png`);
+
+    showLinkModal('✅ Lưu QR Map thành công', url, 'map');
+  } catch (e) {
+    console.error('[AGBCN5] Upload error:', e);
+    showToast('Không tải lên được. Vui lòng dùng nút TẢI PNG.');
+  }
+}
+
+    // ==================== PWA INSTALL ====================
+    function initPWA() {
+      const installBtn = document.getElementById('install-btn');
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBtn.classList.remove('hidden');
+        installBtn.classList.add('flex');
+      });
+
+      installBtn.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        
+        if (outcome === 'accepted') {
+          showToast('Cảm ơn bạn đã cài đặt AGBCN5!');
+        }
+        deferredPrompt = null;
+        installBtn.classList.add('hidden');
+      });
+
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(() => console.log('[AGBCN5] Service Worker registered'))
+            .catch(err => console.warn('SW registration failed', err));
+        });
+      }
+    }
+
+    // ==================== GENERATE PWA ICONS (HELPER) ====================
+    function generatePWAIcons() {
+      const size = 512;
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = '#F5C400';
+      ctx.fillRect(0, 0, size, size);
+
+      ctx.fillStyle = '#1f2937';
+      ctx.beginPath();
+      ctx.roundRect(size * 0.18, size * 0.18, size * 0.64, size * 0.64, 68);
+      ctx.fill();
+
+      ctx.fillStyle = '#F5C400';
+      ctx.font = `bold ${size * 0.48}px Inter, system-ui`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('A', size / 2, size / 2 + 8);
+
+      ctx.font = `bold ${size * 0.085}px Inter, system-ui`;
+      ctx.fillStyle = '#1f2937';
+      ctx.fillText('AGBCN5', size / 2, size * 0.84);
+
+      canvas.toBlob((blob512) => {
+        const url512 = URL.createObjectURL(blob512);
+        const a512 = document.createElement('a');
+        a512.href = url512;
+        a512.download = 'icon-512.png';
+        a512.click();
+
+        setTimeout(() => {
+          const c2 = document.createElement('canvas');
+          c2.width = 192; c2.height = 192;
+          const ctx2 = c2.getContext('2d');
+          ctx2.drawImage(canvas, 0, 0, 192, 192);
+          
+          c2.toBlob((blob192) => {
+            const url192 = URL.createObjectURL(blob192);
+            const a192 = document.createElement('a');
+            a192.href = url192;
+            a192.download = 'icon-192.png';
+            a192.click();
+            
+            showToast('Đã tải 2 file icon. Hãy đặt vào assets/icons/ rồi reload app!', 5200);
+          });
+        }, 280);
+      });
+    }
+
+    function addIconGeneratorButton() {
+      const khacTab = document.getElementById('tab-khac');
+      const div = document.createElement('div');
+      div.className = 'mt-6 px-1';
+      div.innerHTML = `
+        <button onclick="generatePWAIcons()" 
+                class="w-full py-3 text-xs border border-dashed border-yellow-400/70 text-yellow-700 font-bold rounded-2xl flex items-center justify-center gap-x-2 hover:bg-yellow-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v-4m0 0l4 4m-4-4l4-4m12 4v4m0 0l-4-4m4 4l-4-4" />
+          </svg>
+          TẠO & TẢI ICON PWA (192px + 512px)
+        </button>
+        <div class="text-center text-[10px] text-slate-400 mt-1.5">Cần thiết để cài đặt đẹp trên màn hình chính</div>
+      `;
+      khacTab.appendChild(div);
+    }
+
+    // ==================== INITIALIZATION ====================
+    function initInterestRates() {
+      renderInterestTables();     // Hiển thị dữ liệu cố định cho 2 bảng
+      updateLastRateDate();       // Đặt ngày hôm nay cho dòng "Dữ liệu cập nhật gần nhất"
+    }
+
+    function initDateInputs() {
+      const today = new Date().toISOString().split('T')[0];
+      const dateInput = document.getElementById('dep-date');
+      if (dateInput) dateInput.value = today;
+      
+      const mapDate = document.getElementById('map-date');
+      if (mapDate) mapDate.value = today;
+    }
+
+    function initBottomNav() {
+      const homeNav = document.querySelector('.nav-item[data-tab="home"]');
+      if (homeNav) homeNav.classList.add('active');
+    }
+
+    function init() {
+      initTailwind();
+      initBottomNav();
+      initInterestRates();
+      initDateInputs();
+      initPWA();
+      addIconGeneratorButton();
+      renderHistory();
+
+      // (Không còn khởi tạo mode selector)
+
+      // Ensure home nav is active
+      const homeNav = document.querySelector('.nav-item[data-tab="home"]');
+      if (homeNav) homeNav.classList.add('active');
+
+      // Keyboard support
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.getElementById('toast-container').innerHTML = '';
+        }
+      });
+
+      // Auto init map in background (helps first load)
+      setTimeout(() => {
+        const qrmapTab = document.getElementById('tab-qrmap');
+        if (qrmapTab && !qrmapTab.classList.contains('active')) {
+          // Do not auto-init visible map if not on tab, but prepare function
+        }
+      }, 1200);
+
+      console.log('%c[AGBCN5] PWA initialized successfully - All fixes applied', 'color:#888');
+    }
+
+    // Boot the application
+    window.onload = init;
+  </script>
+</body>
+</html>

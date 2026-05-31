@@ -1,0 +1,1 @@
+Place icon-192.png and icon-512.png here.\r\n\r\nOpen the app (index.html) → Tab Khác → Click 'TẠO & TẢI ICON PWA' button to auto-generate beautiful yellow AGBCN5 icons.

@@ -1,0 +1,26 @@
+{
+  "name": "AGBCN5 - Công cụ Số Agribank CN 5",
+  "short_name": "AGBCN5",
+  "description": "Công cụ số Agribank Chi nhánh 5 - Tạo QR VietQR, QR Map, Tính lãi suất, Lãi suất và Card Visit số",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F5C400",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "business", "utilities"],
+  "lang": "vi"
+}
