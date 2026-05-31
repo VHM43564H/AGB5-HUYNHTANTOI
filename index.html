@@ -477,7 +477,7 @@
     <!-- Main Content -->
     <div class="px-4 pt-4 pb-6">
       
-      <!-- ========== TAB 1: TRANG CHỦ (4 CARDS - VietQR removed) ========== -->
+      <!-- ========== TAB 1: TRANG CHỦ (6 CARDS incl. Crypto Dashboard) ========== -->
       <div id="tab-home" class="tab-content active">
         <div class="mb-5">
           <div class="flex items-center justify-between mb-1">
@@ -552,6 +552,20 @@
             </div>
             <div class="font-bold text-lg leading-tight tracking-tight">QR Chuyển Khoản<br>Ngân Hàng</div>
             <div class="text-xs text-slate-500 mt-1">Tạo mã VietQR chuẩn NAPAS</div>
+          </div>
+
+          <!-- Card 6: Crypto Dashboard (NEW) -->
+          <div onclick="switchTab('crypto')" 
+               class="feature-card bg-white p-4 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border">
+            <div class="w-11 h-11 bg-yellow-100 rounded-2xl flex items-center justify-center mb-3.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.1">
+                <!-- Candlestick + trend icon for crypto -->
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h3v8H3v-8zm4-3h3v14H7V7zm4-4h3v18h-3V3zm4 7h3v7h-3v-7z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 8l-3-3m0 0l-3 3m3-3v12" />
+              </svg>
+            </div>
+            <div class="font-bold text-lg leading-tight tracking-tight">Crypto<br>Dashboard</div>
+            <div class="text-xs text-slate-500 mt-1">Giá coin realtime + phân tích kỹ thuật</div>
           </div>
         </div>
 
@@ -1093,6 +1107,112 @@
         Quét bằng bất kỳ app ngân hàng nào để điền sẵn thông tin chuyển khoản
       </div>
     </div>
+  </div>
+
+  <!-- ========== TAB MỚI: CRYPTO DASHBOARD (COINGECKO + FULL 6 INDICATORS) ========== -->
+  <div id="tab-crypto" class="tab-content">
+    <div class="mb-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="section-header flex items-center gap-2">📊 Crypto Dashboard</div>
+          <p class="text-sm text-slate-600">Top 20 coin • Biểu đồ nến + 6 chỉ báo PTKT</p>
+        </div>
+        <button onclick="refreshTopCoins()" 
+                class="px-3 py-1.5 text-xs font-bold bg-white border border-slate-200 rounded-2xl active:bg-yellow-50 flex items-center gap-1">
+          🔄 Cập nhật giá
+        </button>
+      </div>
+      <div class="text-[10px] text-emerald-600 font-medium mt-0.5">Nguồn: CoinGecko Public API (miễn phí, không key)</div>
+    </div>
+
+    <!-- PHẦN 1: TOP 20 COIN (REALTIME) -->
+    <div class="mb-5">
+      <div class="flex items-center gap-2 mb-2 px-1">
+        <div class="font-bold text-[#3E2723]">Top 20 Coin (Market Cap)</div>
+        <div id="crypto-last-update" class="text-[10px] text-slate-500"></div>
+      </div>
+      
+      <div class="modern-card overflow-hidden border border-slate-200/80">
+        <div id="crypto-top20" class="max-h-[210px] overflow-y-auto text-sm">
+          <!-- Populated by JS: rows of coins -->
+          <div class="p-4 text-center text-slate-400 text-xs">Đang tải dữ liệu từ CoinGecko...</div>
+        </div>
+      </div>
+      <div class="text-[10px] text-slate-500 mt-1 px-1">Chạm vào coin để chọn phân tích biểu đồ bên dưới • Giá USD</div>
+    </div>
+
+    <!-- PHẦN 2: PHÂN TÍCH BIỂU ĐỒ + 6 CHỈ BÁO -->
+    <div class="mb-3">
+      <div class="font-bold text-[#3E2723] mb-2 px-1">Phân tích Biểu đồ Kỹ thuật</div>
+      
+      <!-- Controls -->
+      <div class="flex flex-wrap gap-2 mb-3">
+        <div class="flex-1 min-w-[140px]">
+          <label class="text-xs font-semibold text-slate-500 block mb-0.5">Chọn Coin</label>
+          <select id="crypto-coin-select" onchange="onCryptoCoinChange()" 
+                  class="input-field w-full px-3 py-2 rounded-2xl text-sm font-medium bg-white">
+            <option value="">-- Chọn coin từ Top 20 --</option>
+          </select>
+        </div>
+        <div class="w-[92px]">
+          <label class="text-xs font-semibold text-slate-500 block mb-0.5">Khoảng thời gian</label>
+          <select id="crypto-days" onchange="onCryptoCoinChange()" 
+                  class="input-field w-full px-3 py-2 rounded-2xl text-sm font-medium bg-white">
+            <option value="30">30 ngày</option>
+            <option value="90" selected>90 ngày</option>
+            <option value="180">180 ngày</option>
+            <option value="360">360 ngày</option>
+          </select>
+        </div>
+        <div class="flex items-end">
+          <button onclick="loadAndDrawCryptoChart()" 
+                  class="yellow-btn px-5 h-[42px] rounded-2xl text-sm font-extrabold active:scale-[0.985]">
+            VẼ BIỂU ĐỒ
+          </button>
+        </div>
+      </div>
+
+      <!-- CHART CANVAS + LEGEND -->
+      <div class="modern-card p-2 border border-slate-200/80">
+        <div class="px-2 pt-1 pb-2 flex items-center justify-between">
+          <div id="crypto-chart-title" class="font-semibold text-sm text-[#3E2723]"></div>
+          <div id="crypto-chart-price" class="font-mono text-sm font-bold text-emerald-600"></div>
+        </div>
+        
+        <div class="relative bg-[#FAF7F2] rounded-xl overflow-hidden" style="height: 368px;">
+          <canvas id="crypto-chart" width="460" height="368" class="w-full h-full touch-none"></canvas>
+          <div id="crypto-chart-loading" class="hidden absolute inset-0 flex items-center justify-center bg-white/70">
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+              <div class="text-xs text-slate-500 mt-2 font-medium">Đang tải OHLC + tính chỉ báo...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicator Legend -->
+        <div class="mt-2 px-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[10px] font-medium">
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-emerald-500 inline-block"></span> Nến tăng</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-rose-500 inline-block"></span> Nến giảm</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-blue-500 inline-block"></span> MA7/25</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-purple-500 inline-block"></span> Bollinger</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2 h-2 bg-teal-600/70 inline-block rounded-sm"></span> Ichimoku (5 lines + Cloud)</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-orange-500 inline-block"></span> MACD</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-indigo-500 inline-block"></span> RSI</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-slate-400 inline-block"></span> Volume</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHÂN TÍCH SƠ BỘ (AUTO TEXT) -->
+    <div class="mb-4">
+      <div class="font-bold text-[#3E2723] mb-1.5 px-1 flex items-center gap-1.5">📝 Phân tích sơ bộ</div>
+      <div id="crypto-analysis" class="modern-card p-3.5 text-sm leading-snug border-l-4 border-yellow-500 bg-yellow-50/60 text-[#3E2723]">
+        Chọn coin và vẽ biểu đồ để xem phân tích xu hướng tự động tại đây.
+      </div>
+      <div id="crypto-indicators-summary" class="mt-2 grid grid-cols-4 gap-2 text-[11px] hidden"></div>
+    </div>
+
+    <div class="text-center text-[10px] text-slate-400 pb-2">Dữ liệu CoinGecko cập nhật ~1-2 phút • Miễn phí công khai</div>
   </div>
 
   <!-- Bottom Navigation (4 tabs) -->
@@ -2178,6 +2298,797 @@ async function saveMapQROnline() {
       `;
       khacTab.appendChild(div);
     }
+
+    // ==================== CRYPTO DASHBOARD (COINGECKO PUBLIC API + CANVAS + 6 INDICATORS) ====================
+    // TẤT CẢ CODE CRYPTO Ở ĐÂY - GIỮ NGUYÊN PHONG CÁCH AGB (NÂU ĐẤT + VÀNG #F5C400)
+    let top20Coins = [];
+    let cryptoCache = {}; // { 'bitcoin_30': {ohlc, volumes, ind, ts} }
+    let currentCryptoCoin = null;
+
+    // ========== COINGECKO API HELPERS + CHI TIẾT COMMENTS ==========
+    async function fetchTop20Coins() {
+      // CoinGecko Public API (không cần API key, rate limit free ~ 10-50 req/phút tùy IP)
+      // Endpoint /coins/markets : trả về snapshot giá + market cap + % thay đổi 24h, sắp xếp giảm dần theo vốn hóa.
+      // Tham số quan trọng: vs_currency=usd, per_page=20, price_change_percentage=24h, order=market_cap_desc
+      // Dùng để đổ danh sách Top 20 realtime cho phần 1 + dropdown chọn coin.
+      const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h';
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error('CoinGecko markets API lỗi ' + res.status);
+      const data = await res.json();
+      return data.map(c => ({
+        id: c.id,
+        symbol: c.symbol.toUpperCase(),
+        name: c.name,
+        price: c.current_price,
+        change24h: c.price_change_percentage_24h || 0,
+        marketCap: c.market_cap,
+        image: c.image || ''
+      }));
+    }
+
+    async function fetchOHLCV(coinId, days = 30) {
+      // CoinGecko /coins/{id}/ohlc : trả về mảng OHLC nến (daily/period) dạng [[unixMs, open, high, low, close], ...]
+      // Tham số days=1,7,14,30,90,180,365,max ; interval ngầm là daily khi days>1.
+      // LƯU Ý QUAN TRỌNG: endpoint này KHÔNG trả volume! Muốn có volume phải gọi thêm /market_chart.
+      const ohlcUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/ohlc?vs_currency=usd&days=${days}`;
+      const ohlcRes = await fetch(ohlcUrl, { cache: 'no-store' });
+      if (!ohlcRes.ok) throw new Error('OHLC API lỗi ' + ohlcRes.status);
+      const ohlcRaw = await ohlcRes.json(); // [[t, o, h, l, c], ...]
+
+      // /market_chart : dùng để lấy total_volumes (và prices) theo cùng days.
+      // total_volumes = [[unixMs, volume], ...] - volume theo ngày.
+      const chartUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=daily`;
+      const chartRes = await fetch(chartUrl, { cache: 'no-store' });
+      if (!chartRes.ok) throw new Error('Market chart API lỗi ' + chartRes.status);
+      const chart = await chartRes.json();
+
+      // Chuẩn hóa OHLC + align volume theo timestamp (floor về ngày UTC)
+      const ohlc = ohlcRaw.map(row => ({
+        t: row[0], // ms
+        o: row[1],
+        h: row[2],
+        l: row[3],
+        c: row[4]
+      }));
+
+      // Tạo map volume theo ngày (dùng timestamp làm key xấp xỉ)
+      const volMap = new Map();
+      (chart.total_volumes || []).forEach(([ts, vol]) => {
+        const dayKey = Math.floor(ts / 86400000) * 86400000;
+        volMap.set(dayKey, vol);
+      });
+
+      const volumes = ohlc.map(candle => {
+        const dayKey = Math.floor(candle.t / 86400000) * 86400000;
+        return volMap.get(dayKey) || 0;
+      });
+
+      return { ohlc, volumes };
+    }
+
+    function getCacheKey(coinId, days) { return `${coinId}_${days}`; }
+
+    // ========== CÁC HÀM TÍNH CHỈ BÁO KỸ THUẬT (6 LOẠI) ==========
+    function calcSMA(values, period) {
+      const out = new Array(values.length).fill(null);
+      let sum = 0;
+      for (let i = 0; i < values.length; i++) {
+        sum += values[i];
+        if (i >= period - 1) {
+          out[i] = sum / period;
+          sum -= values[i - period + 1];
+        }
+      }
+      return out;
+    }
+
+    function calcEMA(values, period) {
+      const out = new Array(values.length).fill(null);
+      const k = 2 / (period + 1);
+      let ema = values[0];
+      for (let i = 0; i < values.length; i++) {
+        if (i === 0) out[i] = values[i];
+        else {
+          ema = values[i] * k + ema * (1 - k);
+          out[i] = ema;
+        }
+      }
+      // null cho warmup
+      for (let i = 0; i < period - 1; i++) out[i] = null;
+      return out;
+    }
+
+    function calcBollinger(closes, period = 20, mult = 2) {
+      const sma = calcSMA(closes, period);
+      const upper = [], lower = [], mid = sma;
+      for (let i = 0; i < closes.length; i++) {
+        if (i < period - 1) { upper.push(null); lower.push(null); continue; }
+        let sumSq = 0;
+        for (let j = i - period + 1; j <= i; j++) sumSq += Math.pow(closes[j] - sma[i], 2);
+        const std = Math.sqrt(sumSq / period);
+        upper.push(sma[i] + std * mult);
+        lower.push(sma[i] - std * mult);
+      }
+      return { upper, mid, lower };
+    }
+
+    function calcRSI(closes, period = 14) {
+      const out = new Array(closes.length).fill(null);
+      if (closes.length < period + 1) return out;
+      let gains = 0, losses = 0;
+      for (let i = 1; i <= period; i++) {
+        const ch = closes[i] - closes[i - 1];
+        if (ch > 0) gains += ch; else losses -= ch;
+      }
+      let avgG = gains / period, avgL = losses / period;
+      out[period] = 100 - (100 / (1 + (avgG / (avgL || 0.0001))));
+      for (let i = period + 1; i < closes.length; i++) {
+        const ch = closes[i] - closes[i - 1];
+        const g = ch > 0 ? ch : 0;
+        const l = ch < 0 ? -ch : 0;
+        avgG = (avgG * (period - 1) + g) / period;
+        avgL = (avgL * (period - 1) + l) / period;
+        out[i] = 100 - (100 / (1 + (avgG / (avgL || 0.0001))));
+      }
+      return out;
+    }
+
+    function calcMACD(closes, fast = 12, slow = 26, sig = 9) {
+      const emaFast = calcEMA(closes, fast);
+      const emaSlow = calcEMA(closes, slow);
+      const macdLine = emaFast.map((v, i) => (v != null && emaSlow[i] != null) ? v - emaSlow[i] : null);
+      // signal = EMA9 của macdLine (bỏ null)
+      const macdVals = macdLine.filter(v => v != null);
+      const sigVals = calcEMA(macdVals, sig);
+      const signal = new Array(closes.length).fill(null);
+      let j = 0;
+      for (let i = 0; i < macdLine.length; i++) {
+        if (macdLine[i] != null) {
+          if (j >= sigVals.length) signal[i] = null;
+          else signal[i] = sigVals[j++];
+        }
+      }
+      const hist = macdLine.map((m, i) => (m != null && signal[i] != null) ? m - signal[i] : null);
+      return { macd: macdLine, signal, hist };
+    }
+
+    function calcIchimoku(ohlc, tenkanP = 9, kijunP = 26, senkouP = 52, disp = 26) {
+      // Trả về các mảng cùng length: tenkan, kijun, senkouA, senkouB, chikou
+      const len = ohlc.length;
+      const tenkan = new Array(len).fill(null);
+      const kijun = new Array(len).fill(null);
+      const senkouA = new Array(len).fill(null);
+      const senkouB = new Array(len).fill(null);
+      const chikou = new Array(len).fill(null);
+
+      for (let i = 0; i < len; i++) {
+        // Tenkan
+        if (i >= tenkanP - 1) {
+          let maxH = -Infinity, minL = Infinity;
+          for (let k = i - tenkanP + 1; k <= i; k++) { maxH = Math.max(maxH, ohlc[k].h); minL = Math.min(minL, ohlc[k].l); }
+          tenkan[i] = (maxH + minL) / 2;
+        }
+        // Kijun
+        if (i >= kijunP - 1) {
+          let maxH = -Infinity, minL = Infinity;
+          for (let k = i - kijunP + 1; k <= i; k++) { maxH = Math.max(maxH, ohlc[k].h); minL = Math.min(minL, ohlc[k].l); }
+          kijun[i] = (maxH + minL) / 2;
+        }
+        chikou[i] = ohlc[i].c; // sẽ vẽ lùi
+      }
+      // Senkou (dịch tương lai disp kỳ)
+      for (let i = 0; i < len; i++) {
+        if (tenkan[i] != null && kijun[i] != null) {
+          const valA = (tenkan[i] + kijun[i]) / 2;
+          const idxA = i + disp;
+          if (idxA < len) senkouA[idxA] = valA;
+        }
+        if (i >= senkouP - 1) {
+          let maxH = -Infinity, minL = Infinity;
+          for (let k = i - senkouP + 1; k <= i; k++) { maxH = Math.max(maxH, ohlc[k].h); minL = Math.min(minL, ohlc[k].l); }
+          const valB = (maxH + minL) / 2;
+          const idxB = i + disp;
+          if (idxB < len) senkouB[idxB] = valB;
+        }
+      }
+      return { tenkan, kijun, senkouA, senkouB, chikou };
+    }
+
+    // ========== VẼ BIỂU ĐỒ NẾN + TẤT CẢ CHỈ BÁO TRÊN 1 CANVAS (4 PANE) ==========
+    function drawCryptoChart(ohlc, volumes, ind, coinSymbol, coinName) {
+      const canvas = document.getElementById('crypto-chart');
+      if (!canvas) return;
+      // Responsive internal resolution (fit container ~460px on PWA)
+      let displayW = canvas.parentElement ? canvas.parentElement.clientWidth - 8 : 0;
+      if (!displayW || displayW < 200) displayW = 440; // fallback when measuring hidden tab
+      canvas.width = Math.min(460, Math.floor(displayW));
+      canvas.height = 368;
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width;
+      const H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+
+      // Layout panes
+      const pad = 6;
+      const priceH = Math.floor(H * 0.50);
+      const volH = Math.floor(H * 0.155);
+      const macdH = Math.floor(H * 0.165);
+      const rsiH = H - priceH - volH - macdH - pad * 3;
+
+      const priceY = pad;
+      const volY = priceY + priceH + pad;
+      const macdY = volY + volH + pad;
+      const rsiY = macdY + macdH + pad;
+
+      const closes = ohlc.map(d => d.c);
+      const highs = ohlc.map(d => d.h);
+      const lows = ohlc.map(d => d.l);
+
+      // Scale price pane (kết hợp high/low + BB + MA + Ichimoku visible)
+      let minP = Math.min(...lows);
+      let maxP = Math.max(...highs);
+      if (ind.bb && ind.bb.lower) {
+        const bbMin = Math.min(...ind.bb.lower.filter(v => v != null));
+        const bbMax = Math.max(...ind.bb.upper.filter(v => v != null));
+        if (bbMin) minP = Math.min(minP, bbMin);
+        if (bbMax) maxP = Math.max(maxP, bbMax);
+      }
+      if (ind.ichi) {
+        const ichi = ind.ichi;
+        const allI = [
+          ...(ichi.senkouA || []), ...(ichi.senkouB || []),
+          ...(ichi.tenkan || []), ...(ichi.kijun || []),
+          ...(ichi.chikou || [])
+        ].filter(v => v != null);
+        if (allI.length) { minP = Math.min(minP, ...allI); maxP = Math.max(maxP, ...allI); }
+      }
+      const rangeP = (maxP - minP) * 1.06 || 1;
+      minP -= (maxP - minP) * 0.03;
+      maxP += (maxP - minP) * 0.03;
+
+      const priceToY = (p) => priceY + priceH - ((p - minP) / (maxP - minP)) * (priceH - 4);
+
+      // Time scale (index)
+      const n = ohlc.length;
+      const xStep = (W - pad * 2) / Math.max(n - 1, 1);
+      const xAt = (i) => pad + i * xStep;
+
+      // BG + grid
+      ctx.fillStyle = '#FAF7F2';
+      ctx.fillRect(0, 0, W, H);
+
+      // Price grid + labels
+      ctx.strokeStyle = '#EDE4D3';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 4; i++) {
+        const y = priceY + (priceH * i / 4);
+        ctx.beginPath(); ctx.moveTo(pad, y); ctx.lineTo(W - pad, y); ctx.stroke();
+        const price = maxP - (maxP - minP) * (i / 4);
+        ctx.fillStyle = '#6B5B4F';
+        ctx.font = '9px monospace';
+        ctx.fillText(price.toFixed(price > 100 ? 0 : 2), W - 46, y + 3);
+      }
+
+      // Candlesticks (green #10b981 / red #e11d48)
+      const upColor = '#059669', downColor = '#e11d48';
+      const bodyW = Math.max(2.5, xStep * 0.72);
+      for (let i = 0; i < n; i++) {
+        const x = xAt(i);
+        const o = ohlc[i].o, c = ohlc[i].c, h = ohlc[i].h, l = ohlc[i].l;
+        const isUp = c >= o;
+        ctx.strokeStyle = isUp ? upColor : downColor;
+        ctx.fillStyle = isUp ? upColor : downColor;
+        // wick
+        ctx.beginPath();
+        ctx.moveTo(x, priceToY(h));
+        ctx.lineTo(x, priceToY(l));
+        ctx.stroke();
+        // body
+        const y1 = priceToY(Math.max(o, c));
+        const y2 = priceToY(Math.min(o, c));
+        ctx.fillRect(x - bodyW / 2, y1, bodyW, Math.max(1, y2 - y1));
+      }
+
+      // MA7 + MA25
+      ctx.lineWidth = 1.6;
+      if (ind.ma7) {
+        ctx.strokeStyle = '#2563eb';
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (ind.ma7[i] != null) {
+          const yy = priceToY(ind.ma7[i]);
+          if (i === 0 || ind.ma7[i - 1] == null) ctx.moveTo(xAt(i), yy);
+          else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+      }
+      if (ind.ma25) {
+        ctx.strokeStyle = '#ea580c';
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (ind.ma25[i] != null) {
+          const yy = priceToY(ind.ma25[i]);
+          if (i === 0 || ind.ma25[i - 1] == null) ctx.moveTo(xAt(i), yy);
+          else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+      }
+
+      // Bollinger Bands
+      if (ind.bb) {
+        ctx.setLineDash([3, 2]);
+        ctx.strokeStyle = '#7c3aed';
+        ctx.lineWidth = 1;
+        // upper
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (ind.bb.upper[i] != null) {
+          const yy = priceToY(ind.bb.upper[i]);
+          if (i === 0 || ind.bb.upper[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+        // lower
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (ind.bb.lower[i] != null) {
+          const yy = priceToY(ind.bb.lower[i]);
+          if (i === 0 || ind.bb.lower[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // Ichimoku Cloud FULL (Tenkan, Kijun, Senkou A, Senkou B, Chikou + colored cloud fill)
+      // Chikou Span vẽ lùi 26 kỳ (lagging), Senkou vẽ dịch tương lai (leading cloud)
+      if (ind.ichi) {
+        const { tenkan, kijun, senkouA, senkouB, chikou } = ind.ichi;
+        const disp = 26;
+
+        // 1. Cloud fill (màu xanh lá khi bull cloud A>B, đỏ khi bear)
+        ctx.lineWidth = 1;
+        for (let i = 0; i < n; i++) {
+          if (senkouA[i] != null && senkouB[i] != null) {
+            const ya = priceToY(senkouA[i]);
+            const yb = priceToY(senkouB[i]);
+            ctx.fillStyle = senkouA[i] > senkouB[i] ? 'rgba(16,185,129,0.22)' : 'rgba(225,29,72,0.20)';
+            ctx.fillRect(xAt(i) - xStep / 2, Math.min(ya, yb), xStep + 1, Math.max(1, Math.abs(ya - yb)));
+          }
+        }
+
+        // 2. Senkou Span A (mây dẫn đường - xanh lá dashed)
+        ctx.setLineDash([4, 2]);
+        ctx.strokeStyle = '#059669';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (senkouA[i] != null) {
+          const yy = priceToY(senkouA[i]);
+          if (i === 0 || senkouA[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+
+        // 3. Senkou Span B (mây dẫn đường - nâu/đỏ dashed)
+        ctx.strokeStyle = '#b45309';
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (senkouB[i] != null) {
+          const yy = priceToY(senkouB[i]);
+          if (i === 0 || senkouB[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // 4. Tenkan-sen (đường chuyển đổi - xanh ngọc đậm)
+        ctx.lineWidth = 1.4;
+        ctx.strokeStyle = '#0f766e';
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (tenkan[i] != null) {
+          const yy = priceToY(tenkan[i]);
+          if (i === 0 || tenkan[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+
+        // 5. Kijun-sen (đường cơ sở - đỏ hồng)
+        ctx.strokeStyle = '#e11d48';
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (kijun[i] != null) {
+          const yy = priceToY(kijun[i]);
+          if (i === 0 || kijun[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+
+        // 6. Chikou Span (đường trễ - xám tím dashed, vẽ LÙI 26 kỳ)
+        ctx.setLineDash([3, 2]);
+        ctx.strokeStyle = '#6b21a8';
+        ctx.lineWidth = 1.3;
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (chikou[i] != null) {
+          const drawIdx = Math.max(0, i - disp);
+          const yy = priceToY(chikou[i]);
+          if (i === 0 || chikou[i - 1] == null) ctx.moveTo(xAt(drawIdx), yy);
+          else ctx.lineTo(xAt(drawIdx), yy);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // Volume pane
+      ctx.strokeStyle = '#EDE4D3';
+      ctx.beginPath(); ctx.moveTo(pad, volY); ctx.lineTo(W - pad, volY); ctx.stroke();
+      const maxVol = Math.max(...volumes, 1);
+      const barW = Math.max(1.8, xStep * 0.65);
+      for (let i = 0; i < n; i++) {
+        const x = xAt(i);
+        const vh = (volumes[i] / maxVol) * (volH - 4);
+        const isUp = ohlc[i].c >= ohlc[i].o;
+        ctx.fillStyle = isUp ? 'rgba(5,150,105,0.65)' : 'rgba(225,29,72,0.65)';
+        ctx.fillRect(x - barW / 2, volY + volH - vh, barW, vh);
+      }
+      ctx.fillStyle = '#6B5B4F';
+      ctx.font = '8px monospace';
+      ctx.fillText('VOL', pad, volY + 10);
+
+      // MACD pane
+      ctx.strokeStyle = '#EDE4D3';
+      ctx.beginPath(); ctx.moveTo(pad, macdY); ctx.lineTo(W - pad, macdY); ctx.stroke();
+      if (ind.macd) {
+        const { macd, signal, hist } = ind.macd;
+        const allMacd = [...macd, ...signal, ...hist].filter(v => v != null);
+        const maxM = Math.max(...allMacd.map(Math.abs), 0.0001);
+        const zeroY = macdY + macdH / 2;
+        const mToY = (v) => zeroY - (v / maxM) * (macdH / 2 - 2);
+
+        // zero line
+        ctx.strokeStyle = '#C7B8A3';
+        ctx.beginPath(); ctx.moveTo(pad, zeroY); ctx.lineTo(W - pad, zeroY); ctx.stroke();
+
+        // histogram
+        for (let i = 0; i < n; i++) if (hist[i] != null) {
+          const x = xAt(i);
+          const hh = (hist[i] / maxM) * (macdH / 2 - 2);
+          ctx.fillStyle = hist[i] >= 0 ? '#10b981' : '#e11d48';
+          ctx.fillRect(x - barW / 2, hh >= 0 ? mToY(0) - hh : mToY(0), barW, Math.abs(hh) || 1);
+        }
+        // macd line
+        ctx.strokeStyle = '#c2410f';
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (macd[i] != null) {
+          const yy = mToY(macd[i]);
+          if (i === 0 || macd[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+        // signal
+        ctx.strokeStyle = '#6366f1';
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (signal[i] != null) {
+          const yy = mToY(signal[i]);
+          if (i === 0 || signal[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+      }
+      ctx.fillStyle = '#6B5B4F'; ctx.font = '8px monospace'; ctx.fillText('MACD', pad, macdY + 10);
+
+      // RSI pane (0-100)
+      ctx.strokeStyle = '#EDE4D3';
+      ctx.beginPath(); ctx.moveTo(pad, rsiY); ctx.lineTo(W - pad, rsiY); ctx.stroke();
+      if (ind.rsi) {
+        const rsiScale = (v) => rsiY + rsiH - (Math.max(0, Math.min(100, v)) / 100) * (rsiH - 3);
+        // 30 / 70 lines
+        ctx.strokeStyle = '#fda4af';
+        ctx.setLineDash([2, 2]);
+        [30, 70].forEach(r => {
+          const yy = rsiScale(r);
+          ctx.beginPath(); ctx.moveTo(pad, yy); ctx.lineTo(W - pad, yy); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+        // rsi line
+        ctx.strokeStyle = '#4f46e5';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        for (let i = 0; i < n; i++) if (ind.rsi[i] != null) {
+          const yy = rsiScale(ind.rsi[i]);
+          if (i === 0 || ind.rsi[i - 1] == null) ctx.moveTo(xAt(i), yy); else ctx.lineTo(xAt(i), yy);
+        }
+        ctx.stroke();
+      }
+      ctx.fillStyle = '#6B5B4F'; ctx.font = '8px monospace'; ctx.fillText('RSI', pad, rsiY + 10);
+
+      // Date labels (bottom)
+      ctx.fillStyle = '#6B5B4F';
+      ctx.font = '8.5px monospace';
+      const stepLabel = Math.ceil(n / 5);
+      for (let i = 0; i < n; i += stepLabel) {
+        const dt = new Date(ohlc[i].t);
+        const lbl = (dt.getMonth() + 1) + '/' + dt.getDate();
+        ctx.fillText(lbl, xAt(i) - 8, H - 2);
+      }
+    }
+
+    // ========== PHÂN TÍCH SƠ BỘ TỰ ĐỘNG (TEXT + SUMMARY) ==========
+    function generateCryptoAnalysis(ohlc, ind, coinName) {
+      if (!ohlc || ohlc.length < 5) return 'Không đủ dữ liệu để phân tích chi tiết.';
+      const last = ohlc.length - 1;
+      const lastClose = ohlc[last].c;
+      const prevClose = ohlc[Math.max(0, last - 1)].c;
+      const ma7 = ind.ma7 ? ind.ma7[last] : null;
+      const ma25 = ind.ma25 ? ind.ma25[last] : null;
+      const rsi = ind.rsi ? ind.rsi[last] : null;
+      const macd = ind.macd || {};
+      const macdHist = macd.hist ? macd.hist[last] : null;
+      const macdLine = macd.macd ? macd.macd[last] : null;
+      const macdSig = macd.signal ? macd.signal[last] : null;
+      const bb = ind.bb;
+      const ichi = ind.ichi || {};
+
+      // === XU HƯỚNG GIÁ + MA ===
+      let trend = '';
+      let maSignal = '';
+      if (ma25) {
+        if (lastClose > ma25 * 1.015) { trend = 'Xu hướng tăng trung hạn rõ (giá > MA25 +1.5%)'; maSignal = 'Bullish'; }
+        else if (lastClose < ma25 * 0.985) { trend = 'Xu hướng giảm / điều chỉnh (giá < MA25)'; maSignal = 'Bearish'; }
+        else trend = 'Giá đang sideway / dao động quanh MA25';
+      }
+      if (ma7 && ma25) {
+        if (ma7 > ma25 * 1.01) maSignal += ' | MA7 cắt lên MA25 (tín hiệu tăng)';
+        else if (ma7 < ma25 * 0.99) maSignal += ' | MA7 cắt xuống MA25 (tín hiệu giảm)';
+      }
+
+      // === ICHIMOKU CLOUD (quan trọng nhất) ===
+      let cloudTxt = '';
+      const tenkan = ichi.tenkan ? ichi.tenkan[last] : null;
+      const kijun = ichi.kijun ? ichi.kijun[last] : null;
+      const senA = ichi.senkouA ? ichi.senkouA[last] : null;
+      const senB = ichi.senkouB ? ichi.senkouB[last] : null;
+      if (senA && senB) {
+        const cloudTop = Math.max(senA, senB);
+        const cloudBot = Math.min(senA, senB);
+        if (lastClose > cloudTop * 1.005) cloudTxt = 'Giá đang ở TRÊN đám mây Ichimoku (tín hiệu BULLISH mạnh, xu hướng tăng tiếp)';
+        else if (lastClose < cloudBot * 0.995) cloudTxt = 'Giá đang ở DƯỚI đám mây Ichimoku (tín hiệu BEARISH, áp lực bán cao)';
+        else cloudTxt = 'Giá đang BÊN TRONG đám mây (thị trường đang consolidation, chờ phá vỡ)';
+      }
+      let tkCross = '';
+      if (tenkan && kijun) {
+        if (tenkan > kijun * 1.005) tkCross = 'Tenkan-sen cắt lên Kijun-sen (tín hiệu mua ngắn hạn)';
+        else if (tenkan < kijun * 0.995) tkCross = 'Tenkan-sen cắt xuống Kijun-sen (tín hiệu bán)';
+        else tkCross = 'Tenkan & Kijun song song (xu hướng chưa rõ)';
+      }
+
+      // === RSI + MOMENTUM ===
+      let rsiTxt = '';
+      if (rsi != null) {
+        if (rsi > 72) rsiTxt = `RSI(14) = ${rsi.toFixed(1)} → QUÁ MUA, khả năng điều chỉnh ngắn hạn cao`;
+        else if (rsi < 28) rsiTxt = `RSI(14) = ${rsi.toFixed(1)} → QUÁ BÁN, có thể xuất hiện tín hiệu hồi phục`;
+        else if (rsi > 55) rsiTxt = `RSI(14) = ${rsi.toFixed(1)} → Vùng tăng (bullish momentum)`;
+        else if (rsi < 45) rsiTxt = `RSI(14) = ${rsi.toFixed(1)} → Vùng giảm (bearish momentum)`;
+        else rsiTxt = `RSI(14) = ${rsi.toFixed(1)} → Trung lập, thị trường cân bằng`;
+      }
+
+      // === MACD ===
+      let macdTxt = '';
+      if (macdHist != null && macdLine != null && macdSig != null) {
+        const histDir = macdHist > 0 ? 'dương (đà tăng)' : 'âm (đà giảm)';
+        if (macdLine > macdSig && macdHist > 0) macdTxt = `MACD cắt lên Signal + histogram ${histDir} → tín hiệu MUA mạnh`;
+        else if (macdLine < macdSig && macdHist < 0) macdTxt = `MACD cắt xuống Signal + histogram ${histDir} → tín hiệu BÁN`;
+        else macdTxt = `MACD histogram ${histDir}, chưa có cross rõ`;
+      }
+
+      // === BOLLINGER + VOLATILITY ===
+      let bbTxt = '';
+      if (bb && bb.upper[last] && bb.lower[last] && bb.mid[last]) {
+        const bw = ((bb.upper[last] - bb.lower[last]) / bb.mid[last]) * 100;
+        const pos = lastClose > bb.upper[last] ? 'trên dải trên (có thể quá mua)' :
+                    lastClose < bb.lower[last] ? 'dưới dải dưới (có thể quá bán)' : 'bên trong dải Bollinger';
+        bbTxt = `Bollinger Band width ${bw.toFixed(1)}% (${bw > 9 ? 'biến động CAO' : bw < 5 ? 'biến động THẤP (sắp có breakout)' : 'bình thường'}), giá đang ${pos}`;
+      }
+
+      // === TỔNG HỢP TÍN HIỆU ===
+      let overall = 'TRUNG LẬP';
+      let score = 0;
+      if (lastClose > (ma25 || lastClose)) score += 1;
+      if (rsi && rsi > 50) score += 1;
+      if (macdHist && macdHist > 0) score += 1;
+      if (senA && senB && lastClose > Math.max(senA, senB)) score += 2;
+      if (tenkan && kijun && tenkan > kijun) score += 1;
+      if (score >= 4) overall = 'TĂNG MẠNH (nhiều tín hiệu đồng thuận mua)';
+      else if (score >= 2) overall = 'TĂNG NHẸ / TÍCH CỰC';
+      else if (score <= -1) overall = 'GIẢM / CẦN THẬN TRỌNG';
+      else if (score <= 1) overall = 'TRUNG LẬP / SIDEWAY';
+
+      const dir = lastClose >= prevClose ? 'tăng' : 'giảm';
+      const pctChg = ((lastClose - prevClose) / prevClose * 100).toFixed(2);
+
+      return `${coinName} vừa ${dir} ${pctChg}% so với nến trước. ${trend}. ${cloudTxt} ${tkCross}. ${rsiTxt}. ${macdTxt}. ${bbTxt}. ${maSignal}. TỔNG KẾT: ${overall}. Phân tích mang tính tham khảo, kết hợp quản lý vốn và theo dõi tin tức vĩ mô trước khi ra quyết định giao dịch.`;
+    }
+
+    function updateIndicatorPills(ind) {
+      const box = document.getElementById('crypto-indicators-summary');
+      if (!box || !ind) return;
+      box.classList.remove('hidden');
+      const last = (ind.rsi && ind.rsi.length - 1) || 0;
+      const rsiVal = ind.rsi && ind.rsi[last] ? ind.rsi[last].toFixed(1) : '--';
+      const macdVal = ind.macd && ind.macd.hist && ind.macd.hist[last] ? ind.macd.hist[last].toFixed(2) : '--';
+      const bbW = (ind.bb && ind.bb.upper && ind.bb.lower && ind.bb.mid && ind.bb.mid[last]) ?
+        (((ind.bb.upper[last] - ind.bb.lower[last]) / ind.bb.mid[last]) * 100).toFixed(1) : '--';
+
+      const ich = ind.ichi || {};
+      box.innerHTML = `
+        <div class="bg-white rounded-xl px-2 py-1 border border-slate-200 text-center">
+          <div class="text-emerald-700 font-bold">RSI(14)</div>
+          <div class="font-mono text-base font-extrabold">${rsiVal}</div>
+        </div>
+        <div class="bg-white rounded-xl px-2 py-1 border border-slate-200 text-center">
+          <div class="text-orange-600 font-bold">MACD</div>
+          <div class="font-mono text-base font-extrabold">${macdVal}</div>
+        </div>
+        <div class="bg-white rounded-xl px-2 py-1 border border-slate-200 text-center">
+          <div class="text-violet-600 font-bold">BB %</div>
+          <div class="font-mono text-base font-extrabold">${bbW}</div>
+        </div>
+        <div class="bg-white rounded-xl px-2 py-1 border border-slate-200 text-center">
+          <div class="text-teal-700 font-bold text-[10px]">Ichimoku</div>
+          <div class="font-mono text-sm font-extrabold text-teal-700">5 lines</div>
+        </div>
+      `;
+    }
+
+    // ========== RENDER + INTERACTION ==========
+    function renderTop20Table(coins) {
+      const container = document.getElementById('crypto-top20');
+      if (!container) return;
+      if (!coins || !coins.length) {
+        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Không tải được dữ liệu CoinGecko.</div>`;
+        return;
+      }
+      top20Coins = coins;
+
+      // Build nice rows (clickable)
+      let html = '';
+      coins.forEach((c, idx) => {
+        const ch = c.change24h;
+        const chColor = ch >= 0 ? 'text-emerald-600' : 'text-rose-600';
+        const chSign = ch >= 0 ? '+' : '';
+        const cap = c.marketCap > 1e12 ? (c.marketCap / 1e12).toFixed(2) + 'T' :
+                    c.marketCap > 1e9 ? (c.marketCap / 1e9).toFixed(1) + 'B' :
+                    (c.marketCap / 1e6).toFixed(0) + 'M';
+        html += `
+          <div onclick="selectCoinForChart('${c.id}', '${c.symbol}')" 
+               class="flex items-center justify-between px-3 py-[7px] border-b border-slate-100 active:bg-yellow-50 cursor-pointer">
+            <div class="flex items-center gap-2 min-w-0">
+              <div class="w-5 text-right text-xs font-mono text-slate-400">${idx + 1}</div>
+              <div class="font-bold text-[#3E2723] truncate">${c.symbol}</div>
+              <div class="text-[10px] text-slate-500 truncate max-w-[78px]">${c.name}</div>
+            </div>
+            <div class="text-right font-mono">
+              <div class="text-sm font-extrabold text-[#1f2937]">$${c.price.toLocaleString('en-US')}</div>
+              <div class="flex items-center justify-end gap-2 text-xs">
+                <span class="${chColor} font-bold">${chSign}${ch.toFixed(1)}%</span>
+                <span class="text-slate-400 text-[10px]">${cap}</span>
+              </div>
+            </div>
+          </div>`;
+      });
+      container.innerHTML = html;
+
+      // Fill select
+      const sel = document.getElementById('crypto-coin-select');
+      if (sel) {
+        sel.innerHTML = '<option value="">-- Chọn coin từ Top 20 --</option>';
+        coins.forEach(c => {
+          const opt = document.createElement('option');
+          opt.value = c.id;
+          opt.textContent = `${c.symbol} — ${c.name}`;
+          sel.appendChild(opt);
+        });
+      }
+
+      const upd = document.getElementById('crypto-last-update');
+      if (upd) upd.textContent = '• cập nhật ' + new Date().toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'});
+    }
+
+    async function refreshTopCoins() {
+      const container = document.getElementById('crypto-top20');
+      if (container) container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Đang tải Top 20 từ CoinGecko...</div>`;
+      // XÓA TOÀN BỘ CACHE để lần vẽ biểu đồ tiếp theo lấy dữ liệu mới hoàn toàn (fix nút Cập nhật giá)
+      cryptoCache = {};
+      try {
+        const coins = await fetchTop20Coins();
+        renderTop20Table(coins);
+        showToast('Đã cập nhật giá Top 20 + xóa cache');
+        // Nếu đang có coin được chọn, tự động vẽ lại với dữ liệu mới
+        const sel = document.getElementById('crypto-coin-select');
+        if (sel && sel.value) {
+          setTimeout(() => loadAndDrawCryptoChart(), 180);
+        }
+      } catch (e) {
+        console.error('[Crypto] fetchTop20 error', e);
+        if (container) container.innerHTML = `<div class="p-4 text-center text-xs text-rose-500">Lỗi kết nối CoinGecko (thử lại sau). ${e.message}</div>`;
+        showToast('Không thể tải dữ liệu CoinGecko');
+      }
+    }
+
+    window.selectCoinForChart = function(coinId, symbol) {
+      const sel = document.getElementById('crypto-coin-select');
+      if (sel) sel.value = coinId;
+      currentCryptoCoin = coinId;
+      // Auto draw with current days
+      setTimeout(() => loadAndDrawCryptoChart(), 60);
+    };
+
+    window.onCryptoCoinChange = function() {
+      // User can change select or days, but we don't auto-draw (click VẼ button for control)
+    };
+
+    async function loadAndDrawCryptoChart() {
+      const sel = document.getElementById('crypto-coin-select');
+      const daysSel = document.getElementById('crypto-days');
+      const titleEl = document.getElementById('crypto-chart-title');
+      const priceEl = document.getElementById('crypto-chart-price');
+      const loading = document.getElementById('crypto-chart-loading');
+      const analysisEl = document.getElementById('crypto-analysis');
+
+      if (!sel || !sel.value) {
+        showToast('Vui lòng chọn coin từ danh sách Top 20');
+        return;
+      }
+      const coinId = sel.value;
+      const days = parseInt(daysSel.value, 10) || 90;
+      const coinInfo = top20Coins.find(c => c.id === coinId) || { symbol: coinId.toUpperCase(), name: coinId };
+
+      currentCryptoCoin = coinId;
+      if (loading) loading.classList.remove('hidden');
+
+      const key = getCacheKey(coinId, days);
+      try {
+        let data;
+        if (cryptoCache[key] && Date.now() - cryptoCache[key].ts < 65000) {
+          data = cryptoCache[key];
+        } else {
+          const { ohlc, volumes } = await fetchOHLCV(coinId, days);
+          // Tính tất cả 6 chỉ báo
+          const closes = ohlc.map(d => d.c);
+          const ma7 = calcSMA(closes, 7);
+          const ma25 = calcSMA(closes, Math.min(25, Math.floor(closes.length * 0.7)));
+          const bb = calcBollinger(closes, Math.min(20, Math.floor(closes.length / 2)));
+          const rsi = calcRSI(closes, 14);
+          const macd = calcMACD(closes);
+          const ichi = calcIchimoku(ohlc);
+          const ind = { ma7, ma25, bb, rsi, macd, ichi };
+
+          data = { ohlc, volumes, ind, ts: Date.now() };
+          cryptoCache[key] = data;
+        }
+
+        // Vẽ
+        drawCryptoChart(data.ohlc, data.volumes, data.ind, coinInfo.symbol, coinInfo.name);
+
+        // Header + giá
+        const last = data.ohlc[data.ohlc.length - 1];
+        if (titleEl) titleEl.textContent = `${coinInfo.symbol} • ${coinInfo.name} (${days}d)`;
+        if (priceEl) priceEl.textContent = `$${last.c.toLocaleString('en-US')}`;
+
+        // Phân tích + pills
+        const analysisText = generateCryptoAnalysis(data.ohlc, data.ind, coinInfo.name);
+        if (analysisEl) analysisEl.textContent = analysisText;
+        updateIndicatorPills(data.ind);
+
+        showToast(`Đã vẽ biểu đồ ${coinInfo.symbol} (${days} ngày)`);
+      } catch (e) {
+        console.error('[Crypto] load chart error', e);
+        showToast('Lỗi tải OHLC từ CoinGecko (rate limit hoặc mạng)');
+        if (analysisEl) analysisEl.textContent = 'Không thể tải dữ liệu biểu đồ. Vui lòng thử lại sau ít phút.';
+      } finally {
+        if (loading) loading.classList.add('hidden');
+      }
+    }
+
+    // Patch switchTab để auto load top20 khi vào tab crypto
+    (function patchSwitchForCrypto() {
+      const orig = window.switchTab;
+      window.switchTab = function(tab) {
+        orig(tab);
+        if (tab === 'crypto') {
+          const topBox = document.getElementById('crypto-top20');
+          if (topBox && (!top20Coins || top20Coins.length === 0)) {
+            setTimeout(() => { refreshTopCoins(); }, 120);
+          }
+        }
+      };
+    })();
 
     // ==================== INITIALIZATION ====================
     function initInterestRates() {
