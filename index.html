@@ -26,6 +26,9 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
 
+  <!-- Font Awesome (for Tin Tức nav icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Mono:wght@400;500&amp;display=swap');
     
@@ -575,6 +578,44 @@
             <span class="font-semibold text-slate-600">AGB CN 5 đổi mới vươn mình</span>
           </div>
         </div>
+
+        <!-- ========== PHÂN TÍCH THỊ TRƯỜNG (CRYPTO + VN30) - NEW DEDICATED ROW ========== -->
+        <div class="mt-5">
+          <div class="flex items-center gap-2 mb-2 px-1">
+            <div class="font-bold text-[#3E2723] text-sm">📈 Phân tích Thị trường</div>
+            <div class="text-[10px] text-slate-400">Crypto (CoinGecko) • Chứng khoán VN30 (Finfo VNDIRECT)</div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <!-- Crypto quick card -->
+            <div onclick="switchTab('crypto')" 
+                 class="feature-card bg-white p-3.5 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border flex items-center gap-3">
+              <div class="w-9 h-9 bg-yellow-100 rounded-2xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h3v8H3v-8zm4-3h3v14H7V7zm4-4h3v18h-3V3zm4 7h3v7h-3v-7z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 8l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-bold text-sm text-[#3E2723] leading-tight">Crypto Dashboard</div>
+                <div class="text-[10px] text-slate-500 truncate">CoinGecko • 6 chỉ báo • 180/360 ngày</div>
+              </div>
+            </div>
+
+            <!-- VN30 new card -->
+            <div onclick="switchTab('vn30')" 
+                 class="feature-card bg-white p-3.5 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border flex items-center gap-3">
+              <div class="w-9 h-9 bg-emerald-100 rounded-2xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 01-2 2" />
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-bold text-sm text-[#3E2723] leading-tight">Chứng Khoán VN30</div>
+                <div class="text-[10px] text-slate-500 truncate">Finfo VNDIRECT • 6 chỉ báo • 1 ngày → 1 năm</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- ========== TAB 2: QR MAP ĐỊNH VỊ (ROBUST + ALWAYS WORKS) ========== -->
@@ -1122,7 +1163,7 @@
           🔄 Cập nhật giá
         </button>
       </div>
-      <div class="text-[10px] text-emerald-600 font-medium mt-0.5">Nguồn: CoinGecko Public API (miễn phí, không key)</div>
+      <div class="text-[10px] text-emerald-600 font-medium mt-0.5">Nguồn: CoinGecko Public API (miễn phí, không key • /markets + /ohlc)</div>
     </div>
 
     <!-- PHẦN 1: TOP 20 COIN (REALTIME) -->
@@ -1135,7 +1176,7 @@
       <div class="modern-card overflow-hidden border border-slate-200/80">
         <div id="crypto-top20" class="max-h-[210px] overflow-y-auto text-sm">
           <!-- Populated by JS: rows of coins -->
-          <div class="p-4 text-center text-slate-400 text-xs">Đang tải dữ liệu từ CoinGecko...</div>
+          <div class="p-4 text-center text-slate-400 text-xs">Đang tải dữ liệu từ Binance...</div>
         </div>
       </div>
       <div class="text-[10px] text-slate-500 mt-1 px-1">Chạm vào coin để chọn phân tích biểu đồ bên dưới • Giá USD</div>
@@ -1189,6 +1230,13 @@
           </div>
         </div>
 
+        <!-- Error banner with friendly message + Retry button (AGB yellow/brown style) -->
+        <div id="crypto-chart-error" class="hidden mt-1.5 mx-1 px-3 py-2 rounded-2xl bg-orange-50 border border-orange-200 text-[11px] text-[#3E2723] flex items-center gap-2">
+          <span class="flex-1" id="crypto-chart-error-text">Lỗi tải OHLC từ Binance (rate limit hoặc mạng).</span>
+          <button onclick="retryLastCryptoLoad()" 
+                  class="shrink-0 px-3 py-1 bg-[#F5C400] active:bg-yellow-500 text-[#3E2723] font-extrabold rounded-xl text-xs shadow-sm border border-yellow-600/30">🔄 Thử lại</button>
+        </div>
+
         <!-- Indicator Legend -->
         <div class="mt-2 px-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[10px] font-medium">
           <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-emerald-500 inline-block"></span> Nến tăng</span>
@@ -1215,9 +1263,124 @@
     <div class="text-center text-[10px] text-slate-400 pb-2">Dữ liệu CoinGecko cập nhật ~1-2 phút • Miễn phí công khai</div>
   </div>
 
-  <!-- Bottom Navigation (4 tabs) -->
+  <!-- ========== TAB MỚI: CHỨNG KHOÁN VN30 (ENTR ADE/SSI + 6 INDICATORS, IDENTICAL STYLE) ========== -->
+  <div id="tab-vn30" class="tab-content">
+    <div class="mb-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="section-header flex items-center gap-2">📊 Chứng Khoán VN30</div>
+          <p class="text-sm text-slate-600">Rổ VN30 • Biểu đồ nến + 6 chỉ báo PTKT (HOSE)</p>
+        </div>
+        <button onclick="refreshVN30Top()" 
+                class="px-3 py-1.5 text-xs font-bold bg-white border border-slate-200 rounded-2xl active:bg-yellow-50 flex items-center gap-1">
+          🔄 Cập nhật giá
+        </button>
+      </div>
+      <div class="text-[10px] text-emerald-600 font-medium mt-0.5">Nguồn: VNDIRECT Finfo API (nhanh, ổn định • batch quotes + historical)</div>
+    </div>
+
+    <!-- PHẦN 1: TOP VN30 (REALTIME) -->
+    <div class="mb-5">
+      <div class="flex items-center gap-2 mb-2 px-1">
+        <div class="font-bold text-[#3E2723]">Top VN30 (HOSE)</div>
+        <div id="vn30-last-update" class="text-[10px] text-slate-500"></div>
+      </div>
+      
+      <div class="modern-card overflow-hidden border border-slate-200/80">
+        <div id="vn30-top20" class="max-h-[210px] overflow-y-auto text-sm">
+          <!-- Populated by JS -->
+          <div class="p-4 text-center text-slate-400 text-xs">Đang tải danh sách VN30...</div>
+        </div>
+      </div>
+      <div class="text-[10px] text-slate-500 mt-1 px-1">Chạm mã để xem biểu đồ kỹ thuật chi tiết • Giá tham chiếu HOSE</div>
+    </div>
+
+    <!-- PHẦN 2: BIỂU ĐỒ + 6 CHỈ BÁO -->
+    <div class="mb-3">
+      <div class="font-bold text-[#3E2723] mb-2 px-1">Phân tích Biểu đồ Kỹ thuật</div>
+      
+      <!-- Controls -->
+      <div class="flex flex-wrap gap-2 mb-3">
+        <div class="flex-1 min-w-[140px]">
+          <label class="text-xs font-semibold text-slate-500 block mb-0.5">Chọn Mã CK</label>
+          <select id="vn30-coin-select" onchange="onVN30CoinChange()" 
+                  class="input-field w-full px-3 py-2 rounded-2xl text-sm font-medium bg-white">
+            <option value="">-- Chọn mã từ VN30 --</option>
+          </select>
+        </div>
+        <div class="w-[108px]">
+          <label class="text-xs font-semibold text-slate-500 block mb-0.5">Khoảng thời gian</label>
+          <select id="vn30-days" onchange="onVN30CoinChange()" 
+                  class="input-field w-full px-3 py-2 rounded-2xl text-sm font-medium bg-white">
+            <option value="1">1 ngày</option>
+            <option value="5">5 ngày</option>
+            <option value="30" selected>1 tháng</option>
+            <option value="90">3 tháng</option>
+            <option value="180">6 tháng</option>
+            <option value="365">1 năm</option>
+          </select>
+        </div>
+        <div class="flex items-end">
+          <button onclick="loadAndDrawVN30Chart()" 
+                  class="yellow-btn px-5 h-[42px] rounded-2xl text-sm font-extrabold active:scale-[0.985]">
+            VẼ BIỂU ĐỒ
+          </button>
+        </div>
+      </div>
+
+      <!-- CHART CANVAS + LEGEND -->
+      <div class="modern-card p-2 border border-slate-200/80">
+        <div class="px-2 pt-1 pb-2 flex items-center justify-between">
+          <div id="vn30-chart-title" class="font-semibold text-sm text-[#3E2723]"></div>
+          <div id="vn30-chart-price" class="font-mono text-sm font-bold text-emerald-600"></div>
+        </div>
+        
+        <div class="relative bg-[#FAF7F2] rounded-xl overflow-hidden" style="height: 368px;">
+          <canvas id="vn30-chart" width="460" height="368" class="w-full h-full touch-none"></canvas>
+          <div id="vn30-chart-loading" class="hidden absolute inset-0 flex items-center justify-center bg-white/70">
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+              <div class="text-xs text-slate-500 mt-2 font-medium">Đang tải OHLC + tính chỉ báo...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error banner (identical style) -->
+        <div id="vn30-chart-error" class="hidden mt-1.5 mx-1 px-3 py-2 rounded-2xl bg-orange-50 border border-orange-200 text-[11px] text-[#3E2723] flex items-center gap-2">
+          <span class="flex-1" id="vn30-chart-error-text">Lỗi tải dữ liệu VN30 (mạng hoặc rate limit).</span>
+          <button onclick="retryLastVN30Load()" 
+                  class="shrink-0 px-3 py-1 bg-[#F5C400] active:bg-yellow-500 text-[#3E2723] font-extrabold rounded-xl text-xs shadow-sm border border-yellow-600/30">🔄 Thử lại</button>
+        </div>
+
+        <!-- Indicator Legend (same as crypto) -->
+        <div class="mt-2 px-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[10px] font-medium">
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-emerald-500 inline-block"></span> Nến tăng</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-rose-500 inline-block"></span> Nến giảm</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-blue-500 inline-block"></span> MA7/25</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-purple-500 inline-block"></span> Bollinger</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2 h-2 bg-teal-600/70 inline-block rounded-sm"></span> Ichimoku (5 lines + Cloud)</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-orange-500 inline-block"></span> MACD</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-indigo-500 inline-block"></span> RSI</span>
+          <span class="inline-flex items-center gap-1"><span class="w-2.5 h-0.5 bg-slate-400 inline-block"></span> Volume</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHÂN TÍCH SƠ BỘ -->
+    <div class="mb-4">
+      <div class="font-bold text-[#3E2723] mb-1.5 px-1 flex items-center gap-1.5">📝 Phân tích sơ bộ</div>
+      <div id="vn30-analysis" class="modern-card p-3.5 text-sm leading-snug border-l-4 border-yellow-500 bg-yellow-50/60 text-[#3E2723]">
+        Chọn mã VN30 và vẽ biểu đồ để xem phân tích xu hướng tự động.
+      </div>
+      <div id="vn30-indicators-summary" class="mt-2 grid grid-cols-4 gap-2 text-[11px] hidden"></div>
+    </div>
+
+    <div class="text-center text-[10px] text-slate-400 pb-2">Dữ liệu VNDIRECT Finfo • Cập nhật nhanh • Phân tích kỹ thuật tham khảo</div>
+  </div>
+
+  <!-- Bottom Navigation (5 tabs) -->
   <div class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white border-t border-slate-200 z-[60]">
-    <div class="grid grid-cols-4 text-center">
+    <div class="grid grid-cols-5 text-center">
       <div onclick="switchTab('home')" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600" data-tab="home">
         <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v-4" /></svg>
         <div class="nav-label">Trang chủ</div>
@@ -1234,6 +1397,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 002.573 2.573c1.543.94.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-2.573c-1.543-.94-3.31.826-2.37-2.37a1.724 1.724 0 00-2.573-2.573z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
         <div class="nav-label">Card Visit</div>
       </div>
+      <!-- Tab Tin Tức & Phân Tích -->
+      <a href="tin-tuc.html" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600">
+        <i class="fas fa-newspaper fa-lg mb-0.5 nav-icon"></i>
+        <span class="nav-label">Tin Tức</span>
+      </a>
     </div>
   </div>
 
@@ -2301,19 +2469,127 @@ async function saveMapQROnline() {
 
     // ==================== CRYPTO DASHBOARD (COINGECKO PUBLIC API + CANVAS + 6 INDICATORS) ====================
     // TẤT CẢ CODE CRYPTO Ở ĐÂY - GIỮ NGUYÊN PHONG CÁCH AGB (NÂU ĐẤT + VÀNG #F5C400)
+    // Reverted from Binance per fix request. Uses stable CoinGecko free endpoints.
     let top20Coins = [];
-    let cryptoCache = {}; // { 'bitcoin_30': {ohlc, volumes, ind, ts} }
+    let cryptoCache = {}; // in-mem layer (populated by strong LS cache helpers below)
     let currentCryptoCoin = null;
+    let lastCryptoParams = null; // for retry button on OHLC errors
 
-    // ========== COINGECKO API HELPERS + CHI TIẾT COMMENTS ==========
+    // ========== SHARED MARKET DATA HELPERS (CRYPTO + VN30) ==========
+    // Strong cache: localStorage (persist 5min TTL) + memory layer. Reduces API calls dramatically.
+    // fetchWithRetry: 3 attempts with exponential backoff (restored from original rate-limit fix).
+    // normalizeOHLCToDaily: reduces nến for long TF (180/360) when source returns sub-daily granularity.
+    // All helpers are clean, commented, reusable. LS keys: agbcn5_market_{type}_{key}
+    const MARKET_CACHE_TTL = 5 * 60 * 1000; // 5 minutes as required
+    const marketMemCache = {}; // fast in-memory layer
+
+    function getMarketCache(key, type = 'crypto') {
+      const memKey = `${type}_${key}`;
+      const now = Date.now();
+      if (marketMemCache[memKey] && now - marketMemCache[memKey].ts < MARKET_CACHE_TTL) {
+        return marketMemCache[memKey].data;
+      }
+      try {
+        const lsKey = `agbcn5_market_${type}_${key}`;
+        const raw = localStorage.getItem(lsKey);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (now - parsed.ts < MARKET_CACHE_TTL) {
+            marketMemCache[memKey] = { data: parsed.data, ts: parsed.ts };
+            return parsed.data;
+          } else {
+            localStorage.removeItem(lsKey);
+          }
+        }
+      } catch (e) { /* quota, private mode, or parse error – ignore silently */ }
+      return null;
+    }
+
+    function setMarketCache(key, data, type = 'crypto') {
+      const memKey = `${type}_${key}`;
+      const now = Date.now();
+      const entry = { data, ts: now };
+      marketMemCache[memKey] = entry;
+      try {
+        const lsKey = `agbcn5_market_${type}_${key}`;
+        localStorage.setItem(lsKey, JSON.stringify(entry));
+      } catch (e) { /* quota – continue with mem only */ }
+    }
+
+    function clearMarketCache(type = null) {
+      // clear mem layer
+      if (type) {
+        Object.keys(marketMemCache).forEach(k => { if (k.startsWith(type + '_')) delete marketMemCache[k]; });
+      } else {
+        Object.keys(marketMemCache).forEach(k => delete marketMemCache[k]);
+      }
+      // clear matching LS keys (safe prefix scan)
+      try {
+        const prefix = type ? `agbcn5_market_${type}_` : 'agbcn5_market_';
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+          const k = localStorage.key(i);
+          if (k && k.startsWith(prefix)) localStorage.removeItem(k);
+        }
+      } catch (e) { /* ignore */ }
+    }
+
+    async function fetchWithRetry(url, options = {}, maxRetries = 3) {
+      let lastErr;
+      for (let attempt = 0; attempt <= maxRetries; attempt++) {
+        try {
+          const res = await fetch(url, options);
+          if (res.ok) return res;
+          lastErr = new Error('HTTP ' + res.status);
+          if ((res.status === 429 || res.status >= 500) && attempt < maxRetries) {
+            const backoff = 420 * Math.pow(2, attempt) + Math.random() * 180; // ~0.4s, 0.9s, 1.8s
+            await new Promise(r => setTimeout(r, backoff));
+            continue;
+          }
+          throw lastErr;
+        } catch (e) {
+          lastErr = e;
+          if (attempt < maxRetries) {
+            const delay = 300 + attempt * 220 + Math.random() * 120;
+            await new Promise(r => setTimeout(r, delay));
+            continue;
+          }
+        }
+      }
+      throw lastErr || new Error('Fetch failed after ' + maxRetries + ' retries');
+    }
+
+    function normalizeOHLCToDaily(ohlcRaw) {
+      if (!ohlcRaw || ohlcRaw.length === 0) return [];
+      const dayMap = new Map();
+      for (const row of ohlcRaw) {
+        const t = row[0];
+        const dayKey = Math.floor(t / 86400000) * 86400000;
+        if (!dayMap.has(dayKey)) {
+          dayMap.set(dayKey, { t: dayKey, o: row[1], h: row[2], l: row[3], c: row[4] });
+        } else {
+          const d = dayMap.get(dayKey);
+          d.h = Math.max(d.h, row[2]);
+          d.l = Math.min(d.l, row[3]);
+          d.c = row[4];
+        }
+      }
+      return Array.from(dayMap.values())
+        .sort((a, b) => a.t - b.t)
+        .map(d => [d.t, d.o, d.h, d.l, d.c]);
+    }
+
+    // ========== COINGECKO PUBLIC API HELPERS (RESTORED + ENHANCED FOR RATE LIMIT) ==========
+    // CoinGecko Public API – miễn phí, không cần key (rate limit ~10-30 req/phút tùy IP)
+    // - Top 20: /coins/markets (market_cap_desc, per_page=20) – trả marketCap thật (khác Binance)
+    // - OHLCV: /coins/{id}/ohlc + /market_chart?interval=daily (2 calls, align bằng dayKey)
+    // Rate notes: Dùng fetchWithRetry (3x backoff) + strong LS 5min cache + extra delay/normalize cho 180/360 ngày.
+    // Long TF fix: normalize nếu raw > days*1.2 (giảm nến, giữ OHLC hợp lệ cho 6 chỉ báo).
+    // Giữ nguyên logic align volume từ ngày đầu tiên của project.
+
     async function fetchTop20Coins() {
-      // CoinGecko Public API (không cần API key, rate limit free ~ 10-50 req/phút tùy IP)
-      // Endpoint /coins/markets : trả về snapshot giá + market cap + % thay đổi 24h, sắp xếp giảm dần theo vốn hóa.
-      // Tham số quan trọng: vs_currency=usd, per_page=20, price_change_percentage=24h, order=market_cap_desc
-      // Dùng để đổ danh sách Top 20 realtime cho phần 1 + dropdown chọn coin.
+      // CoinGecko /coins/markets – trả snapshot + marketCap thật (ưu điểm so với Binance)
       const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h';
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error('CoinGecko markets API lỗi ' + res.status);
+      const res = await fetchWithRetry(url, { cache: 'no-store' }, 3);
       const data = await res.json();
       return data.map(c => ({
         id: c.id,
@@ -2327,31 +2603,32 @@ async function saveMapQROnline() {
     }
 
     async function fetchOHLCV(coinId, days = 30) {
-      // CoinGecko /coins/{id}/ohlc : trả về mảng OHLC nến (daily/period) dạng [[unixMs, open, high, low, close], ...]
-      // Tham số days=1,7,14,30,90,180,365,max ; interval ngầm là daily khi days>1.
-      // LƯU Ý QUAN TRỌNG: endpoint này KHÔNG trả volume! Muốn có volume phải gọi thêm /market_chart.
+      // CoinGecko /ohlc + /market_chart (2 calls, cần align volume theo ngày)
+      // Long TF (180/360): delay + normalize để giảm nến và tránh rate limit / response chậm
+      const isLongTF = days >= 180;
       const ohlcUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/ohlc?vs_currency=usd&days=${days}`;
-      const ohlcRes = await fetch(ohlcUrl, { cache: 'no-store' });
-      if (!ohlcRes.ok) throw new Error('OHLC API lỗi ' + ohlcRes.status);
-      const ohlcRaw = await ohlcRes.json(); // [[t, o, h, l, c], ...]
+      const ohlcRes = await fetchWithRetry(ohlcUrl, { cache: 'no-store' }, 3);
+      let ohlcRaw = await ohlcRes.json(); // [[t, o, h, l, c], ...]
 
-      // /market_chart : dùng để lấy total_volumes (và prices) theo cùng days.
-      // total_volumes = [[unixMs, volume], ...] - volume theo ngày.
+      if (isLongTF && ohlcRaw.length > days * 1.2) {
+        ohlcRaw = normalizeOHLCToDaily(ohlcRaw); // giảm nến, giữ OHLC daily hợp lệ cho chỉ báo
+      }
+
+      const betweenDelay = isLongTF ? 650 : 300;
+      await new Promise(r => setTimeout(r, betweenDelay));
+
       const chartUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}&interval=daily`;
-      const chartRes = await fetch(chartUrl, { cache: 'no-store' });
-      if (!chartRes.ok) throw new Error('Market chart API lỗi ' + chartRes.status);
+      const chartRes = await fetchWithRetry(chartUrl, { cache: 'no-store' }, 3);
       const chart = await chartRes.json();
 
-      // Chuẩn hóa OHLC + align volume theo timestamp (floor về ngày UTC)
       const ohlc = ohlcRaw.map(row => ({
-        t: row[0], // ms
+        t: row[0],
         o: row[1],
         h: row[2],
         l: row[3],
         c: row[4]
       }));
 
-      // Tạo map volume theo ngày (dùng timestamp làm key xấp xỉ)
       const volMap = new Map();
       (chart.total_volumes || []).forEach(([ts, vol]) => {
         const dayKey = Math.floor(ts / 86400000) * 86400000;
@@ -2495,8 +2772,8 @@ async function saveMapQROnline() {
     }
 
     // ========== VẼ BIỂU ĐỒ NẾN + TẤT CẢ CHỈ BÁO TRÊN 1 CANVAS (4 PANE) ==========
-    function drawCryptoChart(ohlc, volumes, ind, coinSymbol, coinName) {
-      const canvas = document.getElementById('crypto-chart');
+    function drawTechnicalChart(canvasId, ohlc, volumes, ind, symbol, name) {
+      const canvas = document.getElementById(canvasId);
       if (!canvas) return;
       // Responsive internal resolution (fit container ~460px on PWA)
       let displayW = canvas.parentElement ? canvas.parentElement.clientWidth - 8 : 0;
@@ -2507,6 +2784,17 @@ async function saveMapQROnline() {
       const W = canvas.width;
       const H = canvas.height;
       ctx.clearRect(0, 0, W, H);
+
+      // Guard cho "Không có dữ liệu" (fix lỗi crash NaN khi ohlc rỗng từ rate/API)
+      if (!ohlc || ohlc.length < 3) {
+        ctx.fillStyle = '#6B5B4F';
+        ctx.font = '14px Inter, system-ui, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Không có dữ liệu nến để vẽ biểu đồ', W / 2, H / 2 - 10);
+        ctx.font = '11px monospace';
+        ctx.fillText('(Cần ≥ 3 nến • Thử lại hoặc chọn timeframe khác)', W / 2, H / 2 + 12);
+        return;
+      }
 
       // Layout panes
       const pad = 6;
@@ -2895,8 +3183,8 @@ async function saveMapQROnline() {
       return `${coinName} vừa ${dir} ${pctChg}% so với nến trước. ${trend}. ${cloudTxt} ${tkCross}. ${rsiTxt}. ${macdTxt}. ${bbTxt}. ${maSignal}. TỔNG KẾT: ${overall}. Phân tích mang tính tham khảo, kết hợp quản lý vốn và theo dõi tin tức vĩ mô trước khi ra quyết định giao dịch.`;
     }
 
-    function updateIndicatorPills(ind) {
-      const box = document.getElementById('crypto-indicators-summary');
+    function updateIndicatorPills(ind, prefix = 'crypto') {
+      const box = document.getElementById(`${prefix}-indicators-summary`);
       if (!box || !ind) return;
       box.classList.remove('hidden');
       const last = (ind.rsi && ind.rsi.length - 1) || 0;
@@ -2931,7 +3219,7 @@ async function saveMapQROnline() {
       const container = document.getElementById('crypto-top20');
       if (!container) return;
       if (!coins || !coins.length) {
-        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Không tải được dữ liệu CoinGecko.</div>`;
+        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Không tải được dữ liệu Binance.</div>`;
         return;
       }
       top20Coins = coins;
@@ -2983,13 +3271,13 @@ async function saveMapQROnline() {
     async function refreshTopCoins() {
       const container = document.getElementById('crypto-top20');
       if (container) container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Đang tải Top 20 từ CoinGecko...</div>`;
-      // XÓA TOÀN BỘ CACHE để lần vẽ biểu đồ tiếp theo lấy dữ liệu mới hoàn toàn (fix nút Cập nhật giá)
+      // XÓA TOÀN BỘ CACHE (mem + localStorage 5min) để lấy dữ liệu mới (fix nút Cập nhật giá)
       cryptoCache = {};
+      clearMarketCache('crypto');
       try {
         const coins = await fetchTop20Coins();
         renderTop20Table(coins);
         showToast('Đã cập nhật giá Top 20 + xóa cache');
-        // Nếu đang có coin được chọn, tự động vẽ lại với dữ liệu mới
         const sel = document.getElementById('crypto-coin-select');
         if (sel && sel.value) {
           setTimeout(() => loadAndDrawCryptoChart(), 180);
@@ -3020,6 +3308,8 @@ async function saveMapQROnline() {
       const priceEl = document.getElementById('crypto-chart-price');
       const loading = document.getElementById('crypto-chart-loading');
       const analysisEl = document.getElementById('crypto-analysis');
+      const errBox = document.getElementById('crypto-chart-error');
+      const errText = document.getElementById('crypto-chart-error-text');
 
       if (!sel || !sel.value) {
         showToast('Vui lòng chọn coin từ danh sách Top 20');
@@ -3029,16 +3319,29 @@ async function saveMapQROnline() {
       const days = parseInt(daysSel.value, 10) || 90;
       const coinInfo = top20Coins.find(c => c.id === coinId) || { symbol: coinId.toUpperCase(), name: coinId };
 
+      // Remember for "Thử lại" button
+      lastCryptoParams = { coinId, days };
+
       currentCryptoCoin = coinId;
       if (loading) loading.classList.remove('hidden');
+      if (errBox) errBox.classList.add('hidden'); // hide previous error when starting new load
 
       const key = getCacheKey(coinId, days);
       try {
         let data;
-        if (cryptoCache[key] && Date.now() - cryptoCache[key].ts < 65000) {
-          data = cryptoCache[key];
+        const cached = getMarketCache(key, 'crypto');
+        if (cached) {
+          data = cached;
         } else {
           const { ohlc, volumes } = await fetchOHLCV(coinId, days);
+          if (!ohlc || ohlc.length < 3) {
+            if (analysisEl) analysisEl.textContent = 'Không đủ dữ liệu nến từ CoinGecko để tính chỉ báo (cần ≥3 nến).';
+            if (errBox && errText) {
+              errText.textContent = 'Không có dữ liệu OHLC.';
+              errBox.classList.remove('hidden');
+            }
+            throw new Error('Insufficient OHLC data');
+          }
           // Tính tất cả 6 chỉ báo
           const closes = ohlc.map(d => d.c);
           const ma7 = calcSMA(closes, 7);
@@ -3050,11 +3353,11 @@ async function saveMapQROnline() {
           const ind = { ma7, ma25, bb, rsi, macd, ichi };
 
           data = { ohlc, volumes, ind, ts: Date.now() };
-          cryptoCache[key] = data;
+          setMarketCache(key, data, 'crypto'); // strong 5min LS + mem
         }
 
-        // Vẽ
-        drawCryptoChart(data.ohlc, data.volumes, data.ind, coinInfo.symbol, coinInfo.name);
+        // Vẽ (guard đã ở drawTechnicalChart)
+        drawTechnicalChart('crypto-chart', data.ohlc, data.volumes, data.ind, coinInfo.symbol, coinInfo.name);
 
         // Header + giá
         const last = data.ohlc[data.ohlc.length - 1];
@@ -3064,17 +3367,38 @@ async function saveMapQROnline() {
         // Phân tích + pills
         const analysisText = generateCryptoAnalysis(data.ohlc, data.ind, coinInfo.name);
         if (analysisEl) analysisEl.textContent = analysisText;
-        updateIndicatorPills(data.ind);
+        updateIndicatorPills(data.ind, 'crypto');
 
+        if (errBox) errBox.classList.add('hidden');
         showToast(`Đã vẽ biểu đồ ${coinInfo.symbol} (${days} ngày)`);
       } catch (e) {
         console.error('[Crypto] load chart error', e);
-        showToast('Lỗi tải OHLC từ CoinGecko (rate limit hoặc mạng)');
-        if (analysisEl) analysisEl.textContent = 'Không thể tải dữ liệu biểu đồ. Vui lòng thử lại sau ít phút.';
+        const friendly = 'Lỗi tải OHLC từ CoinGecko (rate limit hoặc mạng). Thử lại sau 30-60s.';
+        showToast(friendly);
+        if (analysisEl) analysisEl.textContent = 'Không thể tải dữ liệu biểu đồ OHLC. Nhấn "Thử lại" bên dưới hoặc đợi ít phút (CoinGecko free tier).';
+        if (errBox && errText) {
+          errText.textContent = friendly;
+          errBox.classList.remove('hidden');
+        }
       } finally {
         if (loading) loading.classList.add('hidden');
       }
     }
+
+    window.retryLastCryptoLoad = function() {
+      const errBox = document.getElementById('crypto-chart-error');
+      if (errBox) errBox.classList.add('hidden');
+      if (lastCryptoParams && lastCryptoParams.coinId) {
+        const sel = document.getElementById('crypto-coin-select');
+        const daysSel = document.getElementById('crypto-days');
+        if (sel) sel.value = lastCryptoParams.coinId;
+        if (daysSel) daysSel.value = String(lastCryptoParams.days);
+        // Small delay to let UI update then load (with fresh retry inside fetch)
+        setTimeout(() => loadAndDrawCryptoChart(), 60);
+      } else {
+        showToast('Vui lòng chọn coin và bấm VẼ BIỂU ĐỒ');
+      }
+    };
 
     // Patch switchTab để auto load top20 khi vào tab crypto
     (function patchSwitchForCrypto() {
@@ -3085,6 +3409,287 @@ async function saveMapQROnline() {
           const topBox = document.getElementById('crypto-top20');
           if (topBox && (!top20Coins || top20Coins.length === 0)) {
             setTimeout(() => { refreshTopCoins(); }, 120);
+          }
+        }
+      };
+    })();
+
+    // ==================== CHỨNG KHOÁN VN30 (FINFO VNDIRECT - REPLACED FIREANT ENTIRELY) ====================
+    // TẤT CẢ CODE VN30 Ở ĐÂY - GIAO DIỆN ĐỒNG BỘ 100% VỚI CRYPTO (NÂU ĐẤT + VÀNG #F5C400)
+    // - Realtime Top: Finfo /v4/stock/realtime?symbols=... (batch)
+    // - Historical OHLC: Finfo /v4/stock-historical?symbol=XXX&fromDate=YYYY-MM-DD&toDate=...
+    // - Cache 5 phút (LS+mem) + fetchWithRetry 3 lần (backoff) → tối ưu rate limit
+    // - 180/365 ngày: daily bars từ Finfo → mượt, giảm tải không cần thiết
+    // - Giữ nguyên đầy đủ 6 chỉ báo + vẽ + phân tích + style nâu đất/vàng Agribank
+    let vn30Symbols = [];
+    let vn30Cache = {};
+    let currentVN30 = null;
+    let lastVN30Params = null;
+
+    const VN30_LIST = [
+      {s:'VCB', n:'Vietcombank'}, {s:'TCB', n:'Techcombank'}, {s:'BID', n:'BIDV'}, {s:'VPB', n:'VPBank'},
+      {s:'HDB', n:'HDBank'}, {s:'MBB', n:'MBBank'}, {s:'STB', n:'Sacombank'}, {s:'SHB', n:'SHB'},
+      {s:'VHM', n:'Vinhomes'}, {s:'VIC', n:'Vingroup'}, {s:'VRE', n:'Vincom Retail'}, {s:'NVL', n:'Novaland'},
+      {s:'PDR', n:'Phat Dat'}, {s:'BCM', n:'BCM'}, {s:'HPG', n:'Hòa Phát'}, {s:'HSG', n:'Hòa Sen'},
+      {s:'VNM', n:'Vinamilk'}, {s:'MSN', n:'Masan'}, {s:'MWG', n:'Thế Giới Di Động'}, {s:'FPT', n:'FPT Corp'},
+      {s:'VJC', n:'VietJet Air'}, {s:'PLX', n:'Petrolimex'}, {s:'GAS', n:'PV Gas'}, {s:'POW', n:'PV Power'},
+      {s:'SAB', n:'Sabeco'}, {s:'SSI', n:'SSI'}, {s:'CTG', n:'VietinBank'}, {s:'ACB', n:'ACB'},
+      {s:'GVR', n:'GVR'}, {s:'TPB', n:'TPBank'}
+    ];
+
+    // Finfo VNDIRECT helper (tối ưu CORS + headers giống DStock, dùng chung fetchWithRetry 3x)
+    async function _finfoFetch(url) {
+      const headers = {
+        'Accept': 'application/json, text/plain, */*',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Referer': 'https://dstock.vndirect.com.vn/'
+      };
+      return fetchWithRetry(url, { cache: 'no-store', headers }, 3);
+    }
+
+    async function fetchVN30Top() {
+      // Finfo batch realtime (nhanh, ổn định, thay thế toàn bộ FireAnt)
+      const symbols = VN30_LIST.map(i => i.s).join(',');
+      const url = `https://finfo-api.vndirect.com.vn/v4/stock/realtime?symbols=${symbols}`;
+      const res = await _finfoFetch(url);
+      const json = await res.json();
+      const quotes = Array.isArray(json) ? json : (json?.data || []);
+      return VN30_LIST.map(item => {
+        const q = quotes.find(x => (x.symbol || x.code || '').toUpperCase() === item.s) || {};
+        const price = Number(q.lastPrice ?? q.price ?? q.matchedPrice ?? q.close ?? 0);
+        let chg = Number(q.pctChange ?? q.changePercent ?? q.percentChange ?? 0);
+        if (!chg && q.change != null && q.prevClose) chg = (Number(q.change) / Number(q.prevClose) * 100) || 0;
+        const vol = Number(q.totalVolume ?? q.volume ?? q.accVolume ?? 0);
+        return {
+          id: item.s, symbol: item.s, name: item.n,
+          price, change24h: chg, volume: vol
+        };
+      });
+    }
+
+    function getFinfoDateRange(rangeKey) {
+      const now = new Date();
+      const end = now.toISOString().split('T')[0];
+      let start = new Date(now.getTime() - 90 * 86400000).toISOString().split('T')[0];
+      if (rangeKey === '1') start = new Date(now.getTime() - 5 * 86400000).toISOString().split('T')[0];
+      else if (rangeKey === '5') start = new Date(now.getTime() - 10 * 86400000).toISOString().split('T')[0];
+      else if (rangeKey === '30') start = new Date(now.getTime() - 35 * 86400000).toISOString().split('T')[0];
+      else if (rangeKey === '90') start = new Date(now.getTime() - 95 * 86400000).toISOString().split('T')[0];
+      else if (rangeKey === '180') start = new Date(now.getTime() - 185 * 86400000).toISOString().split('T')[0];
+      else if (rangeKey === '365') start = new Date(now.getTime() - 370 * 86400000).toISOString().split('T')[0];
+      return { startDate: start, endDate: end };
+    }
+
+    async function fetchVN30OHLCV(symbol, rangeKey = '30') {
+      const { startDate, endDate } = getFinfoDateRange(rangeKey);
+      const url = `https://finfo-api.vndirect.com.vn/v4/stock-historical?symbol=${symbol}&fromDate=${startDate}&toDate=${endDate}`;
+      const res = await _finfoFetch(url);
+      const json = await res.json();
+      const arr = Array.isArray(json) ? json : (json?.data || []);
+      const rows = [];
+      (arr || []).forEach(item => {
+        const ds = item.date || item.tradingDate || item.time;
+        const t = ds ? new Date(ds).getTime() : 0;
+        if (!t) return;
+        rows.push({
+          t,
+          o: Number(item.open || 0),
+          h: Number(item.high || 0),
+          l: Number(item.low || 0),
+          c: Number(item.close || 0),
+          v: Number(item.volume || 0)
+        });
+      });
+      rows.sort((a, b) => a.t - b.t);
+      const ohlc = rows.map(r => ({ t: r.t, o: r.o, h: r.h, l: r.l, c: r.c }));
+      const volumes = rows.map(r => r.v);
+      if (ohlc.length < 2 && rangeKey === '1') {
+        // 1 ngày ít nến (nghỉ lễ) → nới range nhẹ
+        return fetchVN30OHLCV(symbol, '5');
+      }
+      // 180/365 ngày: Finfo trả daily (~240 điểm/năm) → tải mượt, vẽ ổn trên canvas, giữ full data cho 6 chỉ báo chính xác
+      return { ohlc, volumes };
+    }
+
+    function renderVN30TopList(items) {
+      const container = document.getElementById('vn30-top20');
+      if (!container) return;
+      if (!items || !items.length) {
+        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Không tải được dữ liệu VN30.</div>`;
+        return;
+      }
+      vn30Symbols = items;
+      let html = '';
+      items.forEach((c) => {
+        const ch = c.change24h || 0;
+        const chColor = ch >= 0 ? 'text-emerald-600' : 'text-rose-600';
+        const chSign = ch >= 0 ? '+' : '';
+        const volStr = c.volume > 1e6 ? (c.volume / 1e6).toFixed(1) + 'M' : (c.volume / 1e3).toFixed(0) + 'K';
+        html += `
+          <div onclick="selectVN30ForChart('${c.id}', '${c.symbol}')" 
+               class="flex items-center justify-between px-3 py-[7px] border-b border-slate-100 active:bg-yellow-50 cursor-pointer">
+            <div class="flex items-center gap-2 min-w-0">
+              <div class="font-bold text-[#3E2723] truncate">${c.symbol}</div>
+              <div class="text-[10px] text-slate-500 truncate max-w-[92px]">${c.name}</div>
+            </div>
+            <div class="text-right font-mono">
+              <div class="text-sm font-extrabold text-[#1f2937]">${c.price ? c.price.toLocaleString('vi-VN') : '--'}</div>
+              <div class="flex items-center justify-end gap-2 text-xs">
+                <span class="${chColor} font-bold">${chSign}${ch.toFixed(1)}%</span>
+                <span class="text-slate-400 text-[10px]">${volStr}</span>
+              </div>
+            </div>
+          </div>`;
+      });
+      container.innerHTML = html;
+
+      // Fill select
+      const sel = document.getElementById('vn30-coin-select');
+      if (sel) {
+        sel.innerHTML = '<option value="">-- Chọn mã từ VN30 --</option>';
+        items.forEach(c => {
+          const opt = document.createElement('option');
+          opt.value = c.id;
+          opt.textContent = `${c.symbol} — ${c.name}`;
+          sel.appendChild(opt);
+        });
+      }
+      const upd = document.getElementById('vn30-last-update');
+      if (upd) upd.textContent = '• cập nhật ' + new Date().toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'});
+    }
+
+    async function refreshVN30Top() {
+      const container = document.getElementById('vn30-top20');
+      if (container) container.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">Đang tải Top VN30 từ Finfo VNDIRECT...</div>`;
+      vn30Cache = {};
+      clearMarketCache('vn30'); // clear 5min LS + mem
+      try {
+        const items = await fetchVN30Top();
+        renderVN30TopList(items);
+        showToast('Đã cập nhật giá VN30 (Finfo VNDIRECT)');
+        const sel = document.getElementById('vn30-coin-select');
+        if (sel && sel.value) setTimeout(() => loadAndDrawVN30Chart(), 180);
+      } catch (e) {
+        console.error('[VN30] refresh error', e);
+        if (container) container.innerHTML = `<div class="p-4 text-center text-xs text-rose-500">Lỗi kết nối Finfo VNDIRECT. ${e.message}</div>`;
+        showToast('Không thể tải dữ liệu VN30');
+      }
+    }
+
+    window.selectVN30ForChart = function(symbol, code) {
+      const sel = document.getElementById('vn30-coin-select');
+      if (sel) sel.value = symbol;
+      currentVN30 = symbol;
+      setTimeout(() => loadAndDrawVN30Chart(), 60);
+    };
+
+    window.onVN30CoinChange = function() {};
+
+    async function loadAndDrawVN30Chart() {
+      const sel = document.getElementById('vn30-coin-select');
+      const rangeSel = document.getElementById('vn30-days');
+      const titleEl = document.getElementById('vn30-chart-title');
+      const priceEl = document.getElementById('vn30-chart-price');
+      const loading = document.getElementById('vn30-chart-loading');
+      const analysisEl = document.getElementById('vn30-analysis');
+      const errBox = document.getElementById('vn30-chart-error');
+      const errText = document.getElementById('vn30-chart-error-text');
+
+      if (!sel || !sel.value) {
+        showToast('Vui lòng chọn mã từ danh sách VN30');
+        return;
+      }
+      const symbol = sel.value;
+      const rangeKey = rangeSel.value || '30';
+      const info = vn30Symbols.find(c => c.id === symbol) || { symbol, name: symbol };
+
+      lastVN30Params = { symbol, rangeKey };
+      currentVN30 = symbol;
+      if (loading) loading.classList.remove('hidden');
+      if (errBox) errBox.classList.add('hidden');
+
+      const key = `${symbol}_${rangeKey}`;
+      try {
+        let data;
+        const cached = getMarketCache(key, 'vn30');
+        if (cached) {
+          data = cached;
+        } else {
+          const { ohlc, volumes } = await fetchVN30OHLCV(symbol, rangeKey);
+          if (!ohlc || ohlc.length < 3) {
+            if (analysisEl) analysisEl.textContent = 'Không đủ dữ liệu nến từ Finfo VNDIRECT để tính chỉ báo (cần ≥3 nến).';
+            if (errBox && errText) {
+              errText.textContent = 'Không có dữ liệu OHLC VN30.';
+              errBox.classList.remove('hidden');
+            }
+            throw new Error('Insufficient VN30 OHLC data');
+          }
+          const closes = ohlc.map(d => d.c);
+          const ma7 = calcSMA(closes, 7);
+          const ma25 = calcSMA(closes, Math.min(25, Math.floor(closes.length * 0.7)));
+          const bb = calcBollinger(closes, Math.min(20, Math.floor(closes.length / 2)));
+          const rsi = calcRSI(closes, 14);
+          const macd = calcMACD(closes);
+          const ichi = calcIchimoku(ohlc);
+          const ind = { ma7, ma25, bb, rsi, macd, ichi };
+
+          data = { ohlc, volumes, ind, ts: Date.now() };
+          setMarketCache(key, data, 'vn30'); // 5min LS + mem (tối ưu mượt)
+        }
+
+        drawTechnicalChart('vn30-chart', data.ohlc, data.volumes, data.ind, info.symbol, info.name);
+
+        const last = data.ohlc[data.ohlc.length - 1];
+        if (titleEl) titleEl.textContent = `${info.symbol} • ${info.name} (${rangeKey}d)`;
+        if (priceEl) priceEl.textContent = last ? last.c.toLocaleString('vi-VN') : '';
+
+        const analysisText = (typeof generateCryptoAnalysis === 'function')
+          ? generateCryptoAnalysis(data.ohlc, data.ind, info.name)
+          : 'Phân tích VN30: dữ liệu đã sẵn sàng.';
+        if (analysisEl) analysisEl.textContent = analysisText;
+
+        // Dùng hàm đã generalize (không dupe HTML)
+        updateIndicatorPills(data.ind, 'vn30');
+
+        if (errBox) errBox.classList.add('hidden');
+        showToast(`Đã vẽ ${info.symbol} (${rangeKey})`);
+      } catch (e) {
+        console.error('[VN30] load chart error', e);
+        const friendly = 'Lỗi tải OHLC VN30 (rate limit hoặc mạng). Thử lại sau 30-60s.';
+        showToast(friendly);
+        if (analysisEl) analysisEl.textContent = 'Không thể tải dữ liệu biểu đồ VN30. Nhấn "Thử lại".';
+        if (errBox && errText) {
+          errText.textContent = friendly;
+          errBox.classList.remove('hidden');
+        }
+      } finally {
+        if (loading) loading.classList.add('hidden');
+      }
+    }
+
+    window.retryLastVN30Load = function() {
+      const errBox = document.getElementById('vn30-chart-error');
+      if (errBox) errBox.classList.add('hidden');
+      if (lastVN30Params && lastVN30Params.symbol) {
+        const sel = document.getElementById('vn30-coin-select');
+        const rSel = document.getElementById('vn30-days');
+        if (sel) sel.value = lastVN30Params.symbol;
+        if (rSel) rSel.value = lastVN30Params.rangeKey;
+        setTimeout(() => loadAndDrawVN30Chart(), 60);
+      } else {
+        showToast('Vui lòng chọn mã và bấm VẼ BIỂU ĐỒ');
+      }
+    };
+
+    // Patch switchTab cho VN30 (lazy load top khi vào tab)
+    (function patchSwitchForVN30() {
+      const orig = window.switchTab;
+      window.switchTab = function(tab) {
+        orig(tab);
+        if (tab === 'vn30') {
+          const box = document.getElementById('vn30-top20');
+          if (box && (!vn30Symbols || vn30Symbols.length === 0)) {
+            setTimeout(() => { refreshVN30Top(); }, 140);
           }
         }
       };
