@@ -3,147 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tin Tức & Phân Tích Thị Trường | tantoi-law-finance.store</title>
+  <title>Phân Tích Thị Trường | tantoi-law-finance.store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { background: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
-    .nav-tabs .nav-link { font-weight: 600; }
-    .card { transition: all 0.3s; }
-    .card:hover { transform: translateY(-4px); }
-    #chart-container { background: white; border-radius: 12px; padding: 10px; }
+    #chart-container { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
   </style>
 </head>
 <body>
   <div class="container py-4">
-    <h2 class="text-center mb-4">📊 Tin Tức & Phân Tích Thị Trường</h2>
+    <h4 class="mb-3">📈 Phân Tích Thị Trường</h4>
 
-    <ul class="nav nav-tabs mb-4" id="myTab">
-      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tin-tuc">📰 Tin Tức</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#chinh-sach">⚖️ Chính Sách & Luật</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#phan-tich">📈 Phân Tích VN30</button></li>
-    </ul>
-
-    <div class="tab-content">
-      <!-- Tab Tin Tức -->
-      <div class="tab-pane fade show active" id="tin-tuc">
-        <div id="tin-tuc-content" class="row"></div>
-        <small class="text-muted">Tự động cập nhật mỗi 30 phút</small>
-      </div>
-
-      <!-- Tab Chính Sách -->
-      <div class="tab-pane fade" id="chinh-sach">
-        <div id="chinh-sach-content" class="row"></div>
-        <small class="text-muted">Tự động cập nhật mỗi 30 phút</small>
-      </div>
-
-      <!-- Tab Phân Tích VN30 -->
-      <div class="tab-pane fade" id="phan-tich">
-        <div class="mb-3">
-          <label><strong>Chọn cổ phiếu VN30:</strong></label>
-          <select id="stock-select" class="form-select" style="max-width: 280px;">
-            <option value="VNINDEX">VNINDEX (Toàn thị trường)</option>
-          </select>
-          <small class="text-muted">Hiện tại chỉ hỗ trợ VNINDEX. Các mã khác sẽ cập nhật sau.</small>
-        </div>
-        <div id="chart-container" style="height: 620px; width: 100%;"></div>
-      </div>
+    <div class="mb-4">
+      <label class="form-label"><strong>Chọn mã chứng khoán VN30:</strong></label>
+      <select id="stock-select" class="form-select w-auto d-inline-block" style="max-width: 320px;">
+        <option value="VNINDEX">VNINDEX</option>
+        <option value="VN30">VN30</option>
+        <option value="HPG">HPG - Hòa Phát</option>
+        <option value="VCB">VCB - Vietcombank</option>
+        <option value="FPT">FPT</option>
+        <option value="VNM">VNM - Vinamilk</option>
+        <option value="GAS">GAS</option>
+        <option value="VHM">VHM</option>
+        <option value="BID">BID - BIDV</option>
+        <option value="CTG">CTG - VietinBank</option>
+        <option value="TCB">TCB - Techcombank</option>
+        <option value="MSN">MSN - Masan</option>
+        <option value="MWG">MWG - Thế Giới Di Động</option>
+        <option value="POW">POW - Điện Lực Dầu Khí</option>
+        <option value="SAB">SAB - Sabeco</option>
+        <option value="ACB">ACB</option>
+        <option value="MBB">MBB - MB Bank</option>
+        <option value="VRE">VRE - Vincom Retail</option>
+      </select>
     </div>
+
+    <div id="chart-container" style="height: 680px; width: 100%;"></div>
+    <small class="text-muted">Nến + MA7/MA25 + RSI(14) + MACD • Dữ liệu VN30</small>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
 
   <script>
-    // ==================== TIN TỨC + CHÍNH SÁCH ====================
-    async function loadNews() {
-      try {
-        const res = await fetch('data/news.json?' + Date.now());
-        const data = await res.json();
+    let chart = null;
 
-        document.getElementById('tin-tuc-content').innerHTML = data.tin_tuc.map(item => `
-          <div class="col-md-6 mb-3">
-            <div class="card h-100">
-              <div class="card-body">
-                <h6>${item.title}</h6>
-                <small class="text-muted">${item.date} • ${item.source}</small>
-                <p class="small">${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="btn btn-sm btn-primary">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-        `).join('');
-
-        document.getElementById('chinh-sach-content').innerHTML = data.chinh_sach.map(item => `
-          <div class="col-md-6 mb-3">
-            <div class="card h-100">
-              <div class="card-body">
-                <h6>${item.title}</h6>
-                <small class="text-muted">${item.date}</small>
-                <p class="small">${item.summary}</p>
-                <a href="${item.link}" target="_blank" class="btn btn-sm btn-primary">Chi tiết</a>
-              </div>
-            </div>
-          </div>
-        `).join('');
-      } catch(e) { console.error(e); }
+    // Các hàm tính chỉ báo (giữ nguyên như bạn đã có)
+    function calculateMA(data, period) {
+      const result = [];
+      for (let i = 0; i < data.length; i++) {
+        if (i < period - 1) result.push({ time: data[i].time, value: null });
+        else {
+          let sum = 0;
+          for (let j = 0; j < period; j++) sum += data[i - j].close;
+          result.push({ time: data[i].time, value: sum / period });
+        }
+      }
+      return result;
     }
 
-    setInterval(loadNews, 30 * 60 * 1000);
+    function calculateRSI(data, period = 14) {
+      // (giữ nguyên hàm RSI của bạn - tôi copy từ code bạn gửi)
+      const result = [];
+      let gains = 0, losses = 0;
+      for (let i = 1; i < data.length; i++) {
+        const change = data[i].close - data[i - 1].close;
+        if (i < period) {
+          gains += Math.max(change, 0);
+          losses += Math.max(-change, 0);
+          result.push({ time: data[i].time, value: null });
+        } else if (i === period) {
+          gains += Math.max(change, 0);
+          losses += Math.max(-change, 0);
+          const avgGain = gains / period;
+          const avgLoss = losses / period;
+          const rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
+          result.push({ time: data[i].time, value: 100 - (100 / (1 + rs)) });
+        } else {
+          const prevAvgGain = gains / period;
+          const prevAvgLoss = losses / period;
+          const currentGain = Math.max(change, 0);
+          const currentLoss = Math.max(-change, 0);
+          const avgGain = (prevAvgGain * (period - 1) + currentGain) / period;
+          const avgLoss = (prevAvgLoss * (period - 1) + currentLoss) / period;
+          const rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
+          result.push({ time: data[i].time, value: 100 - (100 / (1 + rs)) });
+          gains = avgGain * period;
+          losses = avgLoss * period;
+        }
+      }
+      return result;
+    }
 
-    // ==================== BIỂU ĐỒ VN30 ====================
-    let currentChart = null;
+    function calculateMACD(data) {
+      // (giữ nguyên hàm MACD của bạn)
+      const ema12 = calculateEMA(data, 12);
+      const ema26 = calculateEMA(data, 26);
+      const macdLine = [];
+      for (let i = 0; i < data.length; i++) {
+        if (ema12[i].value !== null && ema26[i].value !== null) {
+          macdLine.push({ time: data[i].time, value: ema12[i].value - ema26[i].value });
+        } else {
+          macdLine.push({ time: data[i].time, value: null });
+        }
+      }
+      const signal = calculateEMA(macdLine, 9);
+      const histogram = [];
+      for (let i = 0; i < macdLine.length; i++) {
+        if (macdLine[i].value !== null && signal[i].value !== null) {
+          histogram.push({ time: data[i].time, value: macdLine[i].value - signal[i].value });
+        } else {
+          histogram.push({ time: data[i].time, value: null });
+        }
+      }
+      return { macd: macdLine, signal, histogram };
+    }
 
-    async function renderChart() {
-      if (currentChart) currentChart.remove();
+    function calculateEMA(data, period) {
+      const result = [];
+      let multiplier = 2 / (period + 1);
+      let ema = null;
+      for (let i = 0; i < data.length; i++) {
+        if (i < period - 1) {
+          result.push({ time: data[i].time, value: null });
+        } else if (i === period - 1) {
+          let sum = 0;
+          for (let j = 0; j < period; j++) sum += data[i - j].close;
+          ema = sum / period;
+          result.push({ time: data[i].time, value: ema });
+        } else {
+          ema = (data[i].close - ema) * multiplier + ema;
+          result.push({ time: data[i].time, value: ema });
+        }
+      }
+      return result;
+    }
 
+    async function renderChart(symbol) {
       const container = document.getElementById('chart-container');
-      container.innerHTML = '';
+      if (chart) chart.remove();
 
       try {
-        const res = await fetch('data/stocks.json?' + Date.now());
-        const data = await res.json();
+        const res = await fetch(`/data/stocks.json`);
+        const raw = await res.json();
+        const candles = raw[symbol] ? raw[symbol].candles : raw.candles;
 
-        if (!data.candles || data.candles.length === 0) {
-          container.innerHTML = '<p class="text-warning">Chưa có dữ liệu biểu đồ.</p>';
+        if (!candles || candles.length === 0) {
+          container.innerHTML = `<p class="text-warning p-4">Chưa có dữ liệu cho mã ${symbol}. Đang cập nhật...</p>`;
           return;
         }
 
-        const chart = LightweightCharts.createChart(container, {
+        chart = LightweightCharts.createChart(container, {
           width: container.clientWidth,
-          height: 580,
-          layout: { background: { color: '#fff' } }
+          height: 680,
+          layout: { background: { color: '#ffffff' } },
+          grid: { vertLines: { color: '#f0f0f0' }, horzLines: { color: '#f0f0f0' } }
         });
 
         const candleSeries = chart.addCandlestickSeries();
-        candleSeries.setData(data.candles);
+        candleSeries.setData(candles);
 
-        // MA7
-        const ma7 = chart.addLineSeries({ color: '#2962FF', lineWidth: 2, title: 'MA7' });
-        const ma7Data = data.candles.map((c, i) => ({
-          time: c.time,
-          value: calculateMA(data.candles, i, 7)
-        })).filter(d => d.value !== null);
-        ma7.setData(ma7Data);
+        // MA7 & MA25
+        const ma7 = chart.addLineSeries({ color: '#2962FF', lineWidth: 2 });
+        ma7.setData(calculateMA(candles, 7));
+        const ma25 = chart.addLineSeries({ color: '#FF6D00', lineWidth: 2 });
+        ma25.setData(calculateMA(candles, 25));
 
-        currentChart = chart;
+        // RSI
+        const rsiPane = chart.addPane({ height: 120 });
+        const rsiSeries = rsiPane.addLineSeries({ color: '#9C27B0' });
+        rsiSeries.setData(calculateRSI(candles));
 
-      } catch(e) {
+        // MACD
+        const macdPane = chart.addPane({ height: 140 });
+        const macdData = calculateMACD(candles);
+        const macdLine = macdPane.addLineSeries({ color: '#2196F3' });
+        macdLine.setData(macdData.macd);
+        const signalLine = macdPane.addLineSeries({ color: '#FF5722' });
+        signalLine.setData(macdData.signal);
+        const histogram = macdPane.addHistogramSeries({ color: '#4CAF50' });
+        histogram.setData(macdData.histogram);
+
+        chart.timeScale().fitContent();
+        console.log(`✅ Đã vẽ biểu đồ ${symbol}`);
+      } catch (e) {
         console.error(e);
-        container.innerHTML = '<p class="text-danger">Lỗi tải biểu đồ. Vui lòng thử lại sau.</p>';
+        container.innerHTML = `<p class="text-danger p-4">Lỗi tải dữ liệu ${symbol}.</p>`;
       }
     }
 
-    function calculateMA(candles, index, period) {
-      if (index < period - 1) return null;
-      let sum = 0;
-      for (let i = 0; i < period; i++) sum += candles[index - i].close;
-      return sum / period;
-    }
-
-    // Khởi chạy
     window.onload = () => {
-      loadNews();
-      renderChart();
+      const select = document.getElementById('stock-select');
+      renderChart(select.value);
+
+      select.addEventListener('change', (e) => {
+        renderChart(e.target.value);
+      });
     };
   </script>
 </body>
