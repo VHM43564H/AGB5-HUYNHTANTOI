@@ -2,127 +2,352 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phân Tích Thị Trường | tantoi-law-finance.store</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Tin Tức &amp; Phân Tích VN30 | AGBCN5</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
   <style>
-    body { background: #f8f9fa; font-family: 'Segoe UI', sans-serif; }
-    #chart-container { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Roboto+Mono:wght@400;500&amp;display=swap');
+    
+    :root {
+      --earth-brown: #5D4037;
+      --earth-dark: #3E2723;
+      --gold: #F5C400;
+      --light-bg: #F8F3EC;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #F8F3EC;
+    }
+    
+    .mono { font-family: 'Roboto Mono', ui-monospace, monospace; }
+    
+    .agb-header {
+      background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%);
+    }
+    
+    .section-header {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #3E2723;
+    }
+    
+    .modern-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      border: 1px solid #E7DFD6;
+    }
+    
+    .tab-btn {
+      padding: 10px 18px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 9999px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #5D4037;
+      background: #F1E9DF;
+      border: 2px solid transparent;
+    }
+    
+    .tab-btn.active {
+      background: #5D4037;
+      color: #F5C400;
+      box-shadow: 0 2px 8px rgba(93, 64, 55, 0.3);
+    }
+    
+    .news-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .news-card:active {
+      transform: scale(0.985);
+    }
+    
+    .indicator-legend {
+      font-size: 11px;
+      font-weight: 600;
+    }
+    
+    .chart-pane {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #E7DFD6;
+      background: #fff;
+    }
+    
+    .stock-select {
+      border: 2px solid #D7CCC8;
+      background: white;
+      font-weight: 600;
+      color: #3E2723;
+    }
+    
+    .stock-select:focus {
+      border-color: #F5C400;
+      box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.15);
+      outline: none;
+    }
+    
+    .yellow-accent {
+      color: #B8860B;
+    }
+    
+    .news-source {
+      background: #F1E9DF;
+      color: #5D4037;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 8px;
+      border-radius: 999px;
+    }
+    
+    .metric-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #6B5F54;
+      letter-spacing: 0.5px;
+    }
   </style>
 </head>
 <body>
-  <div class="container py-4">
-    <h4 class="mb-3">📈 Phân Tích Thị Trường</h4>
-
-    <div class="mb-4">
-      <label class="form-label"><strong>Chọn mã chứng khoán VN30:</strong></label>
-      <select id="stock-select" class="form-select w-auto d-inline-block" style="max-width: 320px;">
-        <option value="VNINDEX">VNINDEX</option>
-        <option value="VN30">VN30</option>
-        <option value="HPG">HPG - Hòa Phát</option>
-        <option value="VCB">VCB - Vietcombank</option>
-        <option value="FPT">FPT</option>
-        <option value="VNM">VNM - Vinamilk</option>
-        <option value="GAS">GAS</option>
-        <option value="VHM">VHM</option>
-        <option value="BID">BID - BIDV</option>
-        <option value="CTG">CTG - VietinBank</option>
-        <option value="TCB">TCB - Techcombank</option>
-        <option value="MSN">MSN - Masan</option>
-        <option value="MWG">MWG - Thế Giới Di Động</option>
-        <option value="POW">POW - Điện Lực Dầu Khí</option>
-        <option value="SAB">SAB - Sabeco</option>
-        <option value="ACB">ACB</option>
-        <option value="MBB">MBB - MB Bank</option>
-        <option value="VRE">VRE - Vincom Retail</option>
-      </select>
+  <!-- HEADER -->
+  <div class="agb-header text-white sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-[#F5C400] rounded-2xl flex items-center justify-center shadow-inner">
+          <i class="fas fa-chart-line text-[#3E2723] text-2xl"></i>
+        </div>
+        <div>
+          <div class="font-extrabold text-xl tracking-tight">Tin Tức &amp; Phân Tích</div>
+          <div class="text-[11px] text-[#D7CCC8] -mt-0.5">AGBCN5 • Thị trường Việt Nam</div>
+        </div>
+      </div>
+      <a href="index.html" 
+         class="flex items-center gap-2 px-4 py-2 rounded-3xl bg-white/10 hover:bg-white/20 active:bg-white/25 text-sm font-bold transition-colors">
+        <i class="fas fa-home mr-1"></i>
+        <span>Quay về App</span>
+      </a>
     </div>
-
-    <div id="chart-container" style="height: 680px; width: 100%;"></div>
-    <small class="text-muted">Nến + MA7/MA25 + RSI(14) + MACD • Dữ liệu VN30</small>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+  <div class="max-w-5xl mx-auto px-4 pt-5 pb-10">
+    <!-- TABS NAV -->
+    <div class="flex flex-wrap gap-2 mb-5 border-b border-[#D7CCC8] pb-3">
+      <button onclick="switchTab(0)" id="tab-btn-0"
+              class="tab-btn flex items-center gap-2 active px-5">
+        <i class="fas fa-newspaper"></i>
+        <span>Tin Tức</span>
+      </button>
+      <button onclick="switchTab(1)" id="tab-btn-1"
+              class="tab-btn flex items-center gap-2">
+        <i class="fas fa-gavel"></i>
+        <span>Chính Sách &amp; Luật</span>
+      </button>
+      <button onclick="switchTab(2)" id="tab-btn-2"
+              class="tab-btn flex items-center gap-2">
+        <i class="fas fa-chart-candlestick"></i>
+        <span>Phân Tích VN30</span>
+      </button>
+    </div>
+
+    <!-- TAB 0: TIN TỨC -->
+    <div id="tab-content-0" class="tab-content">
+      <div class="flex items-end justify-between mb-3 px-1">
+        <div>
+          <div class="section-header flex items-center gap-2">
+            <i class="fas fa-newspaper text-[#5D4037]"></i> 
+            Tin Tức Kinh Tế
+          </div>
+          <p class="text-xs text-[#6B5F54] mt-0.5">Cập nhật từ VnExpress • Dữ liệu realtime</p>
+        </div>
+        <button onclick="loadNews()" 
+                class="px-4 py-1.5 text-xs font-extrabold bg-white border border-[#D7CCC8] hover:border-[#5D4037] active:bg-[#F8F3EC] rounded-2xl flex items-center gap-2 text-[#5D4037]">
+          <i class="fas fa-sync-alt"></i>
+          <span class="hidden sm:inline">Tải lại</span>
+        </button>
+      </div>
+      
+      <div id="news-list" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <!-- Populated by JS -->
+        <div class="col-span-full p-8 text-center text-[#8B7355]">
+          <i class="fas fa-spinner fa-spin text-xl mb-2"></i>
+          <div>Đang tải tin tức...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 1: CHÍNH SÁCH & LUẬT -->
+    <div id="tab-content-1" class="tab-content hidden">
+      <div class="flex items-end justify-between mb-3 px-1">
+        <div>
+          <div class="section-header flex items-center gap-2">
+            <i class="fas fa-gavel text-[#5D4037]"></i> 
+            Chính Sách &amp; Luật
+          </div>
+          <p class="text-xs text-[#6B5F54] mt-0.5">Cập nhật pháp luật • Chính sách kinh tế</p>
+        </div>
+        <button onclick="loadPolicyNews()" 
+                class="px-4 py-1.5 text-xs font-extrabold bg-white border border-[#D7CCC8] hover:border-[#5D4037] active:bg-[#F8F3EC] rounded-2xl flex items-center gap-2 text-[#5D4037]">
+          <i class="fas fa-sync-alt"></i>
+          <span class="hidden sm:inline">Tải lại</span>
+        </button>
+      </div>
+      
+      <div id="policy-list" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <!-- Populated by JS -->
+        <div class="col-span-full p-8 text-center text-[#8B7355]">
+          <i class="fas fa-spinner fa-spin text-xl mb-2"></i>
+          <div>Đang tải dữ liệu chính sách...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: PHÂN TÍCH VN30 -->
+    <div id="tab-content-2" class="tab-content hidden">
+      <div class="mb-3 px-1">
+        <div class="section-header flex items-center gap-2 mb-1">
+          <i class="fas fa-chart-candlestick text-[#5D4037]"></i> 
+          Phân Tích Kỹ Thuật VN30
+        </div>
+        <p class="text-xs text-[#6B5F54]">Nến + MA7 + MA25 + RSI(14) + MACD(12,26,9) + Histogram + Ichimoku cơ bản</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex flex-wrap items-end gap-3 mb-4">
+        <div class="flex-1 min-w-[220px]">
+          <label class="metric-label block mb-1.5 ml-1">CHỌN MÃ CHỨNG KHOÁN</label>
+          <select id="stock-select" class="stock-select w-full px-4 py-3 rounded-3xl text-base font-semibold shadow-sm">
+            <!-- Populated dynamically from stocks.json -->
+          </select>
+        </div>
+        
+        <div>
+          <button onclick="loadAndRenderChart()" 
+                  class="h-[50px] px-8 rounded-3xl font-extrabold text-base flex items-center gap-2 shadow-sm active:scale-[0.985] transition-all"
+                  style="background:#F5C400; color:#3E2723;">
+            <i class="fas fa-chart-bar"></i>
+            <span>VẼ BIỂU ĐỒ</span>
+          </button>
+        </div>
+        
+        <div class="text-[10px] text-[#8B7355] leading-tight max-w-[160px]">
+          Dữ liệu: <span class="font-bold">data/stocks.json</span><br>
+          Cập nhật gần nhất
+        </div>
+      </div>
+
+      <!-- CHART AREA -->
+      <div class="modern-card p-3 mb-3">
+        <!-- Main Price Chart -->
+        <div class="mb-2 px-2 flex items-center justify-between">
+          <div id="chart-symbol" class="font-extrabold text-lg text-[#3E2723]">VNINDEX</div>
+          <div id="chart-range" class="text-xs px-3 py-1 bg-[#F8F3EC] text-[#5D4037] font-bold rounded-2xl">77 phiên gần nhất</div>
+        </div>
+        
+        <div id="price-chart" class="chart-pane w-full" style="height: 380px;"></div>
+        
+        <!-- RSI Pane -->
+        <div class="mt-3">
+          <div class="px-2 mb-1 flex items-center gap-2">
+            <span class="text-xs font-extrabold text-purple-700">RSI (14)</span>
+            <span class="text-[10px] text-slate-400">• 30/70 levels</span>
+          </div>
+          <div id="rsi-chart" class="chart-pane w-full" style="height: 92px;"></div>
+        </div>
+        
+        <!-- MACD Pane -->
+        <div class="mt-3">
+          <div class="px-2 mb-1 flex items-center gap-2">
+            <span class="text-xs font-extrabold text-sky-700">MACD (12, 26, 9)</span>
+            <span class="text-[10px] text-slate-400">• Histogram</span>
+          </div>
+          <div id="macd-chart" class="chart-pane w-full" style="height: 108px;"></div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="mt-3 px-2 flex flex-wrap gap-x-4 gap-y-1.5 text-[11px] font-semibold indicator-legend text-[#5D4037]">
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-emerald-500 inline-block rounded"></span> Nến tăng</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-rose-500 inline-block rounded"></span> Nến giảm</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-[#F5C400] inline-block rounded"></span> MA7</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-[#5D4037] inline-block rounded"></span> MA25</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-orange-500 inline-block rounded-full"></span> Tenkan/Kijun (Ichimoku)</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-purple-600 inline-block rounded"></span> RSI</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-blue-600 inline-block rounded"></span> MACD</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-emerald-600 inline-block rounded"></span> Signal</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2 h-3 bg-teal-500"></span> Histogram</span>
+        </div>
+      </div>
+      
+      <div id="chart-status" class="text-center text-xs text-[#8B7355] px-1"></div>
+    </div>
+  </div>
 
   <script>
-    let chart = null;
-
-    // Các hàm tính chỉ báo (giữ nguyên như bạn đã có)
+    // ==================== TAILWIND CONFIG + THEME ====================
+    function initTailwind() {
+      document.documentElement.style.setProperty('--primary', '#F5C400');
+    }
+    
+    // ==================== TAB SWITCHING ====================
+    let currentTab = 0;
+    const tabContents = [0, 1, 2];
+    
+    function switchTab(tabIndex) {
+      currentTab = tabIndex;
+      
+      // Hide all
+      tabContents.forEach(i => {
+        const c = document.getElementById(`tab-content-${i}`);
+        const b = document.getElementById(`tab-btn-${i}`);
+        if (c) c.classList.add('hidden');
+        if (b) b.classList.remove('active');
+      });
+      
+      // Show selected
+      const content = document.getElementById(`tab-content-${tabIndex}`);
+      const btn = document.getElementById(`tab-btn-${tabIndex}`);
+      if (content) content.classList.remove('hidden');
+      if (btn) btn.classList.add('active');
+      
+      // Lazy actions
+      if (tabIndex === 2 && !window._vn30ChartLoaded) {
+        // Auto load first time entering analysis tab
+        setTimeout(() => {
+          const sel = document.getElementById('stock-select');
+          if (sel && sel.value) {
+            loadAndRenderChart();
+            window._vn30ChartLoaded = true;
+          }
+        }, 180);
+      }
+    }
+    
+    // ==================== CLEAN INDICATOR FUNCTIONS ====================
     function calculateMA(data, period) {
       const result = [];
       for (let i = 0; i < data.length; i++) {
-        if (i < period - 1) result.push({ time: data[i].time, value: null });
-        else {
+        if (i < period - 1) {
+          result.push({ time: data[i].time, value: null });
+        } else {
           let sum = 0;
-          for (let j = 0; j < period; j++) sum += data[i - j].close;
+          for (let j = 0; j < period; j++) {
+            sum += data[i - j].close;
+          }
           result.push({ time: data[i].time, value: sum / period });
         }
       }
       return result;
     }
-
-    function calculateRSI(data, period = 14) {
-      // (giữ nguyên hàm RSI của bạn - tôi copy từ code bạn gửi)
-      const result = [];
-      let gains = 0, losses = 0;
-      for (let i = 1; i < data.length; i++) {
-        const change = data[i].close - data[i - 1].close;
-        if (i < period) {
-          gains += Math.max(change, 0);
-          losses += Math.max(-change, 0);
-          result.push({ time: data[i].time, value: null });
-        } else if (i === period) {
-          gains += Math.max(change, 0);
-          losses += Math.max(-change, 0);
-          const avgGain = gains / period;
-          const avgLoss = losses / period;
-          const rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
-          result.push({ time: data[i].time, value: 100 - (100 / (1 + rs)) });
-        } else {
-          const prevAvgGain = gains / period;
-          const prevAvgLoss = losses / period;
-          const currentGain = Math.max(change, 0);
-          const currentLoss = Math.max(-change, 0);
-          const avgGain = (prevAvgGain * (period - 1) + currentGain) / period;
-          const avgLoss = (prevAvgLoss * (period - 1) + currentLoss) / period;
-          const rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
-          result.push({ time: data[i].time, value: 100 - (100 / (1 + rs)) });
-          gains = avgGain * period;
-          losses = avgLoss * period;
-        }
-      }
-      return result;
-    }
-
-    function calculateMACD(data) {
-      // (giữ nguyên hàm MACD của bạn)
-      const ema12 = calculateEMA(data, 12);
-      const ema26 = calculateEMA(data, 26);
-      const macdLine = [];
-      for (let i = 0; i < data.length; i++) {
-        if (ema12[i].value !== null && ema26[i].value !== null) {
-          macdLine.push({ time: data[i].time, value: ema12[i].value - ema26[i].value });
-        } else {
-          macdLine.push({ time: data[i].time, value: null });
-        }
-      }
-      const signal = calculateEMA(macdLine, 9);
-      const histogram = [];
-      for (let i = 0; i < macdLine.length; i++) {
-        if (macdLine[i].value !== null && signal[i].value !== null) {
-          histogram.push({ time: data[i].time, value: macdLine[i].value - signal[i].value });
-        } else {
-          histogram.push({ time: data[i].time, value: null });
-        }
-      }
-      return { macd: macdLine, signal, histogram };
-    }
-
+    
     function calculateEMA(data, period) {
       const result = [];
-      let multiplier = 2 / (period + 1);
+      const k = 2 / (period + 1);
       let ema = null;
+      
       for (let i = 0; i < data.length; i++) {
         if (i < period - 1) {
           result.push({ time: data[i].time, value: null });
@@ -132,74 +357,473 @@
           ema = sum / period;
           result.push({ time: data[i].time, value: ema });
         } else {
-          ema = (data[i].close - ema) * multiplier + ema;
+          ema = (data[i].close * k) + (ema * (1 - k));
           result.push({ time: data[i].time, value: ema });
         }
       }
       return result;
     }
-
-    async function renderChart(symbol) {
-      const container = document.getElementById('chart-container');
-      if (chart) chart.remove();
-
-      try {
-        const res = await fetch(`/data/stocks.json`);
-        const raw = await res.json();
-        const candles = raw[symbol] ? raw[symbol].candles : raw.candles;
-
-        if (!candles || candles.length === 0) {
-          container.innerHTML = `<p class="text-warning p-4">Chưa có dữ liệu cho mã ${symbol}. Đang cập nhật...</p>`;
-          return;
-        }
-
-        chart = LightweightCharts.createChart(container, {
-          width: container.clientWidth,
-          height: 680,
-          layout: { background: { color: '#ffffff' } },
-          grid: { vertLines: { color: '#f0f0f0' }, horzLines: { color: '#f0f0f0' } }
+    
+    function calculateRSI(data, period = 14) {
+      const result = [];
+      if (!data || data.length < period + 1) {
+        return data.map(d => ({ time: d.time, value: null }));
+      }
+      
+      let gains = 0, losses = 0;
+      
+      // Initial SMA of gains/losses for first period
+      for (let i = 1; i <= period; i++) {
+        const change = data[i].close - data[i - 1].close;
+        gains += Math.max(change, 0);
+        losses += Math.max(-change, 0);
+      }
+      
+      let avgGain = gains / period;
+      let avgLoss = losses / period;
+      let rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
+      let rsi = 100 - (100 / (1 + rs));
+      
+      // Fill nulls for warmup period (index 0 to period-1)
+      for (let i = 0; i < period; i++) {
+        result.push({ time: data[i].time, value: null });
+      }
+      result.push({ time: data[period].time, value: rsi });
+      
+      // Wilder smoothing for remaining
+      for (let i = period + 1; i < data.length; i++) {
+        const change = data[i].close - data[i - 1].close;
+        const currentGain = Math.max(change, 0);
+        const currentLoss = Math.max(-change, 0);
+        
+        avgGain = (avgGain * (period - 1) + currentGain) / period;
+        avgLoss = (avgLoss * (period - 1) + currentLoss) / period;
+        
+        rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
+        rsi = 100 - (100 / (1 + rs));
+        
+        result.push({ time: data[i].time, value: rsi });
+      }
+      
+      return result;
+    }
+    
+    function calculateMACD(data, fastPeriod = 12, slowPeriod = 26, signalPeriod = 9) {
+      const emaFast = calculateEMA(data, fastPeriod);
+      const emaSlow = calculateEMA(data, slowPeriod);
+      
+      const macdLine = [];
+      for (let i = 0; i < data.length; i++) {
+        const f = emaFast[i].value;
+        const s = emaSlow[i].value;
+        macdLine.push({
+          time: data[i].time,
+          value: (f !== null && s !== null) ? (f - s) : null
         });
-
-        const candleSeries = chart.addCandlestickSeries();
-        candleSeries.setData(candles);
-
-        // MA7 & MA25
-        const ma7 = chart.addLineSeries({ color: '#2962FF', lineWidth: 2 });
-        ma7.setData(calculateMA(candles, 7));
-        const ma25 = chart.addLineSeries({ color: '#FF6D00', lineWidth: 2 });
-        ma25.setData(calculateMA(candles, 25));
-
-        // RSI
-        const rsiPane = chart.addPane({ height: 120 });
-        const rsiSeries = rsiPane.addLineSeries({ color: '#9C27B0' });
-        rsiSeries.setData(calculateRSI(candles));
-
-        // MACD
-        const macdPane = chart.addPane({ height: 140 });
-        const macdData = calculateMACD(candles);
-        const macdLine = macdPane.addLineSeries({ color: '#2196F3' });
-        macdLine.setData(macdData.macd);
-        const signalLine = macdPane.addLineSeries({ color: '#FF5722' });
-        signalLine.setData(macdData.signal);
-        const histogram = macdPane.addHistogramSeries({ color: '#4CAF50' });
-        histogram.setData(macdData.histogram);
-
-        chart.timeScale().fitContent();
-        console.log(`✅ Đã vẽ biểu đồ ${symbol}`);
-      } catch (e) {
-        console.error(e);
-        container.innerHTML = `<p class="text-danger p-4">Lỗi tải dữ liệu ${symbol}.</p>`;
+      }
+      
+      // Signal line = EMA of MACD line
+      const signalLine = calculateEMA(macdLine.map((d, idx) => ({
+        time: d.time,
+        close: d.value !== null ? d.value : 0   // use close field for EMA helper
+      })), signalPeriod);
+      
+      // Fix signal: remap value
+      const signal = signalLine.map((d, i) => ({
+        time: d.time,
+        value: (macdLine[i].value !== null && d.value !== null) ? d.value : null
+      }));
+      
+      // Histogram
+      const histogram = [];
+      for (let i = 0; i < macdLine.length; i++) {
+        const m = macdLine[i].value;
+        const sig = signal[i].value;
+        histogram.push({
+          time: data[i].time,
+          value: (m !== null && sig !== null) ? (m - sig) : null
+        });
+      }
+      
+      return { macd: macdLine, signal, histogram };
+    }
+    
+    function calculateIchimokuBasic(data) {
+      // Basic Ichimoku: Tenkan (9), Kijun (26) plotted on price
+      const tenkanP = 9;
+      const kijunP = 26;
+      const tenkan = [];
+      const kijun = [];
+      
+      for (let i = 0; i < data.length; i++) {
+        // Tenkan
+        if (i >= tenkanP - 1) {
+          let ph = -Infinity, pl = Infinity;
+          for (let j = 0; j < tenkanP; j++) {
+            ph = Math.max(ph, data[i - j].high);
+            pl = Math.min(pl, data[i - j].low);
+          }
+          tenkan.push({ time: data[i].time, value: (ph + pl) / 2 });
+        } else {
+          tenkan.push({ time: data[i].time, value: null });
+        }
+        
+        // Kijun
+        if (i >= kijunP - 1) {
+          let ph = -Infinity, pl = Infinity;
+          for (let j = 0; j < kijunP; j++) {
+            ph = Math.max(ph, data[i - j].high);
+            pl = Math.min(pl, data[i - j].low);
+          }
+          kijun.push({ time: data[i].time, value: (ph + pl) / 2 });
+        } else {
+          kijun.push({ time: data[i].time, value: null });
+        }
+      }
+      
+      return { tenkan, kijun };
+    }
+    
+    // ==================== CHART STATE ====================
+    let priceChart = null;
+    let rsiChart = null;
+    let macdChart = null;
+    let resizeObserver = null;
+    
+    function cleanupCharts() {
+      if (priceChart) { priceChart.remove(); priceChart = null; }
+      if (rsiChart) { rsiChart.remove(); rsiChart = null; }
+      if (macdChart) { macdChart.remove(); macdChart = null; }
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+        resizeObserver = null;
       }
     }
-
-    window.onload = () => {
-      const select = document.getElementById('stock-select');
-      renderChart(select.value);
-
-      select.addEventListener('change', (e) => {
-        renderChart(e.target.value);
-      });
-    };
+    
+    function syncTimeScales(main, sub1, sub2) {
+      const handler = (range) => {
+        if (sub1) sub1.timeScale().setVisibleRange(range);
+        if (sub2) sub2.timeScale().setVisibleRange(range);
+      };
+      main.timeScale().subscribeVisibleTimeRangeChange(handler);
+      
+      const backHandler = (range) => {
+        main.timeScale().setVisibleRange(range);
+      };
+      if (sub1) sub1.timeScale().subscribeVisibleTimeRangeChange(backHandler);
+      if (sub2) sub2.timeScale().subscribeVisibleTimeRangeChange(backHandler);
+    }
+    
+    // ==================== RENDER PROFESSIONAL CHART ====================
+    async function loadAndRenderChart() {
+      const symbol = document.getElementById('stock-select').value || 'VNINDEX';
+      const priceContainer = document.getElementById('price-chart');
+      const statusEl = document.getElementById('chart-status');
+      
+      statusEl.innerHTML = `<span class="inline-flex items-center gap-1"><i class="fas fa-spinner fa-spin"></i> Đang tải ${symbol} + tính chỉ báo...</span>`;
+      cleanupCharts();
+      
+      try {
+        const res = await fetch('data/stocks.json');
+        if (!res.ok) throw new Error('Không tải được stocks.json');
+        const raw = await res.json();
+        
+        let candles = raw[symbol] && raw[symbol].candles ? raw[symbol].candles : null;
+        if (!candles && raw.candles) candles = raw.candles; // fallback
+        
+        if (!candles || candles.length < 20) {
+          throw new Error(`Không đủ dữ liệu nến cho ${symbol}`);
+        }
+        
+        // Update header
+        document.getElementById('chart-symbol').textContent = symbol;
+        document.getElementById('chart-range').textContent = `${candles.length} phiên`;
+        
+        // ========== PRICE CHART (main) ==========
+        priceChart = LightweightCharts.createChart(priceContainer, {
+          width: priceContainer.clientWidth,
+          height: 380,
+          layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
+          grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
+          crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: '#D7CCC8', width: 1 }, horzLine: { color: '#D7CCC8', width: 1 } },
+          timeScale: { borderColor: '#E7DFD6', timeVisible: false, secondsVisible: false },
+          rightPriceScale: { borderColor: '#E7DFD6', scaleMargins: { top: 0.08, bottom: 0.12 } }
+        });
+        
+        // Candlestick
+        const candleSeries = priceChart.addCandlestickSeries({
+          upColor: '#16a34a',
+          downColor: '#dc2626',
+          borderUpColor: '#16a34a',
+          borderDownColor: '#dc2626',
+          wickUpColor: '#16a34a',
+          wickDownColor: '#dc2626'
+        });
+        candleSeries.setData(candles);
+        
+        // MA7 (gold)
+        const ma7 = priceChart.addLineSeries({ color: '#F5C400', lineWidth: 2.2, lineStyle: 0 });
+        ma7.setData(calculateMA(candles, 7));
+        
+        // MA25 (earth brown)
+        const ma25 = priceChart.addLineSeries({ color: '#5D4037', lineWidth: 2.2, lineStyle: 0 });
+        ma25.setData(calculateMA(candles, 25));
+        
+        // Ichimoku basic (Tenkan + Kijun)
+        const ichi = calculateIchimokuBasic(candles);
+        const tenkanSeries = priceChart.addLineSeries({ color: '#F97316', lineWidth: 1.5, lineStyle: 0 });
+        tenkanSeries.setData(ichi.tenkan);
+        const kijunSeries = priceChart.addLineSeries({ color: '#3B82F6', lineWidth: 1.5, lineStyle: 0 });
+        kijunSeries.setData(ichi.kijun);
+        
+        priceChart.timeScale().fitContent();
+        
+        // ========== RSI CHART ==========
+        const rsiContainer = document.getElementById('rsi-chart');
+        rsiChart = LightweightCharts.createChart(rsiContainer, {
+          width: rsiContainer.clientWidth,
+          height: 92,
+          layout: { background: { color: '#FFFFFF' }, textColor: '#6B5F54' },
+          grid: { vertLines: { color: '#F8F3EC' }, horzLines: { color: '#F1E9DF' } },
+          timeScale: { borderColor: '#E7DFD6', visible: false },
+          rightPriceScale: { borderColor: '#E7DFD6', scaleMargins: { top: 0.1, bottom: 0.1 } }
+        });
+        
+        // 70 / 30 reference lines
+        const rsiUpper = rsiChart.addLineSeries({ color: '#E7DFD6', lineWidth: 1, lineStyle: 2 });
+        const rsiLower = rsiChart.addLineSeries({ color: '#E7DFD6', lineWidth: 1, lineStyle: 2 });
+        const rsiMid = rsiChart.addLineSeries({ color: '#E7DFD6', lineWidth: 1, lineStyle: 2 });
+        
+        const rsiVals = calculateRSI(candles);
+        rsiUpper.setData(rsiVals.map(d => ({ time: d.time, value: 70 })));
+        rsiLower.setData(rsiVals.map(d => ({ time: d.time, value: 30 })));
+        rsiMid.setData(rsiVals.map(d => ({ time: d.time, value: 50 })));
+        
+        const rsiSeries = rsiChart.addLineSeries({ color: '#7C3AED', lineWidth: 2 });
+        rsiSeries.setData(rsiVals);
+        
+        // ========== MACD CHART ==========
+        const macdContainer = document.getElementById('macd-chart');
+        macdChart = LightweightCharts.createChart(macdContainer, {
+          width: macdContainer.clientWidth,
+          height: 108,
+          layout: { background: { color: '#FFFFFF' }, textColor: '#6B5F54' },
+          grid: { vertLines: { color: '#F8F3EC' }, horzLines: { color: '#F1E9DF' } },
+          timeScale: { borderColor: '#E7DFD6', visible: false },
+          rightPriceScale: { borderColor: '#E7DFD6', scaleMargins: { top: 0.12, bottom: 0.12 } }
+        });
+        
+        const macdData = calculateMACD(candles);
+        
+        // Zero line
+        const zeroLine = macdChart.addLineSeries({ color: '#D1D5DB', lineWidth: 1, lineStyle: 2 });
+        zeroLine.setData(macdData.macd.map(d => ({ time: d.time, value: 0 })));
+        
+        const macdLineSeries = macdChart.addLineSeries({ color: '#2563EB', lineWidth: 1.8 });
+        macdLineSeries.setData(macdData.macd);
+        
+        const signalSeries = macdChart.addLineSeries({ color: '#EA580C', lineWidth: 1.6 });
+        signalSeries.setData(macdData.signal);
+        
+        const histSeries = macdChart.addHistogramSeries({
+          color: '#14B8A6',
+          base: 0
+        });
+        histSeries.setData(macdData.histogram);
+        
+        // Sync all time scales
+        syncTimeScales(priceChart, rsiChart, macdChart);
+        
+        // Resize handling
+        function handleResize() {
+          const w = priceContainer.clientWidth;
+          if (priceChart) priceChart.resize(w, 380);
+          if (rsiChart) rsiChart.resize(w, 92);
+          if (macdChart) macdChart.resize(w, 108);
+        }
+        
+        resizeObserver = new ResizeObserver(handleResize);
+        resizeObserver.observe(priceContainer);
+        window.addEventListener('resize', handleResize, { once: true });
+        
+        statusEl.innerHTML = `<span class="text-emerald-600 font-bold">✅ ${symbol} • ${candles.length} nến • RSI + MACD + Ichimoku sẵn sàng</span>`;
+        console.log(`[tin-tuc] Rendered professional chart for ${symbol}`);
+        
+      } catch (err) {
+        console.error(err);
+        statusEl.innerHTML = `<span class="text-rose-600">❌ Lỗi: ${err.message}. Kiểm tra data/stocks.json</span>`;
+        priceContainer.innerHTML = `<div class="h-[380px] flex items-center justify-center text-sm text-[#8B7355] bg-[#FDFAF4] rounded-2xl">Không thể vẽ biểu đồ. Vui lòng thử lại.</div>`;
+      }
+    }
+    
+    // ==================== POPULATE DROPDOWN ====================
+    async function populateStockSelect() {
+      const sel = document.getElementById('stock-select');
+      sel.innerHTML = `<option value="">Đang tải danh sách mã...</option>`;
+      
+      try {
+        const res = await fetch('data/stocks.json');
+        const raw = await res.json();
+        const symbols = Object.keys(raw).filter(k => raw[k] && raw[k].candles && raw[k].candles.length > 5);
+        
+        // Preferred order: VNINDEX first, then popular VN30
+        const preferred = ['VNINDEX', 'VN30', 'HPG', 'VCB', 'FPT', 'VNM', 'GAS', 'BID', 'TCB', 'CTG', 'ACB', 'MBB', 'MWG', 'VHM', 'SAB', 'MSN', 'POW', 'VRE', 'GVR'];
+        const ordered = [];
+        
+        preferred.forEach(p => { if (symbols.includes(p)) ordered.push(p); });
+        symbols.forEach(s => { if (!ordered.includes(s)) ordered.push(s); });
+        
+        sel.innerHTML = '';
+        ordered.forEach(sym => {
+          const opt = document.createElement('option');
+          opt.value = sym;
+          opt.textContent = sym === 'VNINDEX' || sym === 'VN30' ? sym : `${sym} (VN30)`;
+          sel.appendChild(opt);
+        });
+        
+        // Default VNINDEX
+        sel.value = 'VNINDEX';
+        
+        // Auto-render on change
+        sel.onchange = () => {
+          loadAndRenderChart();
+        };
+        
+      } catch (e) {
+        console.error('populateStockSelect error', e);
+        // Fallback static list
+        sel.innerHTML = `
+          <option value="VNINDEX">VNINDEX</option>
+          <option value="VN30">VN30</option>
+          <option value="HPG">HPG - Hòa Phát</option>
+          <option value="VCB">VCB - Vietcombank</option>
+          <option value="FPT">FPT</option>
+          <option value="VNM">VNM - Vinamilk</option>
+          <option value="GAS">GAS</option>
+          <option value="BID">BID - BIDV</option>
+          <option value="TCB">TCB - Techcombank</option>
+        `;
+        sel.value = 'VNINDEX';
+        sel.onchange = () => loadAndRenderChart();
+      }
+    }
+    
+    // ==================== NEWS RENDERING ====================
+    let cachedNews = null;
+    
+    function formatDateVN(dateStr) {
+      if (!dateStr) return '';
+      try {
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit' }) + ' ' + 
+               d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+      } catch { return dateStr.slice(0, 16); }
+    }
+    
+    function stripHtml(str) {
+      if (!str) return '';
+      return str.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 120);
+    }
+    
+    async function loadNews() {
+      const container = document.getElementById('news-list');
+      container.innerHTML = `<div class="col-span-full p-8 text-center text-[#8B7355]"><i class="fas fa-spinner fa-spin mr-2"></i>Đang tải tin tức...</div>`;
+      
+      try {
+        const res = await fetch('data/news.json');
+        const data = await res.json();
+        cachedNews = data;
+        
+        const items = data.tin_tuc || [];
+        if (!items.length) throw new Error('Không có tin');
+        
+        container.innerHTML = items.map(item => `
+          <a href="${item.link}" target="_blank" rel="noopener"
+             class="news-card modern-card p-4 block hover:shadow-md active:bg-[#FDFAF4] no-underline">
+            <div class="flex gap-3">
+              <div class="flex-1 min-w-0">
+                <div class="font-bold text-[#3E2723] leading-snug text-[15px] mb-1.5 line-clamp-2">${item.title}</div>
+                <div class="text-xs text-[#6B5F54] line-clamp-2 mb-2">${stripHtml(item.summary) || 'Đọc chi tiết tại nguồn...'}</div>
+                <div class="flex items-center justify-between text-[10px]">
+                  <span class="news-source">${item.source || 'VnExpress'}</span>
+                  <span class="font-mono text-[#8B7355]">${formatDateVN(item.date)}</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        `).join('');
+        
+      } catch (e) {
+        container.innerHTML = `<div class="col-span-full p-6 text-center text-sm text-rose-600 bg-rose-50 rounded-2xl">Không thể tải tin tức. Vui lòng kiểm tra data/news.json</div>`;
+      }
+    }
+    
+    async function loadPolicyNews() {
+      const container = document.getElementById('policy-list');
+      container.innerHTML = `<div class="col-span-full p-8 text-center text-[#8B7355]"><i class="fas fa-spinner fa-spin mr-2"></i>Đang tải...</div>`;
+      
+      try {
+        let data = cachedNews;
+        if (!data) {
+          const res = await fetch('data/news.json');
+          data = await res.json();
+          cachedNews = data;
+        }
+        
+        const items = data.chinh_sach || [];
+        if (!items.length) throw new Error('Không có dữ liệu');
+        
+        container.innerHTML = items.map(item => `
+          <a href="${item.link}" target="_blank" rel="noopener"
+             class="news-card modern-card p-4 block hover:shadow-md active:bg-[#FDFAF4] no-underline">
+            <div class="flex gap-3">
+              <div class="flex-1 min-w-0">
+                <div class="font-bold text-[#3E2723] leading-snug text-[15px] mb-1.5 line-clamp-2">${item.title}</div>
+                <div class="text-xs text-[#6B5F54] line-clamp-2 mb-2">${stripHtml(item.summary) || 'Chi tiết tại nguồn...'}</div>
+                <div class="flex items-center justify-between text-[10px]">
+                  <span class="news-source">${item.source || 'VnExpress'}</span>
+                  <span class="font-mono text-[#8B7355]">${formatDateVN(item.date)}</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        `).join('');
+        
+      } catch (e) {
+        container.innerHTML = `<div class="col-span-full p-6 text-center text-sm text-amber-600 bg-amber-50 rounded-2xl">Không có dữ liệu Chính Sách & Luật. Dữ liệu sẽ được cập nhật sau.</div>`;
+      }
+    }
+    
+    // ==================== INIT ====================
+    async function init() {
+      initTailwind();
+      
+      // Default open first tab
+      document.getElementById('tab-btn-0').classList.add('active');
+      document.getElementById('tab-content-0').classList.remove('hidden');
+      
+      // Load news immediately (tab 0)
+      loadNews();
+      
+      // Prepare stock select + auto render chart for tab 2 (lazy)
+      await populateStockSelect();
+      
+      // Optional: pre-load chart data but don't draw until tab opened (saves perf)
+      // User can click "VẼ BIỂU ĐỒ" or switch tab will trigger
+      
+      // Keyboard hint
+      console.log('%c[tin-tuc] ✅ 3 tabs + clean indicators + professional chart ready (earth brown + gold theme)', 'color:#5D4037');
+      
+      // Bonus: if direct hash to analysis, switch
+      if (location.hash.includes('chart') || location.hash.includes('vn30')) {
+        setTimeout(() => switchTab(2), 420);
+      }
+    }
+    
+    window.onload = init;
+    
+    // Expose for debugging
+    window.AGBCN5_TinTuc = { switchTab, loadAndRenderChart, calculateRSI, calculateMACD };
   </script>
 </body>
 </html>
