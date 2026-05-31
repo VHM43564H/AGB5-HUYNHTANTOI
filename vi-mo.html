@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Kinh Tế Vĩ Mô Việt Nam | AGBCN5</title>
-  <meta name="description" content="Báo cáo kinh tế vĩ mô Việt Nam: GDP, lạm phát, thất nghiệp, xuất nhập khẩu, FDI — dữ liệu World Bank + Tổng cục Thống kê">
+  <meta name="description" content="Báo cáo Kinh tế Vĩ Mô Việt Nam theo Quý: GDP, lạm phát, thất nghiệp, xuất nhập khẩu, FDI — dữ liệu Tổng cục Thống kê (GSO) + phân tích biến động QoQ/YoY">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -128,7 +128,7 @@
         </div>
         <div>
           <div class="font-extrabold text-xl tracking-tight">Kinh Tế Vĩ Mô Việt Nam</div>
-          <div class="text-[11px] text-[#D7CCC8] -mt-0.5">Báo cáo tổng quan • Cập nhật định kỳ</div>
+          <div class="text-[11px] text-[#D7CCC8] -mt-0.5">Báo cáo theo QUÝ • Biến động QoQ/YoY • 20 quý gần nhất</div>
         </div>
       </div>
       <a href="index.html" 
@@ -148,7 +148,7 @@
           <div class="section-header text-2xl">Báo Cáo Kinh Tế Vĩ Mô Việt Nam</div>
         </div>
         <p class="text-sm text-[#6B5F54] mt-0.5">
-          Tăng trưởng • Lạm phát • Lao động • Thương mại • Đầu tư
+          Phân tích theo <strong>Quý</strong> (đến Quý gần nhất) • So sánh QoQ &amp; YoY • Biểu đồ 20 Quý
         </p>
       </div>
       
@@ -176,10 +176,31 @@
       </div>
     </div>
 
+    <!-- PHÂN TÍCH BIẾN ĐỘNG SO SÁNH THEO QUÝ (MỚI) -->
+    <div class="mb-6">
+      <div class="flex items-center justify-between mb-2 px-1">
+        <div class="font-extrabold text-[#3E2723] flex items-center gap-2">
+          <i class="fas fa-exchange-alt"></i>
+          <span>Phân tích biến động Quý gần nhất</span>
+        </div>
+        <div id="analysis-period" class="text-xs px-3 py-1 bg-amber-100 text-amber-800 rounded-2xl font-bold"></div>
+      </div>
+      
+      <div class="modern-card p-4" id="analysis-panel">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-sm" id="analysis-content">
+          <!-- JS injected: bullets of QoQ/YoY insights + summary -->
+        </div>
+        <div class="mt-3 pt-3 border-t border-[#E7DFD6] text-[11px] text-[#6B5F54]">
+          <strong>Giải thích:</strong> ΔQoQ = thay đổi so với quý liền trước. ΔYoY = thay đổi so với cùng quý năm trước. 
+          Số dương = tăng trưởng/mở rộng so kỳ so sánh.
+        </div>
+      </div>
+    </div>
+
     <!-- CHARTS -->
     <div class="mb-3 px-1 flex items-center justify-between">
-      <div class="font-bold text-[#3E2723]">Biểu đồ xu hướng (Nguồn: World Bank)</div>
-      <div class="text-[10px] text-[#8B7355]">Dữ liệu năm • Cập nhật tự động</div>
+      <div class="font-bold text-[#3E2723]">Biểu đồ xu hướng 20 Quý gần nhất</div>
+      <div class="text-[10px] text-[#8B7355]">Dữ liệu Quý • GSO • QoQ/YoY</div>
     </div>
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-7">
@@ -246,14 +267,14 @@
 
     <!-- DATA TABLE -->
     <div class="mb-3 px-1 flex flex-wrap items-center justify-between gap-2">
-      <div class="font-bold text-[#3E2723]">Bảng dữ liệu chi tiết (có thể sắp xếp)</div>
+      <div class="font-bold text-[#3E2723]">Bảng dữ liệu chi tiết theo Quý (có thể sắp xếp)</div>
       
       <div class="flex items-center gap-2 text-xs">
-        <span class="text-[#6B5F54] font-medium">Lọc năm:</span>
+        <span class="text-[#6B5F54] font-medium">Lọc nhanh Quý:</span>
         <div id="year-filters" class="flex flex-wrap gap-1"></div>
         <button onclick="resetTableFilter()" 
                 class="px-3 py-1 text-[#5D4037] hover:text-[#3E2723] font-bold rounded-xl border border-[#D7CCC8] hover:bg-white text-xs">
-          Tất cả
+          20 Quý gần nhất
         </button>
       </div>
     </div>
@@ -263,14 +284,14 @@
         <table class="w-full data-table text-sm" id="macro-table">
           <thead>
             <tr>
-              <th onclick="sortTable(0)" class="px-4 py-2.5 text-left">Năm <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(1)" class="px-3 py-2.5 text-right">GDP tăng trưởng (%) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(2)" class="px-3 py-2.5 text-right">Lạm phát CPI (%) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(3)" class="px-3 py-2.5 text-right">Thất nghiệp (%) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(4)" class="px-3 py-2.5 text-right">Xuất khẩu (tỷ USD) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(5)" class="px-3 py-2.5 text-right">Nhập khẩu (tỷ USD) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(6)" class="px-3 py-2.5 text-right">FDI (tỷ USD) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
-              <th onclick="sortTable(7)" class="px-4 py-2.5 text-right">GDP/đầu người (USD) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(0)" class="px-3 py-2.5 text-left">Quý <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(1)" class="px-2 py-2.5 text-right">GDP YoY (%) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(2)" class="px-2 py-2.5 text-right">ΔQoQ <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(3)" class="px-2 py-2.5 text-right">ΔYoY <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(4)" class="px-2 py-2.5 text-right">CPI (%) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(5)" class="px-2 py-2.5 text-right">XNK (tỷ USD) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(6)" class="px-2 py-2.5 text-right">FDI (tỷ USD) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
+              <th onclick="sortTable(7)" class="px-3 py-2.5 text-right">Thất nghiệp (%) <i class="fas fa-sort ml-1 text-[#8B7355]"></i></th>
             </tr>
           </thead>
           <tbody id="table-body" class="divide-y divide-[#E7DFD6]">
@@ -282,9 +303,9 @@
 
     <!-- NOTES & SOURCES -->
     <div class="text-xs macro-source px-1 space-y-1">
-      <div><strong>Nguồn dữ liệu chính:</strong> World Bank Open Data (api.worldbank.org) — các chỉ tiêu NY.GDP.MKTP.KD.ZG, FP.CPI.TOTL.ZG, SL.UEM.TOTL.ZS, BX.KLT.DINV.CD.WD, NE.EXP.GNFS.CD, NE.IMP.GNFS.CD, NY.GDP.PCAP.CD</div>
-      <div><strong>Cập nhật:</strong> Dữ liệu được làm mới tự động mỗi 30 phút qua GitHub Actions. Một số chỉ tiêu có độ trễ 6–18 tháng tuỳ theo công bố chính thức của Tổng cục Thống kê Việt Nam.</div>
-      <div><strong>Lưu ý:</strong> Số liệu FDI và thương mại được quy đổi sang tỷ USD. Tỷ lệ thất nghiệp theo mô hình ILO (có thể thấp hơn thực tế khảo sát tại Việt Nam).</div>
+      <div><strong>Nguồn dữ liệu chính:</strong> Tổng cục Thống kê Việt Nam (GSO/NSO) — Báo cáo tình hình kinh tế - xã hội theo Quý (GDP YoY, CPI, Xuất nhập khẩu, FDI giải ngân). Dữ liệu curated từ báo cáo chính thức.</div>
+      <div><strong>Cập nhật:</strong> Cập nhật khi GSO công bố (thường cuối tháng sau mỗi quý). Chạy <code>scripts/fetch_macro.py</code> sau khi chỉnh SEED để cập nhật file JSON.</div>
+      <div><strong>Phân tích:</strong> Bảng &amp; biểu đồ hiển thị 20 Quý gần nhất. ΔQoQ = thay đổi so quý trước. ΔYoY = thay đổi so cùng kỳ năm trước. GDP tăng trưởng là chỉ số YoY theo công bố GSO.</div>
     </div>
     
   </div>
@@ -302,15 +323,14 @@
     let currentYearFilter = null;
     let charts = {}; // store chart instances for cleanup
 
-    // KPI definitions
+    // KPI definitions (Quarterly focus)
     const KPI_DEFS = [
-      { key: 'gdp_growth', label: 'Tăng trưởng GDP', unit: '%', icon: 'fa-chart-line', color: 'emerald' },
-      { key: 'cpi_inflation', label: 'Lạm phát CPI', unit: '%', icon: 'fa-coins', color: 'orange' },
-      { key: 'unemployment', label: 'Tỷ lệ thất nghiệp', unit: '%', icon: 'fa-users', color: 'blue' },
-      { key: 'exports_goods_services', label: 'Xuất khẩu', unit: 'tỷ USD', icon: 'fa-arrow-up', color: 'purple' },
-      { key: 'imports_goods_services', label: 'Nhập khẩu', unit: 'tỷ USD', icon: 'fa-arrow-down', color: 'rose' },
-      { key: 'fdi_net_inflows', label: 'FDI giải ngân', unit: 'tỷ USD', icon: 'fa-globe', color: 'teal' },
-      { key: 'gdp_per_capita', label: 'GDP đầu người', unit: 'USD', icon: 'fa-wallet', color: 'amber' }
+      { key: 'gdp_growth', label: 'Tăng trưởng GDP (YoY)', unit: '%', icon: 'fa-chart-line', color: 'emerald', isPercent: true },
+      { key: 'cpi_inflation', label: 'Lạm phát CPI (YoY)', unit: '%', icon: 'fa-coins', color: 'orange', isPercent: true },
+      { key: 'unemployment', label: 'Tỷ lệ thất nghiệp', unit: '%', icon: 'fa-users', color: 'blue', isPercent: true },
+      { key: 'exports_goods_services', label: 'Xuất khẩu (Quý)', unit: 'tỷ USD', icon: 'fa-arrow-up', color: 'purple' },
+      { key: 'imports_goods_services', label: 'Nhập khẩu (Quý)', unit: 'tỷ USD', icon: 'fa-arrow-down', color: 'rose' },
+      { key: 'fdi_net_inflows', label: 'FDI giải ngân (Quý)', unit: 'tỷ USD', icon: 'fa-globe', color: 'teal' }
     ];
 
     // ==================== HELPERS ====================
@@ -336,13 +356,121 @@
       return series[series.length - 1];
     }
 
-    // ==================== RENDER KPI CARDS ====================
+    // ==================== HELPERS FOR QUARTERLY DELTAS ====================
+    function parsePeriod(p) {
+      // "2026Q1" → {year:2026, q:1}
+      if (!p) return null;
+      const m = String(p).match(/^(\d{4})Q(\d)$/i);
+      if (!m) return null;
+      return { year: parseInt(m[1]), q: parseInt(m[2]) };
+    }
+
+    function periodToIndex(period) {
+      const p = parsePeriod(period);
+      if (!p) return 0;
+      return p.year * 4 + (p.q - 1);
+    }
+
+    function computeDeltas(series, latestPeriod) {
+      if (!series || !series.length || !latestPeriod) return { qoq: null, yoy: null, prevQ: null, prevY: null };
+      const sorted = [...series].sort((a, b) => periodToIndex(a.period) - periodToIndex(b.period));
+      const latestIdx = sorted.findIndex(r => r.period === latestPeriod);
+      if (latestIdx < 0) return { qoq: null, yoy: null };
+
+      const latestVal = sorted[latestIdx].value;
+      let qoq = null, yoy = null, prevQVal = null, prevYVal = null;
+
+      if (latestIdx > 0) {
+        prevQVal = sorted[latestIdx - 1].value;
+        qoq = latestVal - prevQVal;
+      }
+      // same quarter last year
+      const prevYearPeriod = latestPeriod.replace(/(\d{4})/, (y) => (parseInt(y) - 1).toString());
+      const prevY = sorted.find(r => r.period === prevYearPeriod);
+      if (prevY) {
+        prevYVal = prevY.value;
+        yoy = latestVal - prevYVal;
+      }
+      return { qoq, yoy, prevQ: prevQVal, prevY: prevYVal };
+    }
+
+    function formatDelta(d, isPercentPoint = true) {
+      if (d === null || d === undefined || isNaN(d)) return '—';
+      const sign = d > 0 ? '+' : '';
+      const suffix = isPercentPoint ? 'điểm' : '';
+      return `${sign}${d.toFixed(2)}${suffix}`;
+    }
+
+    // ==================== AUTO ANALYSIS PANEL (Biến động so sánh) ====================
+    function renderAnalysis(data) {
+      const panel = document.getElementById('analysis-content');
+      const periodEl = document.getElementById('analysis-period');
+      if (!panel) return;
+
+      const ind = data.indicators || {};
+      const latestQ = data.latest_quarter || '';
+      if (periodEl) periodEl.textContent = latestQ ? `Quý ${latestQ}` : '';
+
+      const gdpSeries = ind.gdp_growth || [];
+      const cpiSeries = ind.cpi_inflation || [];
+      const expSeries = ind.exports_goods_services || [];
+      const impSeries = ind.imports_goods_services || [];
+      const fdiSeries = ind.fdi_net_inflows || [];
+
+      const gdpD = computeDeltas(gdpSeries, latestQ);
+      const cpiD = computeDeltas(cpiSeries, latestQ);
+      const expD = computeDeltas(expSeries, latestQ);
+      const impD = computeDeltas(impSeries, latestQ);
+      const fdiD = computeDeltas(fdiSeries, latestQ);
+
+      const gdpVal = gdpSeries.find(r => r.period === latestQ)?.value;
+      const cpiVal = cpiSeries.find(r => r.period === latestQ)?.value;
+
+      let html = '';
+
+      // Summary sentence
+      html += `<div class="md:col-span-2 text-[#3E2723] font-semibold mb-1">`;
+      if (gdpVal != null) {
+        html += `GDP quý ${latestQ} tăng <strong>${gdpVal.toFixed(2)}%</strong> so cùng kỳ. `;
+      }
+      if (gdpD.qoq != null) {
+        const dir = gdpD.qoq >= 0 ? 'tăng' : 'giảm';
+        html += `Tốc độ tăng trưởng ${dir} <strong>${Math.abs(gdpD.qoq).toFixed(2)} điểm %</strong> so quý trước. `;
+      }
+      html += `</div>`;
+
+      // Per indicator bullets
+      const bullets = [];
+
+      if (gdpD.qoq !== null || gdpD.yoy !== null) {
+        bullets.push(`<div><span class="font-bold text-emerald-700">GDP:</span> QoQ ${formatDelta(gdpD.qoq)} — YoY ${formatDelta(gdpD.yoy)} (so ${latestQ.replace(/\d{4}/, y => parseInt(y)-1)})</div>`);
+      }
+      if (cpiD.qoq !== null || cpiD.yoy !== null) {
+        const dir = (cpiD.yoy || 0) > 0 ? 'cao hơn' : 'thấp hơn';
+        bullets.push(`<div><span class="font-bold text-orange-700">CPI:</span> ${dir} ${formatDelta(Math.abs(cpiD.yoy || 0))} so cùng kỳ năm trước (hiện ${cpiVal ? cpiVal.toFixed(2) : ''}%)</div>`);
+      }
+      if (expD.qoq !== null) {
+        const dir = expD.qoq >= 0 ? 'tăng' : 'giảm';
+        bullets.push(`<div><span class="font-bold text-purple-700">Xuất khẩu:</span> ${dir} ${formatDelta(expD.qoq, false)} tỷ USD so quý trước</div>`);
+      }
+      if (fdiD.qoq !== null) {
+        const dir = fdiD.qoq >= 0 ? 'tăng' : 'giảm';
+        bullets.push(`<div><span class="font-bold text-teal-700">FDI giải ngân:</span> ${dir} ${formatDelta(fdiD.qoq, false)} tỷ USD so quý trước</div>`);
+      }
+
+      html += bullets.map(b => `<div class="text-[#3E2723]">${b}</div>`).join('');
+
+      panel.innerHTML = html || '<div class="text-[#8B7355]">Chưa đủ dữ liệu để phân tích.</div>';
+    }
+
+    // ==================== RENDER KPI CARDS (QUARTERLY + DELTAS) ====================
     function renderKPICards(data) {
       const container = document.getElementById('kpi-grid');
       container.innerHTML = '';
 
       const latest = data.latest || {};
       const indicators = data.indicators || {};
+      const latestQ = data.latest_quarter || (latest.gdp_growth && latest.gdp_growth.period) || '';
 
       KPI_DEFS.forEach(def => {
         const latestItem = latest[def.key];
@@ -350,29 +478,44 @@
         const rawVal = latestItem ? latestItem.value : (series.length ? series[series.length-1].value : null);
         
         let displayVal = '—';
-        let year = latestItem ? latestItem.year : (series.length ? series[series.length-1].year : '');
+        let periodLabel = latestQ || (latestItem ? latestItem.period : '');
         
         if (rawVal != null) {
-          if (['gdp_growth', 'cpi_inflation', 'unemployment'].includes(def.key)) {
+          if (def.isPercent || ['gdp_growth', 'cpi_inflation', 'unemployment'].includes(def.key)) {
             displayVal = rawVal.toFixed(2) + '%';
-          } else if (['exports_goods_services', 'imports_goods_services', 'fdi_net_inflows'].includes(def.key)) {
-            displayVal = (rawVal / 1_000_000_000).toFixed(1) + ' tỷ USD';
-          } else if (def.key === 'gdp_per_capita') {
-            displayVal = Math.round(rawVal).toLocaleString('vi-VN') + ' USD';
+          } else {
+            displayVal = (rawVal / 1_000_000_000).toFixed(1) + ' tỷ';
           }
         }
 
+        // Compute deltas
+        const deltas = computeDeltas(series, latestQ);
+        let deltaHtml = '';
+        if (deltas.qoq !== null || deltas.yoy !== null) {
+          const qoqStr = deltas.qoq !== null ? formatDelta(deltas.qoq) : '—';
+          const yoyStr = deltas.yoy !== null ? formatDelta(deltas.yoy) : '—';
+          const qoqColor = deltas.qoq > 0 ? 'emerald' : (deltas.qoq < 0 ? 'rose' : 'slate');
+          const yoyColor = deltas.yoy > 0 ? 'emerald' : (deltas.yoy < 0 ? 'rose' : 'slate');
+          deltaHtml = `
+            <div class="flex gap-1.5 mt-1 text-[10px] font-bold">
+              <span class="px-1.5 py-0.5 rounded bg-${qoqColor}-100 text-${qoqColor}-700">QoQ ${qoqStr}</span>
+              <span class="px-1.5 py-0.5 rounded bg-${yoyColor}-100 text-${yoyColor}-700">YoY ${yoyStr}</span>
+            </div>
+          `;
+        }
+
         const card = document.createElement('div');
-        card.className = `kpi-card modern-card p-3.5 border-l-4 border-${def.color}-500`;
+        card.className = `kpi-card modern-card p-3 border-l-4 border-${def.color}-500`;
         card.innerHTML = `
           <div class="flex items-start justify-between">
-            <div>
-              <div class="kpi-label mb-1">${def.label}</div>
-              <div class="kpi-value">${displayVal}</div>
-              <div class="text-[10px] text-[#8B7355] mt-0.5 font-medium">${year ? 'Năm ' + year : ''}</div>
+            <div class="min-w-0 flex-1">
+              <div class="kpi-label mb-0.5 text-[10px]">${def.label}</div>
+              <div class="kpi-value text-[1.45rem] leading-none">${displayVal}</div>
+              <div class="text-[10px] text-[#8B7355] mt-0.5 font-semibold">${periodLabel ? periodLabel : ''}</div>
+              ${deltaHtml}
             </div>
-            <div class="w-9 h-9 rounded-2xl bg-${def.color}-100 flex items-center justify-center shrink-0">
-              <i class="fas ${def.icon} text-${def.color}-600"></i>
+            <div class="w-8 h-8 rounded-2xl bg-${def.color}-100 flex items-center justify-center shrink-0 ml-2">
+              <i class="fas ${def.icon} text-${def.color}-600 text-base"></i>
             </div>
           </div>
         `;
@@ -380,73 +523,81 @@
       });
     }
 
-    // ==================== CHART RENDERING ====================
-    function createYearlyChart(containerId, series, options = {}) {
+    // ==================== CHART RENDERING - QUARTERLY (last 20 quarters) ====================
+    function getLastN(series, n = 20) {
+      if (!series || !Array.isArray(series)) return [];
+      const sorted = [...series].sort((a, b) => periodToIndex(a.period) - periodToIndex(b.period));
+      return sorted.slice(-n);
+    }
+
+    function formatQuarterLabel(period) {
+      // "2026Q1" → "26Q1"
+      if (!period) return '';
+      const p = parsePeriod(period);
+      if (!p) return period;
+      return `${String(p.year).slice(-2)}Q${p.q}`;
+    }
+
+    function createQuarterlyChart(containerId, series, options = {}) {
       const container = document.getElementById(containerId);
       if (!container) return null;
 
-      // Cleanup previous chart
       if (charts[containerId]) {
         charts[containerId].remove();
+      }
+
+      const limited = getLastN(series, 20);
+      if (!limited.length) {
+        container.innerHTML = '<div class="p-4 text-center text-sm text-[#8B7355]">Không có dữ liệu</div>';
+        return null;
       }
 
       const chart = LightweightCharts.createChart(container, {
         width: container.clientWidth,
         height: container.clientHeight || 260,
-        layout: { 
-          background: { color: '#FFFFFF' }, 
-          textColor: '#5D4037' 
-        },
-        grid: { 
-          vertLines: { color: '#F1E9DF' }, 
-          horzLines: { color: '#F1E9DF' } 
-        },
-        timeScale: { 
+        layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
+        grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
+        timeScale: {
           borderColor: '#E7DFD6',
-          tickMarkFormatter: (time) => String(time) // show year as-is
+          tickMarkFormatter: (time) => {
+            // time will be our numeric index; we map back via labels
+            const idx = Math.round(time);
+            return limited[idx] ? formatQuarterLabel(limited[idx].period) : '';
+          }
         },
-        rightPriceScale: { 
-          borderColor: '#E7DFD6',
-          scaleMargins: { top: 0.12, bottom: 0.12 }
-        },
+        rightPriceScale: { borderColor: '#E7DFD6', scaleMargins: { top: 0.1, bottom: 0.12 } },
         crosshair: { mode: LightweightCharts.CrosshairMode.Normal }
       });
 
-      // Convert data: {year, value} → {time: yearStr, value}
-      const chartData = (series || []).map(d => ({
-        time: d.year,
-        value: d.value
-      }));
+      // Use sequential numeric time so we control labels perfectly
+      const chartData = limited.map((d, i) => ({ time: i, value: d.value }));
 
       if (options.type === 'bar' || options.type === 'histogram') {
-        const seriesObj = chart.addHistogramSeries({
-          color: options.color || '#5D4037',
-          base: 0
-        });
-        seriesObj.setData(chartData);
+        const s = chart.addHistogramSeries({ color: options.color || '#5D4037', base: 0 });
+        s.setData(chartData);
       } else {
-        const seriesObj = chart.addLineSeries({
+        const s = chart.addLineSeries({
           color: options.color || '#5D4037',
-          lineWidth: options.lineWidth || 2.5,
+          lineWidth: options.lineWidth || 2.8,
           lineStyle: 0
         });
-        seriesObj.setData(chartData);
+        s.setData(chartData);
       }
 
-      // Optional second series (for GDP growth combo or trade)
+      // Optional second series (trade)
       if (options.secondSeries) {
-        const s2 = options.secondSeries.map(d => ({ time: d.year, value: d.value }));
+        const s2Limited = getLastN(options.secondSeries, 20);
+        const s2Data = s2Limited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
         const line2 = chart.addLineSeries({
           color: options.secondColor || '#F5C400',
-          lineWidth: 2,
+          lineWidth: 2.2,
           lineStyle: 0
         });
-        line2.setData(s2);
+        line2.setData(s2Data);
       }
 
       chart.timeScale().fitContent();
 
-      // Resize handler
       const ro = new ResizeObserver(() => {
         if (chart) chart.resize(container.clientWidth, container.clientHeight || 260);
       });
@@ -459,96 +610,106 @@
     function renderAllCharts(data) {
       const ind = data.indicators || {};
 
-      // 1. GDP Growth (line + subtle bar background effect via histogram)
-      createYearlyChart('chart-gdp', ind.gdp_growth, {
-        color: '#10b981',
-        lineWidth: 3
-      });
+      // 1. GDP Growth YoY
+      createQuarterlyChart('chart-gdp', ind.gdp_growth, { color: '#10b981', lineWidth: 3 });
 
-      // 2. CPI Inflation
-      createYearlyChart('chart-cpi', ind.cpi_inflation, {
-        color: '#f59e0b',
-        lineWidth: 2.5
-      });
+      // 2. CPI
+      createQuarterlyChart('chart-cpi', ind.cpi_inflation, { color: '#f59e0b', lineWidth: 2.6 });
 
       // 3. Unemployment
-      createYearlyChart('chart-unemp', ind.unemployment, {
-        color: '#3b82f6',
-        lineWidth: 2.5
-      });
+      createQuarterlyChart('chart-unemp', ind.unemployment, { color: '#3b82f6', lineWidth: 2.6 });
 
-      // 4. Trade - two lines
+      // 4. Trade (Exports + Imports) - two lines, values in billions
       const tradeContainer = document.getElementById('chart-trade');
       if (tradeContainer && charts['chart-trade']) charts['chart-trade'].remove();
+
+      const expLimited = getLastN(ind.exports_goods_services, 20);
+      const impLimited = getLastN(ind.imports_goods_services, 20);
 
       const tradeChart = LightweightCharts.createChart(tradeContainer, {
         width: tradeContainer.clientWidth,
         height: 260,
         layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
         grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
-        timeScale: { borderColor: '#E7DFD6' },
+        timeScale: {
+          borderColor: '#E7DFD6',
+          tickMarkFormatter: (time) => {
+            const idx = Math.round(time);
+            return expLimited[idx] ? formatQuarterLabel(expLimited[idx].period) : '';
+          }
+        },
         rightPriceScale: { borderColor: '#E7DFD6' }
       });
 
-      const expData = (ind.exports_goods_services || []).map(d => ({ time: d.year, value: d.value / 1e9 }));
-      const impData = (ind.imports_goods_services || []).map(d => ({ time: d.year, value: d.value / 1e9 }));
+      const expData = expLimited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
+      const impData = impLimited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
 
-      const expSeries = tradeChart.addLineSeries({ color: '#8b5cf6', lineWidth: 2.5 });
-      expSeries.setData(expData);
-
-      const impSeries = tradeChart.addLineSeries({ color: '#ec4899', lineWidth: 2.5 });
-      impSeries.setData(impData);
+      const expS = tradeChart.addLineSeries({ color: '#8b5cf6', lineWidth: 2.6, title: 'Xuất khẩu' });
+      expS.setData(expData);
+      const impS = tradeChart.addLineSeries({ color: '#ec4899', lineWidth: 2.6, title: 'Nhập khẩu' });
+      impS.setData(impData);
 
       tradeChart.timeScale().fitContent();
 
-      const ro = new ResizeObserver(() => tradeChart.resize(tradeContainer.clientWidth, 260));
-      ro.observe(tradeContainer);
+      const roTrade = new ResizeObserver(() => tradeChart.resize(tradeContainer.clientWidth, 260));
+      roTrade.observe(tradeContainer);
       charts['chart-trade'] = tradeChart;
 
-      // 5. FDI (histogram/bar)
-      createYearlyChart('chart-fdi', ind.fdi_net_inflows, {
-        type: 'histogram',
-        color: '#14b8a6'
-      });
+      // 5. FDI (bar)
+      createQuarterlyChart('chart-fdi', ind.fdi_net_inflows, { type: 'histogram', color: '#14b8a6' });
     }
 
-    // ==================== DATA TABLE ====================
-    function buildTableRows(years) {
+    // ==================== DATA TABLE (QUARTERLY) ====================
+    function getAllPeriods() {
+      const ind = macroData.indicators || {};
+      const set = new Set();
+      Object.values(ind).forEach(series => {
+        if (Array.isArray(series)) series.forEach(r => r.period && set.add(r.period));
+      });
+      return Array.from(set).sort((a, b) => periodToIndex(b) - periodToIndex(a)); // newest first
+    }
+
+    function computeRowDeltas(ind, period) {
+      const gdpSeries = ind.gdp_growth || [];
+      const deltas = computeDeltas(gdpSeries, period); // reuse for GDP mainly; others computed inline
+      return deltas;
+    }
+
+    function buildTableRows(filterPeriods) {
       const tbody = document.getElementById('table-body');
       tbody.innerHTML = '';
 
       const ind = macroData.indicators || {};
-      const latest = macroData.latest || {};
+      const allPeriods = getAllPeriods();
+      const periodsToShow = (filterPeriods && filterPeriods.length) ? filterPeriods : allPeriods;
 
-      // Collect all years present across indicators
-      const yearSet = new Set();
-      Object.values(ind).forEach(series => {
-        if (Array.isArray(series)) series.forEach(r => yearSet.add(r.year));
-      });
-      const allYears = Array.from(yearSet).sort((a,b) => b - a); // newest first
+      periodsToShow.forEach(period => {
+        const gdp = (ind.gdp_growth || []).find(r => r.period === period);
+        const cpi = (ind.cpi_inflation || []).find(r => r.period === period);
+        const unemp = (ind.unemployment || []).find(r => r.period === period);
+        const exp = (ind.exports_goods_services || []).find(r => r.period === period);
+        const imp = (ind.imports_goods_services || []).find(r => r.period === period);
+        const fdi = (ind.fdi_net_inflows || []).find(r => r.period === period);
 
-      const filteredYears = years || allYears;
+        // Deltas for GDP (main indicator users care about for "biến động")
+        const gdpDeltas = computeDeltas(ind.gdp_growth || [], period);
+        const qoqStr = gdpDeltas.qoq !== null ? formatDelta(gdpDeltas.qoq) : '—';
+        const yoyStr = gdpDeltas.yoy !== null ? formatDelta(gdpDeltas.yoy) : '—';
 
-      filteredYears.forEach(year => {
-        const gdpG = (ind.gdp_growth || []).find(r => r.year === year);
-        const cpi = (ind.cpi_inflation || []).find(r => r.year === year);
-        const unemp = (ind.unemployment || []).find(r => r.year === year);
-        const exp = (ind.exports_goods_services || []).find(r => r.year === year);
-        const imp = (ind.imports_goods_services || []).find(r => r.year === year);
-        const fdi = (ind.fdi_net_inflows || []).find(r => r.year === year);
-        const gdpPc = (ind.gdp_per_capita || []).find(r => r.year === year);
+        // Trade total for compact column
+        const tradeTotal = (exp && imp) ? ((exp.value + imp.value) / 1e9).toFixed(0) : '—';
 
         const tr = document.createElement('tr');
         tr.className = 'hover:bg-[#FDFAF4]';
         tr.innerHTML = `
-          <td class="px-4 py-2 font-extrabold text-[#3E2723]">${year}</td>
-          <td class="px-3 py-2 text-right font-semibold text-emerald-700">${gdpG ? gdpG.value.toFixed(2) : '—'}</td>
-          <td class="px-3 py-2 text-right font-semibold text-orange-700">${cpi ? cpi.value.toFixed(2) : '—'}</td>
+          <td class="px-3 py-2 font-extrabold text-[#3E2723] text-sm">${period}</td>
+          <td class="px-2 py-2 text-right font-extrabold text-emerald-700">${gdp ? gdp.value.toFixed(2) : '—'}</td>
+          <td class="px-2 py-2 text-right text-xs font-bold ${gdpDeltas.qoq > 0 ? 'text-emerald-600' : (gdpDeltas.qoq < 0 ? 'text-rose-600' : 'text-slate-500')}">${qoqStr}</td>
+          <td class="px-2 py-2 text-right text-xs font-bold ${gdpDeltas.yoy > 0 ? 'text-emerald-600' : (gdpDeltas.yoy < 0 ? 'text-rose-600' : 'text-slate-500')}">${yoyStr}</td>
+          <td class="px-2 py-2 text-right font-semibold text-orange-700">${cpi ? cpi.value.toFixed(2) : '—'}</td>
+          <td class="px-2 py-2 text-right font-semibold text-purple-700">${tradeTotal}</td>
+          <td class="px-2 py-2 text-right font-semibold text-teal-700">${fdi ? (fdi.value/1e9).toFixed(1) : '—'}</td>
           <td class="px-3 py-2 text-right font-semibold text-blue-700">${unemp ? unemp.value.toFixed(2) : '—'}</td>
-          <td class="px-3 py-2 text-right font-semibold text-purple-700">${exp ? (exp.value/1e9).toFixed(1) : '—'}</td>
-          <td class="px-3 py-2 text-right font-semibold text-rose-700">${imp ? (imp.value/1e9).toFixed(1) : '—'}</td>
-          <td class="px-3 py-2 text-right font-semibold text-teal-700">${fdi ? (fdi.value/1e9).toFixed(1) : '—'}</td>
-          <td class="px-4 py-2 text-right font-semibold text-amber-700">${gdpPc ? Math.round(gdpPc.value).toLocaleString('vi-VN') : '—'}</td>
         `;
         tbody.appendChild(tr);
       });
@@ -566,7 +727,6 @@
         const aVal = a.cells[colIndex].textContent.trim();
         const bVal = b.cells[colIndex].textContent.trim();
 
-        // numeric compare
         const aNum = parseFloat(aVal.replace(/[^\d.-]/g, ''));
         const bNum = parseFloat(bVal.replace(/[^\d.-]/g, ''));
 
@@ -580,42 +740,36 @@
       rows.forEach(r => tbody.appendChild(r));
     }
 
-    function filterByYear(year) {
-      currentYearFilter = year;
+    function filterByPeriod(period) {
+      currentYearFilter = period; // reuse var name for simplicity
       
-      // update button states
       document.querySelectorAll('#year-filters .year-filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.year === year);
+        btn.classList.toggle('active', btn.dataset.period === period);
       });
 
-      buildTableRows([year]);
+      buildTableRows([period]);
     }
 
     function resetTableFilter() {
       currentYearFilter = null;
       document.querySelectorAll('#year-filters .year-filter-btn').forEach(b => b.classList.remove('active'));
-      buildTableRows();
+      buildTableRows(); // all (newest 20 via getAllPeriods + slice in practice)
     }
 
-    function renderYearFilters() {
+    function renderQuarterFilters() {
       const container = document.getElementById('year-filters');
       container.innerHTML = '';
 
       if (!macroData || !macroData.indicators) return;
 
-      const yearSet = new Set();
-      Object.values(macroData.indicators).forEach(series => {
-        if (Array.isArray(series)) series.forEach(r => yearSet.add(r.year));
-      });
+      const periods = getAllPeriods().slice(0, 16); // show last 16 quarters as quick filters
 
-      const years = Array.from(yearSet).sort((a,b) => b - a).slice(0, 12); // last 12 years max
-
-      years.forEach(y => {
+      periods.forEach(p => {
         const btn = document.createElement('button');
-        btn.className = 'year-filter-btn px-2.5 py-0.5 text-[#5D4037] hover:bg-white';
-        btn.textContent = y;
-        btn.dataset.year = y;
-        btn.onclick = () => filterByYear(y);
+        btn.className = 'year-filter-btn px-2.5 py-0.5 text-[#5D4037] hover:bg-white text-xs';
+        btn.textContent = p;
+        btn.dataset.period = p;
+        btn.onclick = () => filterByPeriod(p);
         container.appendChild(btn);
       });
     }
@@ -633,12 +787,15 @@
         // Render KPIs
         renderKPICards(macroData);
         
-        // Render charts
+        // Render charts (last 20Q)
         renderAllCharts(macroData);
         
-        // Table + filters
+        // NEW: Auto analysis of latest quarter fluctuations
+        renderAnalysis(macroData);
+        
+        // Table + filters (quarterly)
         buildTableRows();
-        renderYearFilters();
+        renderQuarterFilters();
         
         // Last updated
         const updatedEl = document.getElementById('last-updated');
