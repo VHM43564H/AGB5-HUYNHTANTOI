@@ -1,0 +1,89 @@
+{
+  "last_updated": "2026-06-01T08:15:00+00:00",
+  "source": "World Bank Open Data (seed data - sẽ được thay thế bởi script)",
+  "country": "Vietnam (VN)",
+  "indicators": {
+    "gdp_growth": [
+      {"year": "2018", "value": 7.075},
+      {"year": "2019", "value": 7.017},
+      {"year": "2020", "value": 2.867},
+      {"year": "2021", "value": 2.562},
+      {"year": "2022", "value": 8.02},
+      {"year": "2023", "value": 5.046},
+      {"year": "2024", "value": 6.93}
+    ],
+    "gdp_current_usd": [
+      {"year": "2018", "value": 310106535191.0},
+      {"year": "2019", "value": 334365272518.0},
+      {"year": "2020", "value": 346615842504.0},
+      {"year": "2021", "value": 366137590600.0},
+      {"year": "2022", "value": 408802359435.0},
+      {"year": "2023", "value": 429716385774.0},
+      {"year": "2024", "value": 459000000000.0}
+    ],
+    "gdp_per_capita": [
+      {"year": "2018", "value": 3268.6},
+      {"year": "2019", "value": 3499.0},
+      {"year": "2020", "value": 3586.3},
+      {"year": "2021", "value": 3756.5},
+      {"year": "2022", "value": 4163.5},
+      {"year": "2023", "value": 4346.8},
+      {"year": "2024", "value": 4600.0}
+    ],
+    "cpi_inflation": [
+      {"year": "2018", "value": 3.54},
+      {"year": "2019", "value": 2.8},
+      {"year": "2020", "value": 1.84},
+      {"year": "2021", "value": 1.83},
+      {"year": "2022", "value": 3.16},
+      {"year": "2023", "value": 3.25},
+      {"year": "2024", "value": 3.8}
+    ],
+    "unemployment": [
+      {"year": "2018", "value": 2.19},
+      {"year": "2019", "value": 2.17},
+      {"year": "2020", "value": 2.48},
+      {"year": "2021", "value": 2.39},
+      {"year": "2022", "value": 2.34},
+      {"year": "2023", "value": 2.28},
+      {"year": "2024", "value": 2.25}
+    ],
+    "fdi_net_inflows": [
+      {"year": "2018", "value": 15500000000.0},
+      {"year": "2019", "value": 16100000000.0},
+      {"year": "2020", "value": 15800000000.0},
+      {"year": "2021", "value": 15700000000.0},
+      {"year": "2022", "value": 17800000000.0},
+      {"year": "2023", "value": 23180000000.0},
+      {"year": "2024", "value": 24500000000.0}
+    ],
+    "exports_goods_services": [
+      {"year": "2018", "value": 290000000000.0},
+      {"year": "2019", "value": 305000000000.0},
+      {"year": "2020", "value": 290000000000.0},
+      {"year": "2021", "value": 340000000000.0},
+      {"year": "2022", "value": 385000000000.0},
+      {"year": "2023", "value": 395000000000.0},
+      {"year": "2024", "value": 415000000000.0}
+    ],
+    "imports_goods_services": [
+      {"year": "2018", "value": 275000000000.0},
+      {"year": "2019", "value": 290000000000.0},
+      {"year": "2020", "value": 275000000000.0},
+      {"year": "2021", "value": 320000000000.0},
+      {"year": "2022", "value": 365000000000.0},
+      {"year": "2023", "value": 372000000000.0},
+      {"year": "2024", "value": 390000000000.0}
+    ]
+  },
+  "latest": {
+    "gdp_growth": {"year": "2024", "value": 6.93},
+    "gdp_current_usd": {"year": "2024", "value": 459000000000.0},
+    "gdp_per_capita": {"year": "2024", "value": 4600.0},
+    "cpi_inflation": {"year": "2024", "value": 3.8},
+    "unemployment": {"year": "2024", "value": 2.25},
+    "fdi_net_inflows": {"year": "2024", "value": 24500000000.0},
+    "exports_goods_services": {"year": "2024", "value": 415000000000.0},
+    "imports_goods_services": {"year": "2024", "value": 390000000000.0}
+  }
+}

@@ -18,7 +18,7 @@ jobs:
 
       - name: Cài thư viện
         run: |
-          pip install feedparser vnstock
+          pip install feedparser vnstock requests
 
       - name: Chạy fetch tin tức
         run: python scripts/fetch_news.py
@@ -26,7 +26,10 @@ jobs:
       - name: Chạy fetch biểu đồ VN30 + cổ phiếu
         run: python scripts/fetch_charts.py
 
+      - name: Chạy fetch Kinh tế Vĩ mô (World Bank)
+        run: python scripts/fetch_macro.py
+
       - name: Commit & Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🔄 Auto update tin tức & biểu đồ VN30 (30 phút)"
+          commit_message: "🔄 Auto update: Tin tức + VN30 + Kinh tế Vĩ mô"

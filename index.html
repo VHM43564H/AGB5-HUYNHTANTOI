@@ -585,7 +585,7 @@
             <div class="font-bold text-[#3E2723] text-sm">📈 Phân tích Thị trường</div>
             <div class="text-[10px] text-slate-400">Crypto (CoinGecko) • Chứng khoán VN30 (Finfo VNDIRECT)</div>
           </div>
-          <div class="grid grid-cols-2 gap-3">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
             <!-- Crypto quick card -->
             <div onclick="switchTab('crypto')" 
                  class="feature-card bg-white p-3.5 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border flex items-center gap-3">
@@ -614,6 +614,18 @@
                 <div class="text-[10px] text-slate-500 truncate">Finfo VNDIRECT • 6 chỉ báo • 1 ngày → 1 năm</div>
               </div>
             </div>
+
+            <!-- NEW: Kinh Tế Vĩ Mô -->
+            <a href="vi-mo.html" 
+               class="feature-card bg-white p-3.5 rounded-3xl border border-slate-200/70 shadow-sm active:scale-[0.985] cursor-pointer agb-yellow-border flex items-center gap-3">
+              <div class="w-9 h-9 bg-amber-100 rounded-2xl flex items-center justify-center shrink-0">
+                <i class="fas fa-chart-area text-amber-600 text-lg"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="font-bold text-sm text-[#3E2723] leading-tight">Kinh Tế Vĩ Mô</div>
+                <div class="text-[10px] text-slate-500 truncate">GDP • Lạm phát • FDI • Thương mại VN</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -1378,9 +1390,9 @@
     <div class="text-center text-[10px] text-slate-400 pb-2">Dữ liệu VNDIRECT Finfo • Cập nhật nhanh • Phân tích kỹ thuật tham khảo</div>
   </div>
 
-  <!-- Bottom Navigation (5 tabs) -->
+  <!-- Bottom Navigation (6 tabs) -->
   <div class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-white border-t border-slate-200 z-[60]">
-    <div class="grid grid-cols-5 text-center">
+    <div class="grid grid-cols-6 text-center">
       <div onclick="switchTab('home')" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600" data-tab="home">
         <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1v-5m-6 0a1 1 0 001-1v-4" /></svg>
         <div class="nav-label">Trang chủ</div>
@@ -1397,6 +1409,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon w-5 h-5 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 002.573 2.573c1.543.94.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573-2.573c-1.543-.94-3.31.826-2.37-2.37a1.724 1.724 0 00-2.573-2.573z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
         <div class="nav-label">Card Visit</div>
       </div>
+      <!-- NEW: Kinh Tế Vĩ Mô -->
+      <a href="vi-mo.html" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600">
+        <i class="fas fa-chart-area fa-lg mb-0.5 nav-icon"></i>
+        <span class="nav-label">Vĩ Mô</span>
+      </a>
       <!-- Tab Tin Tức & Phân Tích -->
       <a href="tin-tuc.html" class="nav-item py-2.5 px-1 flex flex-col items-center justify-center text-slate-500 active:text-yellow-600">
         <i class="fas fa-newspaper fa-lg mb-0.5 nav-icon"></i>
