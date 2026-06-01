@@ -34,7 +34,23 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
-  // For navigation and same-origin requests → cache-first
+  // Data JSON files (news, stocks, macro) → NETWORK FIRST (for auto hourly refresh to work)
+  if (url.origin === location.origin && url.pathname.startsWith('/data/') && url.pathname.endsWith('.json')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // For navigation and other same-origin requests → cache-first
   if (event.request.mode === 'navigate' || url.origin === location.origin) {
     event.respondWith(
       caches.match(event.request).then((cached) => {

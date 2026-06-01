@@ -154,6 +154,19 @@
       </button>
     </div>
 
+    <!-- AUTO-REFRESH STATUS (mỗi 1 tiếng) -->
+    <div class="mb-4 px-1 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[11px]">
+      <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 font-extrabold px-3 py-1 rounded-2xl">
+        <i class="fas fa-robot"></i>
+        <span>Tự động cập nhật mỗi 60 phút</span>
+      </div>
+      <div class="text-[#6B5F54] flex items-center gap-1.5">
+        <span class="font-semibold">Lần cuối:</span>
+        <span id="global-last-update" class="font-mono font-bold text-[#3E2723]">--:--</span>
+        <span id="auto-status" class="ml-1 text-emerald-600"></span>
+      </div>
+    </div>
+
     <!-- TAB 0: TIN TỨC -->
     <div id="tab-content-0" class="tab-content">
       <div class="flex items-end justify-between mb-3 px-1">
@@ -162,7 +175,7 @@
             <i class="fas fa-newspaper text-[#5D4037]"></i> 
             Tin Tức Kinh Tế
           </div>
-          <p class="text-xs text-[#6B5F54] mt-0.5">Cập nhật từ VnExpress • Dữ liệu realtime</p>
+          <p class="text-xs text-[#6B5F54] mt-0.5">Nguồn: VnExpress &amp; Tuổi Trẻ • Tự động làm mới mỗi 60 phút</p>
         </div>
         <button onclick="loadNews()" 
                 class="px-4 py-1.5 text-xs font-extrabold bg-white border border-[#D7CCC8] hover:border-[#5D4037] active:bg-[#F8F3EC] rounded-2xl flex items-center gap-2 text-[#5D4037]">
@@ -188,7 +201,7 @@
             <i class="fas fa-gavel text-[#5D4037]"></i> 
             Chính Sách &amp; Luật
           </div>
-          <p class="text-xs text-[#6B5F54] mt-0.5">Cập nhật pháp luật • Chính sách kinh tế</p>
+          <p class="text-xs text-[#6B5F54] mt-0.5">Nguồn: Thời sự + Pháp luật • Tự động làm mới mỗi 60 phút</p>
         </div>
         <button onclick="loadPolicyNews()" 
                 class="px-4 py-1.5 text-xs font-extrabold bg-white border border-[#D7CCC8] hover:border-[#5D4037] active:bg-[#F8F3EC] rounded-2xl flex items-center gap-2 text-[#5D4037]">
@@ -752,6 +765,14 @@
             </div>
           </a>
         `).join('');
+
+        // Cập nhật thời gian (ưu tiên server last_updated nếu có)
+        if (data.last_updated) {
+          lastRefreshTs = new Date(data.last_updated).getTime();
+        } else {
+          lastRefreshTs = Date.now();
+        }
+        updateGlobalLastUpdate(lastRefreshTs);
         
       } catch (e) {
         container.innerHTML = `<div class="col-span-full p-6 text-center text-sm text-rose-600 bg-rose-50 rounded-2xl">Không thể tải tin tức. Vui lòng kiểm tra data/news.json</div>`;
@@ -788,12 +809,99 @@
             </div>
           </a>
         `).join('');
+
+        // Cập nhật thời gian từ server nếu có
+        if (data.last_updated) {
+          lastRefreshTs = new Date(data.last_updated).getTime();
+        } else {
+          lastRefreshTs = Date.now();
+        }
+        updateGlobalLastUpdate(lastRefreshTs);
         
       } catch (e) {
         container.innerHTML = `<div class="col-span-full p-6 text-center text-sm text-amber-600 bg-amber-50 rounded-2xl">Không có dữ liệu Chính Sách & Luật. Dữ liệu sẽ được cập nhật sau.</div>`;
       }
     }
     
+    // ==================== AUTO REFRESH EVERY 1 HOUR (TIN TỨC + CHÍNH SÁCH) ====================
+    const AUTO_REFRESH_MS = 60 * 60 * 1000; // 1 giờ
+    let autoTimer = null;
+    let lastRefreshTs = 0;
+
+    function formatVNTime(ts) {
+      const d = new Date(ts);
+      return d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function updateGlobalLastUpdate(ts = null) {
+      const el = document.getElementById('global-last-update');
+      const statusEl = document.getElementById('auto-status');
+      if (!el) return;
+
+      const timeToShow = ts || (lastRefreshTs || Date.now());
+      el.textContent = formatVNTime(timeToShow);
+
+      if (statusEl) {
+        statusEl.innerHTML = `<span class="inline-block w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>`;
+        // clear pulse after 8s
+        setTimeout(() => {
+          if (statusEl) statusEl.innerHTML = '';
+        }, 8000);
+      }
+    }
+
+    function doAutoRefresh() {
+      if (document.visibilityState !== 'visible') {
+        // skip background refresh to save battery/data
+        return;
+      }
+      console.log('%c[AGBCN5] Auto-refreshing tin tức & chính sách (1h interval)', 'color:#16a34a');
+      loadNews();
+      loadPolicyNews();
+      lastRefreshTs = Date.now();
+      updateGlobalLastUpdate(lastRefreshTs);
+
+      // subtle non-intrusive note (only if user is on news/policy tabs)
+      const currentContent = document.querySelector('.tab-content:not(.hidden)');
+      if (currentContent && (currentContent.id === 'tab-content-0' || currentContent.id === 'tab-content-1')) {
+        // optional: could show tiny toast but keep clean for now
+      }
+    }
+
+    function startAutoRefresh() {
+      if (autoTimer) clearInterval(autoTimer);
+
+      // initial stamp
+      if (!lastRefreshTs) {
+        lastRefreshTs = Date.now();
+        updateGlobalLastUpdate(lastRefreshTs);
+      }
+
+      autoTimer = setInterval(() => {
+        doAutoRefresh();
+      }, AUTO_REFRESH_MS);
+
+      // Smart refresh on return to app
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          const elapsed = Date.now() - lastRefreshTs;
+          if (elapsed > (50 * 60 * 1000)) { // > 50 phút thì refresh ngay khi mở lại
+            doAutoRefresh();
+          }
+        }
+      });
+
+      // Also refresh when window gets focus (desktop)
+      window.addEventListener('focus', () => {
+        const elapsed = Date.now() - lastRefreshTs;
+        if (elapsed > (45 * 60 * 1000)) {
+          doAutoRefresh();
+        }
+      });
+
+      console.log('%c[AGBCN5] Auto-refresh timer started (every 60min for news & policy)', 'color:#166534');
+    }
+
     // ==================== INIT ====================
     async function init() {
       initTailwind();
@@ -803,16 +911,16 @@
       document.getElementById('tab-content-0').classList.remove('hidden');
       
       // Load news immediately (tab 0)
-      loadNews();
+      await loadNews();
       
       // Prepare stock select + auto render chart for tab 2 (lazy)
       await populateStockSelect();
       
-      // Optional: pre-load chart data but don't draw until tab opened (saves perf)
-      // User can click "VẼ BIỂU ĐỒ" or switch tab will trigger
-      
+      // Start the magic: tự động cập nhật mỗi 1 tiếng
+      startAutoRefresh();
+
       // Keyboard hint
-      console.log('%c[tin-tuc] ✅ 3 tabs + clean indicators + professional chart ready (earth brown + gold theme)', 'color:#5D4037');
+      console.log('%c[tin-tuc] ✅ 3 tabs + AUTO 1H refresh (news + policy) + professional chart ready', 'color:#5D4037');
       
       // Bonus: if direct hash to analysis, switch
       if (location.hash.includes('chart') || location.hash.includes('vn30')) {
