@@ -882,51 +882,35 @@
 
     // ==================== MAIN DATA LOAD ====================
     async function loadMacroData() {
-      const container = document.getElementById('kpi-grid');
-      
-      try {
-        const res = await fetch('data/macro.json');
-        if (!res.ok) throw new Error('Không tìm thấy data/macro.json');
-        
-        allMacroData = await res.json();
-        
-        // Init country tabs (first load or refresh)
-        // Preserve currently selected country if still valid, else default VN
-        if (!currentCountry || !allMacroData.countries[currentCountry]) {
-          currentCountry = 'vn';
-        }
-        renderCountryTabs();
-        updateActiveCountryTab();
-        
-        // Render everything for current
-        renderCurrentCountry();
-        
-        // Last updated (global)
-        const updatedEl = document.getElementById('last-updated');
-        if (allMacroData.last_updated) {
-          const d = new Date(allMacroData.last_updated);
-          updatedEl.innerHTML = `
-            <i class="fas fa-clock"></i>
-            <span>Cập nhật: ${d.toLocaleDateString('vi-VN')} ${d.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'})}</span>
-          `;
-        } else {
-          updatedEl.innerHTML = `<i class="fas fa-clock"></i> <span>Dữ liệu macro</span>`;
-        }
-        
-        console.log('[vi-mo] Macro multi-country dashboard loaded successfully');
-        
-      } catch (err) {
-        console.error(err);
-        container.innerHTML = `
-          <div class="col-span-full p-8 text-center text-[#8B7355] modern-card">
-            <i class="fas fa-exclamation-triangle text-xl mb-2 text-orange-500"></i>
-            <div class="font-semibold">Không thể tải dữ liệu vĩ mô</div>
-            <div class="text-xs mt-1">Vui lòng kiểm tra data/macro.json</div>
-            <button onclick="location.reload()" class="mt-3 text-xs px-4 py-1 bg-white border border-[#D7CCC8] rounded-2xl">Thử lại</button>
-          </div>
-        `;
-      }
+  try {
+    const res = await fetch('data/macro.json?' + Date.now());
+    const data = await res.json();
+
+    console.log('[vi-mo] Dữ liệu nhận được:', data);
+
+    // Cập nhật ngày cập nhật
+    const lastUpdatedEl = document.getElementById('last-updated');
+    if (lastUpdatedEl && data.last_updated) {
+      lastUpdatedEl.textContent = `Cập nhật lần cuối: ${data.last_updated}`;
     }
+
+    // TODO: Thầy sẽ viết code vẽ biểu đồ + bảng ở đây sau khi xem cấu trúc JSON
+    // Hiện tại chỉ log ra console để anh kiểm tra
+
+    alert("Dữ liệu đã load thành công! Mở Console (F12) để xem cấu trúc JSON.");
+
+  } catch (e) {
+    console.error(e);
+    const container = document.getElementById('macro-content') || document.body;
+    container.innerHTML = `
+      <div class="alert alert-danger">
+        <strong>Không thể tải dữ liệu vĩ mô</strong><br>
+        Lỗi: ${e.message}<br>
+        Vui lòng kiểm tra file data/macro.json
+      </div>
+    `;
+  }
+}
 
     function renderCurrentCountry() {
       const cd = getCurrentData();
