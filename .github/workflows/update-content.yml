@@ -2,14 +2,19 @@ name: Cập nhật Tin Tức & Biểu Đồ (mỗi 30 phút)
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # Chạy mỗi 30 phút
+    - cron: '*/30 * * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,17 +28,14 @@ jobs:
       - name: Chạy fetch tin tức
         run: python scripts/fetch_news.py
 
-      - name: Chạy fetch biểu đồ VN30 + cổ phiếu
+      - name: Chạy fetch biểu đồ VN30
         run: python scripts/fetch_charts.py
 
-      - name: Chạy fetch Kinh tế Vĩ mô (World Bank)
+      - name: Chạy fetch Kinh tế Vĩ mô
         run: python scripts/fetch_macro.py
 
-      - name: Commit & Push thay đổi
+      - name: Commit & Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          token: ${{ secrets.PAT_TOKEN }}
           commit_message: "🔄 Auto update: Tin tức + VN30 + Kinh tế Vĩ mô"
-          commit_user_name: github-actions[bot]
-          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
