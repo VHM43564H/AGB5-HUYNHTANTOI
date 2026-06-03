@@ -35,6 +35,5 @@ jobs:
           commit_message: "🔄 Auto update: Tin tức + VN30 + Kinh tế Vĩ mô"
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          push_options: '--force-with-lease'
         env:
-          GITHUB_TOKEN: ${{ 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  }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
