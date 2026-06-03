@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
 """
-Cập nhật dữ liệu Kinh tế Vĩ mô Việt Nam - Phiên bản QUÝ (Quarterly)
+Cập nhật dữ liệu Kinh tế Vĩ mô Việt Nam (SEED) - Phiên bản QUÝ (Quarterly)
 Nguồn chính: Tổng cục Thống kê Việt Nam (GSO/NSO) - Báo cáo tình hình KT-XH theo quý
-Nguồn phụ: World Bank (dữ liệu năm)
 
-Lưu ý quan trọng:
-- Dữ liệu QUÝ được cập nhật thủ công từ các báo cáo GSO chính thức (PDF + Excel)
-  khi có số liệu mới (thường công bố cuối tháng sau quý).
-- Script này chứa SEED dữ liệu 20 quý gần nhất. Khi có quý mới:
-  1. Thêm dòng mới vào mỗi mảng SEED (ở dưới)
-  2. Cập nhật latest_quarter
-  3. Chạy script để ghi đè data/macro.json
-- World Bank vẫn được gọi để lấy dữ liệu năm làm tham chiếu phụ (nếu cần).
+LƯU Ý: Dashboard "Kinh tế Vĩ Mô" hiện hỗ trợ đa quốc gia (VN + US + EU + JP).
+- Dùng script này để cập nhật SEED cho VN (QUARTERLY_SEED + LATEST_QUARTER).
+- Sau đó chạy: python scripts/build_macro_multi.py  (nó sẽ rebuild data/macro.json với format countries + giữ seed VN)
+- Không chạy trực tiếp script này để ghi đè macro.json (sẽ làm mất cấu trúc multi-country).
 """
 
 import requests

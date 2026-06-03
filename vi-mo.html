@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Kinh Tế Vĩ Mô Việt Nam | AGBCN5</title>
-  <meta name="description" content="Báo cáo Kinh tế Vĩ Mô Việt Nam theo Quý: GDP, lạm phát, thất nghiệp, xuất nhập khẩu, FDI — dữ liệu Tổng cục Thống kê (GSO) + phân tích biến động QoQ/YoY">
+  <title>Kinh tế Vĩ Mô | AGBCN5</title>
+  <meta name="description" content="Báo cáo Kinh tế Vĩ Mô theo Quý: Việt Nam, Mỹ, EU, Nhật — GDP, lạm phát, thất nghiệp, xuất nhập khẩu, FDI. Chỉ số cấu trúc, biến động QoQ/YoY">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -127,8 +127,8 @@
           <i class="fas fa-chart-line text-[#3E2723] text-2xl"></i>
         </div>
         <div>
-          <div class="font-extrabold text-xl tracking-tight">Kinh Tế Vĩ Mô Việt Nam</div>
-          <div class="text-[11px] text-[#D7CCC8] -mt-0.5">Báo cáo theo QUÝ • Biến động QoQ/YoY • 20 quý gần nhất</div>
+          <div class="font-extrabold text-xl tracking-tight">Kinh tế Vĩ Mô</div>
+          <div class="text-[11px] text-[#D7CCC8] -mt-0.5">VN • Mỹ • EU • Nhật • Báo cáo theo QUÝ • Biến động QoQ/YoY</div>
         </div>
       </div>
       <a href="index.html" 
@@ -145,10 +145,10 @@
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5">
       <div>
         <div class="flex items-center gap-2">
-          <div class="section-header text-2xl">Báo Cáo Kinh Tế Vĩ Mô Việt Nam</div>
+          <div class="section-header text-2xl">Báo Cáo Kinh Tế Vĩ Mô</div>
         </div>
         <p class="text-sm text-[#6B5F54] mt-0.5">
-          Phân tích theo <strong>Quý</strong> (đến Quý gần nhất) • So sánh QoQ &amp; YoY • Biểu đồ 20 Quý
+          Phân tích theo <strong>Quý</strong> cho <strong>Việt Nam • Mỹ • EU • Nhật</strong> • So sánh QoQ &amp; YoY • Biểu đồ 20 Quý gần nhất
         </p>
       </div>
       
@@ -167,6 +167,14 @@
       </div>
     </div>
 
+    <!-- COUNTRY TABS -->
+    <div class="mb-5">
+      <div class="flex items-center gap-1.5 flex-wrap" id="country-tabs">
+        <!-- Populated by JS: VN, US, EU, JP tabs -->
+      </div>
+      <div class="text-[10px] text-[#8B7355] mt-1.5 px-1">Chọn quốc gia / khu vực để xem chỉ số cấu trúc vĩ mô (cập nhật dữ liệu minh họa cho demo)</div>
+    </div>
+
     <!-- KPI CARDS -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6" id="kpi-grid">
       <!-- Populated by JS -->
@@ -181,7 +189,7 @@
       <div class="flex items-center justify-between mb-2 px-1">
         <div class="font-extrabold text-[#3E2723] flex items-center gap-2">
           <i class="fas fa-exchange-alt"></i>
-          <span>Phân tích biến động chi tiết Quý gần nhất</span>
+          <span id="analysis-title">Phân tích biến động chi tiết Quý gần nhất</span>
         </div>
         <div id="analysis-period" class="text-xs px-3 py-1 bg-amber-100 text-amber-800 rounded-2xl font-bold"></div>
       </div>
@@ -302,10 +310,8 @@
     </div>
 
     <!-- NOTES & SOURCES -->
-    <div class="text-xs macro-source px-1 space-y-1">
-      <div><strong>Nguồn dữ liệu chính:</strong> Tổng cục Thống kê Việt Nam (GSO/NSO) — Báo cáo tình hình kinh tế - xã hội theo Quý (GDP YoY, CPI, Xuất nhập khẩu, FDI giải ngân). Dữ liệu curated từ báo cáo chính thức.</div>
-      <div><strong>Cập nhật:</strong> Cập nhật khi GSO công bố (thường cuối tháng sau mỗi quý). Chạy <code>scripts/fetch_macro.py</code> sau khi chỉnh SEED để cập nhật file JSON.</div>
-      <div><strong>Phân tích:</strong> Bảng &amp; biểu đồ hiển thị 20 Quý gần nhất. ΔQoQ = thay đổi so quý trước. ΔYoY = thay đổi so cùng kỳ năm trước. GDP tăng trưởng là chỉ số YoY theo công bố GSO.</div>
+    <div class="text-xs macro-source px-1 space-y-1" id="source-notes">
+      <!-- Dynamic per country via JS -->
     </div>
     
   </div>
@@ -317,11 +323,24 @@
     }
 
     // ==================== STATE ====================
-    let macroData = null;
+    let allMacroData = null;   // full {last_updated, countries: {vn:{...}, us:{...}, ...}}
+    let currentCountry = 'vn'; // vn | us | eu | jp
     let currentSortColumn = 0;
     let currentSortAsc = false;
     let currentYearFilter = null;
     let charts = {}; // store chart instances for cleanup
+
+    const COUNTRY_META = {
+      vn: { label: 'Việt Nam', flag: '🇻🇳' },
+      us: { label: 'Mỹ', flag: '🇺🇸' },
+      eu: { label: 'EU', flag: '🇪🇺' },
+      jp: { label: 'Nhật Bản', flag: '🇯🇵' }
+    };
+
+    function getCurrentData() {
+      if (!allMacroData || !allMacroData.countries) return null;
+      return allMacroData.countries[currentCountry] || null;
+    }
 
     // KPI definitions (Quarterly focus)
     const KPI_DEFS = [
@@ -423,7 +442,12 @@
     function renderAnalysis(data) {
       const panel = document.getElementById('analysis-content');
       const periodEl = document.getElementById('analysis-period');
+      const titleEl = document.getElementById('analysis-title');
       if (!panel) return;
+
+      const cd = getCurrentData();
+      const countryLabel = (cd && cd.name) || (COUNTRY_META[currentCountry] && COUNTRY_META[currentCountry].label) || 'Kinh tế Vĩ Mô';
+      if (titleEl) titleEl.textContent = `Phân tích biến động chi tiết Quý gần nhất — ${countryLabel}`;
 
       const ind = data.indicators || {};
       const latestQ = data.latest_quarter || '';
@@ -513,9 +537,9 @@
         }
         // Short overall assessment (dynamic from data)
         html += `<div class="text-xs text-[#5D4037]">`;
-        const cpiNote = cpiVal != null ? formatVN(cpiVal, 1) : '3,5';
-        const unempNote = unempVal != null ? formatVN(unempVal, 1) : '2,0';
-        html += `Nhận định: Nền kinh tế quý ${latestQ} duy trì đà tăng trưởng tích cực với GDP YoY cao, lạm phát ổn định ở mức vừa phải (~${cpiNote}%), thị trường lao động lành mạnh (thất nghiệp thấp ~${unempNote}%). Xuất siêu duy trì, dòng vốn FDI giải ngân tiếp tục cải thiện — tín hiệu tích cực cho tăng trưởng bền vững.`;
+        const cpiNote = cpiVal != null ? formatVN(cpiVal, 1) : '2.5';
+        const unempNote = unempVal != null ? formatVN(unempVal, 1) : '4.0';
+        html += `Nhận định: Quý ${latestQ} — tăng trưởng GDP YoY ${gdpVal != null ? formatVN(gdpVal,1) : '—'}%, lạm phát ~${cpiNote}%, thất nghiệp ~${unempNote}%. Cán cân thương mại và FDI phản ánh sức cầu và dòng vốn của nền kinh tế.`;
         html += `</div>`;
         html += `</div>`;
       }
@@ -721,7 +745,8 @@
 
     // ==================== DATA TABLE (QUARTERLY) ====================
     function getAllPeriods() {
-      const ind = macroData.indicators || {};
+      const cd = getCurrentData();
+      const ind = (cd && cd.indicators) || {};
       const set = new Set();
       Object.values(ind).forEach(series => {
         if (Array.isArray(series)) series.forEach(r => r.period && set.add(r.period));
@@ -739,7 +764,8 @@
       const tbody = document.getElementById('table-body');
       tbody.innerHTML = '';
 
-      const ind = macroData.indicators || {};
+      const cd = getCurrentData();
+      const ind = (cd && cd.indicators) || {};
       const allPeriods = getAllPeriods();
       const periodsToShow = (filterPeriods && filterPeriods.length) ? filterPeriods : allPeriods;
 
@@ -839,7 +865,8 @@
       const container = document.getElementById('year-filters');
       container.innerHTML = '';
 
-      if (!macroData || !macroData.indicators) return;
+      const cd = getCurrentData();
+      if (!cd || !cd.indicators) return;
 
       const periods = getAllPeriods().slice(0, 16); // show last 16 quarters as quick filters
 
@@ -861,34 +888,32 @@
         const res = await fetch('data/macro.json');
         if (!res.ok) throw new Error('Không tìm thấy data/macro.json');
         
-        macroData = await res.json();
+        allMacroData = await res.json();
         
-        // Render KPIs
-        renderKPICards(macroData);
+        // Init country tabs (first load or refresh)
+        // Preserve currently selected country if still valid, else default VN
+        if (!currentCountry || !allMacroData.countries[currentCountry]) {
+          currentCountry = 'vn';
+        }
+        renderCountryTabs();
+        updateActiveCountryTab();
         
-        // Render charts (last 20Q)
-        renderAllCharts(macroData);
+        // Render everything for current
+        renderCurrentCountry();
         
-        // NEW: Auto analysis of latest quarter fluctuations
-        renderAnalysis(macroData);
-        
-        // Table + filters (quarterly)
-        buildTableRows();
-        renderQuarterFilters();
-        
-        // Last updated
+        // Last updated (global)
         const updatedEl = document.getElementById('last-updated');
-        if (macroData.last_updated) {
-          const d = new Date(macroData.last_updated);
+        if (allMacroData.last_updated) {
+          const d = new Date(allMacroData.last_updated);
           updatedEl.innerHTML = `
             <i class="fas fa-clock"></i>
             <span>Cập nhật: ${d.toLocaleDateString('vi-VN')} ${d.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'})}</span>
           `;
         } else {
-          updatedEl.innerHTML = `<i class="fas fa-clock"></i> <span>Dữ liệu từ World Bank</span>`;
+          updatedEl.innerHTML = `<i class="fas fa-clock"></i> <span>Dữ liệu macro</span>`;
         }
         
-        console.log('[vi-mo] Macro dashboard loaded successfully');
+        console.log('[vi-mo] Macro multi-country dashboard loaded successfully');
         
       } catch (err) {
         console.error(err);
@@ -896,11 +921,77 @@
           <div class="col-span-full p-8 text-center text-[#8B7355] modern-card">
             <i class="fas fa-exclamation-triangle text-xl mb-2 text-orange-500"></i>
             <div class="font-semibold">Không thể tải dữ liệu vĩ mô</div>
-            <div class="text-xs mt-1">Vui lòng chạy <code>scripts/fetch_macro.py</code> hoặc kiểm tra GitHub Action.</div>
+            <div class="text-xs mt-1">Vui lòng kiểm tra data/macro.json</div>
             <button onclick="location.reload()" class="mt-3 text-xs px-4 py-1 bg-white border border-[#D7CCC8] rounded-2xl">Thử lại</button>
           </div>
         `;
       }
+    }
+
+    function renderCurrentCountry() {
+      const cd = getCurrentData();
+      if (!cd) return;
+
+      // Clear old charts before re-render
+      Object.keys(charts).forEach(k => {
+        try { if (charts[k]) charts[k].remove(); } catch(e){}
+      });
+      charts = {};
+
+      // KPI, charts, analysis, table
+      renderKPICards(cd);
+      renderAllCharts(cd);
+      renderAnalysis(cd);
+      buildTableRows();
+      renderQuarterFilters();
+      renderSourceNotes(cd);
+    }
+
+    function switchCountry(code) {
+      if (!COUNTRY_META[code] || currentCountry === code) return;
+      currentCountry = code;
+      currentYearFilter = null;
+      currentSortColumn = 0;
+      currentSortAsc = false;
+      updateActiveCountryTab();
+      renderCurrentCountry();
+    }
+
+    function renderCountryTabs() {
+      const container = document.getElementById('country-tabs');
+      if (!container || !allMacroData || !allMacroData.countries) return;
+      container.innerHTML = '';
+
+      const order = ['vn', 'us', 'eu', 'jp'];
+      order.forEach(code => {
+        const meta = COUNTRY_META[code];
+        if (!meta || !allMacroData.countries[code]) return;
+        const btn = document.createElement('button');
+        btn.className = `px-3.5 py-1.5 text-sm font-extrabold rounded-2xl border transition-all flex items-center gap-1.5 ${code === currentCountry ? 'bg-[#5D4037] text-[#F5C400] border-[#5D4037]' : 'bg-white text-[#3E2723] border-[#D7CCC8] hover:bg-[#FDFAF4]'}`;
+        btn.innerHTML = `<span>${meta.flag}</span><span>${meta.label}</span>`;
+        btn.onclick = () => switchCountry(code);
+        container.appendChild(btn);
+      });
+    }
+
+    function updateActiveCountryTab() {
+      const container = document.getElementById('country-tabs');
+      if (!container) return;
+      Array.from(container.children).forEach(btn => {
+        const isActive = btn.textContent.includes(COUNTRY_META[currentCountry]?.label);
+        btn.className = `px-3.5 py-1.5 text-sm font-extrabold rounded-2xl border transition-all flex items-center gap-1.5 ${isActive ? 'bg-[#5D4037] text-[#F5C400] border-[#5D4037]' : 'bg-white text-[#3E2723] border-[#D7CCC8] hover:bg-[#FDFAF4]'}`;
+      });
+    }
+
+    function renderSourceNotes(cd) {
+      const el = document.getElementById('source-notes');
+      if (!el || !cd) return;
+      const countryName = cd.name || COUNTRY_META[currentCountry]?.label || currentCountry.toUpperCase();
+      el.innerHTML = `
+        <div><strong>Nguồn dữ liệu:</strong> ${cd.source || 'Dữ liệu vĩ mô cấu trúc theo quý'}</div>
+        <div><strong>Cập nhật:</strong> Dữ liệu demo minh họa (cập nhật thủ công SEED). Chạy <code>scripts/build_macro_multi.py</code> để tái tạo. Thực tế: GSO (VN), BEA/BLS (Mỹ), Eurostat (EU), JP Statistics (Nhật).</div>
+        <div><strong>Phân tích:</strong> Bảng &amp; biểu đồ hiển thị 20 Quý gần nhất cho <strong>${countryName}</strong>. ΔQoQ = thay đổi so quý trước. ΔYoY = thay đổi so cùng kỳ năm trước.</div>
+      `;
     }
 
     // ==================== MANUAL UPDATE (refresh + success toast) ====================
@@ -934,7 +1025,7 @@
       loadMacroData();
       
       // Keyboard hint
-      console.log('%c[vi-mo] Kinh Tế Vĩ Mô dashboard ready. Press "?" for help.', 'color:#8B7355');
+      console.log('%c[vi-mo] Kinh tế Vĩ Mô (multi-country) dashboard ready.', 'color:#8B7355');
     }
 
     window.addEventListener('DOMContentLoaded', init);
