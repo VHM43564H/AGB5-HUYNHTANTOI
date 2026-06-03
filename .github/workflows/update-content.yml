@@ -29,7 +29,12 @@ jobs:
       - name: Chạy fetch Kinh tế Vĩ mô (World Bank)
         run: python scripts/fetch_macro.py
 
-      - name: Commit & Push
+      - name: Commit & Push thay đổi
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🔄 Auto update: Tin tức + VN30 + Kinh tế Vĩ mô"
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          push_options: '--force-with-lease'
+        env:
+          GITHUB_TOKEN: ${{ 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  }}
