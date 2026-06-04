@@ -1,6 +1,20 @@
 {
   "tin_tuc": [
     {
+      "title": "CEO Nvidia nỗ lực tăng sức hút tại Hàn Quốc",
+      "summary": "Bữa tối với bia và gà rán năm 2025 cùng Chủ tịch Samsung, Hyundai giúp Jensen Huang biết làm thế nào để thu hút sự chú ý tại Hàn Quốc.",
+      "link": "https://vnexpress.net/ceo-nvidia-no-luc-tang-suc-hut-tai-han-quoc-5082006.html",
+      "date": "Thu, 04 Jun 2026 19:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Chính quyền ông Trump đề xuất áp thuế bổ sung với 60 nền kinh tế",
+      "summary": "Văn phòng Đại diện Thương mại Mỹ đề xuất áp thuế bổ sung đến 12,5% hàng nhập từ 60 nền kinh tế, vì hành vi thương mại không công bằng.",
+      "link": "https://vnexpress.net/chinh-quyen-ong-trump-de-xuat-ap-thue-bo-sung-voi-60-nen-kinh-te-5081597.html",
+      "date": "Thu, 04 Jun 2026 17:04:35 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Chứng khoán dứt chuỗi giảm điểm",
       "summary": "Sau 7 phiên đi xuống liên tiếp, VN-Index tăng 12,5 điểm nhưng rơi vào tình trạng \"xanh vỏ, đỏ lòng\" khi số lượng cổ phiếu giảm chiếm phần nhiều hơn.",
       "link": "https://vnexpress.net/chung-khoan-dut-chuoi-giam-diem-5081987.html",
@@ -43,49 +57,56 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vàng miếng xuống thấp nhất từ đầu năm",
-      "summary": "Các thương hiệu bán ra vàng miếng quanh mức 156,5 triệu đồng một lượng, thấp nhất từ kể từ đầu năm.",
-      "link": "https://vnexpress.net/gia-vang-mieng-xuong-thap-nhat-tu-dau-nam-5081810.html",
-      "date": "Thu, 04 Jun 2026 09:46:34 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Petrolimex tính bán toàn bộ cổ phiếu quỹ",
-      "summary": "Hội đồng Quản trị Tập đoàn Xăng dầu Việt Nam (Petrolimex) thống nhất chủ trương bán hết 23,28 triệu cổ phiếu quỹ để đáp ứng điều kiện công ty đại chúng.",
-      "link": "https://vnexpress.net/petrolimex-tinh-ban-toan-bo-co-phieu-quy-5081719.html",
-      "date": "Thu, 04 Jun 2026 00:05:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "VN-Index xanh trở lại, PLX tăng trần dù Petrolimex dự kiến bán sạch cổ phiếu quỹ",
-      "summary": "Sau 7 phiên giảm liên tiếp, VN-Index đã lấy lại sắc xanh trong phiên giao dịch ngày 4-6.",
-      "link": "https://tuoitre.vn/vn-index-xanh-tro-lai-plx-tang-tran-du-petrolimex-du-kien-ban-sach-co-phieu-quy-20260604153004892.htm",
-      "date": "Thu, 04 Jun 2026 15:38:18 GMT+7",
+      "title": "Chính phủ giao 3.000 căn nhà ở xã hội, Cần Thơ xây hơn 3.300 căn",
+      "summary": "Chính phủ giao Cần Thơ trong năm 2026 phải xây dựng 3.000 căn nhà ở xã hội, nhưng đến nay thành phố ước thực hiện được hơn 3.300 căn, vượt nhiều so với chỉ tiêu.",
+      "link": "https://tuoitre.vn/chinh-phu-giao-3-000-can-nha-o-xa-hoi-can-tho-xay-hon-3-300-can-20260604182248287.htm",
+      "date": "Thu, 04 Jun 2026 19:01:50 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Giá xăng dầu giảm mạnh",
-      "summary": "Bộ Công Thương vừa phát thông báo về việc điều hành giá xăng dầu áp dụng từ 15h ngày 4-6, với mức giảm hầu hết các mặt hàng.",
-      "link": "https://tuoitre.vn/gia-xang-dau-giam-manh-20260604145204293.htm",
-      "date": "Thu, 04 Jun 2026 15:10:46 GMT+7",
+      "title": "Thay đổi cơ cấu tổ chức Ngân hàng Nhà nước Việt Nam",
+      "summary": "Chính phủ vừa ban hành Nghị định số 198 quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Ngân hàng Nhà nước Việt Nam.",
+      "link": "https://tuoitre.vn/thay-doi-co-cau-to-chuc-cua-ngan-hang-nha-nuoc-viet-nam-20260604173124926.htm",
+      "date": "Thu, 04 Jun 2026 18:08:37 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Chưa đầy một tháng, Quảng Ngãi xử lý 23 vụ xâm phạm sở hữu trí tuệ",
-      "summary": "Các vụ vi phạm liên quan đến hàng giả, hàng nhái, xâm phạm quyền sở hữu trí tuệ tăng mạnh. Chưa đầy 1 tháng, quản lý thị trường Quảng Ngãi đã xử lý 23 vụ, xử phạt 186 triệu đồng...",
-      "link": "https://tuoitre.vn/chua-day-mot-thang-quang-ngai-xu-ly-23-vu-xam-pham-so-huu-tri-tue-20260604145021598.htm",
-      "date": "Thu, 04 Jun 2026 15:01:32 GMT+7",
+      "title": "Tạo hệ sinh thái sản xuất để tăng trưởng 2 con số",
+      "summary": "Từ một nền kinh tế chủ yếu dựa vào nông nghiệp và gia công đơn giản, Việt Nam từng bước hình thành mạng lưới hàng trăm khu công nghiệp, thu hút hàng trăm tỉ USD vốn FDI và trở...",
+      "link": "https://tuoitre.vn/tao-he-sinh-thai-san-xuat-de-tang-truong-2-con-so-20260604082408709.htm",
+      "date": "Thu, 04 Jun 2026 18:00:00 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Diễn biến mới tại công ty ô tô từng vay cá nhân lãi suất 18%/năm để có vốn kinh doanh",
-      "summary": "Ủy ban Chứng khoán đã tiếp nhận, xử lý hồ sơ đăng ký chào bán cổ phiếu riêng lẻ để tăng vốn điều lệ của Ô tô Giải Phóng. Công ty dự định chuyển đổi nợ thành vốn cổ phần.",
-      "link": "https://tuoitre.vn/dien-bien-moi-tai-cong-ty-o-to-tung-vay-ca-nhan-lai-suat-18-nam-de-co-von-kinh-doanh-20260604144207795.htm",
-      "date": "Thu, 04 Jun 2026 14:54:17 GMT+7",
+      "title": "Vietsovpetro đạt cột mốc lịch sử 255 triệu tấn dầu",
+      "summary": "Sau gần 40 năm kể từ khi khai thác dòng dầu đầu tiên từ mỏ Bạch Hổ, Liên doanh Việt - Nga Vietsovpetro đã đạt cột mốc 255 triệu tấn dầu khai thác tại Lô 09-1.",
+      "link": "https://tuoitre.vn/vietsovpetro-dat-cot-moc-lich-su-255-trieu-tan-dau-20260604163317664.htm",
+      "date": "Thu, 04 Jun 2026 17:45:00 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Quét radar tìm mộ tập thể liệt sĩ ở Quảng Ngãi",
+      "summary": "Nhóm chuyên gia Đại học Khoa học Tự nhiên TP HCM dùng radar xuyên đất khảo sát khu vực nghi có mộ tập thể 70-90 liệt sĩ trên đường Trường Chinh.",
+      "link": "https://vnexpress.net/quet-radar-tim-mo-tap-the-liet-si-o-quang-ngai-5082096.html",
+      "date": "Thu, 04 Jun 2026 20:31:32 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Tổng Bí thư, Chủ tịch nước: Việt Nam cần giảm dần phụ thuộc vào nhiên liệu hóa thạch",
+      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm yêu cầu đẩy mạnh chuyển đổi xanh, phát triển năng lượng tái tạo phù hợp với an ninh hệ thống, từng bước giảm phụ thuộc vào nhiên liệu hóa thạch...",
+      "link": "https://vnexpress.net/tong-bi-thu-chu-tich-nuoc-viet-nam-can-giam-dan-phu-thuoc-vao-nhien-lieu-hoa-thach-5082087.html",
+      "date": "Thu, 04 Jun 2026 18:30:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "11 con trâu chết trong rừng, nghi bị sét đánh",
+      "summary": "Chủ đàn trâu lên kiểm tra trâu tại khu vực thượng nguồn hồ Tả Trạch thì phát hiện 11/12 con chết bất thường, cơ quan chức năng bước đầu nghi do sét đánh.",
+      "link": "https://vnexpress.net/11-con-trau-chet-trong-rung-nghi-bi-set-danh-5081985.html",
+      "date": "Thu, 04 Jun 2026 17:52:22 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Chủ tịch TP HCM: Giải ngân đầu tư công 'lẹt đẹt' ảnh hưởng tăng trưởng",
       "summary": "TP HCM giải ngân gần 24.918 tỷ đồng vốn đầu tư công sau 5 tháng, đạt 16,9% kế hoạch, thấp hơn yêu cầu, ảnh hưởng mục tiêu tăng trưởng hai con số, theo ông Nguyễn Văn Được.",
@@ -115,63 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Khách qua Tân Sơn Nhất mùa du lịch hè gần bằng cao điểm Tết",
-      "summary": "Giá vé máy bay tăng nhưng khách qua Tân Sơn Nhất dịp hè dự báo tăng mạnh, cao điểm 125.000 người mỗi ngày, gần bằng một số đợt cao điểm Tết.",
-      "link": "https://vnexpress.net/khach-qua-tan-son-nhat-mua-du-lich-he-gan-bang-cao-diem-tet-5081894.html",
-      "date": "Thu, 04 Jun 2026 11:55:41 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "'Công đoàn không thể mạnh nếu xa công nhân'",
-      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm nhấn mạnh Công đoàn không thể mạnh nếu xa công nhân, không thể hấp dẫn nếu người lao động không thấy lợi ích, quyền lợi của mình được bảo vệ tốt...",
-      "link": "https://vnexpress.net/cong-doan-khong-the-manh-neu-xa-cong-nhan-5081856.html",
-      "date": "Thu, 04 Jun 2026 11:48:37 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Đốm lửa xuất hiện nhiều ngày trên sân bêtông nhà dân",
-      "summary": "Đốm lửa nhỏ liên tiếp xuất hiện trên nền bêtông trước cổng một hộ dân ở Sơn La trong nhiều ngày nắng nóng, địa phương đề nghị cơ quan chức năng xác minh nguyên nhân.",
-      "link": "https://vnexpress.net/dom-lua-xuat-hien-nhieu-ngay-tren-san-betong-nha-dan-5081840.html",
-      "date": "Thu, 04 Jun 2026 11:13:05 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Lãnh đạo UBND TP.HCM thăm, chúc thọ nhiều cụ cao niên tròn 90 tuổi",
-      "summary": "Sáng 4-6, đoàn đại biểu TP.HCM do Ủy viên dự khuyết Trung ương Đảng, Phó chủ tịch UBND TP.HCM Nguyễn Mạnh Cường làm Trưởng đoàn đã đến thăm, chúc thọ người cao tuổi tiêu biểu nhân...",
-      "link": "https://tuoitre.vn/lanh-dao-ubnd-tp-hcm-tham-chuc-tho-nhieu-cu-cao-nien-tron-90-tuoi-20260604112454784.htm",
-      "date": "Thu, 04 Jun 2026 16:06:53 GMT+7",
+      "title": "Đại hội XIV Công đoàn Việt Nam chốt phương án nhân sự Ban Chấp hành khóa 2026 - 2031",
+      "summary": "Đại hội XIV Công đoàn Việt Nam cơ bản thống nhất cơ cấu nhân sự của Ban Chấp hành Tổng liên đoàn Lao động Việt Nam khóa XIV nhiệm kỳ 2026 - 2031.",
+      "link": "https://tuoitre.vn/dai-hoi-xiv-cong-doan-viet-nam-chot-phuong-an-nhan-su-ban-chap-hanh-khoa-2026-2031-20260604180708229.htm",
+      "date": "Thu, 04 Jun 2026 19:51:00 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Bến Lức lên phường giúp phát triển đô thị cửa ngõ Tây Ninh giáp TP.HCM trên quốc lộ 1",
-      "summary": "Xã Bến Lức đã hình thành đô thị rõ nét với công nghiệp - xây dựng và thương mại - dịch vụ chiếm tỉ trọng đến 99,86%. Đây là trung tâm của vùng đô thị trên quốc lộ 1 đang được Tây...",
-      "link": "https://tuoitre.vn/ben-luc-len-phuong-giup-phat-trien-do-thi-cua-ngo-tay-ninh-giap-tp-hcm-tren-quoc-lo-1-20260604150505043.htm",
-      "date": "Thu, 04 Jun 2026 15:34:06 GMT+7",
+      "title": "Nửa năm sau lũ lịch sử, nhiều cầu đường ở đông Đắk Lắk vẫn chưa được sửa",
+      "summary": "Gần nửa năm sau mưa lũ, nhiều công trình giao thông tại khu vực đông Đắk Lắk (trước là Phú Yên) vẫn chưa được khắc phục do thiếu kinh phí, gây ảnh hưởng lớn đến việc đi lại, tiềm...",
+      "link": "https://tuoitre.vn/nua-nam-sau-lu-lich-su-nhieu-cau-duong-o-dong-dak-lak-van-chua-duoc-sua-2026060417042505.htm",
+      "date": "Thu, 04 Jun 2026 19:41:13 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Chủ tịch UBND TP.HCM: Địa phương nào giải ngân đầu tư công thấp thì chuyển khối lượng",
-      "summary": "Chiều 4-6, TP.HCM họp đánh giá tình hình kinh tế - xã hội tháng 5, giải pháp trọng tâm tháng 6 và kết hợp giao ban đầu tư công với xã, phường, đặc khu.",
-      "link": "https://tuoitre.vn/chu-tich-ubnd-tp-hcm-dia-phuong-nao-giai-ngan-dau-tu-cong-thap-thi-chuyen-khoi-luong-20260604144640031.htm",
-      "date": "Thu, 04 Jun 2026 15:33:42 GMT+7",
+      "title": "Ban Chỉ đạo Hội thảo khoa học cấp Bộ Quốc phòng dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh",
+      "summary": "Trong khuôn khổ Hội thảo khoa học cấp Bộ Quốc phòng diễn ra sáng 5-6, đoàn đại biểu do Ban Chỉ đạo hội thảo dẫn đầu đã đến dâng hoa tưởng niệm Chủ tịch Hồ Chí Minh tại công viên...",
+      "link": "https://tuoitre.vn/ban-chi-dao-hoi-thao-khoa-hoc-cap-bo-quoc-phong-dang-hoa-tuong-niem-chu-tich-ho-chi-minh-20260604114248908.htm",
+      "date": "Thu, 04 Jun 2026 19:33:00 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Chưa đầy một tháng, Quảng Ngãi xử lý 23 vụ xâm phạm sở hữu trí tuệ",
-      "summary": "Các vụ vi phạm liên quan đến hàng giả, hàng nhái, xâm phạm quyền sở hữu trí tuệ tăng mạnh. Chưa đầy 1 tháng, quản lý thị trường Quảng Ngãi đã xử lý 23 vụ, xử phạt 186 triệu đồng...",
-      "link": "https://tuoitre.vn/chua-day-mot-thang-quang-ngai-xu-ly-23-vu-xam-pham-so-huu-tri-tue-20260604145021598.htm",
-      "date": "Thu, 04 Jun 2026 15:01:32 GMT+7",
+      "title": "TP.HCM tổ chức hội thảo xác minh hố chôn tập thể liệt sĩ hy sinh năm 1968 tại công viên Lê Thị Riêng",
+      "summary": "Theo kế hoạch, UBND TP.HCM sẽ tổ chức hội thảo xác minh kết luận thông tin về liệt sĩ, mộ liệt sĩ tại khu vực nghĩa địa Chí Hòa - Chợ Quán (nay là công viên Lê Thị Riêng, phường...",
+      "link": "https://tuoitre.vn/tp-hcm-to-chuc-hoi-thao-xac-minh-ho-chon-tap-the-liet-si-hy-sinh-nam-1968-tai-cong-vien-le-thi-rieng-20260604184732723.htm",
+      "date": "Thu, 04 Jun 2026 19:29:40 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Cà Mau sắp xếp lại gần 1.400 ấp, khóm",
-      "summary": "UBND tỉnh Cà Mau vừa có kế hoạch phát động phong trào thi đua “Thực hiện thắng lợi nhiệm vụ sắp xếp ấp, khóm trên địa bàn tỉnh” nhằm tạo sự đồng thuận và quyết tâm hoàn thành...",
-      "link": "https://tuoitre.vn/ca-mau-sap-xep-lai-gan-1-400-ap-khom-20260604142215469.htm",
-      "date": "Thu, 04 Jun 2026 15:00:55 GMT+7",
+      "title": "TP.HCM cắm mốc 515km bờ sông, tạo quỹ đất làm công viên, đường sá",
+      "summary": "515km bờ sông, kênh, rạch thuộc 55 tuyến sông, kênh tại TP.HCM sẽ được cắm mốc để “giữ đất” ngăn lấn chiếm, tạo tiền đề làm công viên, đường sá, hạ tầng kỹ thuật.",
+      "link": "https://tuoitre.vn/tp-hcm-cam-moc-515km-bo-song-tao-quy-dat-lam-cong-vien-duong-sa-20260604180339485.htm",
+      "date": "Thu, 04 Jun 2026 18:58:40 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-04T10:26:49.336818+00:00",
+  "last_updated": "2026-06-04T13:39:12.017227+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
