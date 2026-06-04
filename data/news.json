@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá dứa gai giảm sâu, nông dân lo lỗ nặng",
+      "summary": "Hàng nghìn hộ dân trồng dứa nguy cơ lỗ nặng khi nắng nóng kéo dài, nhiều diện tích dứa bị nám, thối còn giá thì rẻ nhất nhiều năm.",
+      "link": "https://vnexpress.net/gia-dua-gai-giam-sau-nong-dan-lo-lo-nang-5081828.html",
+      "date": "Thu, 04 Jun 2026 12:20:57 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Đề xuất công khai thông tin chủ doanh nghiệp bỏ địa chỉ kinh doanh",
+      "summary": "Bộ Tài chính đề xuất công khai thông tin chủ doanh nghiệp, hộ kinh doanh bỏ địa chỉ đăng ký, nhưng sẽ che một phần số định danh để bảo vệ quyền riêng tư.",
+      "link": "https://vnexpress.net/de-xuat-cong-khai-thong-tin-chu-doanh-nghiep-bo-dia-chi-kinh-doanh-5081800.html",
+      "date": "Thu, 04 Jun 2026 10:53:47 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Giá vàng miếng xuống thấp nhất từ đầu năm",
+      "summary": "Các thương hiệu bán ra vàng miếng quanh mức 156,5 triệu đồng một lượng, thấp nhất từ kể từ đầu năm.",
+      "link": "https://vnexpress.net/gia-vang-mieng-xuong-thap-nhat-tu-dau-nam-5081810.html",
+      "date": "Thu, 04 Jun 2026 09:46:34 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Petrolimex tính bán toàn bộ cổ phiếu quỹ",
       "summary": "Hội đồng Quản trị Tập đoàn Xăng dầu Việt Nam (Petrolimex) thống nhất chủ trương bán hết 23,28 triệu cổ phiếu quỹ để đáp ứng điều kiện công ty đại chúng.",
       "link": "https://vnexpress.net/petrolimex-tinh-ban-toan-bo-co-phieu-quy-5081719.html",
@@ -36,61 +57,68 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Sản xuất ở TP HCM tăng cao nhất 5 năm",
-      "summary": "Chỉ số sản xuất công nghiệp (IIP) nói chung và riêng công nghiệp chế biến - chế tạo của TP HCM 5 tháng đầu năm tăng nhanh nhất kể từ 2021.",
-      "link": "https://vnexpress.net/san-xuat-o-tp-hcm-tang-cao-nhat-5-nam-5081550.html",
-      "date": "Wed, 03 Jun 2026 16:31:51 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "VN-Index chưa cắt chuỗi giảm sâu",
-      "summary": "VN-Index giảm liên tục 7 phiên và có lúc thủng mốc 1.800 điểm do áp lực xả hàng tập trung vào một số cổ phiếu trụ.",
-      "link": "https://vnexpress.net/vn-index-chua-cat-chuoi-giam-sau-5081606.html",
-      "date": "Wed, 03 Jun 2026 16:31:33 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Thủ tướng: Sớm đưa các dự án năng lượng trọng điểm vào hoạt động",
-      "summary": "Thủ tướng Lê Minh Hưng yêu cầu Bộ Công Thương sớm đưa các dự án năng lượng trọng điểm vào hoạt động, trong bối cảnh thời tiết diễn biến bất thường, nhu cầu điện tăng.",
-      "link": "https://vnexpress.net/thu-tuong-som-dua-cac-du-an-nang-luong-trong-diem-vao-hoat-dong-5081587.html",
-      "date": "Wed, 03 Jun 2026 16:15:30 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "6 phó chủ tịch Đà Nẵng trực tiếp chỉ đạo xử lý 312 dự án vướng mắc, chậm tiến độ",
-      "summary": "Chủ tịch UBND TP Đà Nẵng Nguyễn Mạnh Hùng vừa phân công các phó chủ tịch UBND TP theo dõi, đôn đốc, chỉ đạo các dự án khó khăn, vướng mắc, chậm tiến độ trên địa bàn.",
-      "link": "https://tuoitre.vn/6-pho-chu-tich-da-nang-truc-tiep-chi-dao-xu-ly-312-du-an-vuong-mac-cham-tien-do-20260603210651324.htm",
-      "date": "Wed, 03 Jun 2026 21:21:17 GMT+7",
+      "title": "So với cuối tháng 1, giá vàng miếng giảm gần 40 triệu đồng/lượng",
+      "summary": "Giá vàng thế giới dao động mạnh, có lúc chạm ngưỡng 4.485 USD/ounce nhưng sau đó rớt về 4.465 USD/ounce lúc 11h30 hôm nay (4-6).",
+      "link": "https://tuoitre.vn/so-voi-cuoi-thang-1-gia-vang-mieng-giam-gan-40-trieu-dong-luong-20260604115252052.htm",
+      "date": "Thu, 04 Jun 2026 12:06:31 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Người trẻ mang công nghệ nông nghiệp về làng",
-      "summary": "Từ khi còn nhỏ, tôi đã theo cha mẹ ra đồng. Đến khi trưởng thành, tôi tiếp tục nối nghiệp gia đình, sống nhờ vào mảnh đất mà ông bà để lại.",
-      "link": "https://tuoitre.vn/nguoi-tre-mang-cong-nghe-nong-nghiep-ve-lang-20260603203316877.htm",
-      "date": "Wed, 03 Jun 2026 20:43:34 GMT+7",
+      "title": "Đề xuất cắt giảm hàng loạt điều kiện kinh doanh trong lĩnh vực chứng khoán",
+      "summary": "Nhiều điều kiện kinh doanh trong lĩnh vực chứng khoán được đề xuất cắt giảm hoặc chuyển sang hậu kiểm, giảm chi phí tuân thủ và tạo thuận lợi cho doanh nghiệp.",
+      "link": "https://tuoitre.vn/de-xuat-cat-giam-hang-loat-dieu-kien-kinh-doanh-trong-linh-vuc-chung-khoan-20260604101608592.htm",
+      "date": "Thu, 04 Jun 2026 10:45:12 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "'Chiến Binh Đầu Tư' vinh danh các nhà đầu tư xuất sắc nhất tháng 5",
-      "summary": "Ban tổ chức cuộc thi đầu tư chứng khoán “Chiến Binh Đầu Tư” vừa công bố kết quả chặng tháng 5, ghi nhận sự cạnh tranh ở cả ba bảng đấu Tân binh, Bán chuyên và Chuyên nghiệp.",
-      "link": "https://tuoitre.vn/chien-binh-dau-tu-vinh-danh-cac-nha-dau-tu-xuat-sac-nhat-thang-5-20260603161311873.htm",
-      "date": "Wed, 03 Jun 2026 20:10:14 GMT+7",
+      "title": "Grab tăng ô tô điện chở khách, tính mở trạm sạc dùng chung",
+      "summary": "Grab đưa thêm ô tô điện và xe hybrid vào dịch vụ gọi xe, đồng thời đề xuất phát triển hàng nghìn trạm sạc dùng chung tại Việt Nam, trong bối cảnh hạ tầng sạc đang là nút thắt lớn...",
+      "link": "https://tuoitre.vn/grab-tang-oto-dien-cho-khach-tinh-mo-tram-sac-dung-chung-20260604102121373.htm",
+      "date": "Thu, 04 Jun 2026 10:44:34 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Nghiên cứu ưu đãi vượt trội về đất đai, tài chính để doanh nghiệp phát triển nhà ở cho thuê",
-      "summary": "Chánh Văn phòng Bộ Xây dựng cho biết sẽ tập trung nghiên cứu chính sách về cơ chế, ưu đãi vượt trội về đất đai, tài chính để doanh nghiệp tiếp cận quỹ đất, tín dụng phát triển các...",
-      "link": "https://tuoitre.vn/nghien-cuu-uu-dai-vuot-troi-ve-dat-dai-tai-chinh-de-doanh-nghiep-phat-trien-nha-o-cho-thue-20260603180531022.htm",
-      "date": "Wed, 03 Jun 2026 20:07:34 GMT+7",
+      "title": "Từ 15-6, thuê bao phụ thuộc chưa xác nhận chính chủ trên VNeID sẽ bị khóa",
+      "summary": "Theo Cục Viễn thông (Bộ Khoa học và Công nghệ), hiện vẫn còn khoảng 25 triệu thuê bao di động đã được đồng bộ thông tin lên hệ thống VNeID nhưng chưa được người dùng xác nhận...",
+      "link": "https://tuoitre.vn/tu-15-6-thue-bao-phu-thuoc-chua-xac-nhan-chinh-chu-tren-vneid-se-bi-khoa-20260604100903819.htm",
+      "date": "Thu, 04 Jun 2026 10:38:39 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
-      "title": "Phế thải xây dựng - tài nguyên bị lãng phí",
-      "summary": "Phế thải xây dựng ở Hà Nội có thể tái chế thành vật liệu đắp nền, làm bêtông, sản xuất gạch, nhưng phần lớn đang bị chôn lấp, đổ trộm gây ô nhiễm môi trường.",
-      "link": "https://vnexpress.net/phe-thai-xay-dung-tai-nguyen-bi-lang-phi-5081135.html",
-      "date": "Thu, 04 Jun 2026 00:17:59 +0700",
+      "title": "Khách qua Tân Sơn Nhất mùa du lịch hè gần bằng cao điểm Tết",
+      "summary": "Giá vé máy bay tăng nhưng khách qua Tân Sơn Nhất dịp hè dự báo tăng mạnh, cao điểm 125.000 người mỗi ngày, gần bằng một số đợt cao điểm Tết.",
+      "link": "https://vnexpress.net/khach-qua-tan-son-nhat-mua-du-lich-he-gan-bang-cao-diem-tet-5081894.html",
+      "date": "Thu, 04 Jun 2026 11:55:41 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "'Công đoàn không thể mạnh nếu xa công nhân'",
+      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm nhấn mạnh Công đoàn không thể mạnh nếu xa công nhân, không thể hấp dẫn nếu người lao động không thấy lợi ích, quyền lợi của mình được bảo vệ tốt...",
+      "link": "https://vnexpress.net/cong-doan-khong-the-manh-neu-xa-cong-nhan-5081856.html",
+      "date": "Thu, 04 Jun 2026 11:48:37 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Đốm lửa xuất hiện nhiều ngày trên sân bêtông nhà dân",
+      "summary": "Đốm lửa nhỏ liên tiếp xuất hiện trên nền bêtông trước cổng một hộ dân ở Sơn La trong nhiều ngày nắng nóng, địa phương đề nghị cơ quan chức năng xác minh nguyên nhân.",
+      "link": "https://vnexpress.net/dom-lua-xuat-hien-nhieu-ngay-tren-san-betong-nha-dan-5081840.html",
+      "date": "Thu, 04 Jun 2026 11:13:05 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Đề xuất nghỉ thêm 2 ngày dịp Quốc khánh",
+      "summary": "Công đoàn đề xuất bổ sung 2 ngày nghỉ dịp Quốc khánh, cho phép người lao động nghỉ từ ngày 2 đến 5/9 để đưa con đến trường trong ngày khai giảng.",
+      "link": "https://vnexpress.net/de-xuat-nghi-them-2-ngay-dip-quoc-khanh-5081787.html",
+      "date": "Thu, 04 Jun 2026 09:52:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Loạt dinh thự trăm tuổi đổ nát ở miền Tây",
+      "summary": "Hàng chục dinh thự cổ 100 năm tuổi tại Tây Ninh, Đồng Tháp, Cà Mau... không được chăm sóc, trùng tu, hiện xuống cấp, hư hại nặng, nhiều căn bỏ hoang cỏ mọc um tùm.",
+      "link": "https://vnexpress.net/loat-dinh-thu-tram-tuoi-do-nat-o-mien-tay-5080091.html",
+      "date": "Thu, 04 Jun 2026 06:00:00 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
@@ -101,77 +129,49 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Nắng nóng ở miền Bắc giảm dần, miền Trung gần 40 độ C",
-      "summary": "Những cơn mưa giông chiều 3/6 ở miền Bắc khiến nhiệt độ giảm nhanh, trong khi đó miền Trung tiếp tục nắng nóng gay gắt trong những ngày tới.",
-      "link": "https://vnexpress.net/nang-nong-o-mien-bac-giam-dan-mien-trung-gan-40-do-c-5081703.html",
-      "date": "Wed, 03 Jun 2026 21:44:24 +0700",
+      "title": "Phế thải xây dựng - tài nguyên bị lãng phí",
+      "summary": "Phế thải xây dựng ở Hà Nội có thể tái chế thành vật liệu đắp nền, làm bêtông, sản xuất gạch, nhưng phần lớn đang bị chôn lấp, đổ trộm gây ô nhiễm môi trường.",
+      "link": "https://vnexpress.net/phe-thai-xay-dung-tai-nguyen-bi-lang-phi-5081135.html",
+      "date": "Thu, 04 Jun 2026 00:17:59 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đồng Nai khen thưởng 5 người cứu ba phụ nữ giữa dòng lũ",
-      "summary": "UBND xã Phú Riềng khen thưởng đột xuất 5 người dân đã lao vào dòng nước chảy xiết, cứu ba phụ nữ bị cuốn trôi trong cơn mưa lớn.",
-      "link": "https://vnexpress.net/dong-nai-khen-thuong-5-nguoi-cuu-ba-phu-nu-giua-dong-lu-5081709.html",
-      "date": "Wed, 03 Jun 2026 21:38:20 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Tàu hàng container chạy xuyên biên giới Việt - Trung",
-      "summary": "Ngày 3/6, chuyến tàu container liên vận quốc tế đầu tiên từ tỉnh Thanh Hải (Trung Quốc) đã thông quan tại ga Yên Viên (Hà Nội), mở thêm hành lang vận tải xuyên biên giới giữa...",
-      "link": "https://vnexpress.net/tau-hang-container-chay-xuyen-bien-gioi-viet-trung-5081706.html",
-      "date": "Wed, 03 Jun 2026 21:10:37 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Chặn 159 website phát sóng bóng đá lậu",
-      "summary": "Công an đã chặn 159 website phát sóng bóng đá lậu trong đợt cao điểm xử lý vi phạm sở hữu trí tuệ, đồng thời khởi tố 56 vụ án với 98 bị can trên cả nước.",
-      "link": "https://vnexpress.net/chan-159-website-phat-song-bong-da-lau-5081693.html",
-      "date": "Wed, 03 Jun 2026 20:08:45 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Nhà cho thuê sẽ được ưu tiên phát triển đến năm 2030",
-      "summary": "Bộ Xây dựng đang nghiên cứu cơ chế ưu đãi về đất đai, tài chính để phát triển nhà ở cho thuê, đồng thời tham mưu Chính phủ giao chỉ tiêu phát triển loại hình này cho các địa...",
-      "link": "https://vnexpress.net/nha-cho-thue-se-duoc-uu-tien-phat-trien-den-nam-2030-5081690.html",
-      "date": "Wed, 03 Jun 2026 20:01:52 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Thời tiết hôm nay 4-6: Miền Bắc, miền Nam cùng mưa chiều tối",
-      "summary": "Hôm nay 4-6, thời tiết Bắc Bộ ngày nắng nóng, chiều tối mưa dông. Nam Bộ nhiều mây, mưa tập trung chiều tối và đêm.",
-      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-4-6-mien-bac-mien-nam-cung-mua-chieu-toi-20260603203646089.htm",
-      "date": "Thu, 04 Jun 2026 02:07:00 GMT+7",
+      "title": "An Giang tiếp nhận 180 công dân Việt Nam do Campuchia trao trả",
+      "summary": "An Giang hôm nay tiếp nhận 180 công dân Việt Nam do Campuchia trao trả. Qua sàng lọc, cơ quan chức năng địa phương phát hiện hai người bị truy nã về tội cướp giật tài sản và tiêu...",
+      "link": "https://tuoitre.vn/an-giang-tiep-nhan-180-cong-dan-viet-nam-do-campuchia-trao-tra-20260604113049419.htm",
+      "date": "Thu, 04 Jun 2026 12:08:49 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Đến 2030 TP.HCM hoàn thiện quản trị thông minh, bộ máy vận hành số phi địa giới",
-      "summary": "Đề án \"công sở hành chính thông minh\" của TP.HCM đặt mục tiêu đến 2030 hoàn thiện hệ sinh thái quản trị thông minh, bộ máy hành chính vận hành thông suốt hoàn toàn trên môi trường...",
-      "link": "https://tuoitre.vn/den-2030-tp-hcm-hoan-thien-quan-tri-thong-minh-bo-may-van-hanh-so-phi-dia-gioi-20260603224410617.htm",
-      "date": "Wed, 03 Jun 2026 23:01:10 GMT+7",
+      "title": "Bệnh viện Nhi đồng 2 được đầu tư 360 tỉ đồng để tu bổ công trình di tích",
+      "summary": "UBND TP.HCM vừa phê duyệt chủ trương đầu tư dự án tu bổ, phục hồi các khối công trình di tích tại Bệnh viện Nhi đồng 2 với tổng vốn 360 tỉ đồng từ ngân sách, làm trong giai đoạn...",
+      "link": "https://tuoitre.vn/benh-vien-nhi-dong-2-duoc-dau-tu-360-ti-dong-de-tu-bo-cong-trinh-di-tich-20260604114405146.htm",
+      "date": "Thu, 04 Jun 2026 11:54:24 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Biển Đông có áp thấp nhiệt đới đầu tiên trong năm 2026",
-      "summary": "Tối 3-6, một áp thấp nhiệt đới vừa hình thành ở cách quần đảo Hoàng Sa khoảng 270km. Đây là xoáy thuận nhiệt đới đầu tiên hoạt động trên Biển Đông trong năm nay.",
-      "link": "https://tuoitre.vn/bien-dong-co-ap-thap-nhiet-doi-dau-tien-trong-nam-2026-20260603225226167.htm",
-      "date": "Wed, 03 Jun 2026 22:58:38 GMT+7",
+      "title": "Hơn 7.000 tỉ đồng đầu tư tuyến đường bộ ven biển qua tỉnh Đồng Tháp",
+      "summary": "Tuyến đường bộ ven biển đoạn qua địa phận tỉnh Đồng Tháp với tổng vốn đầu tư hơn 7.095 tỉ đồng, kết nối với các tỉnh Tây Ninh và Vĩnh Long, dự kiến chính thức khởi công quý 1-2027.",
+      "link": "https://tuoitre.vn/hon-7-000-ti-dong-dau-tu-tuyen-duong-bo-ven-bien-qua-tinh-dong-thap-20260604111447428.htm",
+      "date": "Thu, 04 Jun 2026 11:39:08 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Thủ tướng Timor-Leste sắp thăm chính thức Việt Nam",
-      "summary": "Thủ tướng Timor-Leste Kay Rala Xanana Gusmão sẽ thăm chính thức Việt Nam và dự Diễn đàn Tương lai ASEAN từ ngày 7 đến 10-6 tới.",
-      "link": "https://tuoitre.vn/thu-tuong-timor-leste-sap-tham-chinh-thuc-viet-nam-20260603221310173.htm",
-      "date": "Wed, 03 Jun 2026 22:45:10 GMT+7",
+      "title": "Đà Nẵng siết quản lý khoáng sản, xử lý nghiêm việc đầu cơ, găm hàng",
+      "summary": "Chủ tịch UBND TP Đà Nẵng Nguyễn Mạnh Hùng yêu cầu tăng cường quản lý hoạt động khoáng sản, bảo đảm nguồn cung và bình ổn giá vật liệu xây dựng phục vụ các công trình trọng điểm,...",
+      "link": "https://tuoitre.vn/da-nang-siet-quan-ly-khoang-san-xu-ly-nghiem-viec-dau-co-gam-hang-20260604110912262.htm",
+      "date": "Thu, 04 Jun 2026 11:24:05 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Dùng radar xuyên đất tìm mộ tập thể liệt sĩ từ 2 bức ảnh cựu binh Mỹ cung cấp",
-      "summary": "Từ bức ảnh cựu binh Mỹ cung cấp, cơ quan chức năng xác định được khu vực nghi có mộ tập thể liệt sĩ hy sinh trong Tổng tiến công và nổi dậy Xuân Mậu Thân 1968 tại Kon Tum. Dự kiến...",
-      "link": "https://tuoitre.vn/dung-radar-xuyen-dat-tim-mo-tap-the-liet-si-tu-2-buc-anh-cuu-binh-my-cung-cap-20260603191309822.htm",
-      "date": "Wed, 03 Jun 2026 21:39:12 GMT+7",
+      "title": "31 thí sinh thi chung khảo Hội thi Báo cáo viên giỏi TP.HCM năm 2026",
+      "summary": "Sáng 4-6, Ban Tuyên giáo và Dân vận Thành ủy TP.HCM tổ chức vòng chung khảo Hội thi Báo cáo viên giỏi năm 2026 với chủ đề \"Son sắt niềm tin - vững vàng lý tưởng\".",
+      "link": "https://tuoitre.vn/31-thi-sinh-thi-chung-khao-hoi-thi-bao-cao-vien-gioi-tp-hcm-nam-2026-20260604105629358.htm",
+      "date": "Thu, 04 Jun 2026 11:22:39 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-03T22:59:33.078822+00:00",
+  "last_updated": "2026-06-04T06:30:03.356926+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
