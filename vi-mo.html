@@ -177,8 +177,8 @@
     </div>
 
     <!-- KPI CARDS -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6" id="kpi-grid">
-      <!-- Populated by JS -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 mb-6" id="kpi-grid">
+      <!-- Populated by JS (7 cards: 6 indicators + 1 computed Trade Balance) -->
       <div class="col-span-full p-8 text-center text-[#8B7355] modern-card">
         <i class="fas fa-spinner fa-spin text-xl mb-2"></i>
         <div>Đang tải dữ liệu vĩ mô...</div>
@@ -208,8 +208,8 @@
 
     <!-- CHARTS -->
     <div class="mb-3 px-1 flex items-center justify-between">
-      <div class="font-bold text-[#3E2723]">Biểu đồ xu hướng 20 Quý gần nhất</div>
-      <div class="text-[10px] text-[#8B7355]">Dữ liệu Quý • GSO • QoQ/YoY</div>
+      <div class="font-bold text-[#3E2723]">Biểu đồ xu hướng 20 Quý gần nhất (5 biểu đồ Lightweight Charts)</div>
+      <div class="text-[10px] text-[#8B7355]">GDP • CPI • Thất nghiệp • XNK • FDI • Dữ liệu Quý</div>
     </div>
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-7">
@@ -276,14 +276,14 @@
 
     <!-- DATA TABLE -->
     <div class="mb-3 px-1 flex flex-wrap items-center justify-between gap-2">
-      <div class="font-bold text-[#3E2723]">Bảng dữ liệu chi tiết theo Quý (có thể sắp xếp)</div>
+      <div class="font-bold text-[#3E2723]">Bảng dữ liệu chi tiết theo Quý <span class="font-normal text-[#8B7355]">(click header để sắp xếp • lọc Năm/Quý + tìm kiếm)</span></div>
       
       <div class="flex items-center gap-2 text-xs">
-        <span class="text-[#6B5F54] font-medium">Lọc nhanh Quý:</span>
-        <div id="year-filters" class="flex flex-wrap gap-1"></div>
+        <span class="text-[#6B5F54] font-medium hidden sm:inline">Lọc Năm / Quý:</span>
+        <div id="year-filters" class="flex flex-wrap gap-1 items-center"></div>
         <button onclick="resetTableFilter()" 
-                class="px-3 py-1 text-[#5D4037] hover:text-[#3E2723] font-bold rounded-xl border border-[#D7CCC8] hover:bg-white text-xs">
-          20 Quý gần nhất
+                class="px-3 py-1 text-[#5D4037] hover:text-[#3E2723] font-bold rounded-xl border border-[#D7CCC8] hover:bg-white text-xs active:scale-[0.985]">
+          <i class="fas fa-undo mr-1"></i>Reset
         </button>
       </div>
     </div>
@@ -329,6 +329,9 @@
     let currentSortColumn = 0;
     let currentSortAsc = false;
     let currentYearFilter = null;
+    let currentFilterYear = null;   // e.g. "2025" for year filter
+    let currentFilterQ = null;      // exact "2026Q1"
+    let currentFilterSearch = '';   // free text search
     let charts = {}; // store chart instances for cleanup
 
     const COUNTRY_META = {
@@ -343,14 +346,14 @@
       return allMacroData.countries[currentCountry] || null;
     }
 
-    // KPI definitions (Quarterly focus)
+    // KPI definitions (Quarterly focus) - 6 core + 1 computed trade balance for completeness
     const KPI_DEFS = [
-      { key: 'gdp_growth', label: 'Tăng trưởng GDP (YoY)', unit: '%', icon: 'fa-chart-line', color: 'emerald', isPercent: true },
-      { key: 'cpi_inflation', label: 'Lạm phát CPI (YoY)', unit: '%', icon: 'fa-coins', color: 'orange', isPercent: true },
-      { key: 'unemployment', label: 'Tỷ lệ thất nghiệp', unit: '%', icon: 'fa-users', color: 'blue', isPercent: true },
-      { key: 'exports_goods_services', label: 'Xuất khẩu (Quý)', unit: 'tỷ USD', icon: 'fa-arrow-up', color: 'purple' },
-      { key: 'imports_goods_services', label: 'Nhập khẩu (Quý)', unit: 'tỷ USD', icon: 'fa-arrow-down', color: 'rose' },
-      { key: 'fdi_net_inflows', label: 'FDI giải ngân (Quý)', unit: 'tỷ USD', icon: 'fa-globe', color: 'teal' }
+      { key: 'gdp_growth', label: 'Tăng trưởng GDP (YoY)', unit: '%', icon: 'fa-chart-line', color: 'emerald', isPercent: true, kind: 'growth' },
+      { key: 'cpi_inflation', label: 'Lạm phát CPI (YoY)', unit: '%', icon: 'fa-coins', color: 'orange', isPercent: true, kind: 'inflation' },
+      { key: 'unemployment', label: 'Tỷ lệ thất nghiệp', unit: '%', icon: 'fa-users', color: 'blue', isPercent: true, kind: 'rate' },
+      { key: 'exports_goods_services', label: 'Xuất khẩu (Quý)', unit: 'tỷ USD', icon: 'fa-arrow-up', color: 'purple', kind: 'trade' },
+      { key: 'imports_goods_services', label: 'Nhập khẩu (Quý)', unit: 'tỷ USD', icon: 'fa-arrow-down', color: 'rose', kind: 'trade' },
+      { key: 'fdi_net_inflows', label: 'FDI giải ngân (Quý)', unit: 'tỷ USD', icon: 'fa-globe', color: 'teal', kind: 'capital' }
     ];
 
     // ==================== HELPERS ====================
@@ -548,7 +551,7 @@
       panel.innerHTML = html || '<div class="text-[#8B7355]">Chưa đủ dữ liệu để phân tích.</div>';
     }
 
-    // ==================== RENDER KPI CARDS (QUARTERLY + DELTAS) ====================
+    // ==================== RENDER KPI CARDS (BEAUTIFUL + COMPLETE: 7 cards) ====================
     function renderKPICards(data) {
       const container = document.getElementById('kpi-grid');
       container.innerHTML = '';
@@ -557,6 +560,7 @@
       const indicators = data.indicators || {};
       const latestQ = data.latest_quarter || (latest.gdp_growth && latest.gdp_growth.period) || '';
 
+      // Render the 6 defined
       KPI_DEFS.forEach(def => {
         const latestItem = latest[def.key];
         const series = indicators[def.key] || [];
@@ -582,30 +586,83 @@
           const qoqColor = deltas.qoq > 0 ? 'emerald' : (deltas.qoq < 0 ? 'rose' : 'slate');
           const yoyColor = deltas.yoy > 0 ? 'emerald' : (deltas.yoy < 0 ? 'rose' : 'slate');
           deltaHtml = `
-            <div class="flex gap-1.5 mt-1 text-[10px] font-bold">
-              <span class="px-1.5 py-0.5 rounded bg-${qoqColor}-100 text-${qoqColor}-700">QoQ ${qoqStr}</span>
-              <span class="px-1.5 py-0.5 rounded bg-${yoyColor}-100 text-${yoyColor}-700">YoY ${yoyStr}</span>
+            <div class="flex gap-1 mt-1.5 text-[9.5px] font-extrabold">
+              <span class="px-1.5 py-[1px] rounded bg-${qoqColor}-100 text-${qoqColor}-700">QoQ ${qoqStr}</span>
+              <span class="px-1.5 py-[1px] rounded bg-${yoyColor}-100 text-${yoyColor}-700">YoY ${yoyStr}</span>
             </div>
           `;
         }
 
+        // Value color accent for growth / rates
+        let valColor = '';
+        if (def.kind === 'growth') valColor = (rawVal != null && rawVal >= 0) ? 'text-emerald-700' : 'text-rose-700';
+        else if (def.kind === 'inflation') valColor = (rawVal != null && rawVal > 4) ? 'text-rose-700' : 'text-orange-700';
+        else if (def.kind === 'rate') valColor = (rawVal != null && rawVal > 5) ? 'text-rose-700' : 'text-blue-700';
+        else valColor = `text-${def.color}-700`;
+
         const card = document.createElement('div');
-        card.className = `kpi-card modern-card p-3 border-l-4 border-${def.color}-500`;
+        card.className = `kpi-card modern-card p-3.5 border-l-[5px] border-${def.color}-500 hover:border-${def.color}-600 group`;
         card.innerHTML = `
-          <div class="flex items-start justify-between">
+          <div class="flex items-start justify-between gap-2">
             <div class="min-w-0 flex-1">
-              <div class="kpi-label mb-0.5 text-[10px]">${def.label}</div>
-              <div class="kpi-value text-[1.45rem] leading-none">${displayVal}</div>
-              <div class="text-[10px] text-[#8B7355] mt-0.5 font-semibold">${periodLabel ? periodLabel : ''}</div>
+              <div class="kpi-label mb-px text-[10px] tracking-[0.3px] flex items-center gap-1">
+                <span>${def.label}</span>
+              </div>
+              <div class="kpi-value text-[1.55rem] leading-none tracking-[-0.4px] ${valColor}">${displayVal}</div>
+              <div class="text-[9.5px] text-[#8B7355] mt-0.5 font-semibold tabular-nums">${periodLabel ? periodLabel : ''}</div>
               ${deltaHtml}
             </div>
-            <div class="w-8 h-8 rounded-2xl bg-${def.color}-100 flex items-center justify-center shrink-0 ml-2">
-              <i class="fas ${def.icon} text-${def.color}-600 text-base"></i>
+            <div class="w-9 h-9 rounded-2xl bg-${def.color}-100 flex items-center justify-center shrink-0 ring-1 ring-inset ring-${def.color}-200 group-hover:scale-105 transition">
+              <i class="fas ${def.icon} text-${def.color}-600 text-lg"></i>
             </div>
           </div>
         `;
         container.appendChild(card);
       });
+
+      // 7th card: COMPUTED Trade Balance = Exports - Imports (more complete)
+      const expSeries = indicators.exports_goods_services || [];
+      const impSeries = indicators.imports_goods_services || [];
+      const expLatest = expSeries.length ? expSeries[expSeries.length-1].value : null;
+      const impLatest = impSeries.length ? impSeries[impSeries.length-1].value : null;
+      const tradeBalRaw = (expLatest != null && impLatest != null) ? (expLatest - impLatest) : null;
+      const tradeBal = tradeBalRaw != null ? tradeBalRaw / 1e9 : null; // in tỷ USD
+
+      const tbDeltas = computeDeltas( (expSeries.length && impSeries.length) ? 
+        expSeries.map((e,i) => ({period:e.period, value: (e.value - (impSeries[i]?.value||0)) })) : [], latestQ );
+
+      let tbDeltaHtml = '';
+      if (tbDeltas.qoq !== null || tbDeltas.yoy !== null) {
+        const qoqStr = tbDeltas.qoq !== null ? formatDelta(tbDeltas.qoq, false) : '—';
+        const yoyStr = tbDeltas.yoy !== null ? formatDelta(tbDeltas.yoy, false) : '—';
+        const qoqC = tbDeltas.qoq > 0 ? 'emerald' : (tbDeltas.qoq < 0 ? 'rose' : 'slate');
+        const yoyC = tbDeltas.yoy > 0 ? 'emerald' : (tbDeltas.yoy < 0 ? 'rose' : 'slate');
+        tbDeltaHtml = `<div class="flex gap-1 mt-1.5 text-[9.5px] font-extrabold">
+          <span class="px-1.5 py-[1px] rounded bg-${qoqC}-100 text-${qoqC}-700">QoQ ${qoqStr}</span>
+          <span class="px-1.5 py-[1px] rounded bg-${yoyC}-100 text-${yoyC}-700">YoY ${yoyStr}</span>
+        </div>`;
+      }
+
+      const tbValStr = tradeBal != null ? formatVN(tradeBal, 1) + ' tỷ' : '—';
+      const tbDir = tradeBal != null ? (tradeBal >= 0 ? 'Xuất siêu' : 'Nhập siêu') : '';
+      const tbColor = tradeBal != null && tradeBal >= 0 ? 'emerald' : 'rose';
+
+      const tbCard = document.createElement('div');
+      tbCard.className = `kpi-card modern-card p-3.5 border-l-[5px] border-${tbColor}-500 hover:border-${tbColor}-600 group`;
+      tbCard.innerHTML = `
+        <div class="flex items-start justify-between gap-2">
+          <div class="min-w-0 flex-1">
+            <div class="kpi-label mb-px text-[10px] tracking-[0.3px]">Cán cân thương mại (Quý)</div>
+            <div class="kpi-value text-[1.55rem] leading-none tracking-[-0.4px] text-${tbColor}-700">${tbValStr}</div>
+            <div class="text-[9.5px] text-[#8B7355] mt-0.5 font-semibold">${tbDir} • ${latestQ || ''}</div>
+            ${tbDeltaHtml}
+          </div>
+          <div class="w-9 h-9 rounded-2xl bg-${tbColor}-100 flex items-center justify-center shrink-0 ring-1 ring-inset ring-${tbColor}-200 group-hover:scale-105 transition">
+            <i class="fas fa-balance-scale text-${tbColor}-600 text-lg"></i>
+          </div>
+        </div>
+      `;
+      container.appendChild(tbCard);
     }
 
     // ==================== CHART RENDERING - QUARTERLY (last 20 quarters) ====================
@@ -627,8 +684,14 @@
       const container = document.getElementById(containerId);
       if (!container) return null;
 
+      if (typeof LightweightCharts === 'undefined') {
+        container.innerHTML = '<div class="p-3 text-xs text-red-600">Lỗi: Lightweight Charts chưa tải. Kiểm tra kết nối.</div>';
+        return null;
+      }
+
       if (charts[containerId]) {
-        charts[containerId].remove();
+        try { charts[containerId].remove(); } catch(e){}
+        delete charts[containerId];
       }
 
       const limited = getLastN(series, 20);
@@ -637,39 +700,72 @@
         return null;
       }
 
+      // Ensure container has size (fix initial 0-width in some layouts)
+      let w = container.clientWidth;
+      if (!w || w < 50) w = Math.max(280, container.getBoundingClientRect().width || 320);
+
+      const isPercent = options.isPercent !== false && (options.type !== 'histogram' && containerId !== 'chart-fdi');
       const chart = LightweightCharts.createChart(container, {
-        width: container.clientWidth,
+        width: w,
         height: container.clientHeight || 260,
         layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
         grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
         timeScale: {
           borderColor: '#E7DFD6',
           tickMarkFormatter: (time) => {
-            // time will be our numeric index; we map back via labels
             const idx = Math.round(time);
             return limited[idx] ? formatQuarterLabel(limited[idx].period) : '';
           }
         },
-        rightPriceScale: { borderColor: '#E7DFD6', scaleMargins: { top: 0.1, bottom: 0.12 } },
-        crosshair: { mode: LightweightCharts.CrosshairMode.Normal }
+        rightPriceScale: {
+          borderColor: '#E7DFD6',
+          scaleMargins: { top: 0.12, bottom: 0.1 },
+          // nice formatting
+          priceFormat: isPercent ? { type: 'custom', formatter: (p) => p.toFixed(2) + '%' } : { type: 'custom', formatter: (p) => p.toFixed(1) }
+        },
+        crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: '#D7CCC8', width: 1, style: 2 }, horzLine: { color: '#D7CCC8', width: 1, style: 2 } }
       });
 
-      // Use sequential numeric time so we control labels perfectly
       const chartData = limited.map((d, i) => ({ time: i, value: d.value }));
 
-      if (options.type === 'bar' || options.type === 'histogram') {
-        const s = chart.addHistogramSeries({ color: options.color || '#5D4037', base: 0 });
-        s.setData(chartData);
+      let mainSeries;
+      if (options.type === 'histogram' || options.type === 'bar') {
+        const histColor = options.color || '#14b8a6';
+        mainSeries = chart.addHistogramSeries({
+          color: histColor,
+          base: 0,
+          priceFormat: { type: 'custom', formatter: (p) => p.toFixed(1) }
+        });
+        mainSeries.setData(chartData);
       } else {
-        const s = chart.addLineSeries({
+        mainSeries = chart.addLineSeries({
           color: options.color || '#5D4037',
           lineWidth: options.lineWidth || 2.8,
-          lineStyle: 0
+          lineStyle: 0,
+          crosshairMarkerVisible: true,
+          crosshairMarkerRadius: 3,
+          crosshairMarkerBorderColor: options.color || '#5D4037',
+          crosshairMarkerBackgroundColor: '#fff'
         });
-        s.setData(chartData);
+        mainSeries.setData(chartData);
       }
 
-      // Optional second series (trade)
+      // Mark latest quarter with a prominent marker (for all 5 charts)
+      const lastIdx = limited.length - 1;
+      const lastVal = limited[lastIdx].value;
+      if (mainSeries && typeof mainSeries.setMarkers === 'function') {
+        const markerColor = (options.color || '#5D4037');
+        mainSeries.setMarkers([{
+          time: lastIdx,
+          position: lastVal >= 0 ? 'aboveBar' : 'belowBar',
+          color: markerColor,
+          shape: 'circle',
+          size: 1.5,
+          text: 'Mới'
+        }]);
+      }
+
+      // Optional second series (used only by legacy call, trade is handled separately now)
       if (options.secondSeries) {
         const s2Limited = getLastN(options.secondSeries, 20);
         const s2Data = s2Limited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
@@ -683,10 +779,23 @@
 
       chart.timeScale().fitContent();
 
+      // Debounced resize
       const ro = new ResizeObserver(() => {
-        if (chart) chart.resize(container.clientWidth, container.clientHeight || 260);
+        if (chart && container) {
+          const nw = container.clientWidth || w;
+          chart.resize(nw, container.clientHeight || 260);
+        }
       });
       ro.observe(container);
+
+      // Safety initial size + fit after paint
+      setTimeout(() => {
+        if (chart && container) {
+          const nw = container.clientWidth || w;
+          chart.resize(nw, container.clientHeight || 260);
+          chart.timeScale().fitContent();
+        }
+      }, 60);
 
       charts[containerId] = chart;
       return chart;
@@ -695,53 +804,104 @@
     function renderAllCharts(data) {
       const ind = data.indicators || {};
 
-      // 1. GDP Growth YoY
-      createQuarterlyChart('chart-gdp', ind.gdp_growth, { color: '#10b981', lineWidth: 3 });
+      // 1. GDP Growth (%) - Line + latest marker (full 20Q)
+      createQuarterlyChart('chart-gdp', ind.gdp_growth, { color: '#059669', lineWidth: 3, isPercent: true });
 
-      // 2. CPI
-      createQuarterlyChart('chart-cpi', ind.cpi_inflation, { color: '#f59e0b', lineWidth: 2.6 });
+      // 2. CPI / Lạm phát (%) - Line
+      createQuarterlyChart('chart-cpi', ind.cpi_inflation, { color: '#d97706', lineWidth: 2.7, isPercent: true });
 
-      // 3. Unemployment
-      createQuarterlyChart('chart-unemp', ind.unemployment, { color: '#3b82f6', lineWidth: 2.6 });
+      // 3. Thất nghiệp (%) - Line
+      createQuarterlyChart('chart-unemp', ind.unemployment, { color: '#2563eb', lineWidth: 2.7, isPercent: true });
 
-      // 4. Trade (Exports + Imports) - two lines, values in billions
+      // 4. Xuất – Nhập khẩu (tỷ USD) - Dual line chart, fully featured
       const tradeContainer = document.getElementById('chart-trade');
-      if (tradeContainer && charts['chart-trade']) charts['chart-trade'].remove();
+      if (tradeContainer && charts['chart-trade']) {
+        try { charts['chart-trade'].remove(); } catch(e){}
+        delete charts['chart-trade'];
+      }
+
+      if (typeof LightweightCharts === 'undefined') {
+        if (tradeContainer) tradeContainer.innerHTML = '<div class="p-3 text-xs text-red-600">LW Charts chưa sẵn sàng.</div>';
+        // still try other charts
+      }
 
       const expLimited = getLastN(ind.exports_goods_services, 20);
       const impLimited = getLastN(ind.imports_goods_services, 20);
 
-      const tradeChart = LightweightCharts.createChart(tradeContainer, {
-        width: tradeContainer.clientWidth,
-        height: 260,
-        layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
-        grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
-        timeScale: {
-          borderColor: '#E7DFD6',
-          tickMarkFormatter: (time) => {
-            const idx = Math.round(time);
-            return expLimited[idx] ? formatQuarterLabel(expLimited[idx].period) : '';
+      let tradeW = tradeContainer ? (tradeContainer.clientWidth || 320) : 320;
+      let tradeChart = null;
+      if (typeof LightweightCharts !== 'undefined' && tradeContainer) {
+        tradeChart = LightweightCharts.createChart(tradeContainer, {
+          width: tradeW,
+          height: 260,
+          layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
+          grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
+          timeScale: {
+            borderColor: '#E7DFD6',
+            tickMarkFormatter: (time) => {
+              const idx = Math.round(time);
+              return expLimited[idx] ? formatQuarterLabel(expLimited[idx].period) : '';
+            }
+          },
+          rightPriceScale: {
+            borderColor: '#E7DFD6',
+            scaleMargins: { top: 0.1, bottom: 0.1 },
+            priceFormat: { type: 'custom', formatter: (p) => p.toFixed(0) + ' tỷ' }
+          },
+          crosshair: { mode: LightweightCharts.CrosshairMode.Normal }
+        });
+
+        const expData = expLimited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
+        const impData = impLimited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
+
+        const expS = tradeChart.addLineSeries({
+          color: '#7c3aed',
+          lineWidth: 2.7,
+          title: 'Xuất khẩu',
+          crosshairMarkerVisible: true,
+          crosshairMarkerRadius: 3
+        });
+        expS.setData(expData);
+
+        const impS = tradeChart.addLineSeries({
+          color: '#db2777',
+          lineWidth: 2.7,
+          title: 'Nhập khẩu',
+          crosshairMarkerVisible: true,
+          crosshairMarkerRadius: 3
+        });
+        impS.setData(impData);
+
+        // Latest markers on trade lines too
+        const lastI = expLimited.length - 1;
+        if (typeof expS.setMarkers === 'function') {
+          expS.setMarkers([{ time: lastI, position: 'aboveBar', color: '#7c3aed', shape: 'circle', size: 1.3, text: 'XK' }]);
+        }
+        if (typeof impS.setMarkers === 'function') {
+          impS.setMarkers([{ time: lastI, position: 'belowBar', color: '#db2777', shape: 'circle', size: 1.3, text: 'NK' }]);
+        }
+
+        tradeChart.timeScale().fitContent();
+
+        const roTrade = new ResizeObserver(() => {
+          if (tradeChart && tradeContainer) tradeChart.resize(tradeContainer.clientWidth || tradeW, 260);
+        });
+        roTrade.observe(tradeContainer);
+
+        setTimeout(() => {
+          if (tradeChart && tradeContainer) {
+            tradeChart.resize(tradeContainer.clientWidth || tradeW, 260);
+            tradeChart.timeScale().fitContent();
           }
-        },
-        rightPriceScale: { borderColor: '#E7DFD6' }
-      });
+        }, 70);
 
-      const expData = expLimited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
-      const impData = impLimited.map((d, i) => ({ time: i, value: d.value / 1e9 }));
+        charts['chart-trade'] = tradeChart;
+      } else if (tradeContainer) {
+        tradeContainer.innerHTML = '<div class="p-3 text-xs text-[#8B7355]">Không thể vẽ biểu đồ (LW Charts).</div>';
+      }
 
-      const expS = tradeChart.addLineSeries({ color: '#8b5cf6', lineWidth: 2.6, title: 'Xuất khẩu' });
-      expS.setData(expData);
-      const impS = tradeChart.addLineSeries({ color: '#ec4899', lineWidth: 2.6, title: 'Nhập khẩu' });
-      impS.setData(impData);
-
-      tradeChart.timeScale().fitContent();
-
-      const roTrade = new ResizeObserver(() => tradeChart.resize(tradeContainer.clientWidth, 260));
-      roTrade.observe(tradeContainer);
-      charts['chart-trade'] = tradeChart;
-
-      // 5. FDI (bar)
-      createQuarterlyChart('chart-fdi', ind.fdi_net_inflows, { type: 'histogram', color: '#14b8a6' });
+      // 5. FDI giải ngân (tỷ USD) - Histogram / Bar
+      createQuarterlyChart('chart-fdi', ind.fdi_net_inflows, { type: 'histogram', color: '#0f766e', isPercent: false });
     }
 
     // ==================== DATA TABLE (QUARTERLY) ====================
@@ -753,12 +913,6 @@
         if (Array.isArray(series)) series.forEach(r => r.period && set.add(r.period));
       });
       return Array.from(set).sort((a, b) => periodToIndex(b) - periodToIndex(a)); // newest first
-    }
-
-    function computeRowDeltas(ind, period) {
-      const gdpSeries = ind.gdp_growth || [];
-      const deltas = computeDeltas(gdpSeries, period); // reuse for GDP mainly; others computed inline
-      return deltas;
     }
 
     function buildTableRows(filterPeriods) {
@@ -846,89 +1000,197 @@
       rows.forEach(r => tbody.appendChild(r));
     }
 
-    function filterByPeriod(period) {
-      currentYearFilter = period; // reuse var name for simplicity
-      
-      document.querySelectorAll('#year-filters .year-filter-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.period === period);
-      });
+    // ==================== ENHANCED FILTER STATE FOR NĂM / QUÝ (hoisted in STATE) ====================
 
-      buildTableRows([period]);
+    function getFilteredPeriods() {
+      const all = getAllPeriods(); // newest first
+      let out = all;
+
+      if (currentFilterSearch && currentFilterSearch.trim()) {
+        const q = currentFilterSearch.trim().toUpperCase();
+        out = out.filter(p => p.toUpperCase().includes(q));
+      }
+      if (currentFilterYear) {
+        out = out.filter(p => p.startsWith(currentFilterYear));
+      }
+      if (currentFilterQ) {
+        out = out.filter(p => p === currentFilterQ);
+      }
+      // if only one filter active we keep order (newest), else user can sort
+      return out.length ? out : all;
+    }
+
+    function applyTableFilters() {
+      // Rebuild table with current combined filters (năm + quý + search)
+      const filtered = getFilteredPeriods();
+      buildTableRows(filtered);
+
+      // Visual active states
+      document.querySelectorAll('#year-filters .year-filter-btn').forEach(btn => {
+        const y = btn.dataset.year;
+        const q = btn.dataset.period;
+        const isYearActive = y && currentFilterYear === y && !currentFilterQ;
+        const isQActive = q && currentFilterQ === q;
+        btn.classList.toggle('active', !!(isYearActive || isQActive));
+        // year buttons get a different subtle style when filtering a whole year
+        if (y) btn.classList.toggle('!bg-amber-100', !!(y && currentFilterYear === y));
+      });
+    }
+
+    function filterByYear(yearStr) {
+      currentFilterYear = yearStr;
+      currentFilterQ = null; // clear single Q when choosing whole year
+      applyTableFilters();
+    }
+
+    function filterByPeriod(period) {
+      // single quarter exact
+      currentFilterQ = period;
+      currentFilterYear = period ? period.slice(0,4) : null;
+      applyTableFilters();
+    }
+
+    function setSearchFilter(val) {
+      currentFilterSearch = val || '';
+      applyTableFilters();
     }
 
     function resetTableFilter() {
-      currentYearFilter = null;
-      document.querySelectorAll('#year-filters .year-filter-btn').forEach(b => b.classList.remove('active'));
-      buildTableRows(); // all (newest 20 via getAllPeriods + slice in practice)
+      currentFilterYear = null;
+      currentFilterQ = null;
+      currentFilterSearch = '';
+      currentYearFilter = null; // legacy compat
+
+      const container = document.getElementById('year-filters');
+      if (container) {
+        container.querySelectorAll('.year-filter-btn').forEach(b => b.classList.remove('active', '!bg-amber-100'));
+      }
+      const searchInput = document.getElementById('table-search');
+      if (searchInput) searchInput.value = '';
+
+      buildTableRows(); // show all (newest 20)
     }
 
     function renderQuarterFilters() {
       const container = document.getElementById('year-filters');
+      if (!container) return;
       container.innerHTML = '';
 
       const cd = getCurrentData();
       if (!cd || !cd.indicators) return;
 
-      const periods = getAllPeriods().slice(0, 16); // show last 16 quarters as quick filters
+      const periods = getAllPeriods(); // desc newest
+      const years = Array.from(new Set(periods.map(p => p.slice(0,4)))).sort((a,b)=> b.localeCompare(a));
 
-      periods.forEach(p => {
+      // 1. Year buttons (lọc theo NĂM - shows all quarters of the year)
+      years.forEach(yr => {
+        const ybtn = document.createElement('button');
+        ybtn.className = 'year-filter-btn px-3 py-0.5 text-[#5D4037] hover:bg-amber-50 text-xs font-extrabold border-[#D7CCC8]';
+        ybtn.textContent = yr;
+        ybtn.dataset.year = yr;
+        ybtn.title = `Xem tất cả quý năm ${yr}`;
+        ybtn.onclick = () => filterByYear(yr);
+        container.appendChild(ybtn);
+      });
+
+      // separator
+      const sep = document.createElement('span');
+      sep.className = 'mx-1 text-[#D7CCC8] select-none';
+      sep.textContent = '|';
+      container.appendChild(sep);
+
+      // 2. Recent individual Quý buttons (lọc theo QUÝ cụ thể)
+      const recentQs = periods.slice(0, 12);
+      recentQs.forEach(p => {
         const btn = document.createElement('button');
-        btn.className = 'year-filter-btn px-2.5 py-0.5 text-[#5D4037] hover:bg-white text-xs';
+        btn.className = 'year-filter-btn px-2 py-0.5 text-[#5D4037] hover:bg-white text-xs';
         btn.textContent = p;
         btn.dataset.period = p;
         btn.onclick = () => filterByPeriod(p);
         container.appendChild(btn);
       });
+
+      // 3. Search input for năm/quý (e.g. type 2025 or Q3)
+      const wrap = document.createElement('span');
+      wrap.className = 'inline-flex items-center ml-1.5 border border-[#D7CCC8] rounded-2xl overflow-hidden bg-white';
+      wrap.innerHTML = `
+        <input id="table-search" type="text" placeholder="Tìm (2025 / Q3)" 
+               class="px-2.5 py-0.5 text-xs w-[92px] outline-none bg-transparent placeholder-[#A38B74]">
+      `;
+      container.appendChild(wrap);
+
+      const searchInp = wrap.querySelector('#table-search');
+      searchInp.oninput = (e) => setSearchFilter(e.target.value);
+      searchInp.onkeydown = (e) => { if (e.key === 'Escape') { resetTableFilter(); } };
     }
 
-    // ==================== MAIN DATA LOAD ====================
+    // ==================== MAIN DATA LOAD (FIXED for multi-country + full render) ====================
     async function loadMacroData() {
-  try {
-    const res = await fetch('data/macro.json?' + Date.now());
-    const data = await res.json();
+      try {
+        const res = await fetch('data/macro.json?' + Date.now());
+        let data = await res.json();
 
-    console.log('[vi-mo] Dữ liệu nhận được:', data);
+        console.log('[vi-mo] Dữ liệu nhận được:', data);
 
-    // Cập nhật thời gian
-    const lastUpdatedEl = document.getElementById('last-updated');
-    if (lastUpdatedEl && data.last_updated) {
-      lastUpdatedEl.textContent = `Cập nhật lần cuối: ${new Date(data.last_updated).toLocaleString('vi-VN')}`;
+        // Fallback support for legacy single-country format (wrap as vn)
+        if (!data || !data.countries) {
+          const wrapped = {
+            last_updated: data && data.last_updated ? data.last_updated : new Date().toISOString(),
+            countries: {
+              vn: {
+                name: (data && data.country) || 'Việt Nam',
+                latest_quarter: (data && data.latest_quarter) || '',
+                source: (data && data.source) || 'Dữ liệu vĩ mô',
+                frequency: (data && data.frequency) || 'quarterly',
+                indicators: (data && data.indicators) || {},
+                latest: (data && data.latest) || {}
+              }
+            }
+          };
+          data = wrapped;
+          console.log('[vi-mo] Wrapped legacy data format into countries.vn');
+        }
+
+        allMacroData = data;
+
+        // Update last updated badge
+        const lastUpdatedEl = document.getElementById('last-updated');
+        if (lastUpdatedEl) {
+          const ts = data.last_updated ? new Date(data.last_updated).toLocaleString('vi-VN') : 'vừa cập nhật';
+          lastUpdatedEl.innerHTML = `<i class="fas fa-clock"></i> <span>Cập nhật: ${ts}</span>`;
+        }
+
+        // Render country tabs (vn/us/eu/jp if present)
+        renderCountryTabs();
+
+        // Ensure currentCountry exists
+        const available = Object.keys(data.countries || {});
+        if (!available.includes(currentCountry)) {
+          currentCountry = available[0] || 'vn';
+        }
+        updateActiveCountryTab();
+
+        // Full render: KPIs + Charts (5x LW) + Analysis + Table + Filters
+        renderCurrentCountry();
+
+        console.log('[vi-mo] Đã load + render đầy đủ cho quốc gia:', currentCountry);
+      } catch (e) {
+        console.error('[vi-mo] load error:', e);
+        const kpi = document.getElementById('kpi-grid');
+        if (kpi) {
+          kpi.innerHTML = `
+            <div class="col-span-full p-6 text-center modern-card border border-red-200">
+              <i class="fas fa-exclamation-triangle text-red-500 text-2xl mb-2"></i>
+              <div class="font-extrabold text-red-700">Không thể tải dữ liệu Kinh tế Vĩ Mô</div>
+              <div class="text-xs mt-1 text-[#8B7355]">${e.message || 'Lỗi mạng hoặc file data/macro.json'}</div>
+              <button onclick="location.reload()" 
+                      class="mt-3 px-4 py-1.5 text-xs font-extrabold bg-red-600 text-white rounded-2xl hover:bg-red-700 active:scale-[0.985]">
+                Tải lại trang
+              </button>
+            </div>`;
+        }
+      }
     }
-
-    const indicators = data.indicators || {};
-
-    // Lấy giá trị mới nhất cho KPI
-    function getLatestValue(key) {
-      const arr = indicators[key] || [];
-      return arr.length > 0 ? arr[arr.length - 1].value : 'N/A';
-    }
-
-    // Cập nhật KPI (bạn có thể thêm nhiều hơn)
-    const gdpEl = document.getElementById('kpi-gdp-growth');
-    if (gdpEl) gdpEl.textContent = getLatestValue('gdp_growth') + '%';
-
-    const cpiEl = document.getElementById('kpi-cpi');
-    if (cpiEl) cpiEl.textContent = getLatestValue('cpi_inflation') + '%';
-
-    const unempEl = document.getElementById('kpi-unemployment');
-    if (unempEl) unempEl.textContent = getLatestValue('unemployment') + '%';
-
-    // TODO: Thầy sẽ viết tiếp phần vẽ biểu đồ chi tiết sau
-    // Hiện tại đã hiển thị được KPI cơ bản
-
-    console.log('[vi-mo] Đã load KPI thành công');
-
-  } catch (e) {
-    console.error(e);
-    const container = document.getElementById('macro-content') || document.body;
-    container.innerHTML = `
-      <div class="p-4 bg-red-100 text-red-700 rounded-lg">
-        <strong>Không thể tải dữ liệu vĩ mô</strong><br>
-        ${e.message}
-      </div>
-    `;
-  }
-}
 
     function renderCurrentCountry() {
       const cd = getCurrentData();
@@ -940,7 +1202,13 @@
       });
       charts = {};
 
-      // KPI, charts, analysis, table
+      // Reset filters to show full fresh data on (re)load / country switch
+      currentFilterYear = null;
+      currentFilterQ = null;
+      currentFilterSearch = '';
+      currentYearFilter = null;
+
+      // KPI (7 beautiful cards), 5x LW charts, analysis panel, full table + fresh Năm/Quý filters
       renderKPICards(cd);
       renderAllCharts(cd);
       renderAnalysis(cd);
@@ -953,6 +1221,9 @@
       if (!COUNTRY_META[code] || currentCountry === code) return;
       currentCountry = code;
       currentYearFilter = null;
+      currentFilterYear = null;
+      currentFilterQ = null;
+      currentFilterSearch = '';
       currentSortColumn = 0;
       currentSortAsc = false;
       updateActiveCountryTab();
