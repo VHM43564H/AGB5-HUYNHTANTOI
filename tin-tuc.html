@@ -151,7 +151,7 @@
       <button onclick="switchTab(2)" id="tab-btn-2"
               class="tab-btn flex items-center gap-2">
         <i class="fas fa-chart-candlestick"></i>
-        <span>Phân Tích VN30</span>
+        <span>Phân Tích Kỹ Thuật</span>
       </button>
     </div>
 
@@ -227,7 +227,7 @@
           <i class="fas fa-chart-candlestick text-[#5D4037]"></i> 
           Phân Tích Kỹ Thuật VN30
         </div>
-        <p class="text-xs text-[#6B5F54]">Nến + MA7 + MA25 + RSI(14) + MACD(12,26,9) + Histogram + Ichimoku cơ bản</p>
+        <p class="text-xs text-[#6B5F54]">Nến + MA7/MA25 + RSI(14) + MACD(12,26,9) + Histogram + Ichimoku đầy đủ (Tenkan/Kijun/Senkou Cloud)</p>
       </div>
 
       <!-- Controls -->
@@ -288,7 +288,9 @@
           <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-rose-500 inline-block rounded"></span> Nến giảm</span>
           <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-[#F5C400] inline-block rounded"></span> MA7</span>
           <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-[#5D4037] inline-block rounded"></span> MA25</span>
-          <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-orange-500 inline-block rounded-full"></span> Tenkan/Kijun (Ichimoku)</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-orange-500 inline-block rounded-full"></span> Tenkan/Kijun</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2.5 bg-green-500 inline-block rounded-sm"></span> SenkouA</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-2 h-2.5 bg-red-500 inline-block rounded-sm"></span> SenkouB (Cloud)</span>
           <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-purple-600 inline-block rounded"></span> RSI</span>
           <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-blue-600 inline-block rounded"></span> MACD</span>
           <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-emerald-600 inline-block rounded"></span> Signal</span>
@@ -296,6 +298,19 @@
         </div>
       </div>
       
+      <!-- PHÂN TÍCH SƠ BỘ (tự động khi chọn + vẽ) -->
+      <div class="mb-3">
+        <div class="font-bold text-[#3E2723] mb-1.5 px-1 flex items-center gap-1.5 text-sm">
+          <i class="fas fa-clipboard-list"></i>
+          <span>PHÂN TÍCH SƠ BỘ</span>
+          <span class="text-[10px] font-normal text-[#8B7355]">(xu hướng • MA • Ichimoku • RSI • MACD)</span>
+        </div>
+        <div id="vn30-analysis" class="modern-card p-3 text-sm leading-snug border-l-4 border-[#F5C400] bg-[#FDF8ED] text-[#3E2723]">
+          Chọn mã chứng khoán và nhấn <b>VẼ BIỂU ĐỒ</b> (hoặc đổi lựa chọn) để xem phân tích tự động.
+        </div>
+        <div id="vn30-indicators" class="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]"></div>
+      </div>
+
       <div id="chart-status" class="text-center text-xs text-[#8B7355] px-1"></div>
     </div>
   </div>
@@ -328,15 +343,18 @@
       if (btn) btn.classList.add('active');
       
       // Lazy actions
-      if (tabIndex === 2 && !window._vn30ChartLoaded) {
-        // Auto load first time entering analysis tab
+      if (tabIndex === 2) {
         setTimeout(() => {
           const sel = document.getElementById('stock-select');
           if (sel && sel.value) {
-            loadAndRenderChart();
+            if (!priceChart) {
+              // first time or after cleanup
+              loadAndRenderChart();
+            }
+            // if charts already exist, showing the tab + ResizeObserver will adjust sizes automatically
             window._vn30ChartLoaded = true;
           }
-        }, 180);
+        }, 160);
       }
     }
     
@@ -463,13 +481,18 @@
     }
     
     function calculateIchimokuBasic(data) {
-      // Basic Ichimoku: Tenkan (9), Kijun (26) plotted on price
+      // Full Ichimoku for chart + analysis: Tenkan(9), Kijun(26), SenkouA/B (cloud, displaced +26)
       const tenkanP = 9;
       const kijunP = 26;
-      const tenkan = [];
-      const kijun = [];
-      
-      for (let i = 0; i < data.length; i++) {
+      const senkouP = 52;
+      const disp = 26;
+      const len = data.length;
+      const tArr = new Array(len).fill(null);
+      const kArr = new Array(len).fill(null);
+      const saArr = new Array(len).fill(null);
+      const sbArr = new Array(len).fill(null);
+
+      for (let i = 0; i < len; i++) {
         // Tenkan
         if (i >= tenkanP - 1) {
           let ph = -Infinity, pl = Infinity;
@@ -477,11 +500,8 @@
             ph = Math.max(ph, data[i - j].high);
             pl = Math.min(pl, data[i - j].low);
           }
-          tenkan.push({ time: data[i].time, value: (ph + pl) / 2 });
-        } else {
-          tenkan.push({ time: data[i].time, value: null });
+          tArr[i] = (ph + pl) / 2;
         }
-        
         // Kijun
         if (i >= kijunP - 1) {
           let ph = -Infinity, pl = Infinity;
@@ -489,13 +509,36 @@
             ph = Math.max(ph, data[i - j].high);
             pl = Math.min(pl, data[i - j].low);
           }
-          kijun.push({ time: data[i].time, value: (ph + pl) / 2 });
-        } else {
-          kijun.push({ time: data[i].time, value: null });
+          kArr[i] = (ph + pl) / 2;
         }
       }
-      
-      return { tenkan, kijun };
+
+      // Senkou cloud displaced into future slots (plotted shifted right on time axis)
+      for (let i = 0; i < len; i++) {
+        if (tArr[i] != null && kArr[i] != null) {
+          const valA = (tArr[i] + kArr[i]) / 2;
+          const idxA = i + disp;
+          if (idxA < len) saArr[idxA] = valA;
+        }
+        if (i >= senkouP - 1) {
+          let ph = -Infinity, pl = Infinity;
+          for (let j = 0; j < senkouP; j++) {
+            ph = Math.max(ph, data[i - j].high);
+            pl = Math.min(pl, data[i - j].low);
+          }
+          const valB = (ph + pl) / 2;
+          const idxB = i + disp;
+          if (idxB < len) sbArr[idxB] = valB;
+        }
+      }
+
+      const toSeries = (arr) => arr.map((v, idx) => ({ time: data[idx].time, value: v }));
+      return {
+        tenkan: toSeries(tArr),
+        kijun: toSeries(kArr),
+        senkouA: toSeries(saArr),
+        senkouB: toSeries(sbArr)
+      };
     }
     
     // ==================== CHART STATE ====================
@@ -528,6 +571,154 @@
       if (sub2) sub2.timeScale().subscribeVisibleTimeRangeChange(backHandler);
     }
     
+    // ==================== PHÂN TÍCH SƠ BỘ (tương tự crypto analysis) ====================
+    function generateStockAnalysis(candles, symbol = '') {
+      if (!candles || candles.length < 26) return 'Không đủ dữ liệu nến để phân tích chi tiết (cần ≥ 26 phiên cho MA25/Ichimoku).';
+      const n = candles.length;
+      const last = candles[n - 1];
+      const prev = candles[n - 2] || last;
+      const close = last.close;
+      const prevClose = prev.close;
+
+      const ma7s = calculateMA(candles, 7);
+      const ma25s = calculateMA(candles, 25);
+      const ma7 = ma7s[n - 1] ? ma7s[n - 1].value : null;
+      const ma25 = ma25s[n - 1] ? ma25s[n - 1].value : null;
+
+      const rsiArr = calculateRSI(candles);
+      const rsi = rsiArr[n - 1] ? rsiArr[n - 1].value : null;
+
+      const macdD = calculateMACD(candles);
+      const m = macdD.macd[n - 1] ? macdD.macd[n - 1].value : null;
+      const s = macdD.signal[n - 1] ? macdD.signal[n - 1].value : null;
+      const h = macdD.histogram[n - 1] ? macdD.histogram[n - 1].value : null;
+
+      const ich = calculateIchimokuBasic(candles);
+      const tk = ich.tenkan[n - 1] ? ich.tenkan[n - 1].value : null;
+      const kj = ich.kijun[n - 1] ? ich.kijun[n - 1].value : null;
+      const sa = ich.senkouA[n - 1] ? ich.senkouA[n - 1].value : null;
+      const sb = ich.senkouB[n - 1] ? ich.senkouB[n - 1].value : null;
+
+      // XU HƯỚNG + MA
+      let trend = 'Giá đang sideway / dao động quanh MA25.';
+      let maSig = '';
+      if (ma25 != null) {
+        if (close > ma25 * 1.015) { trend = 'Xu hướng tăng trung hạn rõ (giá > MA25 +1.5%)'; maSig = 'Bullish'; }
+        else if (close < ma25 * 0.985) { trend = 'Xu hướng giảm / điều chỉnh (giá < MA25)'; maSig = 'Bearish'; }
+        else trend = 'Giá đang sideway / dao động quanh MA25';
+      }
+      if (ma7 != null && ma25 != null) {
+        if (ma7 > ma25 * 1.008) maSig += ' • MA7 cắt lên MA25 (tín hiệu tăng)';
+        else if (ma7 < ma25 * 0.992) maSig += ' • MA7 cắt xuống MA25 (tín hiệu giảm)';
+      }
+
+      // ICHIMOKU (cloud + TK)
+      let cloudTxt = '';
+      if (sa != null && sb != null) {
+        const ctop = Math.max(sa, sb);
+        const cbot = Math.min(sa, sb);
+        if (close > ctop * 1.003) cloudTxt = 'Giá đang TRÊN đám mây Ichimoku (BULLISH mạnh)';
+        else if (close < cbot * 0.997) cloudTxt = 'Giá đang DƯỚI đám mây Ichimoku (BEARISH, áp lực bán)';
+        else cloudTxt = 'Giá đang BÊN TRONG đám mây (consolidation, chờ phá vỡ)';
+      }
+      let tkTxt = '';
+      if (tk != null && kj != null) {
+        if (tk > kj * 1.003) tkTxt = 'Tenkan-sen cắt lên Kijun-sen (tín hiệu mua ngắn hạn)';
+        else if (tk < kj * 0.997) tkTxt = 'Tenkan-sen cắt xuống Kijun-sen (tín hiệu bán)';
+        else tkTxt = 'Tenkan & Kijun gần song song (xu hướng chưa rõ)';
+      }
+
+      // RSI
+      let rsiTxt = '';
+      if (rsi != null) {
+        if (rsi > 70) rsiTxt = `RSI(14)=${rsi.toFixed(1)} → QUÁ MUA, khả năng điều chỉnh cao`;
+        else if (rsi < 30) rsiTxt = `RSI(14)=${rsi.toFixed(1)} → QUÁ BÁN, có thể xuất hiện hồi phục`;
+        else if (rsi > 55) rsiTxt = `RSI(14)=${rsi.toFixed(1)} → Vùng tăng (bullish momentum)`;
+        else if (rsi < 45) rsiTxt = `RSI(14)=${rsi.toFixed(1)} → Vùng giảm (bearish momentum)`;
+        else rsiTxt = `RSI(14)=${rsi.toFixed(1)} → Trung lập, thị trường cân bằng`;
+      }
+
+      // MACD
+      let macdTxt = '';
+      if (h != null && m != null && s != null) {
+        const hd = h > 0 ? 'dương (đà tăng)' : 'âm (đà giảm)';
+        if (m > s && h > 0) macdTxt = `MACD cắt lên Signal + hist ${hd} → tín hiệu MUA`;
+        else if (m < s && h < 0) macdTxt = `MACD cắt xuống Signal + hist ${hd} → tín hiệu BÁN`;
+        else macdTxt = `MACD histogram ${hd}, chưa có cross rõ`;
+      }
+
+      // TỔNG HỢP
+      let overall = 'TRUNG LẬP';
+      let score = 0;
+      if (ma25 && close > ma25) score += 1;
+      if (rsi && rsi > 50) score += 1;
+      if (h && h > 0) score += 1;
+      if (sa && sb && close > Math.max(sa, sb)) score += 2;
+      if (tk && kj && tk > kj) score += 1;
+      if (score >= 5) overall = 'TĂNG MẠNH (nhiều tín hiệu đồng thuận)';
+      else if (score >= 3) overall = 'TĂNG NHẸ / TÍCH CỰC';
+      else if (score <= 1) overall = 'GIẢM / CẦN THẬN TRỌNG';
+      else overall = 'TRUNG LẬP / SIDEWAY';
+
+      const dir = close >= prevClose ? 'tăng' : 'giảm';
+      const pct = ((close - prevClose) / Math.max(0.0001, prevClose) * 100).toFixed(2);
+      const sym = symbol || (document.getElementById('chart-symbol') ? document.getElementById('chart-symbol').textContent : 'Mã');
+
+      return `${sym} vừa <b>${dir} ${pct}%</b> so với nến trước. ${trend}. ${cloudTxt} ${tkTxt}. ${rsiTxt}. ${macdTxt}. ${maSig}. <b>TỔNG KẾT: ${overall}</b>. <span class="text-[10px] text-[#8B7355]">Phân tích mang tính tham khảo — kết hợp tin tức &amp; quản trị rủi ro.</span>`;
+    }
+
+    function updateVN30Analysis(candles, symbol = '') {
+      const box = document.getElementById('vn30-analysis');
+      const indBox = document.getElementById('vn30-indicators');
+      if (!box) return;
+
+      box.innerHTML = generateStockAnalysis(candles, symbol);
+
+      if (!indBox) return;
+      const n = candles.length;
+      const ma7v = (calculateMA(candles, 7)[n - 1] || {}).value;
+      const ma25v = (calculateMA(candles, 25)[n - 1] || {}).value;
+      const rsiv = (calculateRSI(candles)[n - 1] || {}).value;
+      const mac = calculateMACD(candles);
+      const histv = (mac.histogram[n - 1] || {}).value;
+      const ich = calculateIchimokuBasic(candles);
+      const tkv = (ich.tenkan[n - 1] || {}).value;
+      const kjv = (ich.kijun[n - 1] || {}).value;
+      const sav = (ich.senkouA[n - 1] || {}).value;
+      const sbv = (ich.senkouB[n - 1] || {}).value;
+      const closev = candles[n - 1].close;
+
+      let maCross = '—';
+      if (ma7v != null && ma25v != null) maCross = ma7v > ma25v ? 'MA7 ↑ MA25' : 'MA7 ↓ MA25';
+      let ichiSig = '—';
+      if (tkv != null && kjv != null) ichiSig = tkv > kjv ? 'TK ↑ KJ' : (tkv < kjv ? 'TK ↓ KJ' : 'TK ~ KJ');
+      let cloudPos = '—';
+      if (sav != null && sbv != null && closev != null) {
+        const ctop = Math.max(sav, sbv);
+        const cbot = Math.min(sav, sbv);
+        cloudPos = closev > ctop ? 'Trên mây' : (closev < cbot ? 'Dưới mây' : 'Trong mây');
+      }
+
+      indBox.innerHTML = `
+        <div class="bg-white rounded-xl px-2 py-1 border border-[#E7DFD6] text-center">
+          <div class="text-purple-700 font-bold">RSI(14)</div>
+          <div class="font-mono text-base font-extrabold">${rsiv != null ? rsiv.toFixed(1) : '--'}</div>
+        </div>
+        <div class="bg-white rounded-xl px-2 py-1 border border-[#E7DFD6] text-center">
+          <div class="text-sky-700 font-bold">MACD Hist</div>
+          <div class="font-mono text-base font-extrabold">${histv != null ? histv.toFixed(2) : '--'}</div>
+        </div>
+        <div class="bg-white rounded-xl px-2 py-1 border border-[#E7DFD6] text-center">
+          <div class="text-[#5D4037] font-bold">MA Cross</div>
+          <div class="font-mono text-sm font-extrabold">${maCross}</div>
+        </div>
+        <div class="bg-white rounded-xl px-2 py-1 border border-[#E7DFD6] text-center">
+          <div class="text-teal-700 font-bold">Ichimoku</div>
+          <div class="font-mono text-[10px] font-extrabold">${ichiSig} • ${cloudPos}</div>
+        </div>
+      `;
+    }
+    
     // ==================== RENDER PROFESSIONAL CHART ====================
     async function loadAndRenderChart() {
       const symbol = document.getElementById('stock-select').value || 'VNINDEX';
@@ -553,9 +744,16 @@
         document.getElementById('chart-symbol').textContent = symbol;
         document.getElementById('chart-range').textContent = `${candles.length} phiên`;
         
+        // ========== FIX: width for tab (hidden tab => clientWidth=0) ==========
+        let chartW = priceContainer.clientWidth;
+        if (!chartW || chartW < 200) {
+          const wrapper = document.querySelector('#tab-content-2') || priceContainer.parentElement || document.body;
+          chartW = wrapper.clientWidth ? Math.max(320, Math.floor(wrapper.clientWidth * 0.94)) : 640;
+        }
+        
         // ========== PRICE CHART (main) ==========
         priceChart = LightweightCharts.createChart(priceContainer, {
-          width: priceContainer.clientWidth,
+          width: chartW,
           height: 380,
           layout: { background: { color: '#FFFFFF' }, textColor: '#5D4037' },
           grid: { vertLines: { color: '#F1E9DF' }, horzLines: { color: '#F1E9DF' } },
@@ -583,19 +781,24 @@
         const ma25 = priceChart.addLineSeries({ color: '#5D4037', lineWidth: 2.2, lineStyle: 0 });
         ma25.setData(calculateMA(candles, 25));
         
-        // Ichimoku basic (Tenkan + Kijun)
+        // Ichimoku FULL: Tenkan/Kijun + Senkou Cloud (displaced lines)
         const ichi = calculateIchimokuBasic(candles);
-        const tenkanSeries = priceChart.addLineSeries({ color: '#F97316', lineWidth: 1.5, lineStyle: 0 });
+        const tenkanSeries = priceChart.addLineSeries({ color: '#F97316', lineWidth: 1.6, lineStyle: 0 });
         tenkanSeries.setData(ichi.tenkan);
-        const kijunSeries = priceChart.addLineSeries({ color: '#3B82F6', lineWidth: 1.5, lineStyle: 0 });
+        const kijunSeries = priceChart.addLineSeries({ color: '#3B82F6', lineWidth: 1.6, lineStyle: 0 });
         kijunSeries.setData(ichi.kijun);
+        // Cloud lines (will appear shifted right relative to computation point)
+        const senA = priceChart.addLineSeries({ color: '#16a34a', lineWidth: 1.3, lineStyle: 2 });
+        senA.setData(ichi.senkouA);
+        const senB = priceChart.addLineSeries({ color: '#dc2626', lineWidth: 1.3, lineStyle: 2 });
+        senB.setData(ichi.senkouB);
         
         priceChart.timeScale().fitContent();
         
         // ========== RSI CHART ==========
         const rsiContainer = document.getElementById('rsi-chart');
         rsiChart = LightweightCharts.createChart(rsiContainer, {
-          width: rsiContainer.clientWidth,
+          width: chartW,
           height: 92,
           layout: { background: { color: '#FFFFFF' }, textColor: '#6B5F54' },
           grid: { vertLines: { color: '#F8F3EC' }, horzLines: { color: '#F1E9DF' } },
@@ -619,7 +822,7 @@
         // ========== MACD CHART ==========
         const macdContainer = document.getElementById('macd-chart');
         macdChart = LightweightCharts.createChart(macdContainer, {
-          width: macdContainer.clientWidth,
+          width: chartW,
           height: 108,
           layout: { background: { color: '#FFFFFF' }, textColor: '#6B5F54' },
           grid: { vertLines: { color: '#F8F3EC' }, horzLines: { color: '#F1E9DF' } },
@@ -648,9 +851,9 @@
         // Sync all time scales
         syncTimeScales(priceChart, rsiChart, macdChart);
         
-        // Resize handling
+        // Resize handling + post-draw correction for tab visibility
         function handleResize() {
-          const w = priceContainer.clientWidth;
+          const w = priceContainer.clientWidth || chartW;
           if (priceChart) priceChart.resize(w, 380);
           if (rsiChart) rsiChart.resize(w, 92);
           if (macdChart) macdChart.resize(w, 108);
@@ -660,13 +863,33 @@
         resizeObserver.observe(priceContainer);
         window.addEventListener('resize', handleResize, { once: true });
         
-        statusEl.innerHTML = `<span class="text-emerald-600 font-bold">✅ ${symbol} • ${candles.length} nến • RSI + MACD + Ichimoku sẵn sàng</span>`;
-        console.log(`[tin-tuc] Rendered professional chart for ${symbol}`);
+        // Extra: ensure proper size shortly after (handles late tab show / initial 0 width)
+        setTimeout(() => {
+          try {
+            const cw = priceContainer.clientWidth;
+            if (cw > 50) {
+              if (priceChart) priceChart.resize(cw, 380);
+              if (rsiChart) rsiChart.resize(cw, 92);
+              if (macdChart) macdChart.resize(cw, 108);
+            }
+          } catch (e) {}
+        }, 90);
+        
+        // ========== UPDATE ANALYSIS (core fix) ==========
+        updateVN30Analysis(candles, symbol);
+        
+        statusEl.innerHTML = `<span class="text-emerald-600 font-bold">✅ ${symbol} • ${candles.length} nến • RSI + MACD + Ichimoku (cloud) sẵn sàng</span>`;
+        console.log(`[tin-tuc] Rendered professional chart + analysis for ${symbol}`);
         
       } catch (err) {
         console.error(err);
         statusEl.innerHTML = `<span class="text-rose-600">❌ Lỗi: ${err.message}. Kiểm tra data/stocks.json</span>`;
         priceContainer.innerHTML = `<div class="h-[380px] flex items-center justify-center text-sm text-[#8B7355] bg-[#FDFAF4] rounded-2xl">Không thể vẽ biểu đồ. Vui lòng thử lại.</div>`;
+        // clear analysis on error
+        const abox = document.getElementById('vn30-analysis');
+        if (abox) abox.innerHTML = 'Lỗi tải dữ liệu. Không thể tạo phân tích.';
+        const ibox = document.getElementById('vn30-indicators');
+        if (ibox) ibox.innerHTML = '';
       }
     }
     
@@ -698,10 +921,18 @@
         // Default VNINDEX
         sel.value = 'VNINDEX';
         
-        // Auto-render on change
+        // Auto-render on change (khi chọn)
         sel.onchange = () => {
           loadAndRenderChart();
         };
+        
+        // If tab 2 is already visible (e.g. direct nav), auto draw now
+        setTimeout(() => {
+          const c2 = document.getElementById('tab-content-2');
+          if (c2 && !c2.classList.contains('hidden') && sel.value) {
+            loadAndRenderChart();
+          }
+        }, 60);
         
       } catch (e) {
         console.error('populateStockSelect error', e);
@@ -719,6 +950,10 @@
         `;
         sel.value = 'VNINDEX';
         sel.onchange = () => loadAndRenderChart();
+        setTimeout(() => {
+          const c2 = document.getElementById('tab-content-2');
+          if (c2 && !c2.classList.contains('hidden')) loadAndRenderChart();
+        }, 80);
       }
     }
     
@@ -932,7 +1167,7 @@
     window.onload = init;
     
     // Expose for debugging
-    window.AGBCN5_TinTuc = { switchTab, loadAndRenderChart, calculateRSI, calculateMACD };
+    window.AGBCN5_TinTuc = { switchTab, loadAndRenderChart, calculateRSI, calculateMACD, generateStockAnalysis, updateVN30Analysis };
   </script>
 </body>
 </html>
