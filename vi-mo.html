@@ -889,25 +889,33 @@
 
     console.log('[vi-mo] Dữ liệu nhận được:', data);
 
-    // Cập nhật ngày cập nhật
+    // Cập nhật thời gian
     const lastUpdatedEl = document.getElementById('last-updated');
-    if (lastUpdatedEl && data.last_updated) {
-      lastUpdatedEl.textContent = `Cập nhật lần cuối: ${data.last_updated}`;
+    if (lastUpdatedEl) {
+      lastUpdatedEl.textContent = `Cập nhật lần cuối: ${new Date(data.last_updated).toLocaleString('vi-VN')}`;
     }
 
-    // TODO: Thầy sẽ viết code vẽ biểu đồ + bảng ở đây sau khi xem cấu trúc JSON
-    // Hiện tại chỉ log ra console để anh kiểm tra
+    const indicators = data.indicators || {};
 
-    alert("Dữ liệu đã load thành công! Mở Console (F12) để xem cấu trúc JSON.");
+    // Ví dụ: Lấy giá trị mới nhất của GDP Growth
+    const gdpData = indicators.gdp_growth || [];
+    const latestGDP = gdpData.length > 0 ? gdpData[gdpData.length - 1].value : 'N/A';
+
+    // Cập nhật KPI đơn giản (bạn có thể mở rộng thêm)
+    const gdpEl = document.getElementById('kpi-gdp');
+    if (gdpEl) gdpEl.textContent = latestGDP + '%';
+
+    // TODO: Thầy sẽ viết tiếp phần vẽ biểu đồ + bảng sau khi anh confirm đã chạy được đoạn này
+
+    alert("Dữ liệu đã load thành công! Bây giờ có thể vẽ biểu đồ.");
 
   } catch (e) {
     console.error(e);
     const container = document.getElementById('macro-content') || document.body;
     container.innerHTML = `
-      <div class="alert alert-danger">
+      <div class="p-4 bg-red-100 text-red-700 rounded">
         <strong>Không thể tải dữ liệu vĩ mô</strong><br>
-        Lỗi: ${e.message}<br>
-        Vui lòng kiểm tra file data/macro.json
+        ${e.message}
       </div>
     `;
   }
