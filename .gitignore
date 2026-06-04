@@ -1,0 +1,17 @@
+# Build artifacts
+tailwindcss.exe
+tailwindcss
+*.tmp
+
+# Node (if user adds for Tailwind build)
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+Thumbs.db

@@ -34,6 +34,19 @@ Sau đó reload app và cài lại PWA để có icon đẹp trên màn hình ch
 - Dữ liệu lưu localStorage (lịch sử QR, cài đặt)
 - Hoàn toàn offline sau lần load đầu
 
+## Tailwind CSS (quan trọng)
+
+Trang dùng Tailwind utility classes. **Đã loại bỏ CDN** (cdn.tailwindcss.com) để không còn cảnh báo production.
+
+- File CSS đã build sẵn tại `css/tailwind.css`
+- Nếu bạn thêm/sửa class Tailwind trong *.html:
+  1. Cài Node.js (nếu chưa có)
+  2. `npm install`
+  3. `npm run build:css` (hoặc `npm run build:css:watch`)
+- Hoặc dùng Tailwind standalone CLI (không cần npm).
+
+Xem `tailwind.config.js` + `src/input.css` để cấu hình.
+
 **Slogan**: Agribank CN 5 đổi mới vươn mình
 
 ---

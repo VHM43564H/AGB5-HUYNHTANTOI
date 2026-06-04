@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base tweaks for the AGBCN5 PWA (brown/gold theme) */
+:root {
+  --primary: #F5C400;
+}
+
+/* Additional component styles that were previously in <style> can stay in HTML or here */

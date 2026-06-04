@@ -1,0 +1,13 @@
+{
+  "name": "agbcn5-pwa",
+  "version": "1.0.0",
+  "description": "AGBCN5 PWA - Kinh tế Vĩ Mô, Tin Tức, Công cụ",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify",
+    "build:css:watch": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify --watch",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

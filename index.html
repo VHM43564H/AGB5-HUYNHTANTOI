@@ -9,8 +9,8 @@
   <meta name="description" content="AGBCN5-Tới KHDN - Công cụ Số AGB Chi nhánh 5">
   <title>AGBCN5-Tới KHDN - Công cụ Số AGB CN 5</title>
   
-  <!-- Tailwind CSS Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Production Tailwind CSS (built with Tailwind CLI - no more CDN warning) -->
+  <link rel="stylesheet" href="css/tailwind.css">
   
   <!-- Leaflet (Map) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -1297,19 +1297,9 @@
   <div id="toast-container" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-[70] max-w-[92%]"></div>
 
   <script>
-    // ==================== TAILWIND CONFIG ====================
+    // ==================== THEME INIT ====================
     function initTailwind() {
       document.documentElement.style.setProperty('--primary', '#F5C400');
-      
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#F5C400'
-            }
-          }
-        }
-      };
     }
 
     // ==================== GLOBAL STATE ====================
