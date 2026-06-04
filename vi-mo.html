@@ -891,29 +891,38 @@
 
     // Cập nhật thời gian
     const lastUpdatedEl = document.getElementById('last-updated');
-    if (lastUpdatedEl) {
+    if (lastUpdatedEl && data.last_updated) {
       lastUpdatedEl.textContent = `Cập nhật lần cuối: ${new Date(data.last_updated).toLocaleString('vi-VN')}`;
     }
 
     const indicators = data.indicators || {};
 
-    // Ví dụ: Lấy giá trị mới nhất của GDP Growth
-    const gdpData = indicators.gdp_growth || [];
-    const latestGDP = gdpData.length > 0 ? gdpData[gdpData.length - 1].value : 'N/A';
+    // Lấy giá trị mới nhất cho KPI
+    function getLatestValue(key) {
+      const arr = indicators[key] || [];
+      return arr.length > 0 ? arr[arr.length - 1].value : 'N/A';
+    }
 
-    // Cập nhật KPI đơn giản (bạn có thể mở rộng thêm)
-    const gdpEl = document.getElementById('kpi-gdp');
-    if (gdpEl) gdpEl.textContent = latestGDP + '%';
+    // Cập nhật KPI (bạn có thể thêm nhiều hơn)
+    const gdpEl = document.getElementById('kpi-gdp-growth');
+    if (gdpEl) gdpEl.textContent = getLatestValue('gdp_growth') + '%';
 
-    // TODO: Thầy sẽ viết tiếp phần vẽ biểu đồ + bảng sau khi anh confirm đã chạy được đoạn này
+    const cpiEl = document.getElementById('kpi-cpi');
+    if (cpiEl) cpiEl.textContent = getLatestValue('cpi_inflation') + '%';
 
-    alert("Dữ liệu đã load thành công! Bây giờ có thể vẽ biểu đồ.");
+    const unempEl = document.getElementById('kpi-unemployment');
+    if (unempEl) unempEl.textContent = getLatestValue('unemployment') + '%';
+
+    // TODO: Thầy sẽ viết tiếp phần vẽ biểu đồ chi tiết sau
+    // Hiện tại đã hiển thị được KPI cơ bản
+
+    console.log('[vi-mo] Đã load KPI thành công');
 
   } catch (e) {
     console.error(e);
     const container = document.getElementById('macro-content') || document.body;
     container.innerHTML = `
-      <div class="p-4 bg-red-100 text-red-700 rounded">
+      <div class="p-4 bg-red-100 text-red-700 rounded-lg">
         <strong>Không thể tải dữ liệu vĩ mô</strong><br>
         ${e.message}
       </div>
