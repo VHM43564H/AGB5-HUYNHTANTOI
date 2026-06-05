@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Lý do thương hiệu phương Tây dễ 'hồi sinh' khi về tay Trung Quốc",
+      "summary": "Nhờ làm chủ chuỗi cung ứng và khả năng tiếp thị số mạnh mẽ, doanh nghiệp Trung Quốc dễ hồi sinh các thương hiệu phương Tây sau thâu tóm.",
+      "link": "https://vnexpress.net/ly-do-thuong-hieu-phuong-tay-de-hoi-sinh-khi-ve-tay-trung-quoc-5082389.html",
+      "date": "Sat, 06 Jun 2026 02:33:34 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Giá phân bón tăng cao, nông dân thêm áp lực chi phí",
       "summary": "Tháng 5, giá nhiều loại phân bón tăng thêm khoảng 100.000 đồng mỗi bao 50 kg, đẩy chi phí đầu vào của nông dân lên cao trong vụ hè thu.",
       "link": "https://vnexpress.net/gia-phan-bon-tang-cao-nong-dan-them-ap-luc-chi-phi-5082269.html",
@@ -47,13 +54,6 @@
       "summary": "Bộ Nông nghiệp và Môi trường cho biết việc vận hành thí điểm sàn giao dịch carbon trong nước có thể được triển khai trong tháng 6.",
       "link": "https://vnexpress.net/san-giao-dich-carbon-du-kien-duoc-thi-diem-trong-thang-6-5082310.html",
       "date": "Fri, 05 Jun 2026 14:15:48 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Giá vàng tiếp tục lùi về dưới 154 triệu đồng",
-      "summary": "Giá vàng trong nước giảm mạnh hơn so với thế giới về 153,8 triệu đồng, mức thấp nhất nửa năm, chênh lệch được thu hẹp xuống dưới 13 triệu đồng một lượng.",
-      "link": "https://vnexpress.net/gia-vang-tiep-tuc-lui-ve-duoi-154-trieu-dong-5082326.html",
-      "date": "Fri, 05 Jun 2026 12:02:14 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-05T18:59:13.958447+00:00",
+  "last_updated": "2026-06-05T20:48:40.659946+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
