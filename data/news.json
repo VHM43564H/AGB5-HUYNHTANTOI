@@ -1,6 +1,20 @@
 {
   "tin_tuc": [
     {
+      "title": "Ông Trump công bố gói cứu trợ 700 triệu USD vực dậy ngành than",
+      "summary": "Ông Trump công bố gói hỗ trợ 700 triệu USD để cứu ngành than, phần lớn khoản chi viện dẫn quyền hạn khẩn cấp cho Tổng thống thời Chiến tranh lạnh.",
+      "link": "https://vnexpress.net/ong-trump-cong-bo-goi-cuu-tro-700-trieu-usd-vuc-day-nganh-than-5082172.html",
+      "date": "Fri, 05 Jun 2026 09:23:33 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Đề xuất không bắt buộc công ty chứng khoán ký hợp đồng giấy với nhà đầu tư",
+      "summary": "Bộ Tài chính đề xuất mở rộng hình thức giao kết hợp đồng giữa công ty chứng khoán với nhà đầu tư, thay vì phải ký bằng văn bản như quy định hiện hành.",
+      "link": "https://vnexpress.net/de-xuat-khong-bat-buoc-cong-ty-chung-khoan-ky-hop-dong-giay-voi-nha-dau-tu-5082134.html",
+      "date": "Fri, 05 Jun 2026 07:40:14 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Ông Trump lặng lẽ tái khởi động cỗ máy áp thuế",
       "summary": "Tổng thống Mỹ đang tìm cách khôi phục các mức thuế nhập khẩu cũ, nhưng theo cách thận trọng, lâu dài và không ồn ào như trước đây.",
       "link": "https://vnexpress.net/ong-trump-lang-le-tai-khoi-dong-co-may-ap-thue-5081954.html",
@@ -29,6 +43,13 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
+      "title": "Techcombank tái định nghĩa ngân hàng bằng AI",
+      "summary": "Techcombank đang từng bước thay đổi cách ngân hàng vận hành bằng việc kết hợp AI, dữ liệu và con người, nhằm đưa công nghệ vào các hoạt động cốt lõi như quản trị rủi ro, vận hành,...",
+      "link": "https://vnexpress.net/techcombank-tai-dinh-nghia-ngan-hang-bang-ai-5082298.html",
+      "date": "Fri, 05 Jun 2026 11:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Tài khoản ngân hàng hơn 3 năm không giao dịch có thể bị đóng",
       "summary": "Ngân hàng có thể chủ động đóng tài khoản \"rác\" và tài khoản không giao dịch 3 năm trở lên để hạn chế rủi ro gian lận, lừa đảo.",
       "link": "https://vnexpress.net/tai-khoan-ngan-hang-hon-3-nam-khong-giao-dich-co-the-bi-dong-5082111.html",
@@ -36,66 +57,59 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "CEO Nvidia nỗ lực tăng sức hút tại Hàn Quốc",
-      "summary": "Bữa tối với bia và gà rán năm 2025 cùng Chủ tịch Samsung, Hyundai giúp Jensen Huang biết làm thế nào để thu hút sự chú ý tại Hàn Quốc.",
-      "link": "https://vnexpress.net/ceo-nvidia-no-luc-tang-suc-hut-tai-han-quoc-5082006.html",
-      "date": "Thu, 04 Jun 2026 19:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Chính quyền ông Trump đề xuất áp thuế bổ sung với 60 nền kinh tế",
-      "summary": "Văn phòng Đại diện Thương mại Mỹ đề xuất áp thuế bổ sung đến 12,5% hàng nhập từ 60 nền kinh tế, vì hành vi thương mại không công bằng.",
-      "link": "https://vnexpress.net/chinh-quyen-ong-trump-de-xuat-ap-thue-bo-sung-voi-60-nen-kinh-te-5081597.html",
-      "date": "Thu, 04 Jun 2026 17:04:35 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Chứng khoán dứt chuỗi giảm điểm",
-      "summary": "Sau 7 phiên đi xuống liên tiếp, VN-Index tăng 12,5 điểm nhưng rơi vào tình trạng \"xanh vỏ, đỏ lòng\" khi số lượng cổ phiếu giảm chiếm phần nhiều hơn.",
-      "link": "https://vnexpress.net/chung-khoan-dut-chuoi-giam-diem-5081987.html",
-      "date": "Thu, 04 Jun 2026 15:33:22 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Mua điện trực tiếp qua lưới quốc gia: Cột mốc mới của năng lượng xanh",
-      "summary": "Giao dịch điện sạch xuyên 1.800km lần đầu vận hành, tạo bước ngoặt cho thị trường điện cạnh tranh và mục tiêu giảm phát thải.",
-      "link": "https://tuoitre.vn/mua-dien-truc-tiep-qua-luoi-quoc-gia-cot-moc-moi-cua-nang-luong-xanh-20260604231037595.htm",
-      "date": "Fri, 05 Jun 2026 04:59:00 GMT+7",
+      "title": "Gói gọn du lịch Đông Nam Á vào 'Điện thoại, Hộ chiếu và Mastercard'",
+      "summary": "Không còn những chiếc ví dày cộm tiền mặt, không còn nỗi lo đổi ngoại tệ hay thủ tục thanh toán rườm rà.",
+      "link": "https://tuoitre.vn/goi-gon-du-lich-dong-nam-a-vao-dien-thoai-ho-chieu-va-mastercard-20260605084152727.htm",
+      "date": "Fri, 05 Jun 2026 09:09:20 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "TP.HCM định hướng phát triển kinh tế đêm, mang bản sắc riêng của vùng biển Cần Giờ",
-      "summary": "Tại họp báo kinh tế - xã hội TP.HCM chiều 4-6, ông Nguyễn Hữu Ân - Phó trưởng Phòng Quy hoạch phát triển tài nguyên du lịch (Sở Du lịch TP.HCM) - đã thông tin về hiện trạng, tiềm...",
-      "link": "https://tuoitre.vn/tp-hcm-dinh-huong-phat-trien-kinh-te-dem-mang-ban-sac-rieng-cua-vung-bien-can-gio-202606041952395.htm",
-      "date": "Thu, 04 Jun 2026 22:09:00 GMT+7",
+      "title": "Khi thanh toán không dừng lại ở 'giao dịch'",
+      "summary": "Visa mang đến hàng loạt giải pháp thúc đẩy kết nối QR liên thông, thanh toán xuyên biên giới.",
+      "link": "https://tuoitre.vn/khi-thanh-toan-khong-dung-lai-o-giao-dich-2026060508364249.htm",
+      "date": "Fri, 05 Jun 2026 09:00:06 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Gửi ngân hàng, cho đối tác vay, tập đoàn của các tỉ phú nhận mấy tỉ tiền lãi mỗi ngày?",
-      "summary": "Trên báo cáo lưu chuyển tiền tệ, tiền thu lãi cho vay, cổ tức và lợi nhuận được chia của Vingroup, Masan, Vietjet Air... đồng loạt tăng mạnh trong quý 1-2026.",
-      "link": "https://tuoitre.vn/gui-ngan-hang-cho-doi-tac-vay-tap-doan-cua-cac-ti-phu-nhan-may-ti-tien-lai-moi-ngay-20260604210954768.htm",
-      "date": "Thu, 04 Jun 2026 21:26:15 GMT+7",
+      "title": "TP.HCM tăng tốc thủ tục làm metro số 6 đoạn sân bay Tân Sơn Nhất - Phú Hữu",
+      "summary": "Sở Quy hoạch - Kiến trúc TP.HCM có kết luận sau cuộc họp về phương án tuyến, vị trí công trình metro số 6 đoạn sân bay Tân Sơn Nhất - Phú Hữu.",
+      "link": "https://tuoitre.vn/tp-hcm-tang-toc-thu-tuc-lam-metro-so-6-doan-san-bay-tan-son-nhat-phu-huu-20260605072944188.htm",
+      "date": "Fri, 05 Jun 2026 08:56:00 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "SpaceX muốn huy động 75 tỉ USD trong đợt chào bán cổ phiếu đầu tiên",
-      "summary": "Công ty SpaceX của tỉ phú Elon Musk đặt mục tiêu huy động 75 tỉ USD trong đợt chào bán 555.555.555 cổ phiếu lần đầu ra công chúng (IPO).",
-      "link": "https://tuoitre.vn/spacex-muon-huy-dong-75-ti-usd-trong-dot-chao-ban-co-phieu-dau-tien-20260604210009564.htm",
-      "date": "Thu, 04 Jun 2026 21:22:00 GMT+7",
+      "title": "Gen Z dẫn dắt thanh toán không tiền mặt",
+      "summary": "Tặng quà sinh nhật cho một bạn trẻ thời nay? Lời khuyên chân thành là đừng mua ví da nữa.",
+      "link": "https://tuoitre.vn/gen-z-dan-dat-thanh-toan-khong-tien-mat-20260605075811876.htm",
+      "date": "Fri, 05 Jun 2026 08:50:54 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
+      "title": "Ông Nguyễn Anh Tuấn tái đắc cử Chủ tịch Tổng Liên đoàn Lao động Việt Nam",
+      "summary": "Ông Nguyễn Anh Tuấn tái đắc cử Chủ tịch Tổng Liên đoàn Lao động Việt Nam nhiệm kỳ 2026-2031, tiếp tục lãnh đạo tổ chức công đoàn trong giai đoạn đổi mới bộ máy và nâng cao vai trò...",
+      "link": "https://vnexpress.net/ong-nguyen-anh-tuan-tai-dac-cu-chu-tich-tong-lien-doan-lao-dong-viet-nam-5082180.html",
+      "date": "Fri, 05 Jun 2026 09:10:44 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Loạt hồ điều hòa chống ngập ở Hà Nội sắp hoàn thành",
+      "summary": "Nhiều dự án hồ điều hòa chống ngập tại Hà Nội đã đạt khoảng 90% khối lượng thi công, chuẩn bị đưa vào vận hành trong mùa mưa bão để hỗ trợ thoát nước và giảm ngập.",
+      "link": "https://vnexpress.net/loat-ho-dieu-hoa-chong-ngap-o-ha-noi-sap-hoan-thanh-5082092.html",
+      "date": "Fri, 05 Jun 2026 08:50:14 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Sống khổ trong dinh thự trăm tuổi ở miền Tây",
-      "summary": "Mỗi mùa mưa, bà Ngà đặt gần 50 xô chậu hứng nước dột trong toà nhà gần 100 năm tuổi ở Tây Ninh, không thể tự sửa những chỗ hư hỏng vì công trình thuộc diện bảo tồn.",
+      "summary": "Mỗi mùa mưa, bà Ngà đặt gần 50 xô chậu hứng nước dột trong tòa nhà gần 100 năm tuổi ở Tây Ninh, không thể tự sửa những chỗ hư hỏng vì công trình thuộc diện bảo tồn.",
       "link": "https://vnexpress.net/song-kho-trong-dinh-thu-tram-tuoi-o-mien-tay-5081268.html",
       "date": "Fri, 05 Jun 2026 06:00:00 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
       "title": "Cao tốc trục ngang miền Tây thiếu hơn 3 triệu m3 cát",
-      "summary": "Cao tốc Châu Đốc - Cần Thơ - Sóc Trăng cần hơn 3,4 triệu m3 cát trước tháng 8 để gia tải nền đường, song nguồn cung thiếu, nguy cơ chậm tiến độ.",
+      "summary": "Cao tốc Châu Đốc - Cần Thơ - Sóc Trăng cần hơn 3,4 triệu m3 cát trước tháng 8 để gia tải nền đường, song nguồn cung thiếu, nguy cơ khó hoàn thành vào giữa năm tới.",
       "link": "https://vnexpress.net/cao-toc-truc-ngang-mien-tay-thieu-hon-3-trieu-m3-cat-5082016.html",
       "date": "Fri, 05 Jun 2026 00:00:00 +0700",
       "source": "Thời sự - VnExpress RSS"
@@ -122,56 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Chính phủ yêu cầu đánh giá chi phí xã hội nếu dời ga Hà Nội",
-      "summary": "Phó thủ tướng Thường trực Phạm Gia Túc yêu cầu đánh giá toàn diện tác động đến vận tải, chi phí xã hội, giao thông và hoạt động của ngành đường sắt trước đề xuất chuyển ga đầu mối...",
-      "link": "https://vnexpress.net/chinh-phu-yeu-cau-danh-gia-chi-phi-xa-hoi-neu-doi-ga-ha-noi-5082082.html",
-      "date": "Thu, 04 Jun 2026 21:28:39 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Chuyên gia vật lý địa cầu tìm dấu vết mộ tập thể liệt sĩ ở Quảng Ngãi",
-      "summary": "Nhóm chuyên gia Đại học Khoa học Tự nhiên TP HCM dùng radar xuyên đất xác định các dị thường dưới mặt đường Trường Chinh, phục vụ tìm kiếm hài cốt liệt sĩ.",
-      "link": "https://vnexpress.net/chuyen-gia-vat-ly-dia-cau-tim-dau-vet-mo-tap-the-liet-si-o-quang-ngai-5082096.html",
-      "date": "Thu, 04 Jun 2026 20:31:32 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Thời tiết hôm nay 5-6: Áp thấp đi ra khỏi Biển Đông, Nam Bộ chiều mưa dông",
-      "summary": "Hôm nay 5-6, thời tiết Bắc Bộ và Trung Bộ nắng nóng ban ngày. Nam Bộ chiều mưa rả rích, áp thấp nhiệt đới đi ra khỏi Biển Đông.",
-      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-5-6-ap-thap-di-ra-khoi-bien-dong-nam-bo-chieu-mua-dong-20260604164627182.htm",
-      "date": "Fri, 05 Jun 2026 05:07:00 GMT+7",
+      "title": "Tìm hướng khai thác xà bần - 'tài nguyên ngàn tỉ'",
+      "summary": "Xử lý khối lượng xà bần khổng lồ này - thực chất là tài nguyên - sao cho hiệu quả và có lợi nhất?",
+      "link": "https://tuoitre.vn/tim-huong-khai-thac-xa-ban-tai-nguyen-ngan-ti-20260605094033248.htm",
+      "date": "Fri, 05 Jun 2026 10:02:59 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Tin tức sáng 5-6: Đề xuất bổ sung tiêu chuẩn 'có bản lĩnh chính trị vững vàng' với luật sư",
-      "summary": "Tin tức đáng chú ý: Đề xuất bổ sung tiêu chuẩn 'có bản lĩnh chính trị vững vàng' với luật sư; Tiêu chuẩn quân trang, trang phục của quân nhân từ ngày 1-7; Bộ Y tế thúc đẩy chuyển...",
-      "link": "https://tuoitre.vn/tin-tuc-sang-5-6-de-xuat-bo-sung-tieu-chuan-co-ban-linh-chinh-tri-vung-vang-voi-luat-su-2026060423114363.htm",
-      "date": "Fri, 05 Jun 2026 05:03:00 GMT+7",
+      "title": "TP.HCM sẽ có nhà máy xử lý rác thải xây dựng",
+      "summary": "TP.HCM đang xây dựng hàng loạt dự án giao thông, chỉnh trang đô thị nên lượng rác thải xây dựng, bùn thải phát sinh rất lớn.",
+      "link": "https://tuoitre.vn/tp-hcm-se-co-nha-may-xu-ly-rac-thai-xay-dung-20260605095030011.htm",
+      "date": "Fri, 05 Jun 2026 09:56:07 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Chạy đua cho chiến dịch khám sức khỏe bao phủ toàn dân",
-      "summary": "Nhiều địa phương đã khởi động khám sức khỏe miễn phí, ưu tiên người yếu thế, tiến tới mục tiêu bao phủ toàn dân trong năm 2026.",
-      "link": "https://tuoitre.vn/chay-dua-cho-chien-dich-kham-suc-khoe-bao-phu-toan-dan-20260604232104685.htm",
-      "date": "Fri, 05 Jun 2026 04:56:00 GMT+7",
+      "title": "Ông Nguyễn Anh Tuấn tái đắc cử Chủ tịch Tổng liên đoàn Lao động Việt Nam",
+      "summary": "Ông Nguyễn Anh Tuấn tiếp tục được tín nhiệm bầu giữ chức Chủ tịch Tổng liên đoàn Lao động Việt Nam khóa XIV.",
+      "link": "https://tuoitre.vn/ong-nguyen-anh-tuan-tai-dac-cu-chu-tich-tong-lien-doan-lao-dong-viet-nam-20260605091319535.htm",
+      "date": "Fri, 05 Jun 2026 09:50:50 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "TP.HCM định hướng phát triển kinh tế đêm, mang bản sắc riêng của vùng biển Cần Giờ",
-      "summary": "Tại họp báo kinh tế - xã hội TP.HCM chiều 4-6, ông Nguyễn Hữu Ân - Phó trưởng Phòng Quy hoạch phát triển tài nguyên du lịch (Sở Du lịch TP.HCM) - đã thông tin về hiện trạng, tiềm...",
-      "link": "https://tuoitre.vn/tp-hcm-dinh-huong-phat-trien-kinh-te-dem-mang-ban-sac-rieng-cua-vung-bien-can-gio-202606041952395.htm",
-      "date": "Thu, 04 Jun 2026 22:09:00 GMT+7",
+      "title": "Quan tâm đầu tư nhà ở cho người lao động",
+      "summary": "Người lao động có nhu cầu thực sự được tiếp cận và mua nhà ở xã hội đúng đối tượng, đúng giá niêm yết.",
+      "link": "https://tuoitre.vn/quan-tam-dau-tu-nha-o-cho-nguoi-lao-dong-20260605081116199.htm",
+      "date": "Fri, 05 Jun 2026 08:59:02 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Làm hầm chui Mã Vòng sẽ ảnh hưởng gì đến trường học, công viên, chùa Long Sơn ở Nha Trang?",
-      "summary": "Về phương án làm hầm chui tại Mã Vòng (Nha Trang), Liên hiệp các hội Khoa học và Kỹ thuật tỉnh Khánh Hòa đề nghị tỉnh xem xét ảnh hưởng đến trường học và công viên Võ Văn Ký, chùa...",
-      "link": "https://tuoitre.vn/lam-ham-chui-ma-vong-se-anh-huong-gi-den-truong-hoc-cong-vien-chua-long-son-o-nha-trang-20260604204324532.htm",
-      "date": "Thu, 04 Jun 2026 21:35:44 GMT+7",
+      "title": "TP.HCM tăng tốc thủ tục làm metro số 6 đoạn sân bay Tân Sơn Nhất - Phú Hữu",
+      "summary": "Sở Quy hoạch - Kiến trúc TP.HCM có kết luận sau cuộc họp về phương án tuyến, vị trí công trình metro số 6 đoạn sân bay Tân Sơn Nhất - Phú Hữu.",
+      "link": "https://tuoitre.vn/tp-hcm-tang-toc-thu-tuc-lam-metro-so-6-doan-san-bay-tan-son-nhat-phu-huu-20260605072944188.htm",
+      "date": "Fri, 05 Jun 2026 08:56:00 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-05T00:00:10.038314+00:00",
+  "last_updated": "2026-06-05T04:13:05.301217+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
