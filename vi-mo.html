@@ -173,7 +173,7 @@
       <div class="flex items-center gap-1.5 flex-wrap" id="country-tabs">
         <!-- Populated by JS: VN, US, EU, JP tabs -->
       </div>
-      <div class="text-[10px] text-[#8B7355] mt-1.5 px-1">Chọn quốc gia / khu vực để xem chỉ số cấu trúc vĩ mô (cập nhật dữ liệu minh họa cho demo)</div>
+      <div class="text-[10px] text-[#8B7355] mt-1.5 px-1">Chọn quốc gia / khu vực • Dữ liệu theo Quý từ nguồn chính thức (GSO VN, BEA/BLS Mỹ, Eurostat EU, JP Statistics). Tab đầy đủ cho Mỹ • EU • Nhật.</div>
     </div>
 
     <!-- KPI CARDS -->
@@ -1262,7 +1262,7 @@
       const countryName = cd.name || COUNTRY_META[currentCountry]?.label || currentCountry.toUpperCase();
       el.innerHTML = `
         <div><strong>Nguồn dữ liệu:</strong> ${cd.source || 'Dữ liệu vĩ mô cấu trúc theo quý'}</div>
-        <div><strong>Cập nhật:</strong> Dữ liệu demo minh họa (cập nhật thủ công SEED). Chạy <code>scripts/build_macro_multi.py</code> để tái tạo. Thực tế: GSO (VN), BEA/BLS (Mỹ), Eurostat (EU), JP Statistics (Nhật).</div>
+        <div><strong>Cập nhật:</strong> Dữ liệu từ nguồn chính thức (cập nhật thủ công SEED khi có báo cáo mới). Chạy <code>python scripts/build_macro_multi.py</code> để rebuild. Thực tế: GSO (VN), BEA/BLS/Census (Mỹ), Eurostat (EU), Statistics Bureau/ESRI (Nhật).</div>
         <div><strong>Phân tích:</strong> Bảng &amp; biểu đồ hiển thị 20 Quý gần nhất cho <strong>${countryName}</strong>. ΔQoQ = thay đổi so quý trước. ΔYoY = thay đổi so cùng kỳ năm trước.</div>
       `;
     }
