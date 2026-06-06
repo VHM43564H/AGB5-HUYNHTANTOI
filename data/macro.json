@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "last_updated": "2026-06-06T02:25:37.158889+00:00",
   "countries": {
     "vn": {
@@ -499,6 +500,18 @@
             "value": 6900000000.0
           }
         ]
+=======
+  "last_updated": "2026-06-06T02:27:35.472295+00:00",
+  "frequency": "quarterly",
+  "source": "Tổng cục Thống kê Việt Nam (GSO/NSO) - Báo cáo tình hình kinh tế - xã hội theo quý",
+  "country": "Vietnam (VN)",
+  "latest_quarter": "2026Q1",
+  "indicators": {
+    "gdp_growth": [
+      {
+        "period": "2021Q2",
+        "value": 6.73
+>>>>>>> 7f1d50ddc194c55e071e50e34922cb65895cff32
       },
       "latest": {
         "gdp_growth": {
