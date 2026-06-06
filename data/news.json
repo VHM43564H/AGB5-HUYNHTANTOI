@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Nguy cơ giá dầu tăng vọt khi dự trữ toàn cầu bị rút cạn",
+      "summary": "Giá dầu Brent giao ngay có thể lên 150-160 USD một thùng thời gian tới nếu tồn kho dầu toàn cầu xuống thấp chưa từng thấy.",
+      "link": "https://vnexpress.net/nguy-co-gia-dau-tang-vot-khi-du-tru-toan-cau-bi-rut-can-5082686.html",
+      "date": "Sat, 06 Jun 2026 13:36:26 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Giá vàng miếng về sát mốc 150 triệu đồng",
       "summary": "Các thương hiệu bán ra vàng miếng quanh mức 150,2 triệu đồng một lượng, giảm gần 41 triệu đồng so với đỉnh hôm 2/3.",
       "link": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-6-6-5082662.html",
@@ -50,42 +57,63 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Chủ Jackpot hơn 83 tỷ đồng không đeo mặt nạ nhận giải",
-      "summary": "Chiều 5/6, anh Bùi Văn Mạnh nhận Jackpot hơn 83 tỷ đồng và cũng là người trúng giải trị giá lớn nhất công khai danh tính trong 10 năm qua.",
-      "link": "https://vnexpress.net/chu-jackpot-hon-83-ty-dong-khong-deo-mat-na-nhan-giai-5082403.html",
-      "date": "Fri, 05 Jun 2026 16:02:46 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Phát triển thanh toán thông minh nhanh hơn nhưng phải an toàn hơn",
-      "summary": "Theo Ngân hàng Nhà nước, người dân sẽ không sử dụng thanh toán số nếu không cảm thấy an toàn, trong bối cảnh lừa đảo công nghệ cao và deepfake ngày càng tinh vi.",
-      "link": "https://tuoitre.vn/phat-trien-thanh-toan-thong-minh-nhanh-hon-nhung-phai-an-toan-hon-20260606105727926.htm",
-      "date": "Sat, 06 Jun 2026 11:18:11 GMT+7",
+      "title": "Người dân xếp hàng 'săn quà', rộn ràng trải nghiệm công nghệ tại Lễ hội Tài chính số 2026",
+      "summary": "Lễ hội Tài chính số 2026 chính thức khai mạc tại phố đi bộ Nguyễn Huệ (TP.HCM) sáng 6-6, mở màn hai ngày hội hè sôi động với hàng loạt trải nghiệm thanh toán không tiền mặt, các...",
+      "link": "https://tuoitre.vn/nguoi-dan-xep-hang-san-qua-ron-rang-trai-nghiem-cong-nghe-tai-le-hoi-tai-chinh-so-2026-20260606150525828.htm",
+      "date": "Sat, 06 Jun 2026 15:43:47 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Ngành dịch vụ bất động sản Trung Quốc lao đao",
-      "summary": "Sau nhiều năm tăng trưởng nóng, ngành dịch vụ quản lý bất động sản tại Trung Quốc đang trở thành nạn nhân mới của cuộc khủng hoảng bất động sản kéo dài.",
-      "link": "https://tuoitre.vn/nganh-dich-vu-bat-dong-san-trung-quoc-lao-dao-20260604174815558.htm",
-      "date": "Sat, 06 Jun 2026 11:11:31 GMT+7",
+      "title": "Đến gian hàng JCB, quẹt 'một chạm' uống trà sữa, nhận quà",
+      "summary": "Sáng 6-6, gian hàng JCB tại Lễ hội Tài chính số 2026 tràn ngập sắc màu Nhật Bản và hương vị lễ hội mùa hè, thu hút khách tham gia với nhiều phần quà thú vị và cả những ly trà sữa...",
+      "link": "https://tuoitre.vn/den-gian-hang-jcb-quet-mot-cham-uong-tra-sua-nhan-qua-2026060613321013.htm",
+      "date": "Sat, 06 Jun 2026 15:00:33 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Khách Việt, khách ngoại quan tâm đến thanh toán xuyên biên giới tại Lễ hội Tài chính số 2026",
-      "summary": "Thanh toán quốc tế là nhu cầu ngày càng tăng, khi ngày càng nhiều khách Việt đi du lịch, khách quốc tế đến Việt Nam và cả nhu cầu làm việc đa quốc gia.",
-      "link": "https://tuoitre.vn/khach-viet-khach-ngoai-quan-tam-den-thanh-toan-xuyen-bien-gioi-tai-le-hoi-tai-chinh-so-2026-20260606101116379.htm",
-      "date": "Sat, 06 Jun 2026 10:40:41 GMT+7",
+      "title": "Kết nối thanh toán quốc tế, đón làn sóng khách ngoại",
+      "summary": "Mục tiêu của thanh toán xuyên biên giới không chỉ là tạo ra nhiều giao dịch hơn, mà là giúp việc thanh toán trở nên thuận tiện, liền mạch hơn cho mọi người, ở mọi nơi.",
+      "link": "https://tuoitre.vn/ket-noi-thanh-toan-quoc-te-don-lan-song-khach-ngoai-20260606144210905.htm",
+      "date": "Sat, 06 Jun 2026 15:00:05 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Giá vàng miếng SJC giảm mạnh về mức 150 triệu đồng/lượng",
-      "summary": "Giá vàng thế giới bất ngờ giảm sâu và kết thúc tuần giao dịch vào hôm nay 6-6, ở mức 4.330 USD/ounce, giá bạc cũng giảm hơn 6%, về 67,72 USD/ounce.",
-      "link": "https://tuoitre.vn/gia-vang-mieng-sjc-giam-manh-ve-muc-150-trieu-dong-luong-20260606101821698.htm",
-      "date": "Sat, 06 Jun 2026 10:36:11 GMT+7",
+      "title": "Các doanh nghiệp liên kết đẩy lùi hàng giả, nhận 1 triệu tem chống giả thế hệ mới",
+      "summary": "Ngày 6-6, ở hội trường Thống Nhất (phường Long An, Tây Ninh) đã diễn ra lễ công bố quyết định thành lập văn phòng đại diện Viện Công nghệ chống làm giả miền Tây tại Tây Ninh.",
+      "link": "https://tuoitre.vn/cac-doanh-nghiep-lien-ket-day-lui-hang-gia-nhan-1-trieu-tem-chong-gia-the-he-moi-20260606140350634.htm",
+      "date": "Sat, 06 Jun 2026 14:32:35 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Bí thư TP HCM: Thu một triệu tỷ đồng là phép thử với đầu tàu kinh tế",
+      "summary": "Mục tiêu thu ngân sách một triệu tỷ đồng là phép thử năng lực đầu tàu kinh tế, giúp TP HCM có thêm nguồn lực phát triển, theo Bí thư Thành ủy Trần Lưu Quang.",
+      "link": "https://vnexpress.net/bi-thu-tp-hcm-thu-mot-trieu-ty-dong-la-phep-thu-voi-dau-tau-kinh-te-5082731.html",
+      "date": "Sat, 06 Jun 2026 15:56:12 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Siêu nút giao nối cao tốc TP HCM - Long Thành và Biên Hòa - Vũng Tàu mở toàn bộ",
+      "summary": "Nút giao Long Thành, kết nối cao tốc TP HCM - Long Thành - Dầu Giây với Biên Hòa - Vũng Tàu, được thông toàn bộ các nhánh từ 18h ngày 6/6.",
+      "link": "https://vnexpress.net/sieu-nut-giao-noi-cao-toc-tp-hcm-long-thanh-va-bien-hoa-vung-tau-mo-toan-bo-5078091.html",
+      "date": "Sat, 06 Jun 2026 14:58:45 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "TP HCM sẽ thí điểm 5 phường, xã xã hội chủ nghĩa",
+      "summary": "Trong 5 năm tới, TP HCM sẽ thí điểm xây dựng ít nhất 5 phường, xã xã hội chủ nghĩa nhằm nâng chất lượng sống và phát huy vai trò người dân trong quản trị cộng đồng.",
+      "link": "https://vnexpress.net/tp-hcm-se-thi-diem-5-phuong-xa-xa-hoi-chu-nghia-5082709.html",
+      "date": "Sat, 06 Jun 2026 13:56:17 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Nhánh xà cừ cổ thụ gãy đè người đi xe máy",
+      "summary": "Nhánh xà cừ cổ thụ đường kính hơn 60 cm trên đường 21 Tháng 8, phường Phan Rang, bất ngờ gãy, đè người đàn ông đi xe máy bị thương nặng, sáng 6/6.",
+      "link": "https://vnexpress.net/nhanh-xa-cu-co-thu-gay-de-nguoi-di-xe-may-5082706.html",
+      "date": "Sat, 06 Jun 2026 13:18:26 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Phó thủ tướng: Không đánh đổi môi trường lấy tăng trưởng kinh tế đơn thuần",
       "summary": "Phó thủ tướng Hồ Quốc Dũng yêu cầu các bộ, ngành, địa phương thúc đẩy chuyển đổi xanh, phát triển kinh tế tuần hoàn và kinh tế biển xanh.",
@@ -101,77 +129,49 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Xe container tông xe công nông, 3 người chết",
-      "summary": "Xe công nông chở người dân đi rẫy va chạm với xe container trên quốc lộ 14, đoạn qua xã Cư Jut, khiến 3 người chết, một người bị thương, sáng 6/6.",
-      "link": "https://vnexpress.net/xe-container-tong-xe-cong-nong-3-nguoi-chet-5082609.html",
+      "title": "Xe đầu kéo tông xe máy cày, 3 người chết",
+      "summary": "Xe đầu kéo tông xe máy cày chở người dân đi rẫy trên đường Hồ Chí Minh, đoạn qua xã Cư Jút, khiến ba người chết, ba người bị thương, sáng 6/6.",
+      "link": "https://vnexpress.net/xe-dau-keo-tong-xe-may-cay-3-nguoi-chet-5082609.html",
       "date": "Sat, 06 Jun 2026 09:33:13 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Quạt Chàng Sơn: Vực dậy nghề thủ công bằng công nghệ",
-      "summary": "Khi nghề làm quạt ở Chàng Sơn ngày càng mai một, nghệ nhân Nguyễn Quang Hồng tìm cách cùng con trai đưa công nghệ vào làm mới quy trình sản xuất, giúp vực dậy và phát triển nghề...",
-      "link": "https://vnexpress.net/quat-chang-son-vuc-day-nghe-thu-cong-bang-cong-nghe-5080614.html",
-      "date": "Sat, 06 Jun 2026 06:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Metro Thủ Dầu Một - TP HCM có thể được làm sớm hơn 5 năm",
-      "summary": "TP HCM đề xuất khởi công tuyến metro Thủ Dầu Một - trung tâm thành phố cuối năm nay, hoàn thành năm 2030, sớm hơn 5 năm so với kế hoạch ban đầu.",
-      "link": "https://vnexpress.net/metro-thu-dau-mot-tp-hcm-co-the-duoc-lam-som-hon-5-nam-5082495.html",
-      "date": "Sat, 06 Jun 2026 05:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Biệt thự cổ miền Tây loay hoay 'tìm đường sống'",
-      "summary": "Trong hàng trăm dinh thự cổ, chỉ một số căn được trùng tu bài bản, kết hợp làm du lịch giúp người dân có thu nhập ổn định để bảo tồn hiệu quả.",
-      "link": "https://vnexpress.net/biet-thu-co-mien-tay-loay-hoay-tim-duong-song-5081923.html",
-      "date": "Sat, 06 Jun 2026 05:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Đề xuất phòng chống kiệt sức tại nơi làm việc",
-      "summary": "Tổng liên đoàn Lao động Việt Nam kiến nghị sửa Bộ luật Lao động theo hướng bổ sung quy định chăm sóc sức khỏe tâm thần, phòng chống kiệt sức tại nơi làm việc và giảm áp lực cho...",
-      "link": "https://vnexpress.net/de-xuat-phong-chong-kiet-suc-tai-noi-lam-viec-5082412.html",
-      "date": "Sat, 06 Jun 2026 00:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Người dân Cát Lái vui mừng khi phường có điểm hỗ trợ dịch vụ công trực tuyến",
-      "summary": "Sáng 6-6, trụ sở liên khu phố 18, 19, 22, và 25, phường Cát Lái (TP.HCM) tổ chức lễ ra mắt điểm hỗ trợ dịch vụ công trực tuyến và triển khai thí điểm mô hình điểm tuyên truyền,...",
-      "link": "https://tuoitre.vn/nguoi-dan-cat-lai-vui-mung-khi-phuong-co-diem-ho-tro-dich-vu-cong-truc-tuyen-20260606102336007.htm",
-      "date": "Sat, 06 Jun 2026 11:00:11 GMT+7",
+      "title": "Phú Quốc liên tiếp phẫu thuật thành công các ca gãy xương đùi, chấn thương đốt sống phức tạp",
+      "summary": "Ngày 6-6, Trung tâm Y tế Phú Quốc (tỉnh An Giang) phối hợp cùng các chuyên gia Bệnh viện Chợ Rẫy TP.HCM liên tiếp thực hiện thành công các ca đại phẫu gãy xương đùi, chấn thương...",
+      "link": "https://tuoitre.vn/phu-quoc-lien-tiep-phau-thuat-thanh-cong-cac-ca-gay-xuong-dui-chan-thuong-dot-song-phuc-tap-20260606153426932.htm",
+      "date": "Sat, 06 Jun 2026 15:55:01 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Xe container va chạm xe công nông, 3 người chết",
-      "summary": "Xe container chạy trên đường Hồ Chí Minh bất ngờ va chạm với xe công nông phía trước làm 3 người chết, 2 nạn nhân bị thương.",
-      "link": "https://tuoitre.vn/xe-container-va-cham-xe-cong-nong-3-nguoi-chet-20260606103815365.htm",
-      "date": "Sat, 06 Jun 2026 10:59:26 GMT+7",
+      "title": "Xác minh clip nhóm người khiêng quan tài có người sống bên trong diễu hành trên phố",
+      "summary": "Lãnh đạo phường Sóc Trăng cho biết công an đang xác minh vụ nhóm người khiêng quan tài có người sống bên trong diễu hành, nhảy múa trên đường phố gây xôn xao dư luận.",
+      "link": "https://tuoitre.vn/xac-minh-clip-nhom-nguoi-khieng-quan-tai-co-nguoi-song-ben-trong-dieu-hanh-tren-pho-20260606152849737.htm",
+      "date": "Sat, 06 Jun 2026 15:54:39 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Biến xà bần thành sản phẩm xanh, sạch",
-      "summary": "Sớm hoàn thiện đề án, xây dựng cơ chế chính sách và quy định phù hợp, khuyến khích doanh nghiệp tham gia... là những giải pháp mà TP.HCM đang thúc đẩy quá trình tái chế rác thải...",
-      "link": "https://tuoitre.vn/bien-xa-ban-thanh-san-pham-xanh-sach-20260605232017904.htm",
-      "date": "Sat, 06 Jun 2026 10:43:00 GMT+7",
+      "title": "Bí thư TP.HCM nêu 5 từ khóa thực hiện Nghị quyết 09",
+      "summary": "Bí thư Thành ủy TP.HCM Trần Lưu Quang nhấn mạnh 5 từ khóa 'trọng trách, quyết tâm, chuẩn xác, sáng tạo, dũng cảm' để hiện thực hóa Nghị quyết 09 của Bộ Chính trị.",
+      "link": "https://tuoitre.vn/bi-thu-tp-hcm-neu-5-tu-khoa-thuc-hien-nghi-quyet-09-20260606154113827.htm",
+      "date": "Sat, 06 Jun 2026 15:50:06 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Nhiều công nghệ thanh toán không tiền mặt thu hút sự chú ý tại Ngày Tài chính số",
-      "summary": "Phó thủ tướng Chính phủ Nguyễn Văn Thắng, Thống đốc Phạm Đức Ấn cùng lãnh đạo các cơ quan Trung ương và TP.HCM, đại diện cơ quan quản lý, ngân hàng cũng như doanh nghiệp đã trải...",
-      "link": "https://tuoitre.vn/nhieu-cong-nghe-thanh-toan-khong-tien-mat-thu-hut-su-chu-y-tai-ngay-tai-chinh-so-20260606094205634.htm",
-      "date": "Sat, 06 Jun 2026 10:26:09 GMT+7",
+      "title": "Phong Nha - Kẻ Bàng lần đầu được UNESCO công nhận Khu dự trữ sinh quyển thế giới",
+      "summary": "Vườn quốc gia Phong Nha - Kẻ Bàng vừa được UNESCO công nhận là Khu dự trữ sinh quyển thế giới, mở thêm cơ hội bảo tồn và phát triển bền vững.",
+      "link": "https://tuoitre.vn/phong-nha-ke-bang-lan-dau-duoc-unesco-cong-nhan-khu-du-tru-sinh-quyen-the-gioi-20260606125614331.htm",
+      "date": "Sat, 06 Jun 2026 15:20:23 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Mỗi người dân là một công dân xanh",
-      "summary": "Mỗi người dân làm những việc giản dị như không xả rác bừa bãi, hạn chế sử dụng túi ni lông và sản phẩm nhựa dùng một lần; tiết kiệm điện, nước; trồng và chăm sóc cây xanh; giữ gìn...",
-      "link": "https://tuoitre.vn/moi-nguoi-dan-la-mot-cong-dan-xanh-20260606094059771.htm",
-      "date": "Sat, 06 Jun 2026 10:12:46 GMT+7",
+      "title": "Đà Nẵng đã thu 1.437 tỉ từ thực hiện 2 kết luận của Thanh tra Chính phủ",
+      "summary": "Thực hiện các kết luận của Thanh tra Chính phủ, Đà Nẵng đã thu về ngân sách nhà nước hơn 1.437 tỉ đồng. Thành phố đồng thời tháo gỡ cho 1.984 dự án và đang tiếp tục xử lý hàng...",
+      "link": "https://tuoitre.vn/da-nang-da-thu-1-437-ti-tu-thuc-hien-2-ket-luan-cua-thanh-tra-chinh-phu-20260606150531148.htm",
+      "date": "Sat, 06 Jun 2026 15:17:33 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-06T06:07:20.106755+00:00",
+  "last_updated": "2026-06-06T09:06:31.998151+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
