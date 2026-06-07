@@ -1,8 +1,64 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá vàng tuần này dự báo tiếp tục giảm",
+      "summary": "Phần lớn chuyên gia Phố Wall dự báo vàng thế giới tiếp tục lao dốc sau khi giảm hơn 210 USD trong tuần trước.",
+      "link": "https://vnexpress.net/gia-vang-tuan-nay-du-bao-tiep-tuc-giam-5082981.html",
+      "date": "Mon, 08 Jun 2026 00:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Hai con ông Nguyễn Đức Thụy gia nhập Sacombank",
+      "summary": "Con trai và con gái của Phó chủ tịch thường trực Sacombank Nguyễn Đức Thụy lần lượt được bổ nhiệm làm trợ lý cho Hội đồng quản trị và Tổng giám đốc ngân hàng.",
+      "link": "https://vnexpress.net/hai-con-ong-nguyen-duc-thuy-gia-nhap-sacombank-5082944.html",
+      "date": "Sun, 07 Jun 2026 18:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "EVN hết lỗ lũy kế hợp nhất",
+      "summary": "Hết năm 2025, Tập đoàn Điện lực Việt Nam (EVN) ghi nhận lợi nhuận lũy kế chưa phân phối hợp nhất 5.533 tỷ đồng, đảo chiều so với mức âm 38.688 tỷ cuối 2024.",
+      "link": "https://vnexpress.net/evn-het-lo-luy-ke-hop-nhat-5082918.html",
+      "date": "Sun, 07 Jun 2026 15:33:20 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Bitcoin tăng trở lại sau khi thủng mốc 60.000 USD",
+      "summary": "Bitcoin đảo chiều tăng 5% nhờ lực cầu giải ngân khi giá xuống sát 59.100 USD - vùng giá thấp nhất một năm rưỡi.",
+      "link": "https://vnexpress.net/bitcoin-tang-tro-lai-sau-khi-thung-moc-60-000-usd-5082924.html",
+      "date": "Sun, 07 Jun 2026 14:58:18 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Công ty ông Johnathan Hạnh Nguyễn làm chủ tịch tính chia cổ tức kỷ lục",
+      "summary": "Sasco, công ty do ông Johnathan Hạnh Nguyễn làm chủ tịch, lên kế hoạch chia cổ tức bằng tiền mặt hơn 46%, tức mỗi cổ phiếu nhận trên 4.600 đồng.",
+      "link": "https://vnexpress.net/cong-ty-ong-johnathan-hanh-nguyen-lam-chu-tich-tinh-chia-co-tuc-ky-luc-5082875.html",
+      "date": "Sun, 07 Jun 2026 11:22:38 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Quỹ đầu tư vàng lớn nhất thế giới liên tục xả hàng",
+      "summary": "Quỹ đầu tư SPDR Gold Trust bán ròng từ giữa tháng 5 và chỉ còn nắm giữ 1.025 tấn vàng, mức thấp nhất 8 tháng trở lại đây.",
+      "link": "https://vnexpress.net/quy-dau-tu-vang-lon-nhat-the-gioi-lien-tuc-xa-hang-5082844.html",
+      "date": "Sun, 07 Jun 2026 09:28:08 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "TCBS có Quyền Tổng giám đốc mới",
+      "summary": "Bà Trần Thị Thu Trang, người đã có 12 năm làm việc tại TCBS, được bổ nhiệm làm Quyền Tổng giám đốc công ty.",
+      "link": "https://vnexpress.net/tcbs-co-quyen-tong-giam-doc-moi-5082812.html",
+      "date": "Sun, 07 Jun 2026 08:12:51 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Sẽ ban hành cơ chế tín dụng, đặt hàng 1.000 doanh nghiệp tiên phong",
+      "summary": "Bộ Tài chính dự kiến ban hành thông tư về chương trình hỗ trợ 1.000 doanh nghiệp tiên phong - nhóm có khả năng dẫn dắt, lan tỏa công nghệ, chuỗi giá trị.",
+      "link": "https://vnexpress.net/se-ban-hanh-co-che-tin-dung-dat-hang-1-000-doanh-nghiep-tien-phong-5082762.html",
+      "date": "Sat, 06 Jun 2026 19:54:35 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "EVN thông tin rõ về khoản lợi nhuận hợp nhất toàn tập đoàn và tiền gửi ngân hàng",
-      "summary": "Tối muộn ngày 7-5, Tập đoàn Điện lực Việt Nam (EVN) đã có thông tin liên quan tới báo cáo tài chính năm 2025 được tập đoàn này công bố trước đó với các khoản lỗ, lãi và tiền gửi...",
+      "summary": "Tối muộn ngày 7-6, Tập đoàn Điện lực Việt Nam (EVN) đã có thông tin liên quan tới báo cáo tài chính năm 2025 được tập đoàn này công bố trước đó với các khoản lỗ, lãi và tiền gửi...",
       "link": "https://tuoitre.vn/evn-thong-tin-ro-ve-khoan-loi-nhuan-hop-nhat-toan-tap-doan-va-tien-gui-ngan-hang-20260607223822031.htm",
       "date": "Mon, 08 Jun 2026 00:02:31 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
@@ -26,13 +82,6 @@
       "summary": "Hơn 500 lượt tương tác, tiếp cận 1.500 khách hàng và trao 250 phần quà đã được dành tặng khách tham quan tại gian hàng của OCB trong khuôn khổ Ngày Tài chính số 2026.",
       "link": "https://tuoitre.vn/mot-ung-dung-co-hon-200-tien-ich-tai-chinh-va-thanh-toan-duoc-gioi-thieu-tai-ngay-tai-chinh-so-2026-20260607201123975.htm",
       "date": "Sun, 07 Jun 2026 21:39:47 GMT+7",
-      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Bế mạc Ngày Tài chính số 2026: hơn 40.000 phần quà được trao và nhiều con số biết nói",
-      "summary": "Sau hai ngày diễn ra, Lễ hội Tài chính số 2026 đã khép lại với những con số rất ấn tượng: hơn 20.000 tài khoản mở mới, hơn 80.000 lượt tương tác trực tiếp, hơn 2,5 triệu lượt...",
-      "link": "https://tuoitre.vn/be-mac-ngay-tai-chinh-so-2026-hon-40-000-phan-qua-duoc-trao-va-nhieu-con-so-biet-noi-20260607210247351.htm",
-      "date": "Sun, 07 Jun 2026 21:31:17 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
@@ -87,8 +136,15 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
+      "title": "Thời tiết hôm nay 8-6: Bắc Bộ mưa lớn từ chiều nay, Trung Bộ nắng nóng",
+      "summary": "Do ảnh hưởng không khí lạnh giữa mùa hè, thời tiết Bắc Bộ ngày nắng nhưng chiều tối bắt đầu có mưa to. Trung Bộ nắng nóng. Nam Bộ ngày nắng, chiều mưa dông.",
+      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-8-6-bac-bo-mua-lon-tu-chieu-nay-trung-bo-nang-nong-20260607173402823.htm",
+      "date": "Mon, 08 Jun 2026 01:07:00 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
       "title": "EVN thông tin rõ về khoản lợi nhuận hợp nhất toàn tập đoàn và tiền gửi ngân hàng",
-      "summary": "Tối muộn ngày 7-5, Tập đoàn Điện lực Việt Nam (EVN) đã có thông tin liên quan tới báo cáo tài chính năm 2025 được tập đoàn này công bố trước đó với các khoản lỗ, lãi và tiền gửi...",
+      "summary": "Tối muộn ngày 7-6, Tập đoàn Điện lực Việt Nam (EVN) đã có thông tin liên quan tới báo cáo tài chính năm 2025 được tập đoàn này công bố trước đó với các khoản lỗ, lãi và tiền gửi...",
       "link": "https://tuoitre.vn/evn-thong-tin-ro-ve-khoan-loi-nhuan-hop-nhat-toan-tap-doan-va-tien-gui-ngan-hang-20260607223822031.htm",
       "date": "Mon, 08 Jun 2026 00:02:31 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
@@ -113,16 +169,9 @@
       "link": "https://tuoitre.vn/viet-nam-va-lao-day-manh-hop-tac-kinh-te-tu-huu-nghi-sang-hieu-qua-20260607200339421.htm",
       "date": "Sun, 07 Jun 2026 20:31:10 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Cây cầu 1.800 tỉ đồng sẽ thay thế cầu Đuống cũ, khép lại hành trình lịch sử hơn 120 năm",
-      "summary": "Theo kế hoạch, ngay khi cụm cầu mới đi vào khai thác, cầu Đuống cũ sẽ chính thức được tháo dỡ, khép lại vai trò của một huyết mạch giao thông đã gắn bó với Hà Nội hơn 120 năm.",
-      "link": "https://tuoitre.vn/cay-cau-1-800-ti-dong-se-thay-the-cau-duong-cu-khep-lai-hanh-trinh-lich-su-hon-120-nam-20260607184100672.htm",
-      "date": "Sun, 07 Jun 2026 19:21:46 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-07T19:08:51.896778+00:00",
+  "last_updated": "2026-06-07T20:43:47.665852+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
