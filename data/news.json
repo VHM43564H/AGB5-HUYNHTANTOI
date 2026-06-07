@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "EVN hết lỗ lũy kế hợp nhất",
+      "summary": "Hết năm 2025, Tập đoàn Điện lực Việt Nam (EVN) ghi nhận lợi nhuận lũy kế chưa phân phối hợp nhất 5.533 tỷ đồng, đảo chiều so với mức âm 38.688 tỷ cuối 2024.",
+      "link": "https://vnexpress.net/evn-het-lo-luy-ke-hop-nhat-5082918.html",
+      "date": "Sun, 07 Jun 2026 15:33:20 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Bitcoin tăng trở lại sau khi thủng mốc 60.000 USD",
       "summary": "Bitcoin đảo chiều tăng 5% nhờ lực cầu giải ngân khi giá xuống sát 59.100 USD - vùng giá thấp nhất một năm rưỡi.",
       "link": "https://vnexpress.net/bitcoin-tang-tro-lai-sau-khi-thung-moc-60-000-usd-5082924.html",
@@ -22,8 +29,8 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "TCBS có Quyền tổng giám đốc mới",
-      "summary": "Bà Trần Thị Thu Trang, người đã có 12 năm làm việc tại TCBS, được bổ nhiệm làm Quyền tổng giám đốc công ty.",
+      "title": "TCBS có Quyền Tổng giám đốc mới",
+      "summary": "Bà Trần Thị Thu Trang, người đã có 12 năm làm việc tại TCBS, được bổ nhiệm làm Quyền Tổng giám đốc công ty.",
       "link": "https://vnexpress.net/tcbs-co-quyen-tong-giam-doc-moi-5082812.html",
       "date": "Sun, 07 Jun 2026 08:12:51 +0700",
       "source": "Kinh doanh - VnExpress RSS"
@@ -50,44 +57,37 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vàng miếng về sát mốc 150 triệu đồng",
-      "summary": "Các thương hiệu bán ra vàng miếng quanh mức 150,2 triệu đồng một lượng, giảm gần 41 triệu đồng so với đỉnh hôm 2/3.",
-      "link": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-6-6-5082662.html",
-      "date": "Sat, 06 Jun 2026 10:50:32 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Ngân hàng muốn giúp tiểu thương thu tiền dễ hơn",
-      "summary": "Tham gia Ngày Tài chính số 2026, VPBank giới thiệu hệ sinh thái tài chính số toàn diện, từ ngân hàng, đầu tư, bảo hiểm đến các giải pháp quản lý dòng tiền và tiếp cận vốn dành cho...",
-      "link": "https://tuoitre.vn/ngan-hang-muon-giup-tieu-thuong-thu-tien-de-hon-20260607124104665.htm",
-      "date": "Sun, 07 Jun 2026 13:12:29 GMT+7",
+      "title": "Prudential Việt Nam giới thiệu hệ sinh thái bảo hiểm số tiện lợi",
+      "summary": "Trong hàng loạt các gian hàng tham gia Lễ hội Tài chính số 2026, gian hàng của Prudential Việt Nam được xem là \"hàng hiếm\" bởi là doanh nghiệp bảo hiểm nhân thọ duy nhất đồng hành...",
+      "link": "https://tuoitre.vn/prudential-viet-nam-gioi-thieu-he-sinh-thai-bao-hiem-so-tien-loi-20260607135943845.htm",
+      "date": "Sun, 07 Jun 2026 15:18:43 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Ngân hàng đua xây hệ sinh thái số, đồng hành hộ kinh doanh trong giai đoạn chuyển đổi",
-      "summary": "Tại Ngày Tài chính số 2026, nhiều ngân hàng như HDBank, Vietcombank và VPBank đã giới thiệu các hệ sinh thái thanh toán và quản lý tài chính toàn diện, giúp hộ kinh doanh vận hành...",
-      "link": "https://tuoitre.vn/ngan-hang-dua-xay-he-sinh-thai-so-dong-hanh-ho-kinh-doanh-trong-giai-doan-chuyen-doi-20260607121412293.htm",
-      "date": "Sun, 07 Jun 2026 12:40:50 GMT+7",
+      "title": "Ngân hàng cho con: Đồng hành cùng trẻ trong hành trình tài chính đầu đời",
+      "summary": "Khi thanh toán không tiền mặt đang dần trở thành mặc định trong nền kinh tế số, nhiều phụ huynh bắt đầu đối mặt với một câu hỏi mới: làm sao để con hiểu giá trị của tiền bạc khi...",
+      "link": "https://tuoitre.vn/ngan-hang-cho-con-dong-hanh-cung-tre-trong-hanh-trinh-tai-chinh-dau-doi-20260607123906557.htm",
+      "date": "Sun, 07 Jun 2026 15:02:52 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "EVN báo lãi đột biến, xóa sạch lỗ lũy kế, có hơn 150.000 tỉ gửi ngân hàng",
-      "summary": "Tập đoàn Điện lực Việt Nam (EVN) vừa công bố báo cáo tài chính hợp nhất đã được kiểm toán năm 2025 với lãi sau thuế đạt 51.881 tỉ đồng, cao gấp 6,3 lần so với năm trước.",
-      "link": "https://tuoitre.vn/evn-bao-lai-dot-bien-xoa-sach-lo-luy-ke-co-hon-150-000-ti-gui-ngan-hang-20260607104553775.htm",
-      "date": "Sun, 07 Jun 2026 11:40:00 GMT+7",
+      "title": "'Cái bẫy' bất động sản của châu Á",
+      "summary": "An ninh tài chính của cả một thế hệ khi về hưu bị gắn chặt với giá nhà, đến mức giá nhà gần như không được phép giảm. Và mối liên hệ này có trở thành \"cái bẫy\" hay không tùy thuộc...",
+      "link": "https://tuoitre.vn/cai-bay-bat-dong-san-cua-chau-a-20260607141528489.htm",
+      "date": "Sun, 07 Jun 2026 14:40:45 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Đồng Tháp 'cầm tay chỉ việc' đưa nông sản lên sàn thương mại điện tử",
-      "summary": "Nằm trong chuỗi hoạt động của Lễ hội Trái cây lần thứ 1, Sở Công Thương Đồng Tháp phối hợp các đơn vị tổ chức tập huấn kỹ năng bán hàng thương mại điện tử cho doanh nghiệp,...",
-      "link": "https://tuoitre.vn/dong-thap-cam-tay-chi-viec-dua-nong-san-len-san-thuong-mai-dien-tu-20260607104145672.htm",
-      "date": "Sun, 07 Jun 2026 11:36:01 GMT+7",
+      "title": "Thanh toán số và bảo hiểm lấy niềm tin khách hàng làm trọng tâm",
+      "summary": "Niềm tin người dùng, khả năng kết nối toàn cầu và ứng dụng công nghệ số được xem là nền tảng để mở rộng hệ sinh thái tài chính số bền vững.",
+      "link": "https://tuoitre.vn/thanh-toan-so-va-bao-hiem-lay-niem-tin-khach-hang-lam-trong-tam-20260607124541207.htm",
+      "date": "Sun, 07 Jun 2026 14:11:17 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
-      "title": "Công đoàn: Giảm giờ làm dưới 48 tiếng 'không kéo giảm năng suất lao động'",
+      "title": "Công đoàn: Giảm giờ làm dưới 48 tiếng không kéo giảm năng suất lao động",
       "summary": "Đại diện người lao động kỳ vọng luật sửa đổi sớm quy định lộ trình giảm giờ làm trong doanh nghiệp xuống 40-44 tiếng, cân bằng đời sống góp phần tăng năng suất lao động.",
       "link": "https://vnexpress.net/cong-doan-giam-gio-lam-duoi-48-tieng-khong-keo-giam-nang-suat-lao-dong-5082896.html",
       "date": "Sun, 07 Jun 2026 14:12:52 +0700",
@@ -136,7 +136,28 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Tổ Cảnh sát giao thông cùng dân quét đá rơi vãi trên quốc lộ 1 trong đêm, cư dân mạng viral",
+      "title": "Thủ tướng Timor-Leste đến Hà Nội, bắt đầu thăm chính thức Việt Nam",
+      "summary": "Chuyến thăm Việt Nam của Thủ tướng Timor-Leste Kay Rala Xanana Gusmão diễn ra trong 4 ngày, bao gồm việc tham dự Diễn đàn Tương lai ASEAN lần thứ 3.",
+      "link": "https://tuoitre.vn/thu-tuong-timor-leste-den-ha-noi-bat-dau-tham-chinh-thuc-viet-nam-20260607154636018.htm",
+      "date": "Sun, 07 Jun 2026 16:01:11 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Làm rơi bùn đất ra đường lúc nửa đêm ở Hà Nội, tài xế xe tải bị phạt 3 triệu đồng",
+      "summary": "Làm việc với cơ quan công an, anh T. cho biết khi đến khu vực trên, do phát hiện vật cản trên đường nên phanh gấp, khiến bùn đất phía sau dồn lên làm bật tụ ben và rơi xuống mặt...",
+      "link": "https://tuoitre.vn/lam-roi-bun-dat-ra-duong-luc-nua-dem-o-ha-noi-tai-xe-xe-tai-bi-phat-3-trieu-dong-20260607144329985.htm",
+      "date": "Sun, 07 Jun 2026 15:06:15 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Quảng Ngãi hứng đỉnh điểm nắng nóng, có nơi chạm ngưỡng 41 độ C",
+      "summary": "Quảng Ngãi đang chịu đợt nắng nóng gay gắt nhất từ đầu năm đến nay. Nhiều khu vực đồng bằng phía đông của tỉnh được dự báo chạm ngưỡng 41 độ C trong hai ngày 7 và 8-6.",
+      "link": "https://tuoitre.vn/quang-ngai-hung-dinh-diem-nang-nong-co-noi-cham-nguong-41-do-c-20260607142734155.htm",
+      "date": "Sun, 07 Jun 2026 14:38:31 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Tổ cảnh sát giao thông cùng dân quét đá rơi vãi trên quốc lộ 1 trong đêm, cư dân mạng viral",
       "summary": "Những hình ảnh tổ cảnh sát giao thông đường bộ số 1 (Phòng Cảnh sát giao thông Công an tỉnh Quảng Trị) xắn tay áo cùng người dân quét đá rơi vãi dày đặc trên quốc lộ 1 qua xã Vĩnh...",
       "link": "https://tuoitre.vn/to-canh-sat-giao-thong-cung-dan-quet-da-roi-vai-tren-quoc-lo-1-trong-dem-cu-dan-mang-viral-20260607133240521.htm",
       "date": "Sun, 07 Jun 2026 13:58:40 GMT+7",
@@ -144,34 +165,13 @@
     },
     {
       "title": "Radar xuyên đất của quân đội vào cuộc, đào 4 rãnh thăm dò tìm mộ tập thể liệt sĩ ở Kon Tum",
-      "summary": "Radar xuyên đất của quân đội vào cuộc tìm kiếm, quy tập hài cốt liệt sĩ hi sinh trong cuộc Tổng tiến công nổi dậy mùa xuân Mậu Thân năm 1968 ở đường Trường Chinh (phường Đăk Cấm...",
+      "summary": "Radar xuyên đất của quân đội vào cuộc tìm kiếm, quy tập hài cốt liệt sĩ hy sinh trong cuộc Tổng tiến công và nổi dậy mùa xuân Mậu Thân năm 1968 ở đường Trường Chinh (phường Đăk...",
       "link": "https://tuoitre.vn/radar-xuyen-dat-cua-quan-doi-vao-cuoc-dao-4-ranh-tham-do-tim-mo-tap-the-liet-si-o-kon-tum-2026060713271796.htm",
       "date": "Sun, 07 Jun 2026 13:55:57 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Xe khách húc đuôi đầu kéo trên cao tốc Phan Thiết - Dầu Giây, gần 20 hành khách bị thương",
-      "summary": "Vụ tai nạn xảy ra lúc rạng sáng 7-6 tại đoạn dốc Km30 cao tốc Phan Thiết - Dầu Giây, xã Tân Lập, tỉnh Lâm Đồng (vùng Bình Thuận cũ).",
-      "link": "https://tuoitre.vn/xe-khach-huc-duoi-dau-keo-tren-cao-toc-phan-thiet-dau-giay-gan-20-hanh-khach-bi-thuong-20260607121752955.htm",
-      "date": "Sun, 07 Jun 2026 13:03:25 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Ba tấm ảnh của vị kiến trúc sư và hố chôn tập thể liệt sĩ ở công viên Lê Thị Riêng",
-      "summary": "Tuổi Trẻ Online có trao đổi với kiến trúc sư Nguyễn Xuân Thắng, người nhiều năm gắn bó với việc thu thập thông tin phục vụ tìm kiếm hài cốt liệt sĩ.",
-      "link": "https://tuoitre.vn/ba-tam-anh-cua-vi-kien-truc-su-va-ho-chon-tap-the-liet-si-o-cong-vien-le-thi-rieng-20260607111944805.htm",
-      "date": "Sun, 07 Jun 2026 13:00:12 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Quyết tâm phê duyệt hướng tuyến metro số 6 đoạn sân bay Tân Sơn Nhất - Phú Hữu trong tháng 6-2026",
-      "summary": "TP.HCM phấn đấu phê duyệt hướng tuyến metro số 6 đoạn Tân Sơn Nhất - Phú Hữu trong tháng 6-2026, trình báo cáo cuối kỳ vào tháng 10 và phê duyệt, khởi công dự án cuối năm 2026.",
-      "link": "https://tuoitre.vn/quyet-tam-phe-duyet-huong-tuyen-metro-so-6-doan-san-bay-tan-son-nhat-phu-huu-trong-thang-6-2026-20260607105437093.htm",
-      "date": "Sun, 07 Jun 2026 11:33:30 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-07T08:33:38.634420+00:00",
+  "last_updated": "2026-06-07T11:02:45.589899+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
