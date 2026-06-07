@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Công viên Lê Thị Riêng - nơi tìm mộ chiến sĩ hy sinh 58 năm trước",
+      "summary": "Công viên ở trung tâm TP HCM rộng 8 ha với nhiều mảng xanh, đang là nơi tìm kiếm hố chôn chiến sĩ hy sinh trong cuộc tổng tấn công và nổi dậy Xuân Mậu Thân năm 1968.",
+      "link": "https://vnexpress.net/cong-vien-le-thi-rieng-noi-tim-mo-chien-si-hy-sinh-58-nam-truoc-5081168.html",
+      "date": "Mon, 08 Jun 2026 05:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Quảng Ninh nghìn năm thăng trầm",
       "summary": "Để có được thực thể hành chính thống nhất và phát triển như hiện nay, Quảng Ninh đã trải qua hàng nghìn năm thăng trầm với nhiều lần sáp nhập, đổi tên.",
       "link": "https://vnexpress.net/quang-ninh-nghin-nam-thang-tram-5082993.html",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Không khí lạnh cuối mùa tràn xuống, miền Bắc mưa lớn",
-      "summary": "Sau nhiều ngày nắng nóng gay gắt, từ chiều tối mai miền Bắc đón đợt không khí lạnh cuối mùa khiến nhiệt độ giảm mạnh, nhiều nơi mưa to.",
-      "link": "https://vnexpress.net/khong-khi-lanh-cuoi-mua-tran-xuong-mien-bac-mua-lon-5082856.html",
-      "date": "Sun, 07 Jun 2026 09:56:43 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Thời tiết hôm nay 8-6: Bắc Bộ mưa lớn từ chiều nay, Trung Bộ nắng nóng",
       "summary": "Do ảnh hưởng không khí lạnh giữa mùa hè, thời tiết Bắc Bộ ngày nắng nhưng chiều tối bắt đầu có mưa to. Trung Bộ nắng nóng. Nam Bộ ngày nắng, chiều mưa dông.",
       "link": "https://tuoitre.vn/thoi-tiet-hom-nay-8-6-bac-bo-mua-lon-tu-chieu-nay-trung-bo-nang-nong-20260607173402823.htm",
@@ -171,7 +171,7 @@
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-07T21:59:04.282433+00:00",
+  "last_updated": "2026-06-07T23:07:07.930506+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
