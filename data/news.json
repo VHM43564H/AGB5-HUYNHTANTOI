@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá vàng tuần này dự báo tiếp tục giảm",
+      "summary": "Phần lớn chuyên gia Phố Wall dự báo vàng thế giới tiếp tục lao dốc sau khi giảm hơn 210 USD trong tuần trước.",
+      "link": "https://vnexpress.net/gia-vang-tuan-nay-du-bao-tiep-tuc-giam-5082981.html",
+      "date": "Mon, 08 Jun 2026 00:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Hai con ông Nguyễn Đức Thụy gia nhập Sacombank",
       "summary": "Con trai và con gái của Phó chủ tịch thường trực Sacombank Nguyễn Đức Thụy lần lượt được bổ nhiệm làm trợ lý cho Hội đồng quản trị và Tổng giám đốc ngân hàng.",
       "link": "https://vnexpress.net/hai-con-ong-nguyen-duc-thuy-gia-nhap-sacombank-5082944.html",
@@ -50,11 +57,11 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Ông Lê Hồng Minh: 'Cổ phiếu VNG chưa phản ánh đúng giá trị thực'",
-      "summary": "Ông Lê Hồng Minh cho rằng giá lẫn thanh khoản của VNG chưa phản ánh đúng giá trị do khối lượng lên sàn ít và ban lãnh đạo \"không hứa hẹn hoành tráng\".",
-      "link": "https://vnexpress.net/ong-le-hong-minh-co-phieu-vng-chua-phan-anh-dung-gia-tri-thuc-5082728.html",
-      "date": "Sat, 06 Jun 2026 15:46:46 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "EVN thông tin rõ về khoản lợi nhuận hợp nhất toàn tập đoàn và tiền gửi ngân hàng",
+      "summary": "Tối muộn ngày 7-5, Tập đoàn Điện lực Việt Nam (EVN) đã có thông tin liên quan tới báo cáo tài chính năm 2025 được tập đoàn này công bố trước đó với các khoản lỗ, lãi và tiền gửi...",
+      "link": "https://tuoitre.vn/evn-thong-tin-ro-ve-khoan-loi-nhuan-hop-nhat-toan-tap-doan-va-tien-gui-ngan-hang-20260607223822031.htm",
+      "date": "Mon, 08 Jun 2026 00:02:31 GMT+7",
+      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
       "title": "PVcomBank áp đảo, mở mới được 1.100 tài khoản trong Lễ hội Tài chính số 2026",
@@ -76,16 +83,16 @@
       "link": "https://tuoitre.vn/mot-ung-dung-co-hon-200-tien-ich-tai-chinh-va-thanh-toan-duoc-gioi-thieu-tai-ngay-tai-chinh-so-2026-20260607201123975.htm",
       "date": "Sun, 07 Jun 2026 21:39:47 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Bế mạc Ngày Tài chính số 2026: hơn 40.000 phần quà được trao và nhiều con số biết nói",
-      "summary": "Sau hai ngày diễn ra, Lễ hội Tài chính số 2026 đã khép lại với những con số rất ấn tượng: Hơn 20.000 tài khoản mở mới, hơn 80.000 lượt tương tác trực tiếp, hơn 2,5 triệu lượt...",
-      "link": "https://tuoitre.vn/be-mac-ngay-tai-chinh-so-2026-hon-40-000-phan-qua-duoc-trao-va-nhieu-con-so-biet-noi-20260607210247351.htm",
-      "date": "Sun, 07 Jun 2026 21:31:17 GMT+7",
-      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Tàu hỏa tông xe ben, tài xế thoát nạn trong gang tấc",
+      "summary": "Ba giây trước khi tàu hỏa đâm trúng xe tải đang mắc kẹt trên đường ray ở xã Thường Tín, tài xế đã kịp nhảy ra ngoài, tối 7/6.",
+      "link": "https://vnexpress.net/tau-hoa-tong-xe-ben-tai-xe-thoat-nan-trong-gang-tac-5083001.html",
+      "date": "Mon, 08 Jun 2026 00:17:35 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Bùn rơi xuống đường ở Hà Nội, hai người bị ngã",
       "summary": "Quá trình di chuyển trên đường Võ Chí Công, nam tài xế xe tải ben phanh gấp làm bùn rơi xuống đường, hai người đi xe máy bị ngã.",
@@ -129,11 +136,11 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Bức ảnh 58 năm trước hé lộ dấu tích hố chôn liệt sĩ ở công viên Lê Thị Riêng",
-      "summary": "Bức ảnh chụp dịp Tết Mậu Thân năm 1968 cộng với lời kể nhiều điểm tương đồng của các nhân chứng về khả năng có hố chôn tập thể liệt sĩ ở công viên trung tâm TP HCM.",
-      "link": "https://vnexpress.net/buc-anh-58-nam-truoc-he-lo-dau-tich-ho-chon-liet-si-o-cong-vien-le-thi-rieng-5081981.html",
-      "date": "Sun, 07 Jun 2026 05:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "EVN thông tin rõ về khoản lợi nhuận hợp nhất toàn tập đoàn và tiền gửi ngân hàng",
+      "summary": "Tối muộn ngày 7-5, Tập đoàn Điện lực Việt Nam (EVN) đã có thông tin liên quan tới báo cáo tài chính năm 2025 được tập đoàn này công bố trước đó với các khoản lỗ, lãi và tiền gửi...",
+      "link": "https://tuoitre.vn/evn-thong-tin-ro-ve-khoan-loi-nhuan-hop-nhat-toan-tap-doan-va-tien-gui-ngan-hang-20260607223822031.htm",
+      "date": "Mon, 08 Jun 2026 00:02:31 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
       "title": "Công an lập hồ sơ xử lý vụ hai người nghi bạo hành, ép trẻ em bán hàng rong ở TP.HCM",
@@ -162,16 +169,9 @@
       "link": "https://tuoitre.vn/cay-cau-1-800-ti-dong-se-thay-the-cau-duong-cu-khep-lai-hanh-trinh-lich-su-hon-120-nam-20260607184100672.htm",
       "date": "Sun, 07 Jun 2026 19:21:46 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Cháy rừng phòng hộ ven biển lúc Quảng Ngãi nắng nóng đỉnh điểm",
-      "summary": "Ngày 7-6, Quảng Ngãi nắng nóng đỉnh điểm, có nơi ghi nhận chạm mốc 41 độ C. Vụ cháy rừng phòng hộ ven biển ở xã Mỏ Cày được phát hiện lúc 10h và khoảng 16h đã được khống chế.",
-      "link": "https://tuoitre.vn/chay-rung-phong-ho-ven-bien-luc-quang-ngai-nang-nong-dinh-diem-2026060717245158.htm",
-      "date": "Sun, 07 Jun 2026 18:34:37 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-07T16:08:24.340256+00:00",
+  "last_updated": "2026-06-07T17:45:39.781483+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
