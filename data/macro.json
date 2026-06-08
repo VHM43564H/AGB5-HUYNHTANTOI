@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T11:27:45.023678+00:00",
+  "last_updated": "2026-06-08T14:56:22.621688+00:00",
   "frequency": "quarterly",
   "source": "Tổng cục Thống kê Việt Nam (GSO/NSO) - Báo cáo tình hình kinh tế - xã hội theo quý",
   "country": "Vietnam (VN)",
@@ -525,6 +525,48 @@
     }
   },
   "annual_fallback": {
+    "gdp_growth": [
+      {
+        "year": "2015",
+        "value": 6.98715430598611
+      },
+      {
+        "year": "2016",
+        "value": 6.69000892660424
+      },
+      {
+        "year": "2017",
+        "value": 6.94019037359206
+      },
+      {
+        "year": "2018",
+        "value": 7.46500685572751
+      },
+      {
+        "year": "2019",
+        "value": 7.35926270105006
+      },
+      {
+        "year": "2020",
+        "value": 2.86541320912272
+      },
+      {
+        "year": "2021",
+        "value": 2.55372852648131
+      },
+      {
+        "year": "2022",
+        "value": 8.53750046755788
+      },
+      {
+        "year": "2023",
+        "value": 5.06502391455075
+      },
+      {
+        "year": "2024",
+        "value": 7.09118746633975
+      }
+    ],
     "cpi_inflation": [
       {
         "year": "2015",
