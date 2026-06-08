@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Ngành hàng không sẽ tốn thêm 100 tỷ USD vì giá nhiên liệu tăng vọt",
+      "summary": "Các hãng bay dự báo tốn thêm 100 tỷ USD tiền nhiên liệu năm nay do xung đột Trung Đông đẩy giá cả tăng cao, theo IATA.",
+      "link": "https://vnexpress.net/nganh-hang-khong-se-ton-them-100-ty-usd-vi-gia-nhien-lieu-tang-vot-5083353.html",
+      "date": "Tue, 09 Jun 2026 01:54:55 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Công ty ông Lê Viết Hải tính phát hành cổ phiếu cho gần 100 chủ nợ",
       "summary": "Tập đoàn Xây dựng Hòa Bình do ông Lê Viết Hải làm Chủ tịch HĐQT đang lên kế hoạch phát hành gần 47 triệu cổ phiếu để hoán đổi nợ với 96 doanh nghiệp.",
       "link": "https://vnexpress.net/cong-ty-ong-le-viet-hai-tinh-phat-hanh-co-phieu-cho-gan-100-chu-no-5083393.html",
@@ -47,13 +54,6 @@
       "summary": "OPEC+ tiếp tục tăng sản lượng dầu, bất chấp việc chiến sự tại Trung Đông đang gây khó cho nhiều nước thành viên.",
       "link": "https://vnexpress.net/opec-tang-san-xuat-dau-lan-thu-4-lien-tiep-5083132.html",
       "date": "Mon, 08 Jun 2026 10:51:29 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Giá vàng giảm hơn 7 triệu đồng trong ngày",
-      "summary": "Mỗi lượng vàng giảm hơn 7 triệu đồng trong ngày, tới chiều nay về dưới 144 triệu, chỉ còn chênh lệch với thế giới 7,5 triệu đồng.",
-      "link": "https://vnexpress.net/gia-vang-giam-hon-7-trieu-dong-trong-ngay-5083082.html",
-      "date": "Mon, 08 Jun 2026 10:35:08 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-08T17:46:22.115392+00:00",
+  "last_updated": "2026-06-08T20:03:38.396958+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
