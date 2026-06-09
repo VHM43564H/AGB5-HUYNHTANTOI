@@ -1,6 +1,34 @@
 {
   "tin_tuc": [
     {
+      "title": "VN-Index đảo chiều sau nhịp giảm sốc",
+      "summary": "VN-Index tăng nhẹ và áp sát ngưỡng tâm lý 1.800 điểm nhờ lực đỡ của cổ phiếu ngân hàng, thép, bù cho áp lực xả hàng kéo dài ở nhóm Vingroup.",
+      "link": "https://vnexpress.net/vn-index-dao-chieu-sau-nhip-giam-soc-5083737.html",
+      "date": "Tue, 09 Jun 2026 16:07:39 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Liên Hợp Quốc: Toàn cầu thải 52 triệu tấn nhựa ra đại dương mỗi năm",
+      "summary": "Toàn cầu thải hơn 52 triệu tấn rác nhựa ra đại dương mỗi năm, gấp 4-10 lần lượng rác vài năm trước, gây ảnh hưởng tới 4.000 loài sinh vật biển.",
+      "link": "https://vnexpress.net/lien-hop-quoc-toan-cau-thai-52-trieu-tan-nhua-ra-dai-duong-moi-nam-5083662.html",
+      "date": "Tue, 09 Jun 2026 15:56:42 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "'Doanh nghiệp ưu tiên AI nhưng chưa ứng dụng sâu'",
+      "summary": "Một phần ba doanh nghiệp xem AI là ưu tiên chiến lược, nhưng chỉ 3% tự đánh giá mình sẵn sàng làm chủ công nghệ này, còn lại mới ứng dụng cho các tác vụ cơ bản.",
+      "link": "https://vnexpress.net/doanh-nghiep-uu-tien-ai-nhung-chua-ung-dung-sau-5083570.html",
+      "date": "Tue, 09 Jun 2026 13:54:55 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Xuất khẩu của Trung Quốc sang Mỹ tăng mạnh nhất 5 năm",
+      "summary": "Tháng trước, xuất khẩu của Trung Quốc sang Mỹ tăng 35,4% so với năm ngoái, tiếp tục phục hồi sau khi lao dốc năm 2025 vì thuế.",
+      "link": "https://vnexpress.net/xuat-khau-cua-trung-quoc-sang-my-tang-manh-nhat-5-nam-5083596.html",
+      "date": "Tue, 09 Jun 2026 13:43:07 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "OpenAI bí mật nộp hồ sơ IPO",
       "summary": "Ngày 8/6, OpenAI - công ty mẹ ChatGPT cho biết gần đây đã bí mật nộp hồ sơ phát hành cổ phiếu lần đầu ra công chúng (IPO).",
       "link": "https://vnexpress.net/openai-bi-mat-nop-ho-so-ipo-5083552.html",
@@ -29,63 +57,77 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vé máy bay giảm vào cao điểm hè",
-      "summary": "Sau nhiều tháng neo ở mức cao, giá vé máy bay nhiều chặng nội địa từ đầu tháng 6 giảm 10-15% khi các hãng mở rộng dải giá thấp và đẩy mạnh kích cầu.",
-      "link": "https://vnexpress.net/gia-ve-may-bay-giam-vao-cao-diem-he-5083075.html",
-      "date": "Tue, 09 Jun 2026 08:14:24 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Vì sao giá vàng giảm 7 triệu đồng chỉ trong một ngày?",
-      "summary": "Giá vàng giảm tới 7 triệu đồng mỗi lượng trong ngày 8/6 do chịu tác động từ nhịp điều chỉnh của thị trường thế giới cùng với lực bán trong nước, theo chuyên gia.",
-      "link": "https://vnexpress.net/vi-sao-gia-vang-giam-7-trieu-dong-chi-trong-mot-ngay-5083422.html",
-      "date": "Tue, 09 Jun 2026 07:38:28 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "VinFast sẽ cung cấp 1 triệu ôtô cho Green SM trong 4 năm",
-      "summary": "Giai đoạn 2026-2030, VinFast sẽ cung cấp 1 triệu ôtô cho Green SM, giúp công ty này mở rộng mảng gọi xe, cho thuê và dịch vụ vận chuyển.",
-      "link": "https://vnexpress.net/vinfast-se-cung-cap-1-trieu-oto-cho-green-sm-trong-4-nam-5083421.html",
-      "date": "Tue, 09 Jun 2026 07:22:57 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Ngành hàng không sẽ tốn thêm 100 tỷ USD vì giá nhiên liệu tăng vọt",
-      "summary": "Các hãng bay dự báo tốn thêm 100 tỷ USD tiền nhiên liệu năm nay do xung đột Trung Đông đẩy giá cả tăng cao, theo IATA.",
-      "link": "https://vnexpress.net/nganh-hang-khong-se-ton-them-100-ty-usd-vi-gia-nhien-lieu-tang-vot-5083353.html",
-      "date": "Tue, 09 Jun 2026 01:54:55 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Hàng không tăng tải mùa hè, giá vé nội địa vẫn cao",
-      "summary": "Vietnam Airlines Group, gồm Vietnam Airlines, Pacific Airlines và VASCO, cho biết sẽ cung ứng gần 5,5 triệu ghế trên mạng bay nội địa từ nay đến ngày 16-8 nhằm phục vụ nhu cầu đi...",
-      "link": "https://tuoitre.vn/hang-khong-tang-tai-mua-he-gia-ve-noi-dia-van-cao-20260608233718531.htm",
-      "date": "Tue, 09 Jun 2026 11:55:00 GMT+7",
+      "title": "VN-Index lấy lại sắc xanh, dòng tiền đột ngột đổ về một mã ngân hàng",
+      "summary": "Thị trường chứng khoán duy trì đà hồi phục trong phiên 9-6 khi VN-Index tăng hơn 2 điểm, trong đó cổ phiếu ACB bất ngờ trở thành tâm điểm dòng tiền với mức tăng gần 5% và thanh...",
+      "link": "https://tuoitre.vn/vn-index-lay-lai-sac-xanh-dong-tien-dot-ngot-do-ve-mot-ma-ngan-hang-2026060915330654.htm",
+      "date": "Tue, 09 Jun 2026 15:59:10 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Giá điện có cơ hội giảm khi EVN lãi 52.000 tỉ đồng?",
-      "summary": "Tập đoàn Điện lực Việt Nam (EVN) đã ghi nhận mức lãi hợp nhất kỷ lục với gần 52.000 tỉ đồng. Vậy giá điện có cơ hội giảm cho người tiêu dùng khi bức tranh tài chính của ngành điện...",
-      "link": "https://tuoitre.vn/gia-dien-co-co-hoi-giam-khi-evn-lai-52-000-ti-dong-20260609113033446.htm",
-      "date": "Tue, 09 Jun 2026 11:52:00 GMT+7",
+      "title": "Giải quyết điểm nghẽn mã vùng trồng cho nông sản Việt",
+      "summary": "Thạc sĩ Lê Châu Hải Vũ, Phó chủ tịch Câu lạc bộ Doanh Nông Việt Nam, cho rằng một trong những điều kiện tiên quyết để nông sản Việt có thể đi xa chính là mã vùng trồng.",
+      "link": "https://tuoitre.vn/giai-quyet-diem-nghen-ma-vung-trong-cho-nong-san-viet-20260609152452503.htm",
+      "date": "Tue, 09 Jun 2026 15:47:58 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Tập đoàn TH ra mắt Trà không đường TH true TEA",
-      "summary": "Tập đoàn TH vừa ra mắt Trà không đường TH true TEA với hai hương vị Trà xanh tự nhiên không đường và Trà hương đào tự nhiên không đường.",
-      "link": "https://tuoitre.vn/tap-doan-th-ra-mat-tra-khong-duong-th-true-tea-20260609104633298.htm",
-      "date": "Tue, 09 Jun 2026 11:30:00 GMT+7",
+      "title": "TP.HCM: Không cấp phép lắp biển quảng cáo, biển thông tin cổ động trên vỉa hè",
+      "summary": "UBND TP.HCM vừa có văn bản chỉ đạo về quản lý xây dựng, lắp đặt, xử lý công trình biển quảng cáo, biển thông tin cổ động, tuyên truyền chính trị trong phạm vi bảo vệ kết cấu hạ...",
+      "link": "https://tuoitre.vn/tp-hcm-khong-cap-phep-lap-bien-quang-cao-bien-thong-tin-co-dong-tren-via-he-20260609124931065.htm",
+      "date": "Tue, 09 Jun 2026 15:39:03 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Cần Thơ kêu gọi Singapore đầu tư vào 5 lĩnh vực, có lĩnh vực ‘thành phố đang rất cần’",
-      "summary": "Chủ tịch UBND thành phố Cần Thơ kêu gọi doanh nghiệp Singapore đầu tư vào 5 lĩnh vực, trong đó có lĩnh vực \"thành phố đang rất cần\".",
-      "link": "https://tuoitre.vn/can-tho-keu-goi-singapore-dau-tu-vao-5-linh-vuc-co-linh-vuc-thanh-pho-dang-rat-can-20260609103831148.htm",
-      "date": "Tue, 09 Jun 2026 10:48:33 GMT+7",
+      "title": "Bang Florida của Mỹ đề xuất giảm mạnh thuế bất động sản nhằm tăng lợi thế cạnh tranh với Texas",
+      "summary": "Theo Thống đốc DeSantis, chi phí sinh hoạt gia tăng, đặc biệt giá nhà ở, bảo hiểm và lạm phát, đang tạo áp lực lớn đối với người dân Florida.",
+      "link": "https://tuoitre.vn/bang-florida-cua-my-de-xuat-giam-manh-thue-bat-dong-san-nham-tang-loi-the-canh-tranh-voi-texas-20260609150952381.htm",
+      "date": "Tue, 09 Jun 2026 15:21:37 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "'Quảng Ninh đáp ứng tiêu chí lên thành phố trực thuộc Trung ương'",
+      "summary": "Phó thủ tướng Phạm Thị Thanh Trà đánh giá Quảng Ninh cơ bản đáp ứng tiêu chí trở thành thành phố trực thuộc Trung ương và cần phát huy vai trò là cực tăng trưởng quan trọng của...",
+      "link": "https://vnexpress.net/quang-ninh-dap-ung-tieu-chi-len-thanh-pho-truc-thuoc-trung-uong-5083640.html",
+      "date": "Tue, 09 Jun 2026 16:11:48 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Tiếp tục giảm 5-10% biên chế của hệ thống chính trị",
+      "summary": "Bộ Chính trị yêu cầu tiếp tục tinh giản từ 5-10% biên chế hệ thống chính trị giai đoạn 2027-2031, đồng thời siết chặt đánh giá cán bộ, thực hiện nguyên tắc \"có vào - có ra\".",
+      "link": "https://vnexpress.net/tiep-tuc-giam-5-10-bien-che-cua-he-thong-chinh-tri-5083655.html",
+      "date": "Tue, 09 Jun 2026 16:00:10 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Cháy nhà ở TP HCM, cụ bà 76 tuổi tử vong",
+      "summary": "Cụ bà 76 tuổi, sức khỏe yếu, mắc kẹt trong căn nhà cấp bốn gần cầu vượt Trạm 2, phường Linh Xuân, TP HCM, khi hỏa hoạn xảy ra trưa 9/6.",
+      "link": "https://vnexpress.net/chay-nha-o-tp-hcm-cu-ba-76-tuoi-tu-vong-5083730.html",
+      "date": "Tue, 09 Jun 2026 15:38:10 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Hướng tuyến đường sắt tốc độ cao cần hạn chế tác động tháp Chăm 1.300 tuổi",
+      "summary": "Bộ Xây dựng yêu cầu chủ đầu tư lập báo cáo nghiên cứu khả thi đường sắt tốc độ cao phải lựa chọn tuyến tối ưu nhất, hạn chế ảnh hưởng tháp Hòa Lai.",
+      "link": "https://vnexpress.net/huong-tuyen-duong-sat-toc-do-cao-can-han-che-tac-dong-thap-cham-1-300-tuoi-5083667.html",
+      "date": "Tue, 09 Jun 2026 14:42:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "'Sử dụng tối đa sức mạnh kinh tế thị trường nhưng không để phân hóa giàu nghèo cùng cực'",
+      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm đề nghị công tác lý luận cần nghiên cứu sử dụng tối đa sức mạnh của kinh tế thị trường, cởi trói mọi nguồn lực tư nhân nhưng không để xảy ra phân...",
+      "link": "https://vnexpress.net/su-dung-toi-da-suc-manh-kinh-te-thi-truong-nhung-khong-de-phan-hoa-giau-ngheo-cung-cuc-5083630.html",
+      "date": "Tue, 09 Jun 2026 14:30:29 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Gần 40 chuyến bay bị ảnh hưởng vì UAV và diều",
+      "summary": "Cục Hàng không Việt Nam ghi nhận 38 chuyến bay bị chậm khởi hành hoặc phải chuyển hướng hạ cánh do các vật thể bay xuất hiện gần sân bay Nội Bài và Cát Bi.",
+      "link": "https://vnexpress.net/gan-40-chuyen-bay-bi-anh-huong-vi-uav-va-dieu-5083588.html",
+      "date": "Tue, 09 Jun 2026 14:13:49 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Mở rộng cao tốc TP HCM - Trung Lương - Mỹ Thuận vướng hơn 100 ha",
       "summary": "Gần 120 ha mặt bằng dự án mở rộng cao tốc TP HCM - Trung Lương - Mỹ Thuận chưa được giải phóng, trong khi nguồn cát, đá cung cấp cho công trình còn thiếu.",
@@ -94,84 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Quy tập hơn 1.100 hài cốt liệt sĩ sau gần 3 tháng phát động chiến dịch",
-      "summary": "Sau gần 3 tháng triển khai Chiến dịch 500 ngày đêm, các lực lượng đã tìm kiếm, quy tập 1.109 hài cốt liệt sĩ, trong đó gần 700 trường hợp tại Campuchia.",
-      "link": "https://vnexpress.net/quy-tap-hon-1-100-hai-cot-liet-si-sau-gan-3-thang-phat-dong-chien-dich-5083572.html",
-      "date": "Tue, 09 Jun 2026 12:11:22 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Đề xuất đầu tư tuyến đường sắt TP HCM - Cần Thơ hơn 171.000 tỷ đồng",
-      "summary": "Tuyến đường sắt TP HCM - Cần Thơ dự kiến dài 175 km đi qua 5 địa phương, tốc độ thiết kế tàu khách 160 km/h, tàu hàng 120 km/h, tổng đầu tư 171.000 tỷ đồng.",
-      "link": "https://vnexpress.net/de-xuat-dau-tu-tuyen-duong-sat-tp-hcm-can-tho-hon-171-000-ty-dong-5083559.html",
-      "date": "Tue, 09 Jun 2026 11:53:42 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cháy quán karaoke 5 tầng ở Đà Nẵng",
-      "summary": "Hỏa hoạn bùng phát tại quán karaoke 5 tầng gần khu phố du lịch An Thượng sáng 9/6, hơn 10 xe chữa cháy cùng gần 100 cán bộ, chiến sĩ được huy động dập lửa.",
-      "link": "https://vnexpress.net/chay-quan-karaoke-5-tang-o-da-nang-5083590.html",
-      "date": "Tue, 09 Jun 2026 11:46:16 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "'Giải mã' nghi vấn hố chôn 900 liệt sĩ ở công viên Lê Thị Riêng",
-      "summary": "Hàng chục bức hình, không ảnh, bản đồ qua hơn nửa thế kỷ cùng lời kể của nhiều nhân chứng đã chỉ ra vị trí nghi có hố chôn tập thể tại công viên Lê Thị Riêng.",
-      "link": "https://vnexpress.net/giai-ma-nghi-van-ho-chon-900-liet-si-o-cong-vien-le-thi-rieng-5083508.html",
-      "date": "Tue, 09 Jun 2026 10:30:56 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Mưa giông xuất hiện nhiều nơi trong ngày thi tốt nghiệp THPT",
-      "summary": "Trong ba ngày thi tốt nghiệp THPT (10-12/6), thời tiết cả nước nhìn chung thuận lợi, song nhiều khu vực có mưa giông vào chiều tối và đêm, cục bộ xuất hiện mưa to.",
-      "link": "https://vnexpress.net/mua-giong-xuat-hien-nhieu-noi-trong-ngay-thi-tot-nghiep-thpt-5083474.html",
-      "date": "Tue, 09 Jun 2026 09:54:37 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Hiện trạng đường từ TP HCM đi miền Tây được đề xuất mở rộng gấp 6",
-      "summary": "Đường Lê Văn Lương, kết nối TP HCM với Tây Ninh và miền Tây, hiện nhỏ hẹp, thường ùn tắc, được đề xuất mở rộng lên 30-40 m, với tổng vốn gần 10.000 tỷ đồng.",
-      "link": "https://vnexpress.net/hien-trang-duong-tu-tp-hcm-di-mien-tay-duoc-de-xuat-mo-rong-gap-6-5083095.html",
-      "date": "Tue, 09 Jun 2026 05:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Khởi tố người nước ngoài đập phá quán cà phê giữa trung tâm Đà Nẵng",
-      "summary": "Người nước ngoài đập phá quán cà phê trên đường Lê Hồng Phong (Đà Nẵng) đã bị khởi tố.",
-      "link": "https://tuoitre.vn/khoi-to-nguoi-nuoc-ngoai-dap-pha-quan-ca-phe-giua-trung-tam-da-nang-20260609114125247.htm",
-      "date": "Tue, 09 Jun 2026 11:54:45 GMT+7",
+      "title": "Củ Chi hướng tới cực tăng trưởng mới khu vực Tây Bắc TP.HCM",
+      "summary": "Ngày 9-6, UBND xã Củ Chi (TP.HCM) tổ chức hội thảo chuyên đề Định hướng phát triển xã Củ Chi trong cấu trúc không gian TP.HCM đến năm 2040, tầm nhìn đến năm 2060.",
+      "link": "https://tuoitre.vn/cu-chi-huong-toi-cuc-tang-truong-moi-khu-vuc-tay-bac-tp-hcm-20260609153925418.htm",
+      "date": "Tue, 09 Jun 2026 16:03:34 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Đường sắt TP.HCM - Cần Thơ giai đoạn 1 là đường đơn, tốc độ 160km/h",
-      "summary": "Qua nghiên cứu, Ban quản lý dự án Mỹ Thuận đề xuất đường sắt TP.HCM - Cần Thơ giai đoạn 1 là đường đơn, tốc độ thiết kế 160km/h vận chuyển hành khách và hàng hóa.",
-      "link": "https://tuoitre.vn/duong-sat-tp-hcm-can-tho-giai-doan-1-la-duong-don-toc-do-160km-h-20260609111548956.htm",
-      "date": "Tue, 09 Jun 2026 11:51:37 GMT+7",
+      "title": "TP.HCM xây 50.000 nhà ở cho thuê đến 2030, hỗ trợ vay vốn đến 300 tỉ đồng/dự án",
+      "summary": "Chiều 9-6, Sở Xây dựng TP.HCM phối hợp Hội Khoa học kỹ thuật xây dựng TP.HCM tổ chức hội nghị triển khai, xúc tiến đầu tư và phát triển nhà ở cho thuê trên địa bàn TP.HCM.",
+      "link": "https://tuoitre.vn/tp-hcm-xay-50-000-nha-o-cho-thue-den-2030-ho-tro-vay-von-den-300-ti-dong-du-an-20260609130522807.htm",
+      "date": "Tue, 09 Jun 2026 15:57:20 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "'Chiến dịch 500 ngày đêm' đưa các liệt sĩ trở về: Đã tìm kiếm, quy tập được 1.109 hài cốt liệt sĩ",
-      "summary": "Theo thông tin từ Văn phòng Ban Chỉ đạo quốc gia 515, đến nay đã tìm kiếm, quy tập được 1.109 hài cốt liệt sĩ và 2 mộ liệt sĩ tập thể tại Tuyên Quang.",
-      "link": "https://tuoitre.vn/chien-dich-500-ngay-dem-dua-cac-liet-si-tro-ve-da-tim-kiem-quy-tap-duoc-1-109-hai-cot-liet-si-20260609110244555.htm",
-      "date": "Tue, 09 Jun 2026 11:16:19 GMT+7",
+      "title": "Khởi công mở rộng gần 7km quốc lộ 24B, người dân mừng vì sắp thoát cảnh 'vừa đi vừa lo'",
+      "summary": "Gần 7km quốc lộ 24B qua Quảng Ngãi chính thức được khởi công nâng cấp, mở rộng. Theo kế hoạch, 18 tháng sau công trình sẽ đưa vào sử dụng, chấm dứt cảnh 'vừa đi vừa lo' vì lưu...",
+      "link": "https://tuoitre.vn/khoi-cong-mo-rong-gan-7km-quoc-lo-24b-nguoi-dan-mung-vi-sap-thoat-canh-vua-di-vua-lo-20260609152831699.htm",
+      "date": "Tue, 09 Jun 2026 15:51:54 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Gỡ nút thắt mặt bằng và vật liệu cho dự án mở rộng cao tốc TP.HCM - Trung Lương - Mỹ Thuận",
-      "summary": "Dự án mở rộng cao tốc huyết mạch về miền Tây TP.HCM - Trung Lương - Mỹ Thuận đang đối mặt với khó khăn thiếu vật liệu xây dựng như cát, đá... trầm trọng.",
-      "link": "https://tuoitre.vn/go-nut-that-mat-bang-va-vat-lieu-cho-du-an-mo-rong-cao-toc-tp-hcm-trung-luong-my-thuan-20260609101949272.htm",
-      "date": "Tue, 09 Jun 2026 11:01:20 GMT+7",
+      "title": "Cử tri 9 xã ở Tây Ninh đồng thuận việc thành lập phường",
+      "summary": "Ngày 9-6, thông tin từ UBND tỉnh Tây Ninh cho biết đã có báo cáo tổng hợp kết quả lấy ý kiến nhân dân về việc thành lập 9 phường trên cơ sở nguyên trạng của 9 xã thuộc tỉnh.",
+      "link": "https://tuoitre.vn/cu-tri-9-xa-o-tay-ninh-dong-thuan-viec-thanh-lap-phuong-20260609143419265.htm",
+      "date": "Tue, 09 Jun 2026 14:42:15 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Đồng Tháp lấy mẫu ADN hài cốt liệt sĩ chưa xác định danh tính",
-      "summary": "Sáng 9-6, tại Nghĩa trang liệt sĩ Châu Thành, xã Phú Hựu, tỉnh Đồng Tháp, Ban Chỉ đạo 515 đã tổ chức lấy mẫu ADN đối với các hài cốt liệt sĩ chưa xác định danh tính.",
-      "link": "https://tuoitre.vn/dong-thap-lay-mau-adn-hai-cot-liet-si-chua-xac-dinh-danh-tinh-2026060910201406.htm",
-      "date": "Tue, 09 Jun 2026 10:55:47 GMT+7",
+      "title": "Có thể dùng radar xuyên đất giúp xác định khu mộ tập thể liệt sĩ ở công viên Lê Thị Riêng",
+      "summary": "Đây là một trong những giải pháp được đề xuất để khoanh vùng, thu hẹp vị trí khảo sát khu vực có thể có mộ tập thể liệt sĩ tại công viên Lê Thị Riêng được Ban Chỉ đạo 515, TP.HCM...",
+      "link": "https://tuoitre.vn/co-the-dung-radar-xuyen-dat-giup-xac-dinh-khu-mo-tap-the-liet-si-o-cong-vien-le-thi-rieng-20260609140303252.htm",
+      "date": "Tue, 09 Jun 2026 14:31:51 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-09T06:31:23.677972+00:00",
+  "last_updated": "2026-06-09T10:30:10.848487+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
