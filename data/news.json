@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Vùng Vịnh tìm cách thoát phụ thuộc eo biển Hormuz",
+      "summary": "Nhằm giảm phụ thuộc xuất khẩu dầu qua eo biển Hormuz trong tương lai, các nước vùng Vịnh mạnh tay chi tiền xây thêm đường ống, kho dự trữ.",
+      "link": "https://vnexpress.net/vung-vinh-tim-cach-thoat-phu-thuoc-eo-bien-hormuz-5083766.html",
+      "date": "Wed, 10 Jun 2026 00:02:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Ngành than được áp dụng cơ chế đặc thù, đảm bảo an ninh năng lượng",
       "summary": "Chính phủ cho phép doanh nghiệp được áp dụng cơ chế đặc thù, khai thác than vượt tới 15% công suất, đảm bảo an ninh năng lượng quốc gia trong tình huống cấp bách.",
       "link": "https://vnexpress.net/nganh-than-duoc-ap-dung-co-che-dac-thu-dam-bao-an-ninh-nang-luong-5083831.html",
@@ -50,11 +57,11 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "'Cá voi' Strategy gom hàng trong tuần Bitcoin giảm mạnh",
-      "summary": "Sau khi bán ra 32 token làm thị trường chao đảo, Strategy nhanh chóng mua 1.550 Bitcoin trong giai đoạn thị giá có lúc về dưới 60.000 USD.",
-      "link": "https://vnexpress.net/ca-voi-strategy-gom-hang-trong-tuan-bitcoin-giam-manh-5083527.html",
-      "date": "Tue, 09 Jun 2026 10:46:13 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "SpaceX ký thỏa thuận điện toán đám mây hàng chục tỉ USD với Google",
+      "summary": "Theo thỏa thuận của hai hãng, Google sẽ phải trả cho SpaceX 920 triệu USD mỗi tháng để được cung cấp dịch vụ điện toán đám mây.",
+      "link": "https://tuoitre.vn/spacex-ky-thoa-thuan-dien-toan-dam-may-hang-chuc-ti-usd-voi-google-20260609203434335.htm",
+      "date": "Tue, 09 Jun 2026 22:20:05 GMT+7",
+      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
       "title": "Bắc Ninh sẽ quy hoạch khu thương mại tự do 5.000ha gắn với sân bay Gia Bình",
@@ -76,16 +83,30 @@
       "link": "https://tuoitre.vn/sap-dien-ra-workshop-chuan-hoa-thanh-toan-nang-cao-hieu-qua-kinh-doanh-20260609185144634.htm",
       "date": "Tue, 09 Jun 2026 20:03:24 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Khởi tố vụ án bán hàng giả Louis Vuitton, Gucci, Adidas...",
-      "summary": "Công an tỉnh Phú Thọ khởi tố vụ án sau khi phát hiện một cửa hàng bày bán 617 sản phẩm giả mạo nhiều thương hiệu nổi tiếng, mua qua mạng xã hội để bán kiếm lời.",
-      "link": "https://tuoitre.vn/khoi-to-vu-an-ban-hang-gia-louis-vuitton-gucci-adidas-20260609180958942.htm",
-      "date": "Tue, 09 Jun 2026 18:52:54 GMT+7",
-      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "6 phương án mở rộng cầu Nhơn Trạch nối TP HCM - Đồng Nai",
+      "summary": "Sau gần một năm khai thác, cầu Nhơn Trạch trên Vành đai 3 TP HCM được đề xuất đầu tư mở rộng lên 6 hoặc 8 làn xe nhằm đồng bộ kế hoạch nâng cấp toàn tuyến.",
+      "link": "https://vnexpress.net/6-phuong-an-mo-rong-cau-nhon-trach-noi-tp-hcm-dong-nai-5083825.html",
+      "date": "Wed, 10 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "'Lao động không chịu nổi nếu thuê nhà vượt 25% thu nhập'",
+      "summary": "Chi phí thuê quá cao khiến lao động gặp áp lực tài chính lớn, phần thu nhập còn lại không đủ tái tạo sức khỏe, đảm bảo cuộc sống, theo Chủ tịch Hiệp hội Bất động sản TP HCM.",
+      "link": "https://vnexpress.net/lao-dong-khong-chiu-noi-neu-thue-nha-vuot-25-thu-nhap-5083797.html",
+      "date": "Wed, 10 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Những công trình làm thay đổi diện mạo Quảng Ninh",
+      "summary": "Sau hơn 60 năm thành lập, hàng loạt công trình quy mô lớn được triển khai, làm thay đổi diện mạo đô thị, đưa Quảng Ninh thành cực tăng trưởng năng động của miền Bắc.",
+      "link": "https://vnexpress.net/nhung-cong-trinh-lam-thay-doi-dien-mao-quang-ninh-5066646.html",
+      "date": "Wed, 10 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Tài xế xe tải tông gãy barie đường sắt khi tàu sắp tới",
       "summary": "Dù barie đang hạ và tín hiệu cảnh báo bật sáng, tài xế xe tải vẫn cố vượt qua đường sắt, làm gãy cần chắn chỉ ít phút trước khi tàu chạy tới.",
@@ -115,29 +136,15 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Hướng tuyến đường sắt tốc độ cao cần hạn chế tác động tháp Chăm 1.300 tuổi",
-      "summary": "Bộ Xây dựng yêu cầu chủ đầu tư lập báo cáo nghiên cứu khả thi đường sắt tốc độ cao phải lựa chọn tuyến tối ưu nhất, hạn chế ảnh hưởng tháp Hòa Lai.",
-      "link": "https://vnexpress.net/huong-tuyen-duong-sat-toc-do-cao-can-han-che-tac-dong-thap-cham-1-300-tuoi-5083667.html",
-      "date": "Tue, 09 Jun 2026 14:42:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "'Không để phân hóa giàu nghèo cùng cực'",
-      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm đề nghị công tác lý luận cần nghiên cứu sử dụng tối đa sức mạnh của kinh tế thị trường, cởi trói mọi nguồn lực tư nhân nhưng không để xảy ra phân...",
-      "link": "https://vnexpress.net/khong-de-phan-hoa-giau-ngheo-cung-cuc-5083630.html",
-      "date": "Tue, 09 Jun 2026 14:30:29 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Gần 40 chuyến bay bị ảnh hưởng vì UAV và diều",
-      "summary": "Cục Hàng không Việt Nam ghi nhận 38 chuyến bay bị chậm khởi hành hoặc phải chuyển hướng hạ cánh do các vật thể bay xuất hiện gần sân bay Nội Bài và Cát Bi.",
-      "link": "https://vnexpress.net/gan-40-chuyen-bay-bi-anh-huong-vi-uav-va-dieu-5083588.html",
-      "date": "Tue, 09 Jun 2026 14:13:49 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "TP.HCM tập trung tháo gỡ khó khăn, vướng mắc cho các dự án tồn đọng",
+      "summary": "TP.HCM cho biết đã tháo gỡ hoặc có hướng xử lý 834 dự án tồn đọng, đồng thời tiếp tục rà soát, khơi thông nguồn lực cho phát triển.",
+      "link": "https://tuoitre.vn/tp-hcm-tap-trung-thao-go-kho-khan-vuong-mac-cho-cac-du-an-ton-dong-20260609203136339.htm",
+      "date": "Tue, 09 Jun 2026 22:23:27 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
       "title": "Lãnh đạo TP.HCM thăm, chúc thọ nhiều cụ cao niên tròn 90 tuổi",
-      "summary": "Ngày 9-6, các đoàn đại biểu TP.HCM đã đến thăm, chúc thọ các cụ cao niên tiêu biểu tròn 90 tuổi nhân dịp kỷ niệm 85 năm Ngày truyền thống Người cao tuổi Việt Nam.",
+      "summary": "Ngày 9-6, các đoàn đại biểu TP.HCM đã đến thăm, chúc thọ các cụ cao niên tiêu biểu tròn 90 tuổi nhân dịp kỷ niệm 85 năm Ngày truyền thống người cao tuổi Việt Nam.",
       "link": "https://tuoitre.vn/lanh-dao-tp-hcm-tham-chuc-tho-nhieu-cu-cao-nien-tron-90-tuoi-20260609201811331.htm",
       "date": "Tue, 09 Jun 2026 22:14:20 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
@@ -162,16 +169,9 @@
       "link": "https://tuoitre.vn/tong-bi-thu-chu-tich-nuoc-to-lam-co-hoi-chi-tro-thanh-loi-the-khi-asean-du-nang-luc-nam-bat-2026060920151505.htm",
       "date": "Tue, 09 Jun 2026 21:16:48 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Bắc Ninh sẽ quy hoạch khu thương mại tự do 5.000ha gắn với sân bay Gia Bình",
-      "summary": "Bắc Ninh sẽ quy hoạch khu thương mại tự do gắn với sân bay Gia Bình với quy mô khoảng 5.000ha và định hướng phát triển theo mô hình hiện đại, tích hợp sản xuất, logistics, thương...",
-      "link": "https://tuoitre.vn/bac-ninh-se-quy-hoach-khu-thuong-mai-tu-do-5-000ha-gan-voi-san-bay-gia-binh-20260609183102076.htm",
-      "date": "Tue, 09 Jun 2026 20:52:38 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-09T16:17:00.587104+00:00",
+  "last_updated": "2026-06-09T18:28:36.492845+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
