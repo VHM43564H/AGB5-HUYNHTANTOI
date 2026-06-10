@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Lạm phát Mỹ cao nhất 3 năm",
+      "summary": "Lạm phát Mỹ lần đầu tiên vượt 4% kể từ đầu năm 2023, chủ yếu do giá năng lượng tăng cao.",
+      "link": "https://vnexpress.net/lam-phat-my-cao-nhat-3-nam-5084267.html",
+      "date": "Thu, 11 Jun 2026 00:15:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Người Mỹ không còn được tăng lương nhiều khi nhảy việc",
+      "summary": "Mức tăng lương trung bình của lao động Mỹ khi nhảy việc hiện chỉ bằng 30% thời kỳ bùng nổ tuyển dụng trong dịch Covid-19.",
+      "link": "https://vnexpress.net/nguoi-my-khong-con-duoc-tang-luong-nhieu-khi-nhay-viec-5084177.html",
+      "date": "Thu, 11 Jun 2026 00:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "World Cup 2026 được dự báo phát thải kỷ lục",
+      "summary": "Dù không xây sân vận động mới, World Cup 2026 vẫn được dự báo phát thải kỷ lục 7,8 triệu tấn CO2e, gấp đôi mùa giải tại Qatar do làn sóng di chuyển của người hâm mộ.",
+      "link": "https://vnexpress.net/world-cup-2026-duoc-du-bao-phat-thai-ky-luc-5084092.html",
+      "date": "Thu, 11 Jun 2026 00:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Phó tổng giám đốc EVN: Đổi khung giờ điện cao điểm không ảnh hưởng đến hộ gia đình",
       "summary": "Chi phí tiền điện của các hộ gia đình sẽ không đổi, song doanh nghiệp cần điều chỉnh giờ sản xuất để thích ứng nếu khung giờ cao điểm mới được áp dụng, theo đại diện EVN.",
       "link": "https://vnexpress.net/pho-tong-giam-doc-evn-doi-khung-gio-dien-cao-diem-khong-anh-huong-den-ho-gia-dinh-5084252.html",
@@ -36,25 +57,18 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Thủ tướng giao tiến độ gỡ vướng các dự án bất động sản tồn đọng",
-      "summary": "Thủ tướng yêu cầu hoàn thành loạt văn bản hướng dẫn ngay trong tháng 7 và 8 để xử lý các dự án bất động sản, sử dụng đất tồn đọng, kéo dài.",
-      "link": "https://vnexpress.net/thu-tuong-giao-tien-do-go-vuong-cac-du-an-bat-dong-san-ton-dong-5084031.html",
-      "date": "Wed, 10 Jun 2026 11:47:01 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Nhà sản xuất máy bay ATR nhìn thấy cơ hội ở 87 đường bay ngắn tại Việt Nam",
+      "summary": "ATR cho rằng Việt Nam còn khoảng trống lớn ở các chặng bay 1-2 giờ, nơi máy bay nhỏ có thể nối sân bay địa phương, điểm du lịch và các tuyến quốc tế cự ly gần.",
+      "link": "https://tuoitre.vn/nha-san-xuat-may-bay-atr-nhin-thay-co-hoi-o-87-duong-bay-ngan-o-viet-nam-20260610202237704.htm",
+      "date": "Wed, 10 Jun 2026 22:49:53 GMT+7",
+      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Các gã khổng lồ AI sắp bước vào giai đoạn khắc nghiệt",
-      "summary": "Sau khi IPO, OpenAI, Anthropic và SpaceX sẽ phải tìm cách làm hài lòng \"ông chủ\" vốn nổi tiếng kỳ vọng cao vào AI - đó là Wall Street.",
-      "link": "https://vnexpress.net/cac-ga-khong-lo-ai-sap-buoc-vao-giai-doan-khac-nghiet-5083978.html",
-      "date": "Wed, 10 Jun 2026 11:20:09 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Giá vàng giảm xuống 138 triệu đồng",
-      "summary": "Giá vàng trong nước tới chiều nay giảm hơn 5,5 triệu đồng một lượng xuống vùng 138 triệu đồng, áp sát giá thế giới.",
-      "link": "https://vnexpress.net/gia-vang-giam-xuong-138-trieu-dong-5083973.html",
-      "date": "Wed, 10 Jun 2026 10:07:06 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "AEON Mall kinh doanh rất tốt ở Việt Nam",
+      "summary": "Việt Nam là thị trường đem lại doanh thu cao nhất cho Aeon Mall tại Đông Nam Á và thứ hai ở nước ngoài, chỉ sau Trung Quốc.",
+      "link": "https://tuoitre.vn/aeon-mall-kinh-doanh-rat-tot-o-viet-nam-20260610213127125.htm",
+      "date": "Wed, 10 Jun 2026 22:43:58 GMT+7",
+      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
       "title": "Vào vùng 'cao sơn ngọc quế' Trà Leng, nơi có nhiều vườn cây 'khủng'",
@@ -69,23 +83,23 @@
       "link": "https://tuoitre.vn/ai-chua-the-thay-the-con-nguoi-trong-cac-quyet-dinh-tai-chinh-quan-trong-20260610192004135.htm",
       "date": "Wed, 10 Jun 2026 20:47:22 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "VinFast mở thêm 66 đại lý xe máy điện",
-      "summary": "Ngày 10-6, VinFast khai trương cùng lúc 66 đại lý xe máy điện tại 22 tỉnh, thành, nâng tổng số điểm kinh doanh chính hãng lên gần 750 trên toàn quốc.",
-      "link": "https://tuoitre.vn/vinfast-mo-them-66-dai-ly-xe-may-dien-20260610185011894.htm",
-      "date": "Wed, 10 Jun 2026 19:24:29 GMT+7",
-      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Tìm cơ hội tự chủ nguyên liệu đầu vào cho ngành gỗ tại ĐBSCL",
-      "summary": "Những kết quả nghiên cứu gần đây đang cho thấy khu vực Đồng bằng sông Cửu Long có thể trở thành một vùng nguyên liệu quan trọng để doanh nghiệp Việt Nam tự chủ nguyên liệu. Dù...",
-      "link": "https://tuoitre.vn/tim-co-hoi-tu-chu-nguyen-lieu-dau-vao-cho-nganh-go-tai-dbscl-20260610171116084.htm",
-      "date": "Wed, 10 Jun 2026 18:53:15 GMT+7",
-      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Nhảy việc để có thêm thời gian nghỉ cuối tuần",
+      "summary": "Chị Ly chấp nhận giảm thu nhập, chuyển hướng tìm việc nơi có chế độ nghỉ hai ngày cuối tuần hoặc làm từ xa để có thêm thời gian bên con cái.",
+      "link": "https://vnexpress.net/nhay-viec-de-co-them-thoi-gian-nghi-cuoi-tuan-5084152.html",
+      "date": "Thu, 11 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Huế xác minh thông tin hố bom chôn cất 15 liệt sĩ",
+      "summary": "Chính quyền TP Huế đang xác minh thông tin về hố bom ở cửa Chánh Tây chôn cất khoảng 15 chiến sĩ trong trận đánh Mậu Thân 1968.",
+      "link": "https://vnexpress.net/hue-xac-minh-thong-tin-ho-bom-chon-cat-15-liet-si-5084279.html",
+      "date": "Thu, 11 Jun 2026 00:14:26 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Dự kiến giám sát việc sử dụng trụ sở công sau sắp xếp tại 12 địa phương",
       "summary": "Việc giám sát quản lý, sử dụng trụ sở làm việc sau sắp xếp đơn vị hành chính dự kiến thực hiện tại 5 thành phố và 7 tỉnh, tính từ thời điểm 1/3/2025.",
@@ -122,18 +136,11 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đề xuất truyền trực tiếp hình ảnh lái xe vận tải về CSGT",
-      "summary": "Bộ Công an đề xuất hình ảnh từ camera giám sát người lái xe và khoang hành khách trên một số phương tiện vận tải được truyền về hệ thống của Cục Cảnh sát giao thông theo thời gian...",
-      "link": "https://vnexpress.net/de-xuat-truyen-truc-tiep-hinh-anh-lai-xe-van-tai-ve-csgt-5084086.html",
-      "date": "Wed, 10 Jun 2026 15:36:20 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "5 tuyến cao tốc sắp được mở rộng",
-      "summary": "Cao tốc Hà Nội - Thái Nguyên - Chợ Mới, Hà Nội - Bắc Giang, Pháp Vân - Cầu Giẽ, Bắc Nam phía đông, Hòa Bình - Mộc Châu đang được nghiên cứu mở rộng lên 6-10 làn xe.",
-      "link": "https://vnexpress.net/5-tuyen-cao-toc-sap-duoc-mo-rong-5083989.html",
-      "date": "Wed, 10 Jun 2026 15:05:44 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Thứ trưởng Bộ Ngoại giao Ngô Lê Văn: Địa phương phải trở thành tuyến đầu trong công tác đối ngoại",
+      "summary": "Tại Hội nghị Lãnh đạo các cơ quan ngoại vụ địa phương năm 2026, Thứ trưởng Bộ Ngoại giao Ngô Lê Văn nhấn mạnh địa phương phải trở thành \"tuyến đầu\" trong đối ngoại, chủ động triển...",
+      "link": "https://tuoitre.vn/thu-truong-bo-ngoai-giao-ngo-le-van-dia-phuong-phai-tro-thanh-tuyen-dau-trong-cong-tac-doi-ngoai-20260610213216795.htm",
+      "date": "Wed, 10 Jun 2026 22:01:50 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
       "title": "Lấy sự hài lòng của nhân dân làm thước đo của mọi chủ trương, chính sách",
@@ -162,16 +169,9 @@
       "link": "https://tuoitre.vn/trung-tam-doi-moi-sang-tao-can-tho-khong-hinh-thanh-de-ban-phat-cap-phat-20260610182144003.htm",
       "date": "Wed, 10 Jun 2026 19:35:57 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Làm rõ nghi vấn đắp đập, lấn chiếm lòng hồ ở Đồng Nai",
-      "summary": "Hồ nước ở xã Phú Riềng, TP Đồng Nai nghi bị lấn chiếm lòng hồ, đào ao, san gạt đất quy mô lớn. Chính quyền kiểm tra, đang làm rõ vụ việc.",
-      "link": "https://tuoitre.vn/lam-ro-nghi-van-dap-dap-lan-chiem-long-ho-o-dong-nai-20260610185338283.htm",
-      "date": "Wed, 10 Jun 2026 19:33:23 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-10T14:33:47.025202+00:00",
+  "last_updated": "2026-06-10T17:53:22.505861+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
