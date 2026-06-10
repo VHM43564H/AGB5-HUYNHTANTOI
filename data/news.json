@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Cầu nối cao tốc Bến Lức - Long Thành với cảng Cái Mép trước hợp long",
+      "summary": "Cầu Phước An dài hơn 4 km, trục kết nối trực tiếp cảng Cái Mép - Thị Vải với cao tốc Bến Lức - Long Thành, đã thành hình sau ba năm thi công, dự kiến hợp long tháng 7.",
+      "link": "https://vnexpress.net/cau-noi-cao-toc-ben-luc-long-thanh-voi-cang-cai-mep-truoc-hop-long-5084248.html",
+      "date": "Thu, 11 Jun 2026 06:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Lấp khoảng trống an sinh cho hàng trăm nghìn tài xế công nghệ",
       "summary": "Sau hơn một thập kỷ đứng ngoài lưới an sinh, hàng trăm nghìn tài xế công nghệ có thể thuộc diện tham gia BHXH bắt buộc nếu luật được sửa đổi.",
       "link": "https://vnexpress.net/lap-khoang-trong-an-sinh-cho-hang-tram-nghin-tai-xe-cong-nghe-5083672.html",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Hiện trạng đường sắt ga Hà Nội - Ngọc Hồi trước đề xuất di dời",
-      "summary": "Từ ga Hà Nội về Ngọc Hồi, đường sắt Bắc Nam dài khoảng 10 km chạy song song với quốc lộ 1, qua nhiều khu dân cư đông đúc và hàng loạt nút giao thông lớn.",
-      "link": "https://vnexpress.net/hien-trang-duong-sat-ga-ha-noi-ngoc-hoi-truoc-de-xuat-di-doi-5084175.html",
-      "date": "Wed, 10 Jun 2026 16:55:52 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Thứ trưởng Bộ Ngoại giao Ngô Lê Văn: Địa phương phải trở thành tuyến đầu trong công tác đối ngoại",
       "summary": "Tại Hội nghị Lãnh đạo các cơ quan ngoại vụ địa phương năm 2026, Thứ trưởng Bộ Ngoại giao Ngô Lê Văn nhấn mạnh địa phương phải trở thành \"tuyến đầu\" trong đối ngoại, chủ động triển...",
       "link": "https://tuoitre.vn/thu-truong-bo-ngoai-giao-ngo-le-van-dia-phuong-phai-tro-thanh-tuyen-dau-trong-cong-tac-doi-ngoai-20260610213216795.htm",
@@ -171,7 +171,7 @@
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-10T22:25:01.888750+00:00",
+  "last_updated": "2026-06-10T23:54:34.566493+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
