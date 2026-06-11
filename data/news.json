@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Tín hiệu doanh nghiệp Việt không còn nói suông về ESG",
+      "summary": "Sau nhận thức, các doanh nghiệp tại Việt Nam đã bắt đầu thực thi ESG trước sức ép thị trường, nhà đầu tư, theo các nghiên cứu và chuyên gia.",
+      "link": "https://vnexpress.net/tin-hieu-doanh-nghiep-viet-khong-con-noi-suong-ve-esg-5084419.html",
+      "date": "Thu, 11 Jun 2026 18:19:56 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Tiền vào chứng khoán thấp nhất 14 tháng",
+      "summary": "Thanh khoản sàn HoSE hôm nay chỉ đạt hơn 10.100 tỷ đồng, mức thấp nhất kể từ tháng 4/2025, tức khoảng 14 tháng qua.",
+      "link": "https://vnexpress.net/tien-vao-chung-khoan-thap-nhat-14-thang-5084613.html",
+      "date": "Thu, 11 Jun 2026 15:53:37 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Giá xăng E10 giảm về sát 22.000 đồng",
+      "summary": "Từ 15h ngày 11/6, giá xăng, dầu cùng giảm theo đà biến động của thị trường năng lượng thế giới.",
+      "link": "https://vnexpress.net/gia-xang-e10-giam-ve-sat-22-000-dong-5084543.html",
+      "date": "Thu, 11 Jun 2026 14:34:33 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Vải không hạt giá 800.000 đồng một kg vẫn không đủ hàng bán",
       "summary": "Giá vải không hạt tại TP HCM tăng gần gấp đôi năm ngoái, lên khoảng 800.000 đồng một kg, nhưng nguồn cung vẫn khan hiếm do mất mùa nghiêm trọng.",
       "link": "https://vnexpress.net/vai-khong-hat-gia-800-000-dong-mot-kg-van-khong-du-hang-ban-5084154.html",
@@ -15,16 +36,16 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Tiền mặt dần lên ngôi",
+      "title": "Nhiều quỹ lớn tăng giữ tiền mặt",
       "summary": "Khi chứng khoán, bất động sản, vàng và tiền số đều gặp khó, tâm lý chuộng nắm giữ tiền mặt được dự báo lan rộng trong giới đầu tư.",
-      "link": "https://vnexpress.net/tien-mat-dan-len-ngoi-5084084.html",
+      "link": "https://vnexpress.net/nhieu-quy-lon-tang-giu-tien-mat-5084084.html",
       "date": "Thu, 11 Jun 2026 11:31:15 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Vàng miếng giảm hơn 2 triệu đồng một lượng",
-      "summary": "Các thương hiệu hạ giá bán vàng miếng 2,3 triệu đồng, về còn 136 triệu đồng một lượng.",
-      "link": "https://vnexpress.net/vang-mieng-giam-hon-2-trieu-dong-mot-luong-5084381.html",
+      "title": "Giá vàng miếng đảo chiều tăng",
+      "summary": "Các thương hiệu bán ra quanh mức 138,4 triệu đồng, tăng 100.000 đồng so với cuối ngày hôm qua.",
+      "link": "https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-11-6-5084381.html",
       "date": "Thu, 11 Jun 2026 09:27:51 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
@@ -36,56 +57,70 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Lạm phát Mỹ cao nhất 3 năm",
-      "summary": "Lạm phát Mỹ lần đầu tiên vượt 4% kể từ đầu năm 2023, chủ yếu do giá năng lượng tăng cao.",
-      "link": "https://vnexpress.net/lam-phat-my-cao-nhat-3-nam-5084267.html",
-      "date": "Thu, 11 Jun 2026 00:15:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Người Mỹ không còn được tăng lương nhiều khi nhảy việc",
-      "summary": "Mức tăng lương trung bình của lao động Mỹ khi nhảy việc hiện chỉ bằng 30% thời kỳ bùng nổ tuyển dụng trong dịch Covid-19.",
-      "link": "https://vnexpress.net/nguoi-my-khong-con-duoc-tang-luong-nhieu-khi-nhay-viec-5084177.html",
-      "date": "Thu, 11 Jun 2026 00:05:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Hòa Phát vượt Vietcombank, VPBank, đứng đầu sàn chứng khoán về vốn điều lệ",
-      "summary": "Sau khi hoàn tất phát hành hơn 767 triệu cổ phiếu để trả cổ tức, vốn điều lệ của Hòa Phát đạt 84.430 tỷ đồng, lớn nhất sàn chứng khoán.",
-      "link": "https://vnexpress.net/hoa-phat-vuot-vietcombank-vpbank-dung-dau-san-chung-khoan-ve-von-dieu-le-5084310.html",
-      "date": "Thu, 11 Jun 2026 07:36:06 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Hàng Việt trong chuỗi ASEAN: Nhiều cơ hội và sức ép cạnh tranh từ thị trường gần",
-      "summary": "Từ sầu riêng, sữa đến phân bón, nhiều hàng hóa của Việt Nam đang mở rộng sang thị trường Campuchia, Lào, Thái Lan nhờ lợi thế địa lý và chi phí thấp. Nhưng khi cửa mở hai chiều,...",
-      "link": "https://tuoitre.vn/hang-viet-trong-chuoi-asean-nhieu-co-hoi-va-suc-ep-canh-tranh-tu-thi-truong-gan-20260611084840204.htm",
-      "date": "Thu, 11 Jun 2026 12:21:21 GMT+7",
+      "title": "Chứng khoán Việt Nam có thể được nâng hạng theo tiêu chuẩn MSCI sớm hơn dự kiến",
+      "summary": "Ông Nguyễn Sơn - Chủ tịch HĐTV VSDC cho biết mục tiêu nâng hạng lên thị trường mới nổi theo tiêu chuẩn MSCI được đặt ra cho năm 2030, song thực tế có thể đến sớm hơn, vào năm 2028...",
+      "link": "https://tuoitre.vn/chung-khoan-viet-nam-co-the-duoc-nang-hang-theo-tieu-chuan-msci-som-hon-du-kien-20260611175600056.htm",
+      "date": "Thu, 11 Jun 2026 18:20:00 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Dạy nhà nông nghệ thuật đặt câu hỏi cho AI",
-      "summary": "Trong kỷ nguyên số, tương lai của nông nghiệp Việt Nam không chỉ nằm ở việc chuyển giao những quy trình kỹ thuật có sẵn, mà cốt lõi là trang bị cho người nông dân năng lực tự chủ...",
-      "link": "https://tuoitre.vn/day-nha-nong-nghe-thuat-dat-cau-hoi-cho-ai-20260611113725418.htm",
-      "date": "Thu, 11 Jun 2026 11:52:55 GMT+7",
+      "title": "Nhiều doanh nghiệp Thụy Điển muốn tăng đầu tư vì tin vào tăng trưởng dài hạn của Việt Nam",
+      "summary": "Báo cáo Khảo sát môi trường kinh doanh 2026 vừa được công bố cho thấy hiệu quả kinh tế của Việt Nam tiếp tục củng cố niềm tin của nhà đầu tư Thụy Điển.",
+      "link": "https://tuoitre.vn/nhieu-doanh-nghiep-thuy-dien-muon-tang-dau-tu-vi-tin-vao-tang-truong-dai-han-cua-viet-nam-20260611173000662.htm",
+      "date": "Thu, 11 Jun 2026 18:03:34 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Cần hơn 63.000 tỉ đồng làm đường cao tốc Bảo Hà - Lai Châu dài 163km",
-      "summary": "Dự án đường cao tốc Bảo Hà - Lai Châu được UBND tỉnh Lai Châu đề xuất đầu tư với quy mô 4 làn xe hoàn chỉnh, dài khoảng 163km, tổng mức đầu tư sơ bộ khoảng 63.486 tỉ đồng, thực...",
-      "link": "https://tuoitre.vn/can-hon-63-000-ti-dong-lam-duong-cao-toc-bao-ha-lai-chau-dai-163km-2026061111065814.htm",
-      "date": "Thu, 11 Jun 2026 11:39:57 GMT+7",
+      "title": "Thanh toán QR xuyên biên giới: Chìa khóa giữ dòng tiền du khách ở lại Việt Nam",
+      "summary": "Ngành du lịch không chỉ hút khách đến mà còn phải tìm cách gia tăng mức chi tiêu, và thanh toán QR xuyên biên giới là một trong những giải pháp quan trọng.",
+      "link": "https://tuoitre.vn/thanh-toan-qr-xuyen-bien-gioi-chia-khoa-giu-dong-tien-du-khach-o-lai-viet-nam-20260611170004849.htm",
+      "date": "Thu, 11 Jun 2026 17:39:12 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Lãnh đạo EVN: Lãi hợp nhất 51.881 tỉ nhưng còn 17.500 tỉ đồng chênh lệch tỉ giá chưa phân bổ",
-      "summary": "Đến hết năm 2025, khoản chênh lệch tỉ giá chưa được ghi nhận vào chi phí sản xuất, ước tính còn khoảng 17.500 tỉ đồng.",
-      "link": "https://tuoitre.vn/lanh-dao-evn-lai-hop-nhat-51-881-ti-nhung-con-17-500-ti-dong-chenh-lech-ti-gia-chua-phan-bo-20260611103206691.htm",
-      "date": "Thu, 11 Jun 2026 11:17:42 GMT+7",
+      "title": "'Chiến Binh Đầu Tư' bước vào giai đoạn nước rút, bảng xếp hạng liên tục đổi ngôi",
+      "summary": "Ban tổ chức cuộc thi đầu tư chứng khoán \"Chiến Binh Đầu Tư\" vừa công bố kết quả tuần 8 với nhiều thay đổi đáng chú ý ở nhóm dẫn đầu, khi các nhà đầu tư tăng tốc giao dịch trong...",
+      "link": "https://tuoitre.vn/chien-binh-dau-tu-buoc-vao-giai-doan-nuoc-rut-bang-xep-hang-lien-tuc-doi-ngoi-20260611163030237.htm",
+      "date": "Thu, 11 Jun 2026 17:20:38 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Đề xuất hơn 25.000 tỷ đồng xây cao tốc Nha Trang - Đà Lạt",
+      "summary": "UBND tỉnh Khánh Hòa vừa trình Thủ tướng phương án đầu tư tuyến cao tốc Nha Trang - Đà Lạt dài hơn 80 km có tổng vốn khoảng 25.050 tỷ đồng, theo hình thức PPP.",
+      "link": "https://vnexpress.net/de-xuat-hon-25-000-ty-dong-xay-cao-toc-nha-trang-da-lat-5084608.html",
+      "date": "Thu, 11 Jun 2026 17:08:08 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Tùng cổ thụ cao hơn 20 m đè hai ôtô",
+      "summary": "Cây tùng trong trụ sở một cơ quan ở phường Pleiku bật gốc, đè sập tường rào, làm hư hỏng hai ôtô, xe máy và chắn ngang đường Hùng Vương, chiều 11/6.",
+      "link": "https://vnexpress.net/tung-co-thu-cao-hon-20-m-de-hai-oto-5084601.html",
+      "date": "Thu, 11 Jun 2026 16:21:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Hà Nội dự kiến thu hẹp diện hỗ trợ đổi xe máy điện",
+      "summary": "Thay vì hỗ trợ tất cả trường hợp chuyển đổi xe máy xăng sang xe điện, dự thảo nghị quyết mới chỉ đề xuất hỗ trợ với cá nhân thuộc hộ nghèo, mức tối đa 20 triệu đồng.",
+      "link": "https://vnexpress.net/ha-noi-du-kien-thu-hep-dien-ho-tro-doi-xe-may-dien-5084551.html",
+      "date": "Thu, 11 Jun 2026 15:05:57 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Tổng Bí thư, Chủ tịch nước: Việt Nam chủ động góp sức giải quyết vấn đề toàn cầu",
+      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm nhấn mạnh Việt Nam sẽ chủ động tham gia giải quyết các vấn đề chung của cộng đồng quốc tế, đồng thời nâng cao vai trò, vị thế tại các cơ chế đa...",
+      "link": "https://vnexpress.net/tong-bi-thu-chu-tich-nuoc-viet-nam-chu-dong-gop-suc-giai-quyet-van-de-toan-cau-5084547.html",
+      "date": "Thu, 11 Jun 2026 14:46:08 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Người 60-75 tuổi ở Hà Nội được hỗ trợ 100% bảo hiểm y tế từ 1/7",
+      "summary": "Người cao tuổi từ đủ 60 đến dưới 75 tuổi và một số nhóm cư dân không thuộc diện bảo hiểm y tế bắt buộc, chưa có thẻ được TP Hà Nội hỗ trợ 100% kinh phí đóng.",
+      "link": "https://vnexpress.net/nguoi-60-75-tuoi-o-ha-noi-duoc-ho-tro-100-bao-hiem-y-te-tu-1-7-5084560.html",
+      "date": "Thu, 11 Jun 2026 14:46:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Lật thuyền trên sông Sêrêpôk, vợ chồng tử vong",
       "summary": "Ông Y Mét Byă cùng vợ chèo thuyền ra sông Sêrêpôk kiểm tra lưới, không may gặp nước xoáy khiến thuyền lật, cả hai tử vong, sáng 11/6.",
@@ -101,77 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Thác GouGah nguy cơ mất danh hiệu thắng cảnh quốc gia do 'tác động thủy điện'",
-      "summary": "Cảnh quan bị biến dạng nghiêm trọng sau khi thủy điện chặn dòng, thác GouGah khó phục hồi giá trị gốc, địa phương đề nghị hủy xếp hạng danh lam thắng cảnh quốc gia.",
-      "link": "https://vnexpress.net/thac-gougah-nguy-co-mat-danh-hieu-thang-canh-quoc-gia-do-tac-dong-thuy-dien-5084487.html",
-      "date": "Thu, 11 Jun 2026 11:53:23 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cảnh sát phá 'chuồng cọp' cứu 4 người khỏi đám cháy",
-      "summary": "4 người mắc kẹt trong ngôi nhà 5 tầng ở phường Phương Liệt đã được cảnh sát phá khung sắt \"chuồng cọp\" tiếp cận, đưa ra ngoài an toàn khi hỏa hoạn bùng phát rạng sáng 11/6.",
-      "link": "https://vnexpress.net/canh-sat-pha-chuong-cop-cuu-4-nguoi-khoi-dam-chay-5084459.html",
-      "date": "Thu, 11 Jun 2026 10:43:30 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cầu nối cao tốc Bến Lức - Long Thành với cảng Cái Mép trước hợp long",
-      "summary": "Cầu Phước An dài hơn 4 km, trục kết nối trực tiếp cảng Cái Mép - Thị Vải với cao tốc Bến Lức - Long Thành, đã thành hình sau ba năm thi công, dự kiến hợp long tháng 7.",
-      "link": "https://vnexpress.net/cau-noi-cao-toc-ben-luc-long-thanh-voi-cang-cai-mep-truoc-hop-long-5084248.html",
-      "date": "Thu, 11 Jun 2026 06:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Lấp khoảng trống an sinh cho hàng trăm nghìn tài xế công nghệ",
-      "summary": "Sau hơn một thập kỷ đứng ngoài lưới an sinh, hàng trăm nghìn tài xế công nghệ có thể thuộc diện tham gia BHXH bắt buộc nếu luật được sửa đổi.",
-      "link": "https://vnexpress.net/lap-khoang-trong-an-sinh-cho-hang-tram-nghin-tai-xe-cong-nghe-5083672.html",
-      "date": "Thu, 11 Jun 2026 05:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Nhảy việc để có thêm thời gian nghỉ cuối tuần",
-      "summary": "Chị Ly chấp nhận giảm thu nhập, chuyển hướng tìm việc nơi có chế độ nghỉ hai ngày cuối tuần hoặc làm từ xa để có thêm thời gian bên con cái.",
-      "link": "https://vnexpress.net/nhay-viec-de-co-them-thoi-gian-nghi-cuoi-tuan-5084152.html",
-      "date": "Thu, 11 Jun 2026 00:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Những bàn tay lặng lẽ tìm lại tên cho các anh hùng liệt sĩ",
-      "summary": "Giữa cái nắng oi ả ở Nghĩa trang liệt sĩ quốc gia Đường 9, những người lính và cán bộ y tế vẫn lặng lẽ cúi mình bên từng phần mộ, tỉ mỉ lấy mẫu sinh phẩm để giám định ADN, với...",
-      "link": "https://tuoitre.vn/nhung-ban-tay-lang-le-tim-lai-ten-cho-cac-anh-hung-liet-si-20260611122306655.htm",
-      "date": "Thu, 11 Jun 2026 12:59:03 GMT+7",
+      "title": "Chủ tịch Khánh Hòa chỉ đạo kiểm tra 2 bãi cát trong khu dân cư, xử lý người hành hung phóng viên",
+      "summary": "UBND tỉnh Khánh Hòa chỉ đạo kiểm tra toàn diện 2 bãi tập kết cát hoạt động giữa khu dân cư phường Bảo An; yêu cầu làm rõ nguồn gốc cát, xử lý các vi phạm về đất đai, khoáng sản,...",
+      "link": "https://tuoitre.vn/chu-tich-khanh-hoa-chi-dao-kiem-tra-2-bai-cat-trong-khu-dan-cu-xu-ly-nguoi-hanh-hung-phong-vien-20260611175105028.htm",
+      "date": "Thu, 11 Jun 2026 18:24:00 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Lật thuyền trên sông Sêrêpốk, 2 vợ chồng thiệt mạng",
-      "summary": "Trong lúc chèo thuyền trên sông Sêrêpốk để kiểm tra lưới bắt cá, thuyền chở một cặp vợ chồng ở xã Buôn Đôn (tỉnh Đắk Lắk) bất ngờ bị lật tại khu vực có dòng nước xoáy, khiến cả...",
-      "link": "https://tuoitre.vn/lat-thuyen-tren-song-serepok-2-vo-chong-thiet-mang-20260611114254937.htm",
-      "date": "Thu, 11 Jun 2026 11:57:46 GMT+7",
+      "title": "Bí thư phường Nha Trang làm Trưởng Ban Nội chính Tỉnh ủy Khánh Hòa",
+      "summary": "Ông Tạ Hồng Quang - Bí thư Đảng ủy, Chủ tịch HĐND phường Nha Trang - được điều động, bổ nhiệm làm Trưởng Ban Nội chính Tỉnh ủy Khánh Hòa.",
+      "link": "https://tuoitre.vn/bi-thu-phuong-nha-trang-lam-truong-ban-noi-chinh-tinh-uy-khanh-hoa-20260611175447578.htm",
+      "date": "Thu, 11 Jun 2026 18:18:03 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Mở đợt cao điểm tuyên truyền ngăn chặn UAV, diều tại khu vực sân bay",
-      "summary": "Trước tình trạng thiết bị bay không người lái (UAV), diều gây ảnh hưởng các chuyến bay tại sân bay Nội Bài, Cát Bi, Bộ Xây dựng đề nghị các địa phương có sân bay tăng cường biện...",
-      "link": "https://tuoitre.vn/mo-dot-cao-diem-tuyen-truyen-ngan-chan-uav-dieu-tai-khu-vuc-san-bay-20260611113553596.htm",
-      "date": "Thu, 11 Jun 2026 11:54:25 GMT+7",
+      "title": "Lãnh đạo TP.HCM thăm, chúc thọ người cao tuổi tiêu biểu",
+      "summary": "Ngày 11-6, các đoàn đại biểu TP.HCM đã đến thăm, chúc thọ các cụ cao niên tiêu biểu tròn 90 tuổi nhân dịp kỷ niệm 85 năm Ngày truyền thống người cao tuổi Việt Nam.",
+      "link": "https://tuoitre.vn/lanh-dao-tp-hcm-tham-chuc-tho-nguoi-cao-tuoi-tieu-bieu-20260611173113405.htm",
+      "date": "Thu, 11 Jun 2026 17:46:57 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "15 xã ở Vĩnh Long giữ nguyên tên lên phường, xã Trung Thành đổi thành phường Vũng Liêm",
-      "summary": "Hội đồng nhân dân tỉnh Vĩnh Long đã thông qua nghị quyết chấp thuận chủ trương thành lập 16 phường mới trên cơ sở các xã hiện hữu, trong đó xã Trung Thành sẽ đổi tên thành phường...",
-      "link": "https://tuoitre.vn/15-xa-o-vinh-long-giu-nguyen-ten-len-phuong-xa-trung-thanh-doi-thanh-phuong-vung-liem-20260611113842232.htm",
-      "date": "Thu, 11 Jun 2026 11:50:57 GMT+7",
+      "title": "Thuê nhà sống nhẹ nhàng hay dành dụm mua nhà để cho con cháu?",
+      "summary": "Nhiều người trẻ chọn thuê nhà ở để giảm áp lực trước tình trạng giá nhà ngày càng cao.",
+      "link": "https://tuoitre.vn/thue-nha-o-song-nhe-nhang-hay-danh-dum-mua-nha-de-cho-con-chau-20260610165202602.htm",
+      "date": "Thu, 11 Jun 2026 17:18:00 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     },
     {
-      "title": "Ưu tiên bố trí tái định cư cho các hộ gia đình bị sạt lở bên bờ sông Tiền",
-      "summary": "Thời gian qua, tình hình sạt lở bờ sông Tiền, tỉnh Đồng Tháp diễn biến phức tạp, nhiều địa phương lên kế hoạch ưu tiên bố trí tái định cư cho các hộ dân.",
-      "link": "https://tuoitre.vn/uu-tien-bo-tri-tai-dinh-cu-cho-cac-ho-gia-dinh-bi-sat-lo-ben-bo-song-tien-2026061111343076.htm",
-      "date": "Thu, 11 Jun 2026 11:47:51 GMT+7",
+      "title": "Mây dông đen kịt, TP.HCM dự báo mưa hơn 50mm",
+      "summary": "Mây dông đang phát triển mạnh trên toàn bộ khu vực TP.HCM, dự báo mưa to kéo dài giờ tan tầm.",
+      "link": "https://tuoitre.vn/may-dong-den-kit-tp-hcm-du-bao-mua-hon-50mm-de-phong-cay-do-ton-bay-20260611165735369.htm",
+      "date": "Thu, 11 Jun 2026 17:15:00 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-11T07:24:52.621705+00:00",
+  "last_updated": "2026-06-11T11:53:50.306156+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
