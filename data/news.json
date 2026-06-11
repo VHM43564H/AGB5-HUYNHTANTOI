@@ -1,6 +1,20 @@
 {
   "tin_tuc": [
     {
+      "title": "Vàng miếng giảm hơn 2 triệu đồng một lượng",
+      "summary": "Các thương hiệu hạ giá bán vàng miếng 2,3 triệu đồng, về còn 136 triệu đồng một lượng.",
+      "link": "https://vnexpress.net/vang-mieng-giam-hon-2-trieu-dong-mot-luong-5084381.html",
+      "date": "Thu, 11 Jun 2026 09:27:51 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Giá vàng thế giới lao dốc, về dưới 4.100 USD",
+      "summary": "Mỗi ounce vàng mất gần 200 USD một phiên, hiện còn 4.045 USD - thấp nhất 3 tháng.",
+      "link": "https://vnexpress.net/gia-vang-the-gioi-lao-doc-ve-duoi-4-100-usd-5084324.html",
+      "date": "Thu, 11 Jun 2026 07:29:42 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Lạm phát Mỹ cao nhất 3 năm",
       "summary": "Lạm phát Mỹ lần đầu tiên vượt 4% kể từ đầu năm 2023, chủ yếu do giá năng lượng tăng cao.",
       "link": "https://vnexpress.net/lam-phat-my-cao-nhat-3-nam-5084267.html",
@@ -12,6 +26,13 @@
       "summary": "Mức tăng lương trung bình của lao động Mỹ khi nhảy việc hiện chỉ bằng 30% thời kỳ bùng nổ tuyển dụng trong dịch Covid-19.",
       "link": "https://vnexpress.net/nguoi-my-khong-con-duoc-tang-luong-nhieu-khi-nhay-viec-5084177.html",
       "date": "Thu, 11 Jun 2026 00:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Hòa Phát vượt Vietcombank, VPBank, đứng đầu sàn chứng khoán về vốn điều lệ",
+      "summary": "Sau khi hoàn tất phát hành hơn 767 triệu cổ phiếu để trả cổ tức, vốn điều lệ của Hòa Phát đạt 84.430 tỷ đồng, lớn nhất sàn chứng khoán.",
+      "link": "https://vnexpress.net/hoa-phat-vuot-vietcombank-vpbank-dung-dau-san-chung-khoan-ve-von-dieu-le-5084310.html",
+      "date": "Thu, 11 Jun 2026 07:36:06 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -36,52 +57,31 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Bitcoin yếu đi do dòng vốn đổ về AI",
-      "summary": "Dòng vốn chuộng rủi ro đang hướng về lĩnh vực xây dựng cơ sở hạ tầng AI, trở thành một trong những tác nhân lớn khiến giá Bitcoin giảm mạnh.",
-      "link": "https://vnexpress.net/bitcoin-yeu-di-do-dong-von-do-ve-ai-5084210.html",
-      "date": "Wed, 10 Jun 2026 17:16:43 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "VN-Index vọt lên trên 1.800 điểm",
-      "summary": "VN-Index hồi phục hai phiên liên tiếp và đóng cửa gần 1.804 điểm nhờ dòng tiền giải ngân ở vùng giá thấp xuất hiện mạnh hơn.",
-      "link": "https://vnexpress.net/vn-index-vot-len-tren-1-800-diem-5084174.html",
-      "date": "Wed, 10 Jun 2026 16:23:36 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Phó thủ tướng: Khởi nghiệp cần bắt đầu từ khát vọng lớn",
-      "summary": "Phó thủ tướng Nguyễn Văn Thắng nhấn mạnh khởi nghiệp không cần nguồn lực lớn mà phải bắt đầu từ khát vọng, khi tôn vinh danh doanh nhân trẻ xuất sắc 2026.",
-      "link": "https://vnexpress.net/pho-thu-tuong-khoi-nghiep-can-bat-dau-tu-khat-vong-lon-5084111.html",
-      "date": "Wed, 10 Jun 2026 14:42:28 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Nhà sản xuất máy bay ATR nhìn thấy cơ hội ở 87 đường bay ngắn tại Việt Nam",
-      "summary": "ATR cho rằng Việt Nam còn khoảng trống lớn ở các chặng bay 1-2 giờ, nơi máy bay nhỏ có thể nối sân bay địa phương, điểm du lịch và các tuyến quốc tế cự ly gần.",
-      "link": "https://tuoitre.vn/nha-san-xuat-may-bay-atr-nhin-thay-co-hoi-o-87-duong-bay-ngan-o-viet-nam-20260610202237704.htm",
-      "date": "Wed, 10 Jun 2026 22:49:53 GMT+7",
+      "title": "Việt Nam - đối tác chủ động, tự tin trên trường quốc tế",
+      "summary": "Việt Nam là nước thứ 8 trong ASEAN mà tôi đến thăm và làm việc trong vòng 7 tháng qua.",
+      "link": "https://tuoitre.vn/viet-nam-doi-tac-chu-dong-tu-tin-tren-truong-quoc-te-20260611084432289.htm",
+      "date": "Thu, 11 Jun 2026 09:09:25 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "AEON Mall kinh doanh rất tốt ở Việt Nam",
-      "summary": "Việt Nam là thị trường đem lại doanh thu cao nhất cho Aeon Mall tại Đông Nam Á và thứ hai ở nước ngoài, chỉ sau Trung Quốc.",
-      "link": "https://tuoitre.vn/aeon-mall-kinh-doanh-rat-tot-o-viet-nam-20260610213127125.htm",
-      "date": "Wed, 10 Jun 2026 22:43:58 GMT+7",
+      "title": "Anh hỗ trợ Việt Nam hút vốn tư nhân cho năng lượng sạch",
+      "summary": "Anh và Việt Nam tiếp tục mở rộng hợp tác trong lĩnh vực chuyển dịch năng lượng với cơ chế tài chính xanh mới, nhằm hỗ trợ thu hút đầu tư từ Anh vào các dự án năng lượng sạch và hạ...",
+      "link": "https://tuoitre.vn/anh-ho-tro-viet-nam-hut-von-tu-nhan-cho-nang-luong-sach-20260611081803707.htm",
+      "date": "Thu, 11 Jun 2026 09:09:00 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Vào vùng 'cao sơn ngọc quế' Trà Leng, nơi có nhiều vườn cây 'khủng'",
-      "summary": "Quế Trà Leng được biết đến với tên gọi \"cao sơn ngọc quế\" của xứ Quảng, nơi có nhiều khu rừng, vườn với cây \"khủng\" và lễ hội hương quế sắp được tổ chức thu hút du khách.",
-      "link": "https://tuoitre.vn/vao-vung-cao-son-ngoc-que-tra-leng-noi-co-nhieu-vuon-cay-khung-20260610170935167.htm",
-      "date": "Wed, 10 Jun 2026 20:57:30 GMT+7",
+      "title": "Diễn đàn Tương lai ASEAN 2026: Ghi nhận nhiều ý tưởng, đề xuất sáng tạo",
+      "summary": "Diễn đàn Tương lai ASEAN 2026 (AFF) khép lại ngày 10-6, để lại dấu ấn rõ nét về vai trò của một Việt Nam chủ động, tích cực và có trách nhiệm - quốc gia không chỉ tham gia mà đang...",
+      "link": "https://tuoitre.vn/dien-dan-tuong-lai-asean-2026-ghi-nhan-nhieu-y-tuong-de-xuat-sang-tao-20260611085113085.htm",
+      "date": "Thu, 11 Jun 2026 09:05:32 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
-      "title": "AI chưa thể thay thế con người trong các quyết định tài chính quan trọng",
-      "summary": "Đang giúp doanh nghiệp xử lý thông tin hiệu quả hơn, nhưng AI vẫn chưa đủ tin cậy cho các quyết định tài chính quan trọng.",
-      "link": "https://tuoitre.vn/ai-chua-the-thay-the-con-nguoi-trong-cac-quyet-dinh-tai-chinh-quan-trong-20260610192004135.htm",
-      "date": "Wed, 10 Jun 2026 20:47:22 GMT+7",
+      "title": "Từ trải nghiệm công nghệ đến Bảo hiểm số: OPES tạo dấu ấn tại Ngày Tài chính số 2026",
+      "summary": "Trong khuôn khổ Ngày Tài chính số 2026 (6 và 7-6), OPES - công ty bảo hiểm số thuộc hệ sinh thái tài chính VPBank - mang đến không gian trải nghiệm sôi động với nhiều hoạt động...",
+      "link": "https://tuoitre.vn/tu-trai-nghiem-cong-nghe-den-bao-hiem-so-opes-tao-dau-an-tai-ngay-tai-chinh-so-2026-2026061108340108.htm",
+      "date": "Thu, 11 Jun 2026 09:05:01 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
@@ -101,17 +101,17 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Nhảy việc để có thêm thời gian nghỉ cuối tuần",
-      "summary": "Chị Ly chấp nhận giảm thu nhập, chuyển hướng tìm việc nơi có chế độ nghỉ hai ngày cuối tuần hoặc làm từ xa để có thêm thời gian bên con cái.",
-      "link": "https://vnexpress.net/nhay-viec-de-co-them-thoi-gian-nghi-cuoi-tuan-5084152.html",
-      "date": "Thu, 11 Jun 2026 00:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Huế xác minh thông tin hố bom chôn cất 15 liệt sĩ",
       "summary": "Chính quyền TP Huế đang xác minh thông tin về hố bom ở cửa Chánh Tây chôn cất khoảng 15 chiến sĩ trong trận đánh Mậu Thân 1968.",
       "link": "https://vnexpress.net/hue-xac-minh-thong-tin-ho-bom-chon-cat-15-liet-si-5084279.html",
       "date": "Thu, 11 Jun 2026 00:14:26 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Nhảy việc để có thêm thời gian nghỉ cuối tuần",
+      "summary": "Chị Ly chấp nhận giảm thu nhập, chuyển hướng tìm việc nơi có chế độ nghỉ hai ngày cuối tuần hoặc làm từ xa để có thêm thời gian bên con cái.",
+      "link": "https://vnexpress.net/nhay-viec-de-co-them-thoi-gian-nghi-cuoi-tuan-5084152.html",
+      "date": "Thu, 11 Jun 2026 00:00:00 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
@@ -122,9 +122,9 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đề xuất Thủ tướng quyết định lịch nghỉ lễ hàng năm",
-      "summary": "Bộ Nội vụ đề xuất tùy điều kiện hàng năm, Thủ tướng quyết định cụ thể ngày nghỉ lễ, Bộ trưởng Nội vụ thông báo lịch trước ngày 31/12.",
-      "link": "https://vnexpress.net/de-xuat-thu-tuong-quyet-dinh-lich-nghi-le-hang-nam-5084256.html",
+      "title": "Đề xuất Thủ tướng quyết định tất cả ngày nghỉ lễ hàng năm",
+      "summary": "Bộ Nội vụ đề xuất tùy điều kiện hàng năm, Thủ tướng quyết định cụ thể các ngày nghỉ lễ, Bộ trưởng Nội vụ thông báo lịch trước ngày 31/12.",
+      "link": "https://vnexpress.net/de-xuat-thu-tuong-quyet-dinh-tat-ca-ngay-nghi-le-hang-nam-5084256.html",
       "date": "Wed, 10 Jun 2026 20:48:55 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
@@ -136,42 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
+      "title": "Bộ Chính trị: Nghiên cứu cơ chế thu hồi, xử lý tài sản không qua kết tội",
+      "summary": "Bộ Chính trị yêu cầu ngành kiểm sát nghiên cứu cơ chế thu hồi, xử lý tài sản không qua kết tội, bảo đảm giảm thiểu xung đột xã hội, tiết kiệm chi phí tố tụng và chi phí xã hội.",
+      "link": "https://tuoitre.vn/bo-chinh-tri-nghien-cuu-co-che-thu-hoi-xu-ly-tai-san-khong-qua-ket-toi-20260611073704097.htm",
+      "date": "Thu, 11 Jun 2026 09:25:08 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Tổng Bí thư, Chủ tịch nước làm Trưởng Ban Chỉ đạo Trung ương hoàn thiện thể chế, thực thi pháp luật",
+      "summary": "Bộ Chính trị quyết định thành lập Ban Chỉ đạo Trung ương về hoàn thiện thể chế và thực thi pháp luật. Tổng Bí thư, Chủ tịch nước Tô Lâm làm Trưởng Ban Chỉ đạo.",
+      "link": "https://tuoitre.vn/tong-bi-thu-chu-tich-nuoc-lam-truong-ban-chi-dao-trung-uong-hoan-thien-the-che-thuc-thi-phap-luat-20260611072232274.htm",
+      "date": "Thu, 11 Jun 2026 08:59:04 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Huy động lực lượng tinh nhuệ, công nghệ hiện đại tìm kiếm hài cốt liệt sĩ tại công viên Lê Thị Riêng",
+      "summary": "Cơ quan chức năng đang huy động tổng lực tìm kiếm hài cốt liệt sĩ tại công viên Lê Thị Riêng (TP.HCM) trong cuối tháng 6 đầu tháng 7-2026.",
+      "link": "https://tuoitre.vn/huy-dong-luc-luong-tinh-nhue-cong-nghe-hien-dai-tim-kiem-hai-cot-liet-si-tai-cong-vien-le-thi-rieng-20260610224024439.htm",
+      "date": "Thu, 11 Jun 2026 07:21:02 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Thời tiết hôm nay 11-6: Nhiều nơi mưa to chiều tối",
+      "summary": "Hôm nay 11-6, thời tiết nhiều nơi trên cả nước có mưa, đặc biệt về chiều tối những cơn mưa to sẽ xuất hiện.",
+      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-11-6-nhieu-noi-mua-to-chieu-toi-20260610154639741.htm",
+      "date": "Thu, 11 Jun 2026 05:07:00 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
       "title": "Thứ trưởng Bộ Ngoại giao Ngô Lê Văn: Địa phương phải trở thành tuyến đầu trong công tác đối ngoại",
       "summary": "Tại Hội nghị Lãnh đạo các cơ quan ngoại vụ địa phương năm 2026, Thứ trưởng Bộ Ngoại giao Ngô Lê Văn nhấn mạnh địa phương phải trở thành \"tuyến đầu\" trong đối ngoại, chủ động triển...",
       "link": "https://tuoitre.vn/thu-truong-bo-ngoai-giao-ngo-le-van-dia-phuong-phai-tro-thanh-tuyen-dau-trong-cong-tac-doi-ngoai-20260610213216795.htm",
       "date": "Wed, 10 Jun 2026 22:01:50 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Lấy sự hài lòng của nhân dân làm thước đo của mọi chủ trương, chính sách",
-      "summary": "PGS.TS Lê Thị Thục nhấn mạnh, trong Văn kiện Đại hội XIV của Đảng khá nhiều lần nhắc tới việc phải lấy sự hài lòng của nhân dân làm thước đo hiệu quả của mọi chủ trương, chính...",
-      "link": "https://tuoitre.vn/lay-su-hai-long-cua-nhan-dan-lam-thuoc-do-cua-moi-chu-truong-chinh-sach-20260610201136653.htm",
-      "date": "Wed, 10 Jun 2026 20:41:52 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Thông qua dự thảo Báo cáo kết quả kiểm tra đối với Ban Thường vụ Quân ủy Trung ương",
-      "summary": "Chiều 10-6, Thường trực Ban Bí thư Trần Cẩm Tú - Trưởng Đoàn kiểm tra, giám sát số 12 của Bộ Chính trị, Ban Bí thư - đã chủ trì hội nghị thông qua dự thảo Báo cáo kết quả kiểm...",
-      "link": "https://tuoitre.vn/thong-qua-du-thao-bao-cao-ket-qua-kiem-tra-doi-voi-ban-thuong-vu-quan-uy-trung-uong-20260610201517924.htm",
-      "date": "Wed, 10 Jun 2026 20:33:20 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Tổng Bí thư, Chủ tịch nước: Mục tiêu cao nhất để nhân dân  sống trong môi trường an toàn, trong lành",
-      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm cho rằng đầu tư cho môi trường là đầu tư cho tương lai nên cần chuyển mạnh từ tư duy ứng phó sang chủ động kiến tạo phát triển.",
-      "link": "https://tuoitre.vn/tong-bi-thu-chu-tich-nuoc-muc-tieu-cao-nhat-de-nhan-dan-song-trong-moi-truong-an-toan-trong-lanh-20260610201213375.htm",
-      "date": "Wed, 10 Jun 2026 20:24:46 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Trung tâm Đổi mới sáng tạo Cần Thơ không hình thành để ban phát, cấp phát",
-      "summary": "Bí thư Thành ủy Cần Thơ khẳng định mô hình Trung tâm Đổi mới sáng tạo TP Cần Thơ không phải hình thành để ban phát, cấp phát.",
-      "link": "https://tuoitre.vn/trung-tam-doi-moi-sang-tao-can-tho-khong-hinh-thanh-de-ban-phat-cap-phat-20260610182144003.htm",
-      "date": "Wed, 10 Jun 2026 19:35:57 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-10T23:54:34.566493+00:00",
+  "last_updated": "2026-06-11T02:48:26.713753+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
