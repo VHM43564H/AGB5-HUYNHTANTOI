@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Đêm tranh tài pháo hoa của Nhật Bản và Italy trên sông Hàn",
+      "summary": "Tối 13/6, đội Nhật Bản gây ấn tượng với hàng chục nghìn khán giả nhờ màn trình diễn giảm khói tối ưu, trong khi đội Italy thể hiện phong cách lãng mạn tại Lễ hội pháo hoa quốc tế.",
+      "link": "https://vnexpress.net/dem-tranh-tai-phao-hoa-cua-nhat-ban-va-italy-tren-song-han-5085472.html",
+      "date": "Sun, 14 Jun 2026 00:25:08 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Hoán đổi ngày làm việc, dịp Quốc khánh nghỉ 5 ngày",
       "summary": "Kỳ nghỉ kéo dài 5 ngày từ 29/8 đến hết 2/9 gồm 2 ngày chính thức, nghỉ hàng tuần cộng hoán đổi một ngày làm việc.",
       "link": "https://vnexpress.net/hoan-doi-ngay-lam-viec-dip-quoc-khanh-nghi-5-ngay-5085467.html",
@@ -98,13 +105,6 @@
       "summary": "Hàng nghìn phật tử, người dân tụng kinh, thắp hương xuyên đêm tại công viên Lê Thị Riêng, nơi từng là nghĩa trang Đô Thành, cầu siêu cho liệt sĩ, đồng bào hy sinh trong trận Mậu...",
       "link": "https://vnexpress.net/xuyen-dem-cau-sieu-liet-si-dong-bao-o-cong-vien-le-thi-rieng-5085441.html",
       "date": "Sun, 14 Jun 2026 00:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Đêm pháo hoa của Nhật Bản và Italy trên sông Hàn",
-      "summary": "Tối 13/6, đội Nhật Bản gây ấn tượng với hàng chục nghìn khán giả nhờ màn trình diễn giảm khói tối ưu, tạo màn đối thoại ánh sáng tương phản với phong cách lãng mạn của đội Italy...",
-      "link": "https://vnexpress.net/dem-phao-hoa-cua-nhat-ban-va-italy-tren-song-han-5085472.html",
-      "date": "Sun, 14 Jun 2026 00:25:08 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-13T17:51:25.170889+00:00",
+  "last_updated": "2026-06-13T19:11:13.103001+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
