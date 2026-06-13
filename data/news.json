@@ -1,6 +1,20 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá dầu thấp nhất 3 tháng, vàng tăng nhẹ",
+      "summary": "Khả năng Mỹ - Iran đạt thỏa thuận kéo giá dầu Brent về 87 USD một thùng, trong khi giá vàng thế giới tăng gần 8 USD.",
+      "link": "https://vnexpress.net/gia-dau-thap-nhat-3-thang-vang-tang-nhe-5085191.html",
+      "date": "Sat, 13 Jun 2026 06:50:40 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Elon Musk có 1.100 tỷ USD khi giá trị SpaceX vượt 2.000 tỷ USD",
+      "summary": "Cổ phiếu SpaceX tăng gần 20% trong phiên chào sàn, kéo tài sản của Chủ tịch kiêm CEO lên mức kỷ lục mới.",
+      "link": "https://vnexpress.net/elon-musk-co-1-100-ty-usd-khi-gia-tri-spacex-vuot-2-000-ty-usd-5085187.html",
+      "date": "Sat, 13 Jun 2026 06:25:30 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Nhãn sầu riêng giá hơn 2 triệu đồng một kg ở TP HCM",
       "summary": "Nhãn sầu riêng có nguồn gốc từ Thái Lan, đang được trồng thử nghiệm tại Bến Tre, được bán với giá 2,2-2,5 triệu đồng một kg do nguồn cung khan hiếm.",
       "link": "https://vnexpress.net/nhan-sau-rieng-gia-hon-2-trieu-dong-mot-kg-o-tp-hcm-5085039.html",
@@ -43,18 +57,11 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Các doanh nghiệp ngày càng ít mua Bitcoin",
-      "summary": "Nhóm các doanh nghiệp chuyên gom Bitcoin để đầu cơ giá đang ngày càng mua ít hơn trước, khiến thị trường mất động lực tăng trưởng.",
-      "link": "https://vnexpress.net/cac-doanh-nghiep-ngay-cang-it-mua-bitcoin-5084921.html",
-      "date": "Fri, 12 Jun 2026 12:17:30 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Mỗi lượng vàng tăng hơn 7 triệu đồng trong ngày",
-      "summary": "Giá vàng chiều nay tiếp tục tăng 1-2 triệu đồng so với sáng, nâng tổng mức tăng hơn 7 triệu, lên trên 145 triệu đồng một lượng.",
-      "link": "https://vnexpress.net/moi-luong-vang-tang-hon-7-trieu-dong-trong-ngay-5084863.html",
-      "date": "Fri, 12 Jun 2026 10:33:35 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Ra chợ mua thịt heo, biết ngay 'hàng sạch' nhờ quét mã tại chỗ",
+      "summary": "Mô hình \"Tick xanh trách nhiệm\" được triển khai vào chợ truyền thống, giúp người dân truy xuất nguồn gốc thịt heo và mua thực phẩm sạch với giá bình ổn.",
+      "link": "https://tuoitre.vn/ra-cho-mua-thit-heo-biet-ngay-hang-sach-nho-quet-ma-tai-cho-20260612230341927.htm",
+      "date": "Sat, 13 Jun 2026 05:02:00 GMT+7",
+      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     },
     {
       "title": "Tin tức sáng 13-6: Đề xuất phạt tới 1 triệu đồng khi xả rác hoặc đổ nước thải không đúng quy định",
@@ -75,13 +82,6 @@
       "summary": "Lễ khai mạc Tuần lễ trái cây Trên bến dưới thuyền năm 2026 tối 12-6 tại phường Phú Định, TP.HCM thu hút đông đảo người dân tham quan, thưởng thức đặc sản vùng miền.",
       "link": "https://tuoitre.vn/nhon-nhip-khach-tham-quan-mua-sam-dem-khai-mac-tuan-le-trai-cay-o-tp-hcm-20260612212533821.htm",
       "date": "Fri, 12 Jun 2026 22:38:57 GMT+7",
-      "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Tổng giám đốc Vinatex: Đang 'nín thở' chờ câu chuyện thuế quan với Mỹ",
-      "summary": "Ngày 12-6, Tập đoàn Dệt may Việt Nam (Vinatex) họp thông tin về tình hình sản xuất, kinh doanh và xuất khẩu các tháng đầu năm.",
-      "link": "https://tuoitre.vn/tong-giam-doc-vinatex-dang-nin-tho-cho-cau-chuyen-thue-quan-voi-my-20260612174523391.htm",
-      "date": "Fri, 12 Jun 2026 21:01:16 GMT+7",
       "source": "Tuổi Trẻ Online - Kinh doanh - RSS Feed"
     }
   ],
@@ -136,6 +136,13 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
+      "title": "Thời tiết hôm nay 13-6: Bắc Bộ đến Trung Bộ nắng gắt, Nam Bộ chiều mưa dông",
+      "summary": "Hôm nay 13-6, thời tiết các tỉnh Bắc Bộ và Trung Bộ nắng nóng. Nam Bộ ngày nắng nhưng chiều tối mưa rào đến mưa to.",
+      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-13-6-bac-bo-den-trung-bo-nang-gat-nam-bo-chieu-mua-dong-20260612163028929.htm",
+      "date": "Sat, 13 Jun 2026 05:07:00 GMT+7",
+      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
+    },
+    {
       "title": "Tin tức sáng 13-6: Đề xuất phạt tới 1 triệu đồng khi xả rác hoặc đổ nước thải không đúng quy định",
       "summary": "Tin tức đáng chú ý: Đề xuất phạt tới 1 triệu đồng khi xả rác hoặc đổ nước thải không đúng quy định; Một cá nhân bị xử phạt khi làm chủ tịch kiêm tổng giám đốc; Giá thuê văn phòng...",
       "link": "https://tuoitre.vn/tin-tuc-sang-13-6-de-xuat-phat-toi-1-trieu-dong-khi-xa-rac-hoac-do-nuoc-thai-khong-dung-quy-dinh-20260612233303825.htm",
@@ -162,16 +169,9 @@
       "link": "https://tuoitre.vn/phat-tien-toi-2-trieu-dong-neu-khong-deo-ro-mom-cho-cho-o-noi-cong-cong-20260612183356555.htm",
       "date": "Fri, 12 Jun 2026 19:47:30 GMT+7",
       "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Vận hành chính quyền 2 cấp: Cần cơ chế tương xứng cho cán bộ trẻ làm công tác lâu năm",
-      "summary": "\"Ai phát hiện để đưa họ lên?\", nguyên Phó bí thư Thành ủy, nguyên Chủ tịch HĐND TP.HCM Phạm Phương Thảo chất vấn và cho rằng cần có cơ chế chính sách tương xứng cho đội ngũ cán bộ...",
-      "link": "https://tuoitre.vn/van-hanh-chinh-quyen-2-cap-can-co-che-tuong-xung-cho-can-bo-tre-lam-cong-tac-lau-nam-20260612112008549.htm",
-      "date": "Fri, 12 Jun 2026 18:46:00 GMT+7",
-      "source": "Tuổi Trẻ Online - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-12T22:54:27.701064+00:00",
+  "last_updated": "2026-06-13T00:14:28.827030+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
