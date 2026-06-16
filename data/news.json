@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Gần 20 năm sống trong bụi đá",
+      "summary": "Nhà cửa, vườn tược của hơn 200 hộ dân ở xã Trường Sơn thường xuyên nhuốm bụi từ mỏ đá, nhà quét được nửa tiếng lại phủ đầy bụi.",
+      "link": "https://vnexpress.net/gan-20-nam-song-trong-bui-da-5086531.html",
+      "date": "Wed, 17 Jun 2026 01:00:17 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Hành khách được hoàn tiền vé nếu chuyến bay chậm 4 giờ",
       "summary": "Từ 1/7, hành khách sẽ được hoàn trả toàn bộ tiền vé hoặc phần vé chưa sử dụng, nếu chuyến bay bị chậm từ 4 giờ do lỗi của hãng bay, theo quy định của Chính phủ.",
       "link": "https://vnexpress.net/hanh-khach-duoc-hoan-tien-ve-neu-chuyen-bay-cham-4-gio-5086567.html",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "'Không để lồng ghép lợi ích nhóm khi làm luật'",
-      "summary": "Chủ tịch Quốc hội yêu cầu toàn bộ quy trình lập pháp phải gắn với kiểm soát quyền lực, phòng, chống tham nhũng và không để lồng ghép lợi ích nhóm, lợi ích cục bộ.",
-      "link": "https://vnexpress.net/khong-de-long-ghep-loi-ich-nhom-khi-lam-luat-5086363.html",
-      "date": "Tue, 16 Jun 2026 15:27:37 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Phó thủ tướng: Giải phóng mặt bằng đồng bộ tuyến đường sắt Lào Cai - Hà Nội - Hải Phòng",
       "summary": "Phó thủ tướng thường trực Phạm Gia Túc lưu ý công tác giải phóng mặt bằng dự án đường sắt Lào Cai - Hà Nội - Hải Phòng phải thực hiện toàn tuyến, đồng bộ, đúng tiến độ. Các địa...",
       "link": "https://tuoitre.vn/pho-thu-tuong-giai-phong-mat-bang-dong-bo-tuyen-duong-sat-lao-cai-ha-noi-hai-phong-20260616205451598.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-16T18:13:56.317056+00:00",
+  "last_updated": "2026-06-16T21:28:37.470826+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
