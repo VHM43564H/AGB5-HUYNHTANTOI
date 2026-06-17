@@ -1,6 +1,41 @@
 {
   "tin_tuc": [
     {
+      "title": "Bộ Tài chính: Sẽ nghiên cứu lại một số loại thuế với xăng E10",
+      "summary": "Bộ Tài chính sẽ xem xét chính sách thuế tiêu thụ đặc biệt, bảo vệ môi trường với xăng E10 để giảm giá thành, khuyến khích người dân sử dụng nhiên liệu này.",
+      "link": "https://vnexpress.net/bo-tai-chinh-se-nghien-cuu-lai-mot-so-loai-thue-voi-xang-e10-5086945.html",
+      "date": "Wed, 17 Jun 2026 18:17:34 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "SCB thanh lý tài sản tại nhiều chi nhánh",
+      "summary": "Ngân hàng SCB thông báo thanh lý tài sản, công cụ lao động tại nhiều chi nhánh sau quá trình tinh gọn mạng lưới.",
+      "link": "https://vnexpress.net/scb-thanh-ly-tai-san-tai-nhieu-chi-nhanh-5086791.html",
+      "date": "Wed, 17 Jun 2026 17:37:07 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Dự kiến nới trần vốn ngắn hạn cho vay trung, dài hạn lên 40%",
+      "summary": "Ngân hàng Nhà nước đề xuất cho phép các nhà băng nâng tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn từ 30% lên 40%.",
+      "link": "https://vnexpress.net/du-kien-noi-tran-von-ngan-han-cho-vay-trung-dai-han-len-40-5086889.html",
+      "date": "Wed, 17 Jun 2026 17:04:08 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Nhà đầu tư ngoại trở lại bán tháo cổ phiếu",
+      "summary": "Sau đợt giải ngân hơn 4.000 tỷ đồng hồi đầu tuần, khối ngoại đột ngột bán ròng 3.100 tỷ đồng, tập trung vào các mã trụ ngân hàng và công nghệ.",
+      "link": "https://vnexpress.net/nha-dau-tu-ngoai-tro-lai-ban-thao-co-phieu-5086882.html",
+      "date": "Wed, 17 Jun 2026 15:42:44 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Nhà đầu tư bắt đầu gom Bitcoin",
+      "summary": "Nhà đầu tư từ cá mập đến nhóm nhỏ lẻ đều đồng loạt mua ròng gần 260.000 Bitcoin sau khi tiền số lớn nhất thế giới giảm mạnh.",
+      "link": "https://vnexpress.net/nha-dau-tu-bat-dau-gom-bitcoin-5086736.html",
+      "date": "Wed, 17 Jun 2026 14:03:50 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "'Ông lớn' ngành cao su dự kiến doanh thu cao kỷ lục",
       "summary": "Tập đoàn Công nghiệp cao su Việt Nam dự tính doanh thu năm nay lên cao kỷ lục gần 33.000 tỷ đồng theo đà tăng của giá mủ cao su, nhưng lãi có thể thụt lùi.",
       "link": "https://vnexpress.net/ong-lon-nganh-cao-su-du-kien-doanh-thu-cao-ky-luc-5086769.html",
@@ -22,70 +57,56 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Liên Bộ Công Thương - Tài chính sẽ công bố giá cơ sở xăng E10",
-      "summary": "Xăng E10 RON 95-III được xác định là mặt hàng tiêu dùng phổ biến, do liên Bộ Công Thương - Tài chính công bố giá cơ sở thay thế xăng RON 95-III.",
-      "link": "https://vnexpress.net/lien-bo-cong-thuong-tai-chinh-se-cong-bo-gia-co-so-xang-e10-5086618.html",
-      "date": "Wed, 17 Jun 2026 09:23:33 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Vốn hóa SpaceX vượt Amazon",
-      "summary": "Cổ phiếu SpaceX tăng phiên thứ 3 liên tiếp, giúp hãng này vượt Amazon trở thành công ty giá trị thứ 5 tại Mỹ.",
-      "link": "https://vnexpress.net/von-hoa-spacex-vuot-amazon-5086601.html",
-      "date": "Wed, 17 Jun 2026 07:47:27 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Chuyển đổi số trợ lực tăng trưởng du lịch Huế",
-      "summary": "Từ quảng bá đến cung ứng các dịch vụ truyền thống trên online, Huế đang tìm thấy một phần động lực tăng trưởng du lịch nhờ chuyển đổi số.",
-      "link": "https://vnexpress.net/chuyen-doi-so-tro-luc-tang-truong-du-lich-hue-5086059.html",
-      "date": "Wed, 17 Jun 2026 06:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Xây trung tâm dữ liệu từ 2.000 điện thoại cũ, giảm 50% phát thải carbon",
-      "summary": "Đại học California San Diego (Mỹ) tái sử dụng điện thoại cũ làm trung tâm dữ liệu, với chi phí cùng lượng phát thải giảm một nửa so với máy chủ cấu hình trung bình của Asus.",
-      "link": "https://vnexpress.net/xay-trung-tam-du-lieu-tu-2-000-dien-thoai-cu-giam-50-phat-thai-carbon-5086471.html",
-      "date": "Wed, 17 Jun 2026 00:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Bạn có nhận ra bẫy tăng giá?",
-      "summary": "Bẫy tăng giá khiến không ít nhà đầu tư mua đúng lúc thị trường bật tăng rồi nhanh chóng thua lỗ sau đó.",
-      "link": "https://vnexpress.net/ban-co-nhan-ra-bay-tang-gia-5086324.html",
-      "date": "Wed, 17 Jun 2026 00:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Thủ tướng lập Hội đồng thẩm định nhà nước dự án đường vành đai 5 vùng thủ đô Hà Nội",
-      "summary": "Thủ tướng quyết định thành lập Hội đồng thẩm định nhà nước để thẩm định báo cáo nghiên cứu tiền khả thi dự án đường vành đai 5 vùng thủ đô Hà Nội, tổng mức đầu tư dự kiến khoảng...",
-      "link": "https://tuoitre.vn/thu-tuong-lap-hoi-dong-tham-dinh-nha-nuoc-du-an-duong-vanh-dai-5-vung-thu-do-ha-noi-100260617133345267.htm",
-      "date": "6/17/2026 2:10:00 PM",
+      "title": "Tiêu thụ điện tăng mạnh, các tỉnh thành phía Nam vẫn tiết kiệm hơn 3,13 tỉ kWh",
+      "summary": "Dù nhu cầu sử dụng điện tăng mạnh do nắng nóng kéo dài, các tỉnh, thành phía Nam vẫn tiết kiệm được hơn 3,13 tỉ kWh điện trong 5 tháng đầu năm 2026 nhờ triển khai đồng bộ nhiều...",
+      "link": "https://tuoitre.vn/tieu-thu-dien-tang-manh-cac-tinh-thanh-phia-nam-van-tiet-kiem-hon-313-ti-kwh-100260617173959573.htm",
+      "date": "6/17/2026 6:58:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Ưu tiên gắn tem truy xuất nguồn gốc nông sản làm thực phẩm, sản phẩm có rủi ro cao từ 1-7",
-      "summary": "Ông Nguyễn Văn Long, Vụ trưởng Vụ Khoa học và Công nghệ, cho biết như vậy tại buổi họp báo thường kỳ ngành nông nghiệp và môi trường sáng 17-6.",
-      "link": "https://tuoitre.vn/uu-tien-gan-tem-truy-xuat-nguon-goc-nong-san-lam-thuc-pham-san-pham-co-rui-ro-cao-tu-1-7-100260617103512594.htm",
-      "date": "6/17/2026 12:39:00 PM",
+      "title": "HDBank: Tăng trưởng ấn tượng song hành cùng trách nhiệm cộng đồng",
+      "summary": "HDBank tiếp tục được vinh danh tại Lễ công bố Top 50 Doanh nghiệp Phát triển bền vững tiêu biểu Việt Nam năm 2026 (Top 50 CSA), đồng thời được ghi nhận ở hạng mục 'Hoạt động CSR...",
+      "link": "https://tuoitre.vn/hdbank-tang-truong-an-tuong-song-hanh-cung-trach-nhiem-cong-dong-100260617181613364.htm",
+      "date": "6/17/2026 6:53:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "VRG đẩy mạnh khu công nghiệp và năng lượng tái tạo",
-      "summary": "VRG đẩy mạnh khu công nghiệp và năng lượng tái tạo VRG vượt kế hoạch lợi nhuận năm 2025, đồng thời đặt mục tiêu mở rộng đầu tư khu công nghiệp, nông nghiệp công nghệ cao và năng...",
-      "link": "https://tuoitre.vn/vrg-day-manh-khu-cong-nghiep-va-nang-luong-tai-tao-100260617114929574.htm",
-      "date": "6/17/2026 12:30:00 PM",
+      "title": "Dự án 'đắp chiếu' 10 năm của Gotec Việt Nam sắp được TP.HCM gỡ vướng những gì?",
+      "summary": "Kết luận thanh tra vừa được Thanh tra TP.HCM ban hành, chỉ rõ 'lối hồi sinh' cho dự án khu trung tâm thương mại và căn hộ cao cấp tại đường Bến Nghé (phường Tân Thuận Đông) của...",
+      "link": "https://tuoitre.vn/du-an-dap-chieu-10-nam-cua-gotec-viet-nam-sap-duoc-tphcm-go-vuong-nhung-gi-100260617163652976.htm",
+      "date": "6/17/2026 5:03:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Bộ Tài chính: Dùng ngân sách xây nhà cho thuê, miễn thuế TNCN với người cho thuê nhà",
-      "summary": "Bộ Tài chính thông tin về việc sử dụng ngân sách xây nhà cho thuê, đồng thời đề xuất Chính phủ miễn thuế thu nhập cá nhân (TNCN) với thu nhập từ hoạt động cho thuê nhà tại cuộc...",
-      "link": "https://tuoitre.vn/bo-tai-chinh-dung-ngan-sach-xay-nha-cho-thue-mien-thue-tncn-voi-nguoi-cho-thue-nha-100260617120140057.htm",
-      "date": "6/17/2026 11:54:00 AM",
+      "title": "Ông Phạm Nhật Vượng chỉ đạo dừng mở rộng quỹ đất, Vinhomes đang theo đuổi điều gì?",
+      "summary": "Chuyên gia nhận định trong bối cảnh có nhiều dự án quy mô lớn cần tập trung nguồn lực phát triển, việc tiếp tục mở rộng quỹ đất không còn là ưu tiên hàng đầu của Vinhomes.",
+      "link": "https://tuoitre.vn/ong-pham-nhat-vuong-chi-dao-dung-mo-rong-quy-dat-vinhomes-dang-theo-duoi-dieu-gi-100260617164759499.htm",
+      "date": "6/17/2026 5:01:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Chuyên gia: Nhà nước đang 'vừa đá bóng vừa thổi còi' khi định giá đất",
+      "summary": "Nhà nước đồng thời là chủ sở hữu và cơ quan quản lý đất đai, khiến lĩnh vực này chưa vận hành đầy đủ theo cơ chế thị trường, theo PGS.TS Lưu Quốc Thái.",
+      "link": "https://vnexpress.net/chuyen-gia-nha-nuoc-dang-vua-da-bong-vua-thoi-coi-khi-dinh-gia-dat-5086941.html",
+      "date": "Wed, 17 Jun 2026 18:29:57 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Đàn voi tắm bùn trong rừng Mã Đà",
+      "summary": "Video từ bẫy ảnh ghi cảnh đàn voi bốn con tắm bùn, uống nước trong rừng Mã Đà, trong đó có voi con từng được kiểm lâm giải cứu.",
+      "link": "https://vnexpress.net/dan-voi-tam-bun-trong-rung-ma-da-5086808.html",
+      "date": "Wed, 17 Jun 2026 14:51:48 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Cá sấu bò vào nhà dân lúc đêm khuya",
+      "summary": "Con cá sấu nước ngọt dài hơn một mét bất ngờ bò vào khuôn viên nhà dân ở phường Thuận Hóa lúc đêm khuya 16/6.",
+      "link": "https://vnexpress.net/ca-sau-bo-vao-nha-dan-luc-dem-khuya-5086779.html",
+      "date": "Wed, 17 Jun 2026 14:14:03 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Cầu cạn được đề xuất thay thế đất đắp cho cao tốc miền Tây",
       "summary": "Bộ Xây dựng đánh giá phương án cầu cạn tại Đồng bằng sông Cửu Long vốn đầu tư ban đầu cao hơn, nhưng hiệu quả lâu dài và giảm áp lực thiếu đất cát đắp nền.",
@@ -115,63 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Cây điều bật gốc đè chết người đàn ông trong nhà",
-      "summary": "Cây điều bật gốc trong mưa lớn kèm giông lốc, đổ vào nhà đè trúng ông Điểu Brong, 66 tuổi, đang nằm trên giường.",
-      "link": "https://vnexpress.net/cay-dieu-bat-goc-de-chet-nguoi-dan-ong-trong-nha-5086664.html",
-      "date": "Wed, 17 Jun 2026 09:57:48 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cứu hàng trăm ki-ốt chợ Mỹ Đình khỏi cháy",
-      "summary": "Từ đám cháy ki-ốt bán đồ ăn trong chợ Mỹ Đình, lính cứu hỏa khoanh vùng ngăn cháy lan, bảo vệ hơn 4.000 m2 chợ với hàng trăm ki-ốt của tiểu thương, đêm 16/6.",
-      "link": "https://vnexpress.net/cuu-hang-tram-ki-ot-cho-my-dinh-khoi-chay-5086647.html",
-      "date": "Wed, 17 Jun 2026 09:48:12 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Gần 20 năm sống trong bụi đá",
-      "summary": "Nhà cửa, vườn tược của hơn 200 hộ dân ở xã Trường Sơn thường xuyên nhuốm bụi từ mỏ đá, nhà quét được nửa tiếng lại phủ đầy bụi.",
-      "link": "https://vnexpress.net/gan-20-nam-song-trong-bui-da-5086531.html",
-      "date": "Wed, 17 Jun 2026 01:00:17 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Thủ tướng lập Hội đồng thẩm định nhà nước dự án đường vành đai 5 vùng thủ đô Hà Nội",
-      "summary": "Thủ tướng quyết định thành lập Hội đồng thẩm định nhà nước để thẩm định báo cáo nghiên cứu tiền khả thi dự án đường vành đai 5 vùng thủ đô Hà Nội, tổng mức đầu tư dự kiến khoảng...",
-      "link": "https://tuoitre.vn/thu-tuong-lap-hoi-dong-tham-dinh-nha-nuoc-du-an-duong-vanh-dai-5-vung-thu-do-ha-noi-100260617133345267.htm",
-      "date": "6/17/2026 2:10:00 PM",
+      "title": "Tiêu thụ điện tăng mạnh, các tỉnh thành phía Nam vẫn tiết kiệm hơn 3,13 tỉ kWh",
+      "summary": "Dù nhu cầu sử dụng điện tăng mạnh do nắng nóng kéo dài, các tỉnh, thành phía Nam vẫn tiết kiệm được hơn 3,13 tỉ kWh điện trong 5 tháng đầu năm 2026 nhờ triển khai đồng bộ nhiều...",
+      "link": "https://tuoitre.vn/tieu-thu-dien-tang-manh-cac-tinh-thanh-phia-nam-van-tiet-kiem-hon-313-ti-kwh-100260617173959573.htm",
+      "date": "6/17/2026 6:58:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Ngắm Vườn quốc gia Cát Tiên trước khi chuyển giao cho Đồng Nai quản lý",
-      "summary": "Thủ tướng Lê Minh Hưng vừa yêu cầu các bộ ngành, địa phương khẩn trương trình Chính phủ xem xét ban hành Nghị quyết chuyển giao Vườn quốc gia Cát Tiên về UBND TP Đồng Nai quản lý.",
-      "link": "https://tuoitre.vn/phong-su/ngam-vuon-quoc-gia-cat-tien-truoc-khi-chuyen-giao-cho-dong-nai-quan-ly-100260617125603696.htm",
-      "date": "6/17/2026 1:36:00 PM",
+      "title": "TP.HCM chốt hạn bàn giao mặt bằng đường Lương Định Của, gỡ vướng cho nút giao An Phú",
+      "summary": "TP.HCM yêu cầu hoàn tất bồi thường, tái định cư và bàn giao toàn bộ mặt bằng đường Lương Định Của trước ngày 30-11-2026.",
+      "link": "https://tuoitre.vn/tphcm-chot-han-ban-giao-mat-bang-duong-luong-dinh-cua-go-vuong-cho-nut-giao-an-phu-1002606171832196.htm",
+      "date": "6/17/2026 6:57:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Cà Mau bắt đầu xác định danh tính liệt sĩ vô danh qua giám định ADN",
-      "summary": "Ngày 17-6, Ban Chỉ đạo về tìm kiếm, quy tập và xác định danh tính hài cốt liệt sĩ tỉnh Cà Mau tổ chức lấy mẫu, bàn giao mẫu hài cốt liệt sĩ tại Nghĩa trang liệt sĩ Trần Văn Thời...",
-      "link": "https://tuoitre.vn/ca-mau-bat-dau-xac-dinh-danh-tinh-liet-si-vo-danh-qua-giam-dinh-adn-100260617124732648.htm",
-      "date": "6/17/2026 1:25:00 PM",
+      "title": "Lãnh đạo Khánh Hòa, Đắk Lắk chúc mừng, ghi nhận đóng góp của báo Tuổi Trẻ cho sự phát triển địa phương",
+      "summary": "Nhân dịp kỷ niệm 101 năm Ngày Báo chí cách mạng Việt Nam, lãnh đạo 2 tỉnh Khánh Hòa và Đắk Lắk đã đến chúc mừng Văn phòng đại diện (VPĐD) báo Tuổi Trẻ khu vực Nam Trung Bộ và Tây...",
+      "link": "https://tuoitre.vn/lanh-dao-khanh-hoa-dak-lak-chuc-mung-ghi-nhan-dong-gop-cua-bao-tuoi-tre-cho-su-phat-trien-dia-phuong-100260617172343721.htm",
+      "date": "6/17/2026 6:40:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "22 trường hợp phải nhập viện cấp cứu, bánh mì Hồng Ngọc 37 bị tạm ngưng sản xuất",
-      "summary": "Tính đến 19h ngày 16-6, cơ quan chức năng ghi nhận 22 trường hợp phải nhập viện cấp cứu với các triệu chứng nghi ngộ độc thực phẩm sau khi ăn bánh mì mua tại cơ sở Hồng Ngọc 37...",
-      "link": "https://tuoitre.vn/22-truong-hop-phai-nhap-vien-cap-cuu-banh-mi-hong-ngoc-37-bi-tam-ngung-san-xuat-100260617124252752.htm",
-      "date": "6/17/2026 1:23:00 PM",
+      "title": "Tây Ninh tán thành thành lập 9 phường và dự án giao thông gần 8.000 tỉ đồng",
+      "summary": "HĐND tỉnh Tây Ninh thông qua 9 phường mới và dự án ĐT.827E gần 8.000 tỉ đồng, hoàn thiện trục kết nối TP.HCM với Đồng bằng sông Cửu Long.",
+      "link": "https://tuoitre.vn/tay-ninh-tan-thanh-thanh-lap-9-phuong-va-du-an-giao-thong-gan-8000-ti-dong-100260617172255256.htm",
+      "date": "6/17/2026 6:33:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "'Mùa hè số' đưa công nghệ đên gần dân",
-      "summary": "Hè tình nguyện 2026 tại TP.HCM là một mô hình mới tinh: Lần đầu tiên ra mắt trong chương trình, chiến dịch tình nguyện hè là mô hình 'Mùa hè số'.",
-      "link": "https://tuoitre.vn/mua-he-so-dua-cong-nghe-den-gan-dan-100260617090642747.htm",
-      "date": "6/17/2026 1:07:00 PM",
+      "title": "Chủ tịch Hà Nội: Chỉ di dời khi đã hoàn thành các khu tái định cư",
+      "summary": "Chiều 17-6, Hà Nội tổ chức hội nghị gặp mặt đại biểu các cơ quan chỉ đạo, quản lý báo chí; lãnh đạo, phóng viên các cơ quan báo chí trung ương và Hà Nội nhân dịp kỷ niệm 101 năm...",
+      "link": "https://tuoitre.vn/chu-tich-ha-noi-chi-di-doi-khi-da-hoan-thanh-cac-khu-tai-dinh-cu-100260617175723771.htm",
+      "date": "6/17/2026 6:21:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-17T07:15:45.126378+00:00",
+  "last_updated": "2026-06-17T12:01:48.062010+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",

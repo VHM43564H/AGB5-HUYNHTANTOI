@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17T07:16:14.873846+00:00",
+  "last_updated": "2026-06-17T12:02:20.356687+00:00",
   "frequency": "quarterly",
   "source": "Tổng cục Thống kê Việt Nam (GSO/NSO) - Báo cáo tình hình kinh tế - xã hội theo quý",
   "country": "Vietnam (VN)",
@@ -525,48 +525,6 @@
     }
   },
   "annual_fallback": {
-    "gdp_growth": [
-      {
-        "year": "2015",
-        "value": 6.98715430598611
-      },
-      {
-        "year": "2016",
-        "value": 6.69000892660424
-      },
-      {
-        "year": "2017",
-        "value": 6.94019037359206
-      },
-      {
-        "year": "2018",
-        "value": 7.46500685572751
-      },
-      {
-        "year": "2019",
-        "value": 7.35926270105006
-      },
-      {
-        "year": "2020",
-        "value": 2.86541320912272
-      },
-      {
-        "year": "2021",
-        "value": 2.55372852648131
-      },
-      {
-        "year": "2022",
-        "value": 8.53750046755788
-      },
-      {
-        "year": "2023",
-        "value": 5.06502391455075
-      },
-      {
-        "year": "2024",
-        "value": 7.09118746633975
-      }
-    ],
     "cpi_inflation": [
       {
         "year": "2015",
@@ -607,52 +565,6 @@
       {
         "year": "2024",
         "value": 3.62109273885843
-      }
-    ],
-    "unemployment": [
-      {
-        "year": "2015",
-        "value": 1.848
-      },
-      {
-        "year": "2016",
-        "value": 1.848
-      },
-      {
-        "year": "2017",
-        "value": 1.874
-      },
-      {
-        "year": "2018",
-        "value": 1.161
-      },
-      {
-        "year": "2019",
-        "value": 1.681
-      },
-      {
-        "year": "2020",
-        "value": 2.103
-      },
-      {
-        "year": "2021",
-        "value": 2.383
-      },
-      {
-        "year": "2022",
-        "value": 1.57
-      },
-      {
-        "year": "2023",
-        "value": 1.645
-      },
-      {
-        "year": "2024",
-        "value": 1.602
-      },
-      {
-        "year": "2025",
-        "value": 1.523
       }
     ],
     "exports_goods_services": [
