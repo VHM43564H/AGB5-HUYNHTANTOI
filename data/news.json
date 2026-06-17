@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "WGC: Nhiều ngân hàng trung ương đưa vàng dự trữ về nước",
+      "summary": "Ngày càng nhiều ngân hàng trung ương chọn dự trữ vàng trong nước, thay vì gửi ở nước ngoài để giảm rủi ro tiếp cận tài sản ở nước ngoài, theo Hội đồng Vàng Thế giới.",
+      "link": "https://vnexpress.net/wgc-nhieu-ngan-hang-trung-uong-dua-vang-du-tru-ve-nuoc-5086864.html",
+      "date": "Thu, 18 Jun 2026 00:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "TP HCM đẩy nhanh tái cấu trúc các khu công nghiệp",
       "summary": "TP HCM đang đẩy nhanh tái cấu trúc khu công nghiệp theo hướng thông minh, bền vững, chớp \"thời cơ hiếm có\" tham gia chuỗi giá trị toàn cầu.",
       "link": "https://vnexpress.net/tp-hcm-day-nhanh-tai-cau-truc-cac-khu-cong-nghiep-5086842.html",
@@ -50,13 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Nhà đầu tư ngoại trở lại bán tháo cổ phiếu",
-      "summary": "Sau đợt giải ngân hơn 4.000 tỷ đồng hồi đầu tuần, khối ngoại đột ngột bán ròng 3.100 tỷ đồng, tập trung vào các mã trụ ngân hàng và công nghệ.",
-      "link": "https://vnexpress.net/nha-dau-tu-ngoai-tro-lai-ban-thao-co-phieu-5086882.html",
-      "date": "Wed, 17 Jun 2026 15:42:44 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "TP.HCM sẽ tái cấu trúc 17 khu công nghiệp theo hướng thông minh",
       "summary": "Thông tin này được Phó trưởng Ban Quản lý các khu chế xuất và công nghiệp TP.HCM (HEPZA) nêu tại Diễn đàn 'Công nghiệp 4.0 & chuỗi cung ứng thông minh động lực mới cho TP.HCM' do...",
       "link": "https://tuoitre.vn/tphcm-se-tai-cau-truc-17-khu-cong-nghiep-theo-huong-thong-minh-100260617204547398.htm",
@@ -86,6 +86,20 @@
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Hội Báo toàn quốc sẽ thảo luận về AI, bản quyền",
+      "summary": "Từ ngày 19-21/6, thành phố Hải Phòng sẽ tổ chức Hội Báo toàn quốc và Diễn đàn Báo chí toàn quốc năm 2026, thảo luận nhiều chủ đề trong đó có ứng dụng AI.",
+      "link": "https://vnexpress.net/hoi-bao-toan-quoc-se-thao-luan-ve-ai-ban-quyen-5087004.html",
+      "date": "Thu, 18 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Giữ nước chống cháy làm rừng tràm U Minh Hạ suy tàn",
+      "summary": "Việc giữ nước chống cháy quanh năm làm mất quy luật ngập - khô tự nhiên, khiến hàng trăm ha rừng tràm U Minh Hạ suy kiệt và chết hàng loạt, theo chuyên gia.",
+      "link": "https://vnexpress.net/giu-nuoc-chong-chay-lam-rung-tram-u-minh-ha-suy-tan-5085862.html",
+      "date": "Thu, 18 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Đề xuất vị trí ga đường sắt tốc độ cao và metro tại sân bay Long Thành",
       "summary": "UBND TP Đồng Nai đề xuất phương án bố trí nhà ga đường sắt tốc độ cao Bắc Nam và hai ga metro độc lập, so le trước Terminal T1 của Cảng hàng không quốc tế Long Thành.",
@@ -119,20 +133,6 @@
       "summary": "Video từ bẫy ảnh ghi cảnh đàn voi bốn con tắm bùn, uống nước trong rừng Mã Đà, trong đó có voi con từng được kiểm lâm giải cứu.",
       "link": "https://vnexpress.net/dan-voi-tam-bun-trong-rung-ma-da-5086808.html",
       "date": "Wed, 17 Jun 2026 14:51:48 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cá sấu bò vào nhà dân lúc đêm khuya",
-      "summary": "Con cá sấu nước ngọt dài hơn một mét bất ngờ bò vào khuôn viên nhà dân ở phường Thuận Hóa lúc đêm khuya 16/6.",
-      "link": "https://vnexpress.net/ca-sau-bo-vao-nha-dan-luc-dem-khuya-5086779.html",
-      "date": "Wed, 17 Jun 2026 14:14:03 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cầu cạn được đề xuất thay thế đất đắp cho cao tốc miền Tây",
-      "summary": "Bộ Xây dựng đánh giá phương án cầu cạn tại Đồng bằng sông Cửu Long vốn đầu tư ban đầu cao hơn, nhưng hiệu quả lâu dài và giảm áp lực thiếu đất cát đắp nền.",
-      "link": "https://vnexpress.net/cau-can-duoc-de-xuat-thay-the-dat-dap-cho-cao-toc-mien-tay-5086687.html",
-      "date": "Wed, 17 Jun 2026 11:54:22 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-17T16:10:00.427449+00:00",
+  "last_updated": "2026-06-17T18:39:18.651321+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
