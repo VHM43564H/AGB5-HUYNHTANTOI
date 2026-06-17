@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Fed giữ nguyên lãi suất",
+      "summary": "Cục Dự trữ Liên bang Mỹ (Fed) giữ nguyên lãi suất lần thứ 4 liên tiếp, trong phiên họp đầu tiên dưới thời tân Chủ tịch Kevin Warsh.",
+      "link": "https://vnexpress.net/fed-giu-nguyen-lai-suat-5087016.html",
+      "date": "Thu, 18 Jun 2026 01:13:02 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "WGC: Nhiều ngân hàng trung ương đưa vàng dự trữ về nước",
       "summary": "Ngày càng nhiều ngân hàng trung ương chọn dự trữ vàng trong nước, thay vì gửi ở nước ngoài để giảm rủi ro tiếp cận tài sản ở nước ngoài, theo Hội đồng Vàng Thế giới.",
       "link": "https://vnexpress.net/wgc-nhieu-ngan-hang-trung-uong-dua-vang-du-tru-ve-nuoc-5086864.html",
@@ -47,13 +54,6 @@
       "summary": "Ngân hàng SCB thông báo thanh lý tài sản, công cụ lao động tại nhiều chi nhánh sau quá trình tinh gọn mạng lưới.",
       "link": "https://vnexpress.net/scb-thanh-ly-tai-san-tai-nhieu-chi-nhanh-5086791.html",
       "date": "Wed, 17 Jun 2026 17:37:07 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Dự kiến nới trần vốn ngắn hạn cho vay trung, dài hạn lên 40%",
-      "summary": "Ngân hàng Nhà nước đề xuất cho phép các nhà băng nâng tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn từ 30% lên 40%.",
-      "link": "https://vnexpress.net/du-kien-noi-tran-von-ngan-han-cho-vay-trung-dai-han-len-40-5086889.html",
-      "date": "Wed, 17 Jun 2026 17:04:08 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-17T18:39:18.651321+00:00",
+  "last_updated": "2026-06-17T21:00:56.516133+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
