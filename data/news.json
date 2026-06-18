@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Deutsche Bank: Chất lượng doanh nghiệp mới là điều thu hút vốn ngoại",
+      "summary": "Theo ngân hàng lớn nhất Đức, vốn ngoại đầu tư không chỉ nhờ thể chế, quan trọng hơn là sức hấp dẫn của các doanh nghiệp trên sàn chứng khoán.",
+      "link": "https://vnexpress.net/deutsche-bank-chat-luong-doanh-nghiep-moi-la-dieu-thu-hut-von-ngoai-5087426.html",
+      "date": "Fri, 19 Jun 2026 02:39:58 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Toàn cầu có thể dư cung dầu thô đáng kể năm 2027",
       "summary": "Cơ quan Năng lượng Quốc tế (IEA) cho rằng thị trường sẽ dư cung lớn năm tới, do eo biển Hormuz mở cửa trở lại sau chiến sự Trung Đông.",
       "link": "https://vnexpress.net/toan-cau-co-the-du-cung-dau-tho-dang-ke-nam-2027-5087312.html",
@@ -47,13 +54,6 @@
       "summary": "Đến 2030, Việt Nam sẽ có ít nhất 10 doanh nghiệp công nghệ chiến lược quy mô lớn, doanh thu từ 1 tỷ USD mỗi năm, theo đề án của Chính phủ.",
       "link": "https://vnexpress.net/viet-nam-dat-muc-tieu-co-10-doanh-nghiep-cong-nghe-chien-luoc-ty-usd-5087216.html",
       "date": "Thu, 18 Jun 2026 14:08:25 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Người Mỹ mạnh tay chi tiêu",
-      "summary": "Bất chấp lạm phát, hoạt động tiêu dùng tại Mỹ tăng trưởng liên tiếp 4 tháng với doanh số bán lẻ tháng 5 vượt dự báo.",
-      "link": "https://vnexpress.net/nguoi-my-manh-tay-chi-tieu-5087193.html",
-      "date": "Thu, 18 Jun 2026 13:54:34 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -136,6 +136,13 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
+      "title": "Thời tiết hôm nay 19-6: Vùng núi Bắc Bộ còn mưa to, Nam Bộ ngày nắng, chiều mưa",
+      "summary": "Hôm nay 19-6, mưa to đã giảm bớt ở Bắc Bộ, nắng nóng xuất hiện tại một số nơi. Nam Bộ ngày nắng, chiều tối mưa dông.",
+      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-19-6-vung-nui-bac-bo-con-mua-to-nam-bo-ngay-nang-chieu-mua-100260618163014545.htm",
+      "date": "6/19/2026 3:07:00 AM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
+    },
+    {
       "title": "Tổng thống Nga Putin: Việt Nam là người bạn keo sơn của Nga",
       "summary": "Tổng thống Nga Vladimir Putin nhấn mạnh tình hữu nghị Nga - Việt và cùng Thủ tướng Lê Minh Hưng thảo luận về các biện pháp tạo đột phá cho quan hệ song phương.",
       "link": "https://tuoitre.vn/tong-thong-nga-putin-viet-nam-la-nguoi-ban-keo-son-cua-nga-100260618215957564.htm",
@@ -162,16 +169,9 @@
       "link": "https://tuoitre.vn/trung-tam-bao-chi-va-hoc-vien-can-bo-tphcm-ky-ket-phoi-hop-dao-tao-nghien-cuu-10026061819305351.htm",
       "date": "6/18/2026 8:50:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Bắt 1 người nước ngoài dùng túi ni lông trùm đầu nữ quản lý sòng bạc để cướp tài sản",
-      "summary": "Cảnh sát hình sự Đà Nẵng đã bắt nghi phạm là người nước ngoài cướp tài sản của một nữ quản lý sòng bạc.",
-      "link": "https://tuoitre.vn/bat-1-nguoi-nuoc-ngoai-dung-tui-ni-long-trum-dau-nu-quan-ly-song-bac-de-cuop-tai-san-100260618201517541.htm",
-      "date": "6/18/2026 8:44:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-18T18:40:03.576608+00:00",
+  "last_updated": "2026-06-18T21:17:42.438130+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
