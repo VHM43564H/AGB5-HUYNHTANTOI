@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Toàn bộ HĐQT Chứng khoán Thành Công từ nhiệm",
+      "summary": "Ông Nguyễn Khánh Linh, Chủ tịch Hội đồng quản trị Chứng khoán Thành Công, cùng 4 thành viên còn lại đều xin từ nhiệm trước thời hạn.",
+      "link": "https://vnexpress.net/toan-bo-hdqt-chung-khoan-thanh-cong-tu-nhiem-5087773.html",
+      "date": "Fri, 19 Jun 2026 18:16:16 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Yen Nhật xuống gần mức thấp nhất 40 năm",
+      "summary": "Yen Nhat xuống sát mức thấp nhất trong gần bốn thập kỷ, làm dấy lên dự báo sẽ có đợt bán USD để can thiệp mới từ Tokyo.",
+      "link": "https://vnexpress.net/yen-nhat-xuong-gan-muc-thap-nhat-40-nam-5087739.html",
+      "date": "Fri, 19 Jun 2026 17:16:58 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Chứng khoán 'đi tàu lượn' trong phiên ATC",
+      "summary": "Trong phiên ATC, nhiều mã đồng loạt nằm sàn do cơ cấu ETF như VHM, VPL, MCH… khiến chứng khoán giảm 28 điểm, trước khi phục hồi vào cuối phiên.",
+      "link": "https://vnexpress.net/chung-khoan-di-tau-luon-trong-phien-atc-5087690.html",
+      "date": "Fri, 19 Jun 2026 16:56:34 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "50% người mua Bitcoin dưới 62.358 USD có thể lời gấp đôi sau một năm",
       "summary": "Nghiên cứu chỉ ra một nửa nhà đầu tư mua Bitcoin dưới đường SMA 200 tuần có lợi nhuận hơn 113% sau một năm, mốc hiện tại là 62.358 USD.",
       "link": "https://vnexpress.net/50-nguoi-mua-bitcoin-duoi-62-358-usd-co-the-loi-gap-doi-sau-mot-nam-5087535.html",
@@ -36,142 +57,121 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vải không hạt Trung Quốc giảm một nửa",
-      "summary": "Vải không hạt nhập từ Trung Quốc được bán giá 350.000-480.000 đồng một kg, giảm 40-50% so với cùng kỳ năm ngoái nhờ nguồn cung dồi dào.",
-      "link": "https://vnexpress.net/gia-vai-khong-hat-trung-quoc-giam-mot-nua-5086646.html",
-      "date": "Fri, 19 Jun 2026 07:31:21 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Deutsche Bank: Chất lượng doanh nghiệp mới là điều thu hút vốn ngoại",
-      "summary": "Theo ngân hàng lớn nhất Đức, vốn ngoại đầu tư không chỉ nhờ thể chế, quan trọng hơn là sức hấp dẫn của các doanh nghiệp trên sàn chứng khoán.",
-      "link": "https://vnexpress.net/deutsche-bank-chat-luong-doanh-nghiep-moi-la-dieu-thu-hut-von-ngoai-5087426.html",
-      "date": "Fri, 19 Jun 2026 02:39:58 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Đặc sản vẫn loay hoay 'tìm đường' vào siêu thị",
-      "summary": "Mặc dù đã xuất khẩu sang Mỹ, châu Âu, nhiều đặc sản hiện nay vẫn loay hoay tìm chỗ đứng trong hệ thống bán lẻ hiện đại tại Việt Nam.",
-      "link": "https://vnexpress.net/dac-san-van-loay-hoay-tim-duong-vao-sieu-thi-5087263.html",
-      "date": "Fri, 19 Jun 2026 07:54:32 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Hai con ông Nguyễn Đức Thụy nắm khối tài sản gần 11.500 tỉ đồng ở một công ty chứng khoán",
-      "summary": "Ông Nguyễn Xuân Thái và bà Nguyễn Ngọc Mỹ Anh, con trai và con gái ông Nguyễn Đức Thụy, đều là cổ đông lớn của LPBS với tỉ lệ sở hữu mỗi người gần 13,5% vốn điều lệ.",
-      "link": "https://tuoitre.vn/hai-con-ong-nguyen-duc-thuy-nam-khoi-tai-san-gan-11500-ti-dong-o-mot-cong-ty-chung-khoan-100260619115607538.htm",
-      "date": "6/19/2026 12:14:00 PM",
+      "title": "Hệ thống điện cảnh báo áp lực lớn khi nắng nóng có thể lên 45°C tuần tới",
+      "summary": "Thông tin từ Công ty Quản lý và vận hành Hệ thống điện quốc gia (NSMO), dự báo đợt nắng nóng gay gắt sắp tới sẽ tạo nên áp lực lớn cho hệ thống điện quốc gia.",
+      "link": "https://tuoitre.vn/he-thong-dien-canh-bao-ap-luc-lon-khi-nang-nong-co-the-len-45c-tuan-toi-100260619144047702.htm",
+      "date": "6/19/2026 4:54:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Soi đèn hái vải thiều từ 3h sáng, nông dân vẫn vui vì giá cao",
-      "summary": "Dù trời vẫn còn tối đen như mực, những khu vườn ở thủ phủ vải thiều phía Bắc đã sáng đèn, nhộn nhịp tiếng cười nói khi hái vải thiều.",
-      "link": "https://tuoitre.vn/soi-den-hai-vai-thieu-tu-3h-sang-nong-dan-van-vui-vi-gia-cao-10026061911223038.htm",
-      "date": "6/19/2026 11:34:00 AM",
+      "title": "Đắk Lắk công bố 259 dự án, kêu gọi hơn 1 triệu tỉ đồng đầu tư",
+      "summary": "Tỉnh Đắk Lắk sẽ công bố quy hoạch điều chỉnh, trao nhiều quyết định đầu tư và giới thiệu danh mục 259 dự án với tổng vốn hơn 1,03 triệu tỉ đồng tại hội nghị xúc tiến đầu tư diễn...",
+      "link": "https://tuoitre.vn/dak-lak-cong-bo-259-du-an-keu-goi-hon-1-trieu-ti-dong-dau-tu-10026061916005038.htm",
+      "date": "6/19/2026 4:41:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Ông Nguyễn Cao Cường giữ chức Chủ tịch ACV",
-      "summary": "Ông Nguyễn Cao Cường, Phó tổng giám đốc phụ trách kinh doanh, được bầu giữ chức Chủ tịch HĐQT Tổng công ty Cảng hàng không Việt Nam trong giai đoạn doanh nghiệp chuẩn bị đưa sân...",
-      "link": "https://tuoitre.vn/ong-nguyen-cao-cuong-giu-chuc-chu-tich-acv-100260619090946506.htm",
-      "date": "6/19/2026 11:02:00 AM",
+      "title": "Lộ trình xây dựng môi trường xanh cho điểm đến du lịch Phú Quốc",
+      "summary": "Trong 6 tháng đầu năm 2026, đảo Phú Quốc (tỉnh An Giang) ước đón hơn 5,7 triệu lượt khách, khách quốc tế hơn 1,3 triệu lượt.",
+      "link": "https://tuoitre.vn/lo-trinh-xay-dung-moi-truong-xanh-cho-diem-den-du-lich-phu-quoc-100260619153902741.htm",
+      "date": "6/19/2026 4:18:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "MSCI: Chứng khoán Việt Nam có nhiều bước tiến, nhưng vẫn còn một số điểm nghẽn",
-      "summary": "MSCI ghi nhận nhiều cải cách của thị trường chứng khoán Việt Nam trong năm qua, từ room ngoại đến hạ tầng thanh toán. Tuy nhiên, vẫn còn một số rào cản đối với nhà đầu tư nước...",
-      "link": "https://tuoitre.vn/msci-chung-khoan-viet-nam-co-nhieu-buoc-tien-nhung-van-con-mot-so-diem-nghen-100260619101542143.htm",
-      "date": "6/19/2026 11:01:00 AM",
+      "title": "VN-Index kết tuần trong sắc đỏ, nhưng vẫn tăng 33 điểm sau một tuần",
+      "summary": "VN-Index giảm gần 6 điểm trong phiên 19-6 do áp lực bán gia tăng ở nhóm cổ phiếu vốn hóa lớn. Tuy nhiên chỉ số vẫn tăng gần 33 điểm sau một tuần giao dịch, và giữ vững trên mốc...",
+      "link": "https://tuoitre.vn/vn-index-ket-tuan-trong-sac-do-nhung-van-tang-33-diem-sau-mot-tuan-100260619153159679.htm",
+      "date": "6/19/2026 4:05:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
-      "title": "Hà Nội dự kiến nâng mức hỗ trợ bữa trưa cho học sinh tiểu học",
-      "summary": "Mức hỗ trợ học sinh tiểu học diện chính sách, con em đồng bào dân tộc thiểu số, miền núi và bãi giữa sông Hồng dự kiến nâng từ 30.000 lên 40.000 đồng/em/ngày.",
-      "link": "https://vnexpress.net/ha-noi-du-kien-nang-muc-ho-tro-bua-trua-cho-hoc-sinh-tieu-hoc-5087565.html",
-      "date": "Fri, 19 Jun 2026 12:23:11 +0700",
+      "title": "'Đất nước không thể vươn mình nếu thiếu báo chí tiên phong'",
+      "summary": "Trưởng ban Tuyên giáo và Dân vận Trung ương Trịnh Văn Quyết khẳng định đất nước không thể vươn mình nếu thiếu một nền báo chí bản lĩnh, tiên phong và khát vọng.",
+      "link": "https://vnexpress.net/dat-nuoc-khong-the-vuon-minh-neu-thieu-bao-chi-tien-phong-5087754.html",
+      "date": "Fri, 19 Jun 2026 17:48:12 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Quy định mới về chăm sóc sức khỏe cán bộ cấp cao",
-      "summary": "Theo quy định mới, lãnh đạo chủ chốt của Đảng và Nhà nước được bác sĩ theo dõi, thăm khám sức khỏe hằng ngày; các nhóm chức danh khác thực hiện chế độ khám, theo dõi sức khỏe theo...",
-      "link": "https://vnexpress.net/quy-dinh-moi-ve-cham-soc-suc-khoe-can-bo-cap-cao-5087529.html",
-      "date": "Fri, 19 Jun 2026 12:13:34 +0700",
+      "title": "Nhật Bản dẫn đầu thị trường tiếp nhận lao động Việt Nam",
+      "summary": "Gần 28.500 người, chiếm 43% tổng số lao động Việt Nam đi làm việc nước ngoài trong sáu tháng đầu năm chọn điểm đến Nhật Bản.",
+      "link": "https://vnexpress.net/nhat-ban-dan-dau-thi-truong-tiep-nhan-lao-dong-viet-nam-5087757.html",
+      "date": "Fri, 19 Jun 2026 17:42:47 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Ba người gặp nạn trên sông Đồng Nai",
-      "summary": "Nước từ thượng nguồn sông Đồng Nai đổ về, anh Đoàn Mạnh Tài (37 tuổi) kịp đưa một con lên bờ rồi quay lại cứu con trai và cháu nhưng cả ba bị cuốn mất tích.",
-      "link": "https://vnexpress.net/ba-nguoi-gap-nan-tren-song-dong-nai-5087549.html",
-      "date": "Fri, 19 Jun 2026 10:30:43 +0700",
+      "title": "TP HCM sẽ xây chung cư 35-38 tầng ở khu Mả Lạng, chợ Gà - Gạo",
+      "summary": "Thành phố dự kiến xây chung cư nhà ở xã hội cao 35-38 tầng, với tổng số gần 2.300 căn cùng trường học tại khu Mả Lạng và chợ Gà - Gạo tại trung tâm quận 1 cũ.",
+      "link": "https://vnexpress.net/tp-hcm-se-xay-chung-cu-35-38-tang-o-khu-ma-lang-cho-ga-gao-5087642.html",
+      "date": "Fri, 19 Jun 2026 17:40:36 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đường ven Hồ Tây trước kế hoạch thay đổi diện mạo",
-      "summary": "Nhiều đoạn đường quanh Hồ Tây mặt cắt hẹp, thường xuyên ùn ứ, hạ tầng xuống cấp, ảnh hưởng đến mỹ quan và khả năng kết nối không gian công cộng.",
-      "link": "https://vnexpress.net/duong-ven-ho-tay-truoc-ke-hoach-thay-doi-dien-mao-5086368.html",
-      "date": "Fri, 19 Jun 2026 08:54:37 +0700",
+      "title": "TP HCM miễn phí hạ tầng cảng biển trong 3 năm",
+      "summary": "Gần 94.100 doanh nghiệp được miễn phí sử dụng hạ tầng cảng biển trong ba năm, giúp giảm chi phí logistics, nhưng ngân sách TP HCM dự kiến hụt thu 7.170 tỷ đồng.",
+      "link": "https://vnexpress.net/tp-hcm-mien-phi-ha-tang-cang-bien-trong-3-nam-5087632.html",
+      "date": "Fri, 19 Jun 2026 17:02:23 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đề xuất lập Sở An toàn thực phẩm ở Hà Nội, chi cục tại 32 tỉnh",
-      "summary": "Bộ Y tế đề xuất Hà Nội thành lập Sở An toàn thực phẩm tương tự mô hình đang áp dụng tại TP HCM; 32 tỉnh, thành còn lại tổ chức Chi cục An toàn thực phẩm trực thuộc Sở Y tế.",
-      "link": "https://vnexpress.net/de-xuat-lap-so-an-toan-thuc-pham-o-ha-noi-chi-cuc-tai-32-tinh-5087052.html",
-      "date": "Fri, 19 Jun 2026 07:00:00 +0700",
+      "title": "Phát hiện dị vật nghi liên quan mộ liệt sĩ ở công viên Lê Thị Riêng",
+      "summary": "Lực lượng tìm kiếm quét radar thăm dò lòng đất phát hiện dị vật tại khu vực rãnh nghi mộ tập thể liệt sĩ ở công viên Lê Thị Riêng.",
+      "link": "https://vnexpress.net/phat-hien-di-vat-nghi-lien-quan-mo-liet-si-o-cong-vien-le-thi-rieng-5087701.html",
+      "date": "Fri, 19 Jun 2026 16:28:44 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "TP HCM sẽ xây bãi xe, trung tâm thương mại ngầm dưới bến Bạch Đằng",
-      "summary": "Đường Tôn Đức Thắng qua bến Bạch Đằng dự kiến được ngầm hóa một phần, phía dưới bố trí bãi đậu xe và trung tâm thương mại, trong dự án gần 30.000 tỷ đồng.",
-      "link": "https://vnexpress.net/tp-hcm-se-xay-bai-xe-trung-tam-thuong-mai-ngam-duoi-ben-bach-dang-5087436.html",
-      "date": "Fri, 19 Jun 2026 06:00:00 +0700",
+      "title": "TP HCM miễn nhiệm một phó chủ tịch UBND",
+      "summary": "Ông Bùi Xuân Cường, 51 tuổi thôi chức Phó chủ tịch UBND TP HCM, hai Giám đốc Sở Nguyễn Văn Hiếu và Nguyễn Văn Đồng thôi làm Ủy viên UBND thành phố.",
+      "link": "https://vnexpress.net/tp-hcm-mien-nhiem-mot-pho-chu-tich-ubnd-5087683.html",
+      "date": "Fri, 19 Jun 2026 16:12:35 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "TP HCM sẽ miễn vé xe buýt không cần định danh trong ba tháng",
-      "summary": "Dự kiến hành khách đi 135 tuyến xe buýt nội tỉnh được miễn vé, không cần định danh từ tháng 7 đến hết tháng 9, ba tháng cuối năm phải xác thực điện tử.",
-      "link": "https://vnexpress.net/tp-hcm-se-mien-ve-xe-buyt-khong-can-dinh-danh-trong-ba-thang-5087416.html",
-      "date": "Fri, 19 Jun 2026 05:00:00 +0700",
+      "title": "Ôtô tải tự trôi tông 3 xe, làm gãy trụ điện",
+      "summary": "Xe tải chở hơn chục tấn cà phê trôi xuống dốc khi tài xế rời cabin, tông một taxi, hai xe máy rồi làm gãy trụ điện trung thế trên quốc lộ 20.",
+      "link": "https://vnexpress.net/oto-tai-tu-troi-tong-3-xe-lam-gay-tru-dien-5087681.html",
+      "date": "Fri, 19 Jun 2026 15:44:25 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Những kết quả nổi bật từ chuyến công du Nga của Thủ tướng Lê Minh Hưng",
-      "summary": "Hội nghị cấp cao kỷ niệm 35 năm quan hệ ASEAN - Nga không chỉ tạo khuôn khổ hợp tác mới cho hai bên, mà còn ghi dấu vai trò chủ động, trách nhiệm và thực chất của Việt Nam.",
-      "link": "https://tuoitre.vn/nhung-ket-qua-noi-bat-tu-chuyen-cong-du-nga-cua-thu-tuong-le-minh-hung-100260619115507007.htm",
-      "date": "6/19/2026 1:01:00 PM",
+      "title": "Lãnh đạo Thành ủy Cần Thơ đặt hàng báo chí về tin, bài có đầu tư, chiều sâu",
+      "summary": "Phó bí thư Thành ủy Cần Thơ đặt hàng báo chí về tin, bài có sự đầu tư, chiều sâu để giới thiệu, quảng bá mạnh mẽ hơn nữa hình ảnh Cần Thơ.",
+      "link": "https://tuoitre.vn/lanh-dao-thanh-uy-can-tho-dat-hang-bao-chi-ve-tin-bai-co-dau-tu-chieu-sau-100260619162506332.htm",
+      "date": "6/19/2026 5:03:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Tải ứng dụng MultiGo, sử dụng giao thông công cộng TP.HCM thuận tiện, ưu đãi",
-      "summary": "Trung tâm Quản lý giao thông công cộng TP.HCM (Sở Xây dựng) khuyến khích người dân tải ứng dụng MultiGo để sử dụng giao thông công cộng được thuận tiện và có nhiều ưu đãi.",
-      "link": "https://tuoitre.vn/tai-ung-dung-multigo-su-dung-giao-thong-cong-cong-tphcm-thuan-tien-uu-dai-10026061910432666.htm",
-      "date": "6/19/2026 12:29:00 PM",
+      "title": "Miễn nhiệm Phó chủ tịch UBND TP.HCM Bùi Xuân Cường để thực hiện công tác cán bộ",
+      "summary": "Chiều 19-6, tại kỳ họp thứ 3, HĐND TP.HCM khóa XI, nhiệm kỳ 2026-2031 đã tiến hành miễn nhiệm đối với Phó chủ tịch UBND TP.HCM Bùi Xuân Cường để thực hiện công tác cán bộ.",
+      "link": "https://tuoitre.vn/mien-nhiem-pho-chu-tich-ubnd-tphcm-bui-xuan-cuong-de-thuc-hien-cong-tac-can-bo-10026061914301262.htm",
+      "date": "6/19/2026 5:00:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Hành trình cai nghiện game, mạng xã hội - Kỳ cuối: Mỹ cắt cơn nghiện Internet thế nào?",
-      "summary": "Từ năm 2013, khi trung tâm điều trị nghiện Internet chuẩn bị đi vào hoạt động tại Trung tâm dịch vụ sức khỏe hành vi thuộc Bệnh viện khu vực Bradford, bang Pennsylvania, Mỹ thì...",
-      "link": "https://tuoitre.vn/hanh-trinh-cai-nghien-game-mang-xa-hoi-ky-cuoi-my-cat-con-nghien-internet-the-nao-100260618232158723.htm",
-      "date": "6/19/2026 12:02:00 PM",
+      "title": "Hệ thống điện cảnh báo áp lực lớn khi nắng nóng có thể lên 45°C tuần tới",
+      "summary": "Thông tin từ Công ty Quản lý và vận hành Hệ thống điện quốc gia (NSMO), dự báo đợt nắng nóng gay gắt sắp tới sẽ tạo nên áp lực lớn cho hệ thống điện quốc gia.",
+      "link": "https://tuoitre.vn/he-thong-dien-canh-bao-ap-luc-lon-khi-nang-nong-co-the-len-45c-tuan-toi-100260619144047702.htm",
+      "date": "6/19/2026 4:54:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Giăng bẫy người già mua hợp đồng kỳ nghỉ: Thứ mất hơn cả tiền bạc",
-      "summary": "Công an TP Hà Nội đã công bố thông tin gây chú ý dư luận: khởi tố 21 vụ án tại 23 công ty mua bán thẻ sở hữu kỳ nghỉ, khởi tố 187 bị can về tội lừa đảo chiếm đoạt tài sản.",
-      "link": "https://tuoitre.vn/giang-bay-nguoi-gia-mua-hop-dong-ky-nghi-thu-mat-hon-ca-tien-bac-100260619080056697.htm",
-      "date": "6/19/2026 12:01:00 PM",
+      "title": "Palestine truy tặng Đại tướng Võ Nguyên Giáp huân chương cao quý nhất",
+      "summary": "Huân chương Đại huân đai được truy tặng Đại tướng Võ Nguyên Giáp vì những đóng góp to lớn cho phong trào đấu tranh giải phóng dân tộc, cũng như tình cảm kiên định của cố Đại tướng...",
+      "link": "https://tuoitre.vn/palestine-truy-tang-dai-tuong-vo-nguyen-giap-huan-chuong-cao-quy-nhat-100260619163423688.htm",
+      "date": "6/19/2026 4:52:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "TP.HCM đề xuất tăng 1,5 lần hệ số đất khu TOD, hỗ trợ 10 tỉ đồng cho nhà ở xã hội",
-      "summary": "Theo tờ trình về quy hoạch khu vực TOD trên địa bàn TP.HCM, hệ số sử dụng đất gộp trong khu TOD tăng tối đa 1,5 lần so với quy chuẩn, còn dự án nhà xã hội được hỗ trợ tối đa 10 tỉ...",
-      "link": "https://tuoitre.vn/tphcm-de-xuat-tang-15-lan-he-so-dat-khu-tod-ho-tro-10-ti-dong-cho-nha-o-xa-hoi-100260619111507846.htm",
-      "date": "6/19/2026 11:59:00 AM",
+      "title": "Đắk Lắk công bố 259 dự án, kêu gọi hơn 1 triệu tỉ đồng đầu tư",
+      "summary": "Tỉnh Đắk Lắk sẽ công bố quy hoạch điều chỉnh, trao nhiều quyết định đầu tư và giới thiệu danh mục 259 dự án với tổng vốn hơn 1,03 triệu tỉ đồng tại hội nghị xúc tiến đầu tư diễn...",
+      "link": "https://tuoitre.vn/dak-lak-cong-bo-259-du-an-keu-goi-hon-1-trieu-ti-dong-dau-tu-10026061916005038.htm",
+      "date": "6/19/2026 4:41:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-19T07:35:53.753322+00:00",
+  "last_updated": "2026-06-19T12:00:08.580276+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
