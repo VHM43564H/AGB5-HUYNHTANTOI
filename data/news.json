@@ -57,6 +57,13 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
+      "title": "Khi một video phối đồ tạo ra cơn sốt mua sắm",
+      "summary": "Thương mại điện tử hiện đóng góp khoảng 10% tổng mức bán lẻ hàng hóa, dịch vụ tiêu dùng và gần 2/3 giá trị nền kinh tế số Việt Nam. Tuy nhiên, nhiều doanh nghiệp thời trang vẫn...",
+      "link": "https://tuoitre.vn/khi-mot-video-phoi-do-tao-ra-con-sot-mua-sam-100260619222008745.htm",
+      "date": "6/19/2026 11:54:00 PM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
+    },
+    {
       "title": "Ký loạt hợp đồng dầu khí tại các lô, mỏ Sư Tử Trắng cung ứng khí cho Đông Nam Bộ",
       "summary": "Hợp đồng chia sản phẩm dầu khí (PSC) các lô 10/11 và 10&11-1 và hợp đồng mua bán khí (GSPA) mỏ Sư Tử Trắng giai đoạn 2B, lô 15-1 vừa được ký kết.",
       "link": "https://tuoitre.vn/ky-loat-hop-dong-dau-khi-tai-cac-lo-mo-su-tu-trang-cung-ung-khi-cho-dong-nam-bo-100260619202130685.htm",
@@ -76,26 +83,19 @@
       "link": "https://tuoitre.vn/nuoi-tieu-khung-long-tren-vung-ban-hoang-mac-100260618153618049.htm",
       "date": "6/19/2026 8:11:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Biến động ở Chứng khoán Thành Công: Toàn bộ hội đồng quản trị xin nghỉ ngay trước đại hội",
-      "summary": "Chủ tịch Chứng khoán Thành Công cùng hai phó chủ tịch và 2 thành viên HĐQT còn lại đều đã nộp đơn từ nhiệm. Đơn sẽ được thông qua tại đại hội đồng cổ đông thường niên diễn ra vào...",
-      "link": "https://tuoitre.vn/bien-dong-o-chung-khoan-thanh-cong-toan-bo-hoi-dong-quan-tri-xin-nghi-ngay-truoc-dai-hoi-100260619193930672.htm",
-      "date": "6/19/2026 7:46:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
       "title": "Lao động ngoài trời mất gần 2,5 giờ làm việc mỗi ngày vì nắng nóng",
-      "summary": "Khảo sát tại Hà Nội và TP HCM cho thấy lao động ngoài trời mất trung bình 2,4 giờ làm việc mỗi ngày trong các đợt nắng nóng gay gắt, kéo theo thu nhập giảm và chi phí sinh hoạt...",
+      "summary": "Khảo sát tại Hà Nội và TP HCM cho thấy lao động ngoài trời mất trung bình 2,4 giờ làm việc mỗi ngày trong các đợt nắng nóng, làm giảm thu nhập và tăng chi phí sinh hoạt.",
       "link": "https://vnexpress.net/lao-dong-ngoai-troi-mat-gan-2-5-gio-lam-viec-moi-ngay-vi-nang-nong-5087807.html",
       "date": "Sat, 20 Jun 2026 00:00:00 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
       "title": "Gỡ vướng chứng nhận cho ghế an toàn trẻ em",
-      "summary": "Do chưa có tổ chức nào chứng nhận ghế an toàn cho trẻ em, Cục Đăng kiểm Việt Nam kiến nghị Bộ Xây dựng sớm hướng dẫn thủ tục đăng ký hoạt động chứng nhận, thử nghiệm cho thiết bị...",
+      "summary": "Do chưa có tổ chức nào chứng nhận ghế an toàn cho trẻ em, Cục Đăng kiểm Việt Nam kiến nghị Bộ Xây dựng hướng dẫn thủ tục đăng ký hoạt động chứng nhận, thử nghiệm cho thiết bị này.",
       "link": "https://vnexpress.net/go-vuong-chung-nhan-cho-ghe-an-toan-tre-em-5087674.html",
       "date": "Sat, 20 Jun 2026 00:00:00 +0700",
       "source": "Thời sự - VnExpress RSS"
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-19T17:30:44.749354+00:00",
+  "last_updated": "2026-06-19T19:28:15.607547+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
