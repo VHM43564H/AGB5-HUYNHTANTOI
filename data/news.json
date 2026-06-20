@@ -87,6 +87,20 @@
   ],
   "chinh_sach": [
     {
+      "title": "Khu vực cầu đường Bình Tiên đi qua trước ngày khởi công",
+      "summary": "Cầu đường Bình Tiên dài 3,6 km, vốn gần 6.300 tỷ đồng, đi qua nhiều khu dân cư và kênh rạch, kết nối trung tâm TP HCM với khu Nam và miền Tây.",
+      "link": "https://vnexpress.net/khu-vuc-cau-duong-binh-tien-di-qua-truoc-ngay-khoi-cong-5087978.html",
+      "date": "Sun, 21 Jun 2026 06:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Hơn nửa thế kỷ tìm gia đình nhà báo liệt sĩ",
+      "summary": "Hơn 50 năm kể từ ngày đồng đội hy sinh, ông Nguyễn Đắc Hiền, 88 tuổi, vẫn đau đáu tìm thân nhân liệt sĩ, nhà báo Nguyễn Duy Kiểm.",
+      "link": "https://vnexpress.net/hon-nua-the-ky-tim-gia-dinh-nha-bao-liet-si-5085175.html",
+      "date": "Sun, 21 Jun 2026 05:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Đội Trung Quốc 'kể chuyện Tây Du Ký' bằng pháo hoa",
       "summary": "Đội từ Trung Quốc mang đến Lễ hội pháo hoa quốc tế Đà Nẵng màn trình diễn lấy cảm hứng \"Tây Du Ký\", tạo nên cuộc đối đầu kịch tính với đại diện Đức, đêm 20/6.",
       "link": "https://vnexpress.net/doi-trung-quoc-ke-chuyen-tay-du-ky-bang-phao-hoa-5088082.html",
@@ -122,18 +136,11 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Hai bò tót chết trong Khu bảo tồn Đồng Nai",
-      "summary": "Hai con bò tót nặng khoảng 800 kg và 1,2 tấn được kiểm lâm phát hiện chết cách nhau 200 m trong Khu bảo tồn Thiên nhiên - Văn hóa Đồng Nai, chưa rõ nguyên nhân.",
-      "link": "https://vnexpress.net/hai-bo-tot-chet-trong-khu-bao-ton-dong-nai-5087997.html",
-      "date": "Sat, 20 Jun 2026 16:47:20 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Làng muối cuối cùng ở Quảng Trị",
-      "summary": "Nhiều làng muối đã biến mất nhưng người làng Phú Lộc, xã Phú Trạch vẫn gìn giữ nghề, tạo thu nhập khoảng một triệu đồng trên một tấn muối thành phẩm.",
-      "link": "https://vnexpress.net/lang-muoi-cuoi-cung-o-quang-tri-5087708.html",
-      "date": "Sat, 20 Jun 2026 14:43:14 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Cao tốc ở miền Tây, xây cầu cạn đắt hơn nhưng xứng đáng?",
+      "summary": "Xây cầu cạn bê tông cốt thép qua những vùng đất yếu có nhiều điểm lợi hơn so với đắp nền làm đường.",
+      "link": "https://tuoitre.vn/cao-toc-o-mien-tay-xay-cau-can-dat-hon-nhung-xung-dang-100260618145950873.htm",
+      "date": "6/21/2026 5:16:00 AM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
       "title": "Thời tiết hôm nay 21-6: Cả nước nắng nóng, nhiệt độ cao nhất có thể gần 40 độ C",
@@ -162,16 +169,9 @@
       "link": "https://tuoitre.vn/bao-mekkhala-dang-manh-len-chua-co-dau-hieu-vao-bien-dong-100260620194343422.htm",
       "date": "6/20/2026 8:14:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Công bố 10 quy tắc sử dụng AI trong báo chí",
-      "summary": "Chiều 20-6, Diễn đàn Báo chí toàn quốc lần thứ III năm 2026 đã khép lại với 9 phiên thảo luận chuyên sâu, chuyên biệt và 2 phiên khai mạc, bế mạc.",
-      "link": "https://tuoitre.vn/cong-bo-10-quy-tac-su-dung-ai-trong-bao-chi-100260620192011778.htm",
-      "date": "6/20/2026 8:03:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-20T22:01:02.319433+00:00",
+  "last_updated": "2026-06-20T23:42:14.171547+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
