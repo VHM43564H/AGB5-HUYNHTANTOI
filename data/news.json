@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Những ai sở hữu cổ phần tỷ USD trong SpaceX?",
+      "summary": "Ngoài Elon Musk, các giám đốc cấp cao và quỹ đầu tư của SpaceX cũng chứng kiến tài sản tăng vọt nhờ IPO của công ty.",
+      "link": "https://vnexpress.net/nhung-ai-so-huu-co-phan-ty-usd-trong-spacex-5088211.html",
+      "date": "Mon, 22 Jun 2026 00:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Giá vàng có thể giảm tiếp tuần tới",
       "summary": "Chuyên gia Phố Wall dự báo vàng thế giới tiếp tục giảm sau động thái giữ nguyên lãi suất của Fed, trong khi nhà đầu tư cá nhân lạc quan.",
       "link": "https://vnexpress.net/gia-vang-co-the-giam-tiep-tuan-toi-5088242.html",
@@ -50,13 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Hàn Quốc lo lạm phát do công ty công nghệ chi thưởng 'khủng'",
-      "summary": "Ngân hàng Trung ương Hàn Quốc (BOK) cảnh báo áp lực lạm phát khi người lao động trong ngành công nghệ nhận được lượng tiền thưởng lớn.",
-      "link": "https://vnexpress.net/han-quoc-lo-lam-phat-do-cong-ty-cong-nghe-chi-thuong-khung-5088076.html",
-      "date": "Sun, 21 Jun 2026 08:30:01 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Nghị định 208: Chậm chuyến 4 giờ, khi nào hãng phải hoàn vé, bồi thường?",
       "summary": "Từ ngày 1-7, hành khách có thể yêu cầu hoàn vé khi chuyến bay chậm từ 4 giờ do lỗi của hãng, thay vì phải chờ 5 giờ như hiện nay. Tình trạng chậm, hủy chuyến ra sao, hãng nào \"đội...",
       "link": "https://tuoitre.vn/nghi-dinh-208-cham-chuyen-4-gio-khi-nao-hang-phai-hoan-ve-boi-thuong-1002606211618174.htm",
@@ -86,6 +86,20 @@
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Đề xuất chỉ định thầu một số hạng mục đường sắt",
+      "summary": "Bộ Công Thương đề xuất áp dụng các cơ chế đặc thù, gồm chỉ định thầu và chia gói thầu, nhằm tăng tỷ lệ nội địa hóa trong các dự án đường sắt trọng điểm.",
+      "link": "https://vnexpress.net/de-xuat-chi-dinh-thau-mot-so-hang-muc-duong-sat-5088149.html",
+      "date": "Mon, 22 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Ôtô khách tông xe đầu kéo trên cao tốc, 9 người bị thương",
+      "summary": "Ôtô khách chở hơn 10 người chạy trên cao tốc Hàm Nghi - Vũng Áng tông vào đuôi xe đầu kéo chở khung sắt cùng chiều, khiến 9 người bị thương, tối 21/6.",
+      "link": "https://vnexpress.net/oto-khach-tong-xe-dau-keo-tren-cao-toc-9-nguoi-bi-thuong-5088294.html",
+      "date": "Sun, 21 Jun 2026 23:41:41 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "VnExpress giành giải B Báo chí Quốc gia",
       "summary": "Tuyến bài kỷ niệm 80 năm Quốc khánh của VnExpress đoạt giải B Báo chí Quốc gia lần thứ 19, tại lễ trao giải tổ chức ở Hải Phòng tối 21/6.",
@@ -119,20 +133,6 @@
       "summary": "Từ cuối năm nay, các chung cư mới và hiện hữu phải đáp ứng nhiều yêu cầu mới về bố trí chỗ đỗ xe, khu vực sạc và đổi pin nhằm tăng cường an toàn phòng cháy chữa cháy.",
       "link": "https://vnexpress.net/chung-cu-phai-bo-tri-rieng-khu-vuc-de-oto-va-xe-may-dien-5088053.html",
       "date": "Sun, 21 Jun 2026 16:41:34 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Nhiều xe máy đi vào cao tốc Bắc Nam",
-      "summary": "Cục Đường bộ Việt Nam ghi nhận hơn 100 trường hợp xe máy đi vào các đoạn cao tốc Bắc Nam trong ba tháng, tiềm ẩn nguy cơ tai nạn và mất an toàn giao thông.",
-      "link": "https://vnexpress.net/nhieu-xe-may-di-vao-cao-toc-bac-nam-5087859.html",
-      "date": "Sun, 21 Jun 2026 16:36:10 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Cẩu 200 tấn kéo xe container khỏi vực đèo Bảo Lộc",
-      "summary": "Xe cẩu cùng nhiều phương tiện nâng ôtô container rơi xuống vực sâu 30 m ở đèo Bảo Lộc, ùn tắc hơn 10 km trên tuyến nối Đà Lạt dần được giải tỏa, trưa 21/6.",
-      "link": "https://vnexpress.net/cau-200-tan-keo-xe-container-khoi-vuc-deo-bao-loc-5088157.html",
-      "date": "Sun, 21 Jun 2026 12:30:39 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-21T17:00:01.245616+00:00",
+  "last_updated": "2026-06-21T18:21:10.120288+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
