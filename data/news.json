@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Đế chế kinh doanh khổng lồ của Elon Musk",
+      "summary": "Elon Musk từng đồng sáng lập PayPal, OpenAI, nhưng hiện chỉ điều hành SpaceX, Tesla, Neuralink và The Boring Company.",
+      "link": "https://vnexpress.net/de-che-kinh-doanh-khong-lo-cua-elon-musk-5088103.html",
+      "date": "Sun, 21 Jun 2026 11:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Phong cách điều hành 'tinh gọn' của tân chủ tịch Fed",
       "summary": "Ngay cuộc họp chính sách đầu tiên, Chủ tịch mới của Fed Kevin Warsh đã để lại dấu ấn riêng, với phong cách điều hành tinh gọn.",
       "link": "https://vnexpress.net/phong-cach-dieu-hanh-tinh-gon-cua-tan-chu-tich-fed-5088086.html",
@@ -50,42 +57,56 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vàng thế giới chưa dứt đà giảm",
-      "summary": "Mỗi ounce vàng hiện xuống vùng 4.150 USD, ghi nhận tuần giảm thứ 3 liên tiếp, chủ yếu do khả năng Fed tăng lãi suất.",
-      "link": "https://vnexpress.net/gia-vang-the-gioi-chua-dut-da-giam-5087867.html",
-      "date": "Sat, 20 Jun 2026 09:16:21 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Toàn cảnh đường vượt biển Cần Giờ - Vũng Tàu: Khép vòng hạ tầng chiến lược TP.HCM",
-      "summary": "Đường vượt biển Cần Giờ - Vũng Tàu là công trình đầu tiên tại Việt Nam triển khai kết hợp cầu, khu vực cửa hầm và hầm vượt biển.",
-      "link": "https://tuoitre.vn/toan-canh-duong-vuot-bien-can-gio-vung-tau-khep-vong-ha-tang-chien-luoc-tphcm-100260619142943654.htm",
-      "date": "6/21/2026 8:16:00 AM",
+      "title": "Nhiều ngân hàng sắp gia nhập câu lạc bộ vốn điều lệ 100.000 tỉ",
+      "summary": "Hàng loạt ngân hàng đang triển khai kế hoạch tăng vốn thông qua phát hành cổ phiếu, trả cổ tức bằng cổ phiếu và chào bán riêng lẻ. Nếu hoàn tất, hệ thống có thể xuất hiện thêm...",
+      "link": "https://tuoitre.vn/nhieu-ngan-hang-sap-gia-nhap-cau-lac-bo-von-dieu-le-100000-ti-10026062112082653.htm",
+      "date": "6/21/2026 1:17:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "'Hàng hiệu' giá vài trăm nghìn đồng vẫn phủ kín chợ",
-      "summary": "Theo ghi nhận của Tuổi Trẻ, nhiều sản phẩm có dấu hiệu vi phạm sở hữu trí tuệ vẫn được bày bán công khai trên chợ mạng lẫn các khu mua sắm nổi tiếng như chợ Bến Thành, Saigon...",
-      "link": "https://tuoitre.vn/hang-hieu-gia-vai-tram-nghin-dong-van-phu-kin-cho-100260621075218364.htm",
-      "date": "6/21/2026 8:01:00 AM",
+      "title": "Thu hồi đất hơn 5 năm, Cà Mau chưa trả 25,6 tỉ đồng cho nhà đầu tư",
+      "summary": "Thanh tra tỉnh Cà Mau cho biết khoản hơn 25,6 tỉ đồng phải chi trả cho nhà đầu tư sau thu hồi đất vẫn chưa được bố trí, trong khi khu đất chưa được khai thác.",
+      "link": "https://tuoitre.vn/thu-hoi-dat-hon-5-nam-ca-mau-chua-tra-256-ti-dong-cho-nha-dau-tu-100260621095228696.htm",
+      "date": "6/21/2026 10:25:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Tin tức sáng 21-6: Chủ tịch nước tặng quà dịp 27-7 cho hơn 1,56 triệu người có công",
-      "summary": "Một số tin tức đáng chú ý: Vốn thu được từ chào bán trái phiếu có thể gửi ở ngân hàng hưởng lãi; Đại gia chăn nuôi một lúc lập 4 công ty con vốn 810 tỉ đồng; Bệnh viện Nhi đồng 2...",
-      "link": "https://tuoitre.vn/tin-tuc-sang-21-6-chu-tich-nuoc-tang-qua-dip-27-7-cho-hon-156-trieu-nguoi-co-cong-100260620165730075.htm",
-      "date": "6/21/2026 6:05:00 AM",
+      "title": "Thêm 'Big 4' dính lùm xùm chất lượng: Đình chỉ tư cách kiểm toán viên PwC vì hồ sơ Thép Nam Kim",
+      "summary": "Với kiểm toán viên ký báo cáo kiểm toán tài chính năm 2025 của Thép Nam Kim, Ủy ban Chứng khoán cho biết đã đình chỉ tư cách được chấp thuận thực hiện kiểm toán cho đơn vị có lợi...",
+      "link": "https://tuoitre.vn/them-big-4-dinh-lum-xum-chat-luong-dinh-chi-tu-cach-kiem-toan-vien-pwc-vi-ho-so-thep-nam-kim-100260621095900213.htm",
+      "date": "6/21/2026 10:09:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Đón làn sóng đầu tư năng lượng tái tạo, doanh nghiệp Việt tìm vị thế mới",
-      "summary": "Các chuyên gia cho rằng với năng lực hiện có và tiềm năng từ ngành năng lượng tái tạo trong nước, lĩnh vực này đang mở ra dư địa để nhân lực Việt Nam tham gia sâu hơn vào thị...",
-      "link": "https://tuoitre.vn/don-lan-song-dau-tu-nang-luong-tai-tao-doanh-nghiep-viet-tim-vi-the-moi-100260620215907461.htm",
-      "date": "6/20/2026 11:29:00 PM",
+      "title": "HDBank đồng hành cùng Cục Thuế thúc đẩy chuyển đổi số hộ kinh doanh",
+      "summary": "Lễ ký kết hợp tác giữa HDBank và Cục Thuế được kết nối trực tuyến tới các điểm cầu của HDBank tại 34 tỉnh, thành phố trên toàn quốc.",
+      "link": "https://tuoitre.vn/hdbank-dong-hanh-cung-cuc-thue-thuc-day-chuyen-doi-so-ho-kinh-doanh-100260621095626978.htm",
+      "date": "6/21/2026 10:04:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Cẩu 200 tấn kéo xe container khỏi vực đèo Bảo Lộc",
+      "summary": "Xe cẩu cùng nhiều phương tiện nâng ôtô container rơi xuống vực sâu 30 m ở đèo Bảo Lộc, ùn tắc hơn 10 km trên tuyến nối Đà Lạt dần được giải tỏa, trưa 21/6.",
+      "link": "https://vnexpress.net/cau-200-tan-keo-xe-container-khoi-vuc-deo-bao-loc-5088157.html",
+      "date": "Sun, 21 Jun 2026 12:30:39 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Lặn biển hái rong mơ mùa gió Lào",
+      "summary": "Từ tháng 4 đến 6 âm lịch, ngư dân xã Phú Trạch chèo thuyền thúng ra các bãi đá ngầm cách bờ hàng trăm mét, lặn xuống đáy biển thu hoạch rong mơ, kiếm tiền triệu mỗi ngày.",
+      "link": "https://vnexpress.net/lan-bien-hai-rong-mo-mua-gio-lao-5088019.html",
+      "date": "Sun, 21 Jun 2026 09:35:25 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Nhiều nhóm lao động đóng bảo hiểm cao hơn từ 1/7",
+      "summary": "Từ ngày 1/7, lương cơ sở tăng lên 2,53 triệu đồng một tháng, kéo theo mức đóng bảo hiểm xã hội, bảo hiểm y tế của nhiều nhóm lao động và người tham gia bảo hiểm tăng tương ứng.",
+      "link": "https://vnexpress.net/nhieu-nhom-lao-dong-dong-bao-hiem-cao-hon-tu-1-7-5088111.html",
+      "date": "Sun, 21 Jun 2026 09:24:33 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Xe container và ôtô rơi xuống vực sau tai nạn trên đèo Bảo Lộc",
       "summary": "Xe container khi đổ dốc lao sang phần đường ngược chiều, va chạm liên hoàn ba xe khác rồi lao xuống vực cùng ôtô 5 chỗ, đèo Bảo Lộc sáng nay ùn tắc kéo dài.",
@@ -109,69 +130,48 @@
     },
     {
       "title": "Đội Trung Quốc 'kể chuyện Tây Du Ký' bằng pháo hoa",
-      "summary": "Đội từ Trung Quốc mang đến Lễ hội pháo hoa quốc tế Đà Nẵng màn trình diễn lấy cảm hứng \"Tây Du Ký\", tạo nên cuộc đối đầu kịch tính với đại diện Đức, đêm 20/6.",
+      "summary": "Đội từ Trung Quốc mang đến Lễ hội pháo hoa quốc tế Đà Nẵng màn trình diễn lấy cảm hứng \"Tây Du Ký\", tạo nên cuộc đối đầu kịch tính với đại diện Đức.",
       "link": "https://vnexpress.net/doi-trung-quoc-ke-chuyen-tay-du-ky-bang-phao-hoa-5088082.html",
       "date": "Sun, 21 Jun 2026 00:31:47 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Miền Bắc vào đợt nắng nóng diện rộng",
-      "summary": "Hoàn lưu vùng thấp nóng phía tây gây nắng nóng ở đồng bằng Bắc Bộ hai ngày nay, sẽ tiếp tục mở rộng trong những ngày tới.",
-      "link": "https://vnexpress.net/mien-bac-vao-dot-nang-nong-dien-rong-5088058.html",
-      "date": "Sun, 21 Jun 2026 00:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "'Tự chủ chiến lược là sống còn với báo chí'",
-      "summary": "Lãnh đạo các cơ quan báo chí cho rằng khái niệm tự chủ giờ đây không chỉ trong tài chính, mà là năng lực làm chủ công nghệ và dữ liệu, để không bị các nền tảng xuyên biên giới chi...",
-      "link": "https://vnexpress.net/tu-chu-chien-luoc-la-song-con-voi-bao-chi-5088015.html",
-      "date": "Sun, 21 Jun 2026 00:00:00 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Mưa giông quật đổ hàng chục cây xanh, đè hai ôtô",
-      "summary": "Giông lốc kéo dài khoảng 30 phút làm hàng chục cây xanh ở phường Cao Lãnh bật gốc, đè hai ôtô, nhiều công trình và khiến 6 căn nhà tốc mái.",
-      "link": "https://vnexpress.net/mua-giong-quat-do-hang-chuc-cay-xanh-de-hai-oto-5088031.html",
-      "date": "Sat, 20 Jun 2026 19:17:46 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Xây dựng cơ quan báo chí chủ lực, cơ hội để báo chí TP.HCM bước vào giai đoạn phát triển mới",
-      "summary": "Lãnh đạo TP.HCM kỳ vọng cơ quan báo chí mới phát huy sức mạnh đa nền tảng, giữ vững bản sắc nghề nghiệp và phục vụ tốt hơn người dân.",
-      "link": "https://tuoitre.vn/xay-dung-co-quan-bao-chi-chu-luc-co-hoi-de-bao-chi-tphcm-buoc-vao-giai-doan-phat-trien-moi-100260621080351296.htm",
-      "date": "6/21/2026 9:12:00 AM",
+      "title": "Đã trục kéo được xe container lao xuống vực, thông đèo Bảo Lộc sau tai nạn liên hoàn",
+      "summary": "Lực lượng chức năng đã đưa xe container liên quan đến vụ tai nạn liên hoàn dưới vực lên, giải tỏa kẹt xe. Hiện xe cộ qua đèo Bảo Lộc trở lại bình thường.",
+      "link": "https://tuoitre.vn/da-truc-keo-duoc-xe-container-lao-xuong-vuc-thong-deo-bao-loc-sau-tai-nan-lien-hoan-100260621113948611.htm",
+      "date": "6/21/2026 11:38:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Xe container và ô tô 5 chỗ lao xuống vực đèo Bảo Lộc sau va chạm liên hoàn",
-      "summary": "Xe container đổ đèo Bảo Lộc bất ngờ va chạm liên hoàn rồi cùng một ô tô 5 chỗ lao xuống vực, may mắn không có thương vong.",
-      "link": "https://tuoitre.vn/xe-container-va-o-to-5-cho-lao-xuong-vuc-deo-bao-loc-sau-va-cham-lien-hoan-100260621083846268.htm",
-      "date": "6/21/2026 8:42:00 AM",
+      "title": "Hơn 2.000 công nhân TP.HCM được khám sức khỏe, tư vấn pháp luật miễn phí",
+      "summary": "Ngày 21-6, tại Trung tâm Hội nghị và triển lãm Bình Dương, TP.HCM, hơn 2.000 công nhân tại các nhà máy, khu công nghiệp tham dự chương trình khám sức khỏe, tư vấn pháp luật miễn...",
+      "link": "https://tuoitre.vn/hon-2000-cong-nhan-tphcm-duoc-kham-suc-khoe-tu-van-phap-luat-mien-phi-100260621110139838.htm",
+      "date": "6/21/2026 11:26:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Toàn cảnh đường vượt biển Cần Giờ - Vũng Tàu: Khép vòng hạ tầng chiến lược TP.HCM",
-      "summary": "Đường vượt biển Cần Giờ - Vũng Tàu là công trình đầu tiên tại Việt Nam triển khai kết hợp cầu, khu vực cửa hầm và hầm vượt biển.",
-      "link": "https://tuoitre.vn/toan-canh-duong-vuot-bien-can-gio-vung-tau-khep-vong-ha-tang-chien-luoc-tphcm-100260619142943654.htm",
-      "date": "6/21/2026 8:16:00 AM",
+      "title": "Cảnh sát biển 4 làm bệ đỡ cho học sinh nghèo biển đảo An Giang",
+      "summary": "Không chỉ đồng hành cùng ngư dân, bảo vệ chủ quyền biển đảo Tổ quốc, cán bộ, chiến sĩ Vùng Cảnh sát biển 4 thời gian qua còn là ‘bệ đỡ’ cho các em học sinh nghèo ở biển đảo An...",
+      "link": "https://tuoitre.vn/canh-sat-bien-4-lam-be-do-cho-hoc-sinh-ngheo-bien-dao-an-giang-100260621103500898.htm",
+      "date": "6/21/2026 11:23:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Ban Tổ chức Trung ương hướng dẫn mới về tặng Huy hiệu Đảng",
-      "summary": "Ban Tổ chức Trung ương đã có hướng dẫn mới gửi các cơ quan, địa phương về việc tặng Huy hiệu Đảng.",
-      "link": "https://tuoitre.vn/ban-to-chuc-trung-uong-huong-dan-moi-ve-tang-huy-hieu-dang-100260621073423909.htm",
-      "date": "6/21/2026 7:56:00 AM",
+      "title": "Hơn 20.000 người có nguy cơ gián đoạn nhận lương hưu vì chưa làm lại thủ tục",
+      "summary": "Bảo hiểm xã hội TP Hà Nội đề nghị người hưởng lương hưu, trợ cấp bảo hiểm xã hội đang nhận thay qua giấy ủy quyền hoàn tất thủ tục lập lại giấy ủy quyền trước ngày 30-6-2026.",
+      "link": "https://tuoitre.vn/hon-20000-nguoi-co-nguy-co-gian-doan-nhan-luong-huu-vi-chua-lam-lai-thu-tuc-100260621105022952.htm",
+      "date": "6/21/2026 11:21:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Đổi mới tư duy, công nghệ và phương thức làm báo, xây dựng nền báo chí hiện đại",
-      "summary": "Trong dịp kỷ niệm 101 năm Ngày Báo chí cách mạng Việt Nam, nhiều đại biểu Quốc hội, chuyên gia kỳ vọng với Tuổi Trẻ về việc xây dựng một nền báo chí chuyên nghiệp, nhân văn và...",
-      "link": "https://tuoitre.vn/doi-moi-tu-duy-cong-nghe-va-phuong-thuc-lam-bao-xay-dung-nen-bao-chi-hien-dai-100260620230910615.htm",
-      "date": "6/21/2026 7:21:00 AM",
+      "title": "Dự báo thời tiết từ ngày 21 đến 27-6: Cả nước nắng nóng",
+      "summary": "Tuần này, thời tiết cả nước nắng nóng đến nắng nóng gay gắt, cuối tuần giảm nhiệt, Nam Bộ chiều tối mưa dông.",
+      "link": "https://tuoitre.vn/du-bao-thoi-tiet-tu-ngay-21-den-27-6-ca-nuoc-nang-nong-100260620162722798.htm",
+      "date": "6/21/2026 11:09:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-21T02:52:36.262137+00:00",
+  "last_updated": "2026-06-21T07:27:34.586133+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
