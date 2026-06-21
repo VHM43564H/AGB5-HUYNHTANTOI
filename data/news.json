@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "VnExpress giành giải B Báo chí Quốc gia",
+      "summary": "Tuyến bài kỷ niệm 80 năm Quốc khánh của VnExpress đoạt giải B Báo chí Quốc gia lần thứ 19, tại lễ trao giải tổ chức ở Hải Phòng tối 21/6.",
+      "link": "https://vnexpress.net/vnexpress-gianh-giai-b-bao-chi-quoc-gia-5088276.html",
+      "date": "Sun, 21 Jun 2026 22:42:54 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Đề xuất bổ sung quy hoạch 5 tuyến cao tốc mới",
       "summary": "Cục Đường bộ Việt Nam đề xuất bổ sung 5 tuyến cao tốc kết nối khu vực biên giới phía Bắc, Tây Nguyên và cửa khẩu quốc tế Cầu Treo vào Quy hoạch mạng lưới đường bộ.",
       "link": "https://vnexpress.net/de-xuat-bo-sung-quy-hoach-5-tuyen-cao-toc-moi-5088226.html",
@@ -129,11 +136,18 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Lặn biển hái rong mơ mùa gió Lào",
-      "summary": "Từ tháng 4 đến 6 âm lịch, ngư dân xã Phú Trạch chèo thuyền thúng ra các bãi đá ngầm cách bờ hàng trăm mét, lặn xuống đáy biển thu hoạch rong mơ, kiếm tiền triệu mỗi ngày.",
-      "link": "https://vnexpress.net/lan-bien-hai-rong-mo-mua-gio-lao-5088019.html",
-      "date": "Sun, 21 Jun 2026 09:35:25 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Báo Tuổi Trẻ đoạt giải C Giải báo chí quốc gia lần thứ 20",
+      "summary": "Tối 21-6, tại Nhà hát Hoa Phượng, thành phố Hải Phòng đã diễn ra lễ trao Giải báo chí quốc gia lần thứ 20 năm 2025. Trong đó, loạt bài 'Thế giới ngầm lòng đường, vỉa hè ở TP.HCM'...",
+      "link": "https://tuoitre.vn/bao-tuoi-tre-doat-giai-c-giai-bao-chi-quoc-gia-lan-thu-xx-100260621215507639.htm",
+      "date": "6/21/2026 10:16:00 PM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Bắc Ninh sẽ lấy ý kiến người dân về xây dựng thành phố trực thuộc Trung ương vào ngày 12-7",
+      "summary": "Dự kiến ngày 12-7 tới, Bắc Ninh sẽ lấy ý kiến cử tri về đề án thành lập thành phố Bắc Ninh trực thuộc Trung ương.",
+      "link": "https://tuoitre.vn/bac-ninh-se-lay-y-kien-nguoi-dan-ve-xay-dung-thanh-pho-truc-thuoc-trung-uong-vao-ngay-12-7-100260621204719659.htm",
+      "date": "6/21/2026 9:28:00 PM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
       "title": "Bắc Ninh hỗ trợ gia đình nạn nhân vụ án mạng làm 4 người tử vong",
@@ -155,23 +169,9 @@
       "link": "https://tuoitre.vn/chu-tich-quoc-hoi-tran-thanh-man-du-le-trao-giai-bao-chi-quoc-gia-lan-thu-xx-100260621194157687.htm",
       "date": "6/21/2026 8:30:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Áp thấp nóng phát triển mạnh, từ mai, Bắc và Trung Bộ nắng nóng hầm hập 40 độ C",
-      "summary": "Dự báo từ ngày mai (22-6), vùng thấp nóng phía tây tiếp tục hoạt động mạnh hơn, các tỉnh miền Bắc và miền Trung bước vào những ngày nắng nóng đỉnh điểm, có nơi trên 40 độ C.",
-      "link": "https://tuoitre.vn/ap-thap-nong-phat-trien-manh-tu-mai-bac-va-trung-bo-nang-nong-ham-hap-40-do-c-100260621185754879.htm",
-      "date": "6/21/2026 7:46:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Người đàn ông ở Vũng Tàu đổ gục, tử vong khi đang chơi pickleball",
-      "summary": "Sau một pha bóng, người đàn ông 51 tuổi ở Vũng Tàu đang chơi pickleball bất ngờ ngã gục xuống sân và tử vong sau đó.",
-      "link": "https://tuoitre.vn/nguoi-dan-ong-o-vung-tau-do-guc-tu-vong-khi-dang-choi-pickleball-100260621190559056.htm",
-      "date": "6/21/2026 7:31:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-21T15:21:32.734878+00:00",
+  "last_updated": "2026-06-21T17:00:01.245616+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
