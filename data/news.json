@@ -1,6 +1,41 @@
 {
   "tin_tuc": [
     {
+      "title": "Công ty khoáng sản của Masan mở rộng vùng khai thác vonfram quanh Núi Pháo",
+      "summary": "Núi Pháo mở rộng và Núi Chiếm, hai khu vực sẽ do Masan High-Tech Materials khai thác, ước tính có tiềm năng khoảng 115 triệu tấn vonfram đa kim.",
+      "link": "https://vnexpress.net/cong-ty-khoang-san-cua-masan-mo-rong-vung-khai-thac-vonfram-quanh-nui-phao-5088434.html",
+      "date": "Mon, 22 Jun 2026 12:38:25 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Trung Quốc áp kiểm soát xuất khẩu với 10 công ty Mỹ",
+      "summary": "Giới chức Trung Quốc vừa áp kiểm soát xuất khẩu với 10 công ty Mỹ, đáp trả việc Washington đưa nhiều doanh nghiệp nước này vào danh sách đen.",
+      "link": "https://vnexpress.net/trung-quoc-ap-kiem-soat-xuat-khau-voi-10-cong-ty-my-5088386.html",
+      "date": "Mon, 22 Jun 2026 12:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Nhà đầu tư 'cược' Bitcoin có thể giảm về 52.000 USD",
+      "summary": "Trên sàn phái sinh lớn nhất thế giới Deribit, nhiều hợp đồng quyền chọn bán Bitcoin ở giá 52.000 USD, cho thấy tâm lý bi quan vẫn còn tồn tại.",
+      "link": "https://vnexpress.net/nha-dau-tu-cuoc-bitcoin-co-the-giam-ve-52-000-usd-5088382.html",
+      "date": "Mon, 22 Jun 2026 11:28:06 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Giá vàng tăng lên gần 149 triệu đồng",
+      "summary": "Mỗi lượng vàng tăng hơn 1 triệu đồng lên gần 149 triệu, chênh lệch với giá thế giới khoảng 15 triệu đồng.",
+      "link": "https://vnexpress.net/gia-vang-tang-len-gan-149-trieu-dong-5088399.html",
+      "date": "Mon, 22 Jun 2026 10:35:03 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Ngân hàng đua phát hành trái phiếu lãi suất trên 8,3%",
+      "summary": "Trái phiếu ngân hàng thiết lập mặt bằng lãi suất mới trên 8,3%, tăng khoảng 3 điểm phần trăm so với cùng kỳ để bổ sung nhu cầu vốn trung và dài hạn.",
+      "link": "https://vnexpress.net/ngan-hang-dua-phat-hanh-trai-phieu-lai-suat-tren-8-3-5088287.html",
+      "date": "Mon, 22 Jun 2026 09:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Thủ tướng yêu cầu chuẩn bị quỹ đất sạch xây nhà ở cho thuê",
       "summary": "Các địa phương được yêu cầu chủ động giải phóng mặt bằng, chuẩn bị quỹ đất sạch để phát triển nhà ở cho thuê, theo quyết định của Thủ tướng.",
       "link": "https://vnexpress.net/thu-tuong-yeu-cau-chuan-bi-quy-dat-sach-xay-nha-o-cho-thue-5088323.html",
@@ -22,156 +57,121 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vàng có thể giảm tiếp tuần tới",
-      "summary": "Chuyên gia Phố Wall dự báo vàng thế giới tiếp tục giảm sau động thái giữ nguyên lãi suất của Fed, trong khi nhà đầu tư cá nhân lạc quan.",
-      "link": "https://vnexpress.net/gia-vang-co-the-giam-tiep-tuan-toi-5088242.html",
-      "date": "Sun, 21 Jun 2026 20:15:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Iraq có thể khôi phục sản xuất dầu trong vòng 2 tháng",
-      "summary": "Nước sản xuất dầu lớn thứ 2 OPEC kỳ vọng sớm quay về sản lượng trước chiến sự, tùy thuộc vào mức độ lưu thông qua eo biển Hormuz.",
-      "link": "https://vnexpress.net/iraq-co-the-khoi-phuc-san-xuat-dau-trong-vong-2-thang-5088160.html",
-      "date": "Sun, 21 Jun 2026 18:19:09 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "5 bất ngờ của triệu phú tự thân khi nghỉ hưu sớm ở tuổi 40",
-      "summary": "Bernadette Joy, một triệu phú tự thân tại Mỹ, vẫn lo lắng về tiền bạc lúc thị trường lao dốc, gặp khó trong sắp xếp lịch trình mỗi ngày và đôi khi cảm thấy cô đơn.",
-      "link": "https://vnexpress.net/5-bat-ngo-cua-trieu-phu-tu-than-khi-nghi-huu-som-o-tuoi-40-5088104.html",
-      "date": "Sun, 21 Jun 2026 15:10:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Xuất khẩu ghẹ Việt sang Mỹ tăng mạnh",
-      "summary": "Mỹ là thị trường tiêu thụ chủ lực mặt hàng ghẹ của Việt Nam trong 4 tháng đầu năm, với kim ngạch tăng gần gấp rưỡi so với cùng kỳ.",
-      "link": "https://vnexpress.net/xuat-khau-ghe-viet-sang-my-tang-manh-5088156.html",
-      "date": "Sun, 21 Jun 2026 14:40:34 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Đế chế kinh doanh khổng lồ của Elon Musk",
-      "summary": "Elon Musk từng đồng sáng lập PayPal, OpenAI, nhưng hiện chỉ điều hành SpaceX, Tesla, Neuralink và The Boring Company.",
-      "link": "https://vnexpress.net/de-che-kinh-doanh-khong-lo-cua-elon-musk-5088103.html",
-      "date": "Sun, 21 Jun 2026 11:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Tin tức sáng 22-6: Từ ngày 1-7, người livestream bán hàng phải xác thực danh tính",
-      "summary": "Tin tức đáng chú ý: Từ ngày 1-7, người livestream bán hàng phải xác thực danh tính; Kế hoạch tổ chức Ngày Văn hóa Việt Nam giai đoạn 2026 - 2030...",
-      "link": "https://tuoitre.vn/tin-tuc-sang-22-6-tu-ngay-1-7-nguoi-livestream-ban-hang-phai-xac-thuc-danh-tinh-100260621232355823.htm",
-      "date": "6/22/2026 4:48:00 AM",
+      "title": "Lạm phát và nhập siêu thử sức doanh nghiệp: Ai có lợi thế chống chịu?",
+      "summary": "Những doanh nghiệp có khả năng chuyển phần tăng chi phí đầu vào sang khách hàng, có tỉ lệ vay ngoại tệ thấp và bảng cân đối tài chính lành mạnh có thể chống chịu tốt hơn trước áp...",
+      "link": "https://tuoitre.vn/lam-phat-va-nhap-sieu-thu-suc-doanh-nghiep-ai-co-loi-the-chong-chiu-100260622103258737.htm",
+      "date": "6/22/2026 1:19:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Cuộc chạy đua gom các trạm sạc lên app chung",
-      "summary": "Đứng thứ 2 Đông Nam Á về lượng ô tô điện ghi nhận trong quý 1-2026, Việt Nam đang bước vào cuộc đua đưa các điểm sạc vốn phân tán, mỗi nơi một ứng dụng và ví tiền, về nền tảng...",
-      "link": "https://tuoitre.vn/cuoc-chay-dua-gom-cac-tram-sac-len-app-chung-100260621231243778.htm",
-      "date": "6/22/2026 4:30:00 AM",
+      "title": "Hà Nội đồng loạt khởi công xây dựng hàng ngàn căn nhà cho thuê",
+      "summary": "Ngày 22-6, TP Hà Nội tổ chức khởi công xây dựng 3 dự án nhà ở cho thuê, quy mô xây dựng hơn 4.300 căn hộ, đáp ứng chỗ ở cho người lao động, cán bộ, công chức, viên chức, lực lượng...",
+      "link": "https://tuoitre.vn/ha-noi-dong-loat-khoi-cong-xay-dung-hang-ngan-can-nha-cho-thue-100260622111335388.htm",
+      "date": "6/22/2026 11:31:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Nghị định 208: Chậm chuyến 4 giờ, khi nào hãng phải hoàn vé, bồi thường?",
-      "summary": "Từ ngày 1-7, hành khách có thể yêu cầu hoàn vé khi chuyến bay chậm từ 4 giờ do lỗi của hãng, thay vì phải chờ 5 giờ như hiện nay. Tình trạng chậm, hủy chuyến ra sao, hãng nào \"đội...",
-      "link": "https://tuoitre.vn/nghi-dinh-208-cham-chuyen-4-gio-khi-nao-hang-phai-hoan-ve-boi-thuong-1002606211618174.htm",
-      "date": "6/21/2026 4:36:00 PM",
+      "title": "Thanh toán trong kỷ nguyên số: Củng cố niềm tin - 'hạ tầng vô hình'",
+      "summary": "Các thủ đoạn giả mạo tin nhắn ngân hàng, cơ quan nhà nước hoặc trang web dịch vụ công đang tiếp tục xuất hiện tại nhiều địa phương.",
+      "link": "https://tuoitre.vn/thanh-toan-trong-ky-nguyen-so-cung-co-niem-tin-ha-tang-vo-hinh-100260622094759544.htm",
+      "date": "6/22/2026 10:10:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Lộ diện thêm 'ái nữ', 'thiếu gia' Việt: Trẻ măng nhưng khối tài sản nhiều nghìn tỉ",
-      "summary": "Bà Nguyễn Thiên Hương Jenny - ái nữ Chủ tịch Công ty CP Âu Lạc - nắm giữ lượng cổ phiếu ACB với giá trị lên tới gần 3.400 tỉ đồng. Còn tại LPBS, hai đại gia trẻ tuổi nắm giữ lượng...",
-      "link": "https://tuoitre.vn/lo-dien-them-ai-nu-thieu-gia-viet-tre-mang-nhung-khoi-tai-san-nhieu-nghin-ti-100260621151720295.htm",
-      "date": "6/21/2026 3:28:00 PM",
+      "title": "Đón 120 triệu lượt khách/năm, sân bay Việt còn nhiều dư địa tăng nguồn thu dịch vụ",
+      "summary": "Hơn 120 triệu lượt khách qua 22 sân bay/năm mở ra dư địa lớn cho ACV phát triển dịch vụ, khi nguồn thu ngoài hàng không mới chiếm khoảng 15%, so với mức 30-40% tại nhiều doanh...",
+      "link": "https://tuoitre.vn/don-120-trieu-luot-khach-nam-san-bay-viet-con-nhieu-du-dia-tang-nguon-thu-dich-vu-100260622083129981.htm",
+      "date": "6/22/2026 9:03:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
-      "title": "Xây nút giao kết nối cao tốc Pháp Vân - Cầu Giẽ với khu đô thị thể thao quốc tế",
-      "summary": "Bộ Xây dựng vừa chấp thuận vị trí đấu nối giữa đường trục dự án Khu đô thị thể thao quốc tế Hà Nội với cao tốc Pháp Vân - Cầu Giẽ, thuộc địa phận TP Hà Nội.",
-      "link": "https://vnexpress.net/xay-nut-giao-ket-noi-cao-toc-phap-van-cau-gie-voi-khu-do-thi-the-thao-quoc-te-5088310.html",
-      "date": "Mon, 22 Jun 2026 08:09:57 +0700",
+      "title": "Lao động đổ về công trường sân bay Long Thành",
+      "summary": "Các nhà thầu tăng nhân lực cho dự án sân bay Long Thành trong chiến dịch thi đua \"180 ngày đêm tăng tốc\", nhằm hoàn thành công trình đúng tiến độ.",
+      "link": "https://vnexpress.net/lao-dong-do-ve-cong-truong-san-bay-long-thanh-5088460.html",
+      "date": "Mon, 22 Jun 2026 13:57:29 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Hành trình giành giật sự sống của bé trai mắc bệnh hiếm",
-      "summary": "Vàng da lúc một tháng tuổi, bé Hữu An, 3 tuổi, được chẩn đoán mắc bệnh Pompe - một hội chứng di truyền hiếm gặp.",
-      "link": "https://vnexpress.net/hanh-trinh-gianh-giat-su-song-cua-be-trai-mac-benh-hiem-5087303.html",
-      "date": "Mon, 22 Jun 2026 05:00:00 +0700",
+      "title": "Hơn 70.000 người sẽ dự lễ tuyên chân phước linh mục Trương Bửu Diệp",
+      "summary": "Lễ tuyên chân phước linh mục Phanxicô Xaviê Trương Bửu Diệp tại Trung tâm Hành hương Tắc Sậy, xã Phong Thạnh ngày 2/7 dự kiến thu hút hơn 70.000 người.",
+      "link": "https://vnexpress.net/hon-70-000-nguoi-se-du-le-tuyen-chan-phuoc-linh-muc-truong-buu-diep-5088464.html",
+      "date": "Mon, 22 Jun 2026 13:53:19 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đề xuất chỉ định thầu một số hạng mục đường sắt",
-      "summary": "Bộ Công Thương đề xuất áp dụng các cơ chế đặc thù, gồm chỉ định thầu và chia gói thầu, nhằm tăng tỷ lệ nội địa hóa trong các dự án đường sắt trọng điểm.",
-      "link": "https://vnexpress.net/de-xuat-chi-dinh-thau-mot-so-hang-muc-duong-sat-5088149.html",
-      "date": "Mon, 22 Jun 2026 00:00:00 +0700",
+      "title": "Buýt từ trung tâm TP HCM đi Vũng Tàu không được miễn vé",
+      "summary": "Tuyến buýt số 172 nối trung tâm TP HCM với Vũng Tàu không thuộc 134 tuyến được miễn vé từ ngày 1/7 do hành trình dài gần 100 km, một phần đi qua Đồng Nai.",
+      "link": "https://vnexpress.net/buyt-tu-trung-tam-tp-hcm-di-vung-tau-khong-duoc-mien-ve-5088456.html",
+      "date": "Mon, 22 Jun 2026 13:40:25 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Ôtô khách tông xe đầu kéo trên cao tốc, 9 người bị thương",
-      "summary": "Ôtô khách chở hơn 10 người chạy trên cao tốc Hàm Nghi - Vũng Áng tông vào đuôi xe đầu kéo chở khung sắt cùng chiều, khiến 9 người bị thương, tối 21/6.",
-      "link": "https://vnexpress.net/oto-khach-tong-xe-dau-keo-tren-cao-toc-9-nguoi-bi-thuong-5088294.html",
-      "date": "Sun, 21 Jun 2026 23:41:41 +0700",
+      "title": "Nghiên cứu thành lập đơn vị hành chính đô thị đặc biệt",
+      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm yêu cầu các cơ quan nghiên cứu, bổ sung thành lập đơn vị hành chính đô thị đặc biệt mang tính hạt nhân để điều phối phát triển, kết nối hạ tầng.",
+      "link": "https://vnexpress.net/nghien-cuu-thanh-lap-don-vi-hanh-chinh-do-thi-dac-biet-5088440.html",
+      "date": "Mon, 22 Jun 2026 12:23:05 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "VnExpress giành giải B Báo chí Quốc gia",
-      "summary": "Tuyến bài kỷ niệm 80 năm Quốc khánh của VnExpress đoạt giải B Báo chí Quốc gia lần thứ 19, tại lễ trao giải tổ chức ở Hải Phòng tối 21/6.",
-      "link": "https://vnexpress.net/vnexpress-gianh-giai-b-bao-chi-quoc-gia-5088276.html",
-      "date": "Sun, 21 Jun 2026 22:42:54 +0700",
+      "title": "Hơn 1.000 người xuyên đêm chữa cháy rừng",
+      "summary": "Nhiều lực lượng gồm kiểm lâm, công an, bộ đội và dân quân địa phương xuyên đêm chữa cháy rừng tại xã Thiên Nhẫn khi lửa lan rộng trên nhiều ngọn đồi.",
+      "link": "https://vnexpress.net/hon-1-000-nguoi-xuyen-dem-chua-chay-rung-5088433.html",
+      "date": "Mon, 22 Jun 2026 12:19:59 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đề xuất bổ sung quy hoạch 5 tuyến cao tốc mới",
-      "summary": "Cục Đường bộ Việt Nam đề xuất bổ sung 5 tuyến cao tốc kết nối khu vực biên giới phía Bắc, Tây Nguyên và cửa khẩu quốc tế Cầu Treo vào Quy hoạch mạng lưới đường bộ.",
-      "link": "https://vnexpress.net/de-xuat-bo-sung-quy-hoach-5-tuyen-cao-toc-moi-5088226.html",
-      "date": "Sun, 21 Jun 2026 20:54:17 +0700",
+      "title": "Nhóm thanh niên chặn ôtô, đập vỡ kính sau mâu thuẫn giao thông",
+      "summary": "Sau mâu thuẫn giao thông tại xã Bà Điểm, nhóm thanh niên đi xe máy chặn đầu ôtô, đập vỡ kính và uy hiếp tài xế, sáng 22/6.",
+      "link": "https://vnexpress.net/nhom-thanh-nien-chan-oto-dap-vo-kinh-sau-mau-thuan-giao-thong-5088400.html",
+      "date": "Mon, 22 Jun 2026 10:40:32 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Hơn 100 xe máy cháy rụi trên cầu Bến Thủy 2",
-      "summary": "Xe container chở hơn 100 xe máy lưu thông qua cầu Bến Thủy 2 nối Nghệ An - Hà Tĩnh thì bốc cháy dữ dội, thiêu rụi toàn bộ số xe trên thùng, chiều 21/6.",
-      "link": "https://vnexpress.net/hon-100-xe-may-chay-rui-tren-cau-ben-thuy-2-5088237.html",
-      "date": "Sun, 21 Jun 2026 20:44:54 +0700",
+      "title": "Khách bỏ quên 466 triệu đồng ở sân bay Nội Bài",
+      "summary": "Chị Bùi Thị Huyên, nhân viên Đội xe đẩy thuộc Trung tâm Khai thác ga Nội Bài, phát hiện túi xách chứa hơn 466 triệu đồng do khách bỏ quên tại sân bay, sáng 22/6.",
+      "link": "https://vnexpress.net/khach-bo-quen-466-trieu-dong-o-san-bay-noi-bai-5088336.html",
+      "date": "Mon, 22 Jun 2026 10:22:14 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Người trẻ trong vụ lừa đảo hợp đồng kỳ nghỉ: Sao lại lừa gạt ông bà mình!?",
-      "summary": "Từ công việc telesale tưởng chừng như đơn giản, nhiều người trẻ mới ngoài 20 tuổi đã trở thành bị can trong vụ án lừa đảo hợp đồng kỳ nghỉ chấn động tại TP.HCM.",
-      "link": "https://tuoitre.vn/nguoi-tre-trong-vu-lua-dao-hop-dong-ky-nghi-sao-lai-lua-gat-ong-ba-minh-100260621230855586.htm",
-      "date": "6/22/2026 5:04:00 AM",
+      "title": "Để những chuyến chơi hè an vui",
+      "summary": "Khi đâu đâu cũng thấy phượng vĩ nở hoa lửa rực rỡ là nhiều chuyến xe cũng ngược xuôi phục vụ \"khối nghỉ hè\" du lịch hay về quê thăm nội ngoại.",
+      "link": "https://tuoitre.vn/de-nhung-chuyen-choi-he-an-vui-10026062210530462.htm",
+      "date": "6/22/2026 12:37:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Tin tức sáng 22-6: Từ ngày 1-7, người livestream bán hàng phải xác thực danh tính",
-      "summary": "Tin tức đáng chú ý: Từ ngày 1-7, người livestream bán hàng phải xác thực danh tính; Kế hoạch tổ chức Ngày Văn hóa Việt Nam giai đoạn 2026 - 2030...",
-      "link": "https://tuoitre.vn/tin-tuc-sang-22-6-tu-ngay-1-7-nguoi-livestream-ban-hang-phai-xac-thuc-danh-tinh-100260621232355823.htm",
-      "date": "6/22/2026 4:48:00 AM",
+      "title": "Danh sách 258 ô tô dừng, đỗ sai bị Cảnh sát giao thông Hàng Xanh gửi phạt nguội trong 1 tháng",
+      "summary": "Đội Cảnh sát giao thông Hàng Xanh đã ghi hình, gửi thông báo 'phạt nguội' hơn 250 xe dừng đỗ sai quy định gây cản trở giao thông trên địa bàn.",
+      "link": "https://tuoitre.vn/danh-sach-258-o-to-dung-do-sai-bi-canh-sat-giao-thong-hang-xanh-gui-phat-nguoi-trong-1-thang-100260622112627119.htm",
+      "date": "6/22/2026 11:47:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Thời tiết hôm nay 22-6: Nắng nóng gay gắt từ Bắc vào Trung, miền Nam chiều mưa to",
-      "summary": "Hôm nay 22-6, thời tiết cả nước nắng nóng gay gắt, miền Nam chiều tối vài nơi mưa to kèm dông sét.",
-      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-22-6-nang-nong-gay-gat-tu-bac-vao-trung-mien-nam-chieu-mua-to-100260621162523626.htm",
-      "date": "6/22/2026 4:07:00 AM",
+      "title": "Lời kể của nạn nhân vụ xe khách va chạm xe đầu kéo khiến 1 người chết, 8 người bị thương",
+      "summary": "'Khi chiếc xe khách đâm mạnh vào chiếc xe đầu kéo phía trước, tôi bị bổ nhào ra khỏi ghế, trán va vào thành xe chảy máu. Những người khác trong xe hoảng loạn kêu cứu, nhiều người...",
+      "link": "https://tuoitre.vn/loi-ke-cua-nan-nhan-vu-xe-khach-va-cham-xe-dau-keo-khien-1-nguoi-chet-8-nguoi-bi-thuong-100260622110203894.htm",
+      "date": "6/22/2026 11:35:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Báo Tuổi Trẻ đoạt giải C Giải báo chí quốc gia lần thứ 20",
-      "summary": "Tối 21-6, tại Nhà hát Hoa Phượng, thành phố Hải Phòng đã diễn ra lễ trao Giải báo chí quốc gia lần thứ 20 năm 2025. Trong đó, loạt bài 'Thế giới ngầm lòng đường, vỉa hè ở TP.HCM'...",
-      "link": "https://tuoitre.vn/bao-tuoi-tre-doat-giai-c-giai-bao-chi-quoc-gia-lan-thu-xx-100260621215507639.htm",
-      "date": "6/21/2026 10:16:00 PM",
+      "title": "TP.HCM: Chính quyền đô thị thông minh chủ động hơn nhờ 'bộ não số' và 'đôi mắt số'",
+      "summary": "Tại TP.HCM, phường Phú Nhuận là 1 trong 3 địa phương đang thí điểm mô hình đô thị thông minh cấp xã.",
+      "link": "https://tuoitre.vn/tphcm-chinh-quyen-do-thi-thong-minh-chu-dong-hon-nho-bo-nao-so-va-doi-mat-so-100260621171522799.htm",
+      "date": "6/22/2026 11:14:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Bắc Ninh sẽ lấy ý kiến người dân về xây dựng thành phố trực thuộc Trung ương vào ngày 12-7",
-      "summary": "Dự kiến ngày 12-7 tới, Bắc Ninh sẽ lấy ý kiến cử tri về đề án thành lập thành phố Bắc Ninh trực thuộc Trung ương.",
-      "link": "https://tuoitre.vn/bac-ninh-se-lay-y-kien-nguoi-dan-ve-xay-dung-thanh-pho-truc-thuoc-trung-uong-vao-ngay-12-7-100260621204719659.htm",
-      "date": "6/21/2026 9:28:00 PM",
+      "title": "Đồng Tháp sang Thái Lan đưa sếu về Vườn quốc gia Tràm Chim đợt 2",
+      "summary": "Ngày 22-6, ông Bùi Thanh Phong - Phó giám đốc Vườn quốc gia Tràm Chim, tỉnh Đồng Tháp - cho biết đã sẵn sàng công tác chuẩn bị để đưa sếu đợt 2 về chăm sóc tại khu bảo tồn.",
+      "link": "https://tuoitre.vn/dong-thap-sang-thai-lan-dua-seu-ve-vuon-quoc-gia-tram-chim-dot-2-100260622104451189.htm",
+      "date": "6/22/2026 11:07:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-22T01:59:23.651714+00:00",
+  "last_updated": "2026-06-22T07:27:58.720408+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
