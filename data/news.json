@@ -1,6 +1,20 @@
 {
   "tin_tuc": [
     {
+      "title": "Thủ tướng yêu cầu chuẩn bị quỹ đất sạch xây nhà ở cho thuê",
+      "summary": "Các địa phương được yêu cầu chủ động giải phóng mặt bằng, chuẩn bị quỹ đất sạch để phát triển nhà ở cho thuê, theo quyết định của Thủ tướng.",
+      "link": "https://vnexpress.net/thu-tuong-yeu-cau-chuan-bi-quy-dat-sach-xay-nha-o-cho-thue-5088323.html",
+      "date": "Mon, 22 Jun 2026 08:14:35 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Sức hút kinh doanh quần áo, giày dép trực tuyến",
+      "summary": "Doanh số thời trang trực tuyến liên tục tăng trưởng trên hai chữ số, giúp một số thương hiệu bứt phá, song toàn ngành vẫn đối mặt với bài toán tối ưu vận hành và chi phí.",
+      "link": "https://vnexpress.net/suc-hut-kinh-doanh-quan-ao-giay-dep-truc-tuyen-5088011.html",
+      "date": "Mon, 22 Jun 2026 06:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Những ai sở hữu cổ phần tỷ USD trong SpaceX?",
       "summary": "Ngoài Elon Musk, các giám đốc cấp cao và quỹ đầu tư của SpaceX cũng chứng kiến tài sản tăng vọt nhờ IPO của công ty.",
       "link": "https://vnexpress.net/nhung-ai-so-huu-co-phan-ty-usd-trong-spacex-5088211.html",
@@ -43,20 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Phong cách điều hành 'tinh gọn' của tân chủ tịch Fed",
-      "summary": "Ngay cuộc họp chính sách đầu tiên, Chủ tịch mới của Fed Kevin Warsh đã để lại dấu ấn riêng, với phong cách điều hành tinh gọn.",
-      "link": "https://vnexpress.net/phong-cach-dieu-hanh-tinh-gon-cua-tan-chu-tich-fed-5088086.html",
-      "date": "Sun, 21 Jun 2026 07:58:01 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Trang trại điện gió lớn nhất nước Mỹ hoàn thành sau hai thập kỷ",
-      "summary": "Trang trại điện gió SunZia gồm hơn 900 turbine, vốn đầu tư 11 tỷ USD, công suất 3.650 MW, gấp ba lần trang trại lớn thứ hai tại Mỹ.",
-      "link": "https://vnexpress.net/trang-trai-dien-gio-lon-nhat-nuoc-my-hoan-thanh-sau-hai-thap-ky-5088028.html",
-      "date": "Sun, 21 Jun 2026 00:02:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Tin tức sáng 22-6: Từ ngày 1-7, người livestream bán hàng phải xác thực danh tính",
       "summary": "Tin tức đáng chú ý: Từ ngày 1-7, người livestream bán hàng phải xác thực danh tính; Kế hoạch tổ chức Ngày Văn hóa Việt Nam giai đoạn 2026 - 2030...",
       "link": "https://tuoitre.vn/tin-tuc-sang-22-6-tu-ngay-1-7-nguoi-livestream-ban-hang-phai-xac-thuc-danh-tinh-100260621232355823.htm",
@@ -86,6 +86,13 @@
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Xây nút giao kết nối cao tốc Pháp Vân - Cầu Giẽ với khu đô thị thể thao quốc tế",
+      "summary": "Bộ Xây dựng vừa chấp thuận vị trí đấu nối giữa đường trục dự án Khu đô thị thể thao quốc tế Hà Nội với cao tốc Pháp Vân - Cầu Giẽ, thuộc địa phận TP Hà Nội.",
+      "link": "https://vnexpress.net/xay-nut-giao-ket-noi-cao-toc-phap-van-cau-gie-voi-khu-do-thi-the-thao-quoc-te-5088310.html",
+      "date": "Mon, 22 Jun 2026 08:09:57 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Hành trình giành giật sự sống của bé trai mắc bệnh hiếm",
       "summary": "Vàng da lúc một tháng tuổi, bé Hữu An, 3 tuổi, được chẩn đoán mắc bệnh Pompe - một hội chứng di truyền hiếm gặp.",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "6 ôtô tông liên hoàn trên cao tốc Phan Thiết - Dầu Giây",
-      "summary": "Sáu ôtô va chạm liên hoàn trên cao tốc Phan Thiết - Dầu Giây khiến giao thông ùn ứ khi cuối tuần các xe từ các tỉnh miền Trung về TP HCM tăng cao, chiều 21/6.",
-      "link": "https://vnexpress.net/6-oto-tong-lien-hoan-tren-cao-toc-phan-thiet-dau-giay-5088217.html",
-      "date": "Sun, 21 Jun 2026 16:50:59 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Người trẻ trong vụ lừa đảo hợp đồng kỳ nghỉ: Sao lại lừa gạt ông bà mình!?",
       "summary": "Từ công việc telesale tưởng chừng như đơn giản, nhiều người trẻ mới ngoài 20 tuổi đã trở thành bị can trong vụ án lừa đảo hợp đồng kỳ nghỉ chấn động tại TP.HCM.",
       "link": "https://tuoitre.vn/nguoi-tre-trong-vu-lua-dao-hop-dong-ky-nghi-sao-lai-lua-gat-ong-ba-minh-100260621230855586.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-21T23:02:53.350111+00:00",
+  "last_updated": "2026-06-22T01:59:23.651714+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
