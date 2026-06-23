@@ -1,10 +1,52 @@
 {
   "tin_tuc": [
     {
+      "title": "Pacific Airlines lỗ lũy kế hơn 10.000 tỷ đồng",
+      "summary": "Pacific Airlines - công ty con của Vietnam Airlines năm ngoái lỗ 565 tỷ, đưa số lỗ lũy kế của hãng bay này lên 10.675 tỷ đồng tính đến hết 2025.",
+      "link": "https://vnexpress.net/pacific-airlines-lo-luy-ke-hon-10-000-ty-dong-5088783.html",
+      "date": "Tue, 23 Jun 2026 10:43:43 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Măng cụt được mùa, giá xuống đáy",
+      "summary": "Măng cụt vào chính vụ tại nhiều tỉnh phía Nam nhưng giá tại vườn chỉ còn 20.000-25.000 đồng một kg, mức thấp nhất nhiều năm qua.",
+      "link": "https://vnexpress.net/mang-cut-duoc-mua-gia-xuong-day-5088351.html",
+      "date": "Tue, 23 Jun 2026 09:25:11 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Elon Musk mất hơn 150 tỷ USD khi cổ phiếu SpaceX lao dốc",
+      "summary": "Cổ phiếu SpaceX mất hơn 16% trong phiên đầu tuần, khiến tài sản của Chủ tịch giảm 152 tỷ USD một ngày.",
+      "link": "https://vnexpress.net/elon-musk-mat-hon-150-ty-usd-khi-co-phieu-spacex-lao-doc-5088716.html",
+      "date": "Tue, 23 Jun 2026 08:57:46 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Các nước thiếu hụt trạm sạc trước làn sóng xe điện Trung Quốc",
+      "summary": "Xe điện Trung Quốc tăng tốc đổ bộ Đông Nam Á, châu Phi nhưng hệ thống hạ tầng trạm sạc nhiều nước không phát triển kịp, khiến tài xế gặp khó.",
+      "link": "https://vnexpress.net/cac-nuoc-thieu-hut-tram-sac-truoc-lan-song-xe-dien-trung-quoc-5088605.html",
+      "date": "Tue, 23 Jun 2026 07:47:16 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "511 triệu tấn CO2e lên sàn carbon vào cuối tháng này",
+      "summary": "Hơn 511 triệu tấn hạn ngạch khí nhà kính của ngành nhiệt điện, sắt thép, xi măng sẽ giao dịch lần đầu vào ngày 29/6.",
+      "link": "https://vnexpress.net/511-trieu-tan-co2e-len-san-carbon-vao-cuoi-thang-nay-5088662.html",
+      "date": "Tue, 23 Jun 2026 06:59:18 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Xe sang Đức gặp khó",
       "summary": "Doanh số giảm ở Trung Quốc, cùng gánh nặng thuế quan và chi phí tăng do xung đột Trung Đông, khiến hãng xe Porsche và BMW phải thắt chặt chi tiêu.",
       "link": "https://vnexpress.net/xe-sang-duc-gap-kho-5088513.html",
       "date": "Tue, 23 Jun 2026 06:32:24 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Prudential vào Top 50 doanh nghiệp phát triển bền vững 2026",
+      "summary": "Prudential Việt Nam được vinh danh ở hạng mục Hoạt động trách nhiệm cộng đồng (CSR) nổi bật nhờ các sáng kiến cộng đồng, chương trình giáo dục tài chính và hoạt động đầu tư dài...",
+      "link": "https://vnexpress.net/prudential-vao-top-50-doanh-nghiep-phat-trien-ben-vung-2026-5088805.html",
+      "date": "Tue, 23 Jun 2026 11:00:00 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -15,77 +57,49 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "'Tiết kiệm năng lượng giúp giảm áp lực đầu tư nguồn điện mới'",
-      "summary": "Chuyên gia cho rằng mỗi kWh điện tiết kiệm sẽ tương đương một kWh được sản xuất thêm, giúp giảm áp lực đầu tư nguồn mới và bảo đảm an ninh năng lượng quốc gia.",
-      "link": "https://vnexpress.net/tiet-kiem-nang-luong-giup-giam-ap-luc-dau-tu-nguon-dien-moi-5088593.html",
-      "date": "Mon, 22 Jun 2026 19:51:44 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Cựu chủ tịch Fed Alan Greenspan qua đời ở tuổi 100",
-      "summary": "Alan Greenspan - người từng lãnh đạo Fed 19 năm, qua 4 đời Tổng thống Mỹ - vừa mất ở tuổi 100.",
-      "link": "https://vnexpress.net/cuu-chu-tich-fed-alan-greenspan-qua-doi-o-tuoi-100-5088640.html",
-      "date": "Mon, 22 Jun 2026 19:29:12 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Nâng trần vốn ngắn hạn cho vay trung dài hạn",
-      "summary": "Ngân hàng Nhà nước vừa ban hành Thông tư cho phép nâng tỷ lệ tối đa ngân hàng được dùng vốn ngắn hạn cho vay trung, dài hạn từ 30% lên 40%.",
-      "link": "https://vnexpress.net/nang-tran-von-ngan-han-cho-vay-trung-dai-han-5088635.html",
-      "date": "Mon, 22 Jun 2026 18:09:21 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "SK Hynix vượt Samsung Electronics thành công ty giá trị nhất Hàn Quốc",
-      "summary": "Hãng chip SK Hynix hiện có vốn hóa 1.350 tỷ USD, tạo ra một trong những cuộc lội ngược dòng ngoạn mục nhất lịch sử doanh nghiệp Hàn Quốc.",
-      "link": "https://vnexpress.net/sk-hynix-vuot-samsung-electronics-thanh-cong-ty-gia-tri-nhat-han-quoc-5088572.html",
-      "date": "Mon, 22 Jun 2026 17:10:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "VN-Index tăng mạnh nhất hai tháng",
-      "summary": "VIC và VHM chạm trần, giúp chỉ số đại diện cho sàn TP HCM tăng 33 điểm, đánh dấu phiên khởi sắc nhất từ đầu tháng 4 đến nay.",
-      "link": "https://vnexpress.net/vn-index-tang-manh-nhat-hai-thang-5088528.html",
-      "date": "Mon, 22 Jun 2026 15:29:49 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Công ty khoáng sản của Masan mở rộng vùng khai thác vonfram quanh Núi Pháo",
-      "summary": "Núi Pháo mở rộng và Núi Chiếm, hai khu vực sẽ do Masan High-Tech Materials khai thác, ước tính có tiềm năng khoảng 115 triệu tấn vonfram đa kim.",
-      "link": "https://vnexpress.net/cong-ty-khoang-san-cua-masan-mo-rong-vung-khai-thac-vonfram-quanh-nui-phao-5088434.html",
-      "date": "Mon, 22 Jun 2026 12:38:25 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Tin tức sáng 23-6: Đề xuất thay thế cán bộ có mức độ hài lòng thấp tại bộ phận một cửa",
-      "summary": "Tin tức đáng chú ý: Đề xuất thay thế cán bộ có mức độ hài lòng thấp tại bộ phận một cửa; Ủy ban Thường vụ Quốc hội xem xét, thông qua 2 nghị quyết quan trọng; Đoàn đại biểu TP.HCM...",
-      "link": "https://tuoitre.vn/tin-tuc-sang-23-6-de-xuat-thay-the-can-bo-co-muc-do-hai-long-thap-tai-bo-phan-mot-cua-100260622233243952.htm",
-      "date": "6/23/2026 4:34:00 AM",
+      "title": "Hàng giả, hàng nhái sẽ hết đất sống?",
+      "summary": "Việc định danh người bán hàng online trên sàn thương mại điện tử, người livestream bán hàng và người làm tiếp thị liên kết được kỳ vọng sẽ ngăn chặn vấn nạn hàng gian, hàng giả...",
+      "link": "https://tuoitre.vn/hang-gia-hang-nhai-se-het-dat-song-100260622225512512.htm",
+      "date": "6/23/2026 10:30:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Startup công nghệ Việt trước cơ hội vốn từ Nhật Bản",
-      "summary": "Hệ sinh thái đổi mới sáng tạo Việt Nam phục hồi tích cực trong năm 2025, với dòng vốn quay trở lại, đặc biệt ở lĩnh vực AI, củng cố thêm cơ hội nhận nguồn vốn từ Nhật Bản.",
-      "link": "https://tuoitre.vn/startup-cong-nghe-viet-truoc-co-hoi-von-tu-nhat-ban-10026062219544483.htm",
-      "date": "6/22/2026 8:24:00 PM",
+      "title": "Bộ Công Thương hỏa tốc yêu cầu rà soát rõ nguồn và lưới điện, nhu cầu điện cho các trạm sạc xe điện",
+      "summary": "Bộ Công Thương đề nghị các địa phương cung cấp số liệu về nguồn điện, lưới điện, điện gió, điện mặt trời và nhu cầu phụ tải mới nhằm phục vụ quá trình rà soát, cập nhật Quy hoạch...",
+      "link": "https://tuoitre.vn/bo-cong-thuong-hoa-toc-yeu-cau-ra-soat-ro-nguon-va-luoi-dien-nhu-cau-dien-cho-cac-tram-sac-xe-dien-100260623101605563.htm",
+      "date": "6/23/2026 10:15:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Trước sóng FDI thế hệ mới, hơn 70% cổ phiếu nhóm hưởng lợi trực tiếp 'giật lùi'",
-      "summary": "Phần lớn cổ phiếu thuộc các nhóm ngành được kỳ vọng hưởng lợi trực tiếp từ làn sóng FDI thế hệ mới đang đi lùi, bao gồm nhiều cổ phiếu công nghệ đầu ngành.",
-      "link": "https://tuoitre.vn/truoc-song-fdi-the-he-moi-hon-70-co-phieu-nhom-huong-loi-truc-tiep-giat-lui-100260622184326731.htm",
-      "date": "6/22/2026 8:22:00 PM",
+      "title": "MSR dự kiến bổ sung 115 triệu tấn tài nguyên vonfram",
+      "summary": "Masan High -Tech Materials (UPCOM: MSR) vừa công bố những bước tiến quan trọng trong chiến lược mở rộng vùng thăm dò và khai thác quanh khu vực mỏ Núi Pháo.",
+      "link": "https://tuoitre.vn/msr-du-kien-bo-sung-115-trieu-tan-tai-nguyen-vonfram-100260623084610079.htm",
+      "date": "6/23/2026 10:00:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Một năm 'đại phẫu' bộ máy, Thực phẩm Việt San hái quả ngọt từ chuyển đổi số",
-      "summary": "Từng phải ghi đơn hàng bằng giấy, phụ thuộc vào những chuyến đi của nhân viên kinh doanh và các khâu xử lý thủ công, Thực phẩm Việt San đã từng bước xây dựng hệ thống quản trị số...",
-      "link": "https://tuoitre.vn/mot-nam-dai-phau-bo-may-thuc-pham-viet-san-hai-qua-ngot-tu-chuyen-doi-so-100260622170737268.htm",
-      "date": "6/22/2026 8:00:00 PM",
+      "title": "Sân bay Buôn Ma Thuột sẽ có thêm đường băng thứ 2, công suất 7 triệu khách/năm",
+      "summary": "Theo quy hoạch vừa được Bộ Xây dựng phê duyệt, sân bay Buôn Ma Thuột sẽ có thêm đường băng thứ hai, nhà ga T2 và 27 vị trí đỗ máy bay, nâng công suất khai thác lên 7 triệu hành...",
+      "link": "https://tuoitre.vn/san-bay-buon-ma-thuot-se-co-them-duong-bang-thu-2-cong-suat-7-trieu-khach-nam-100260623100350719.htm",
+      "date": "6/23/2026 9:58:00 AM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Thanh Hóa chi gần 4.600 tỷ đồng mở rộng quốc lộ 45",
+      "summary": "Thanh Hóa sẽ đầu tư gần 4.600 tỷ đồng nâng cấp, mở rộng gần 53 km quốc lộ 45, tăng kết nối với Ninh Bình, hoàn thiện mạng lưới giao thông liên vùng và tạo động lực thu hút đầu tư.",
+      "link": "https://vnexpress.net/thanh-hoa-chi-gan-4-600-ty-dong-mo-rong-quoc-lo-45-5088732.html",
+      "date": "Tue, 23 Jun 2026 09:39:23 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Hai bố con gặp nạn khi tắm biển Xuân Thành",
+      "summary": "Trong lúc tắm biển Xuân Thành, người bố 54 tuổi tử vong nghi do đột tử, thi thể dạt vào bờ, con trai 13 tuổi đang mất tích.",
+      "link": "https://vnexpress.net/hai-bo-con-gap-nan-khi-tam-bien-xuan-thanh-5088713.html",
+      "date": "Tue, 23 Jun 2026 08:08:37 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Diện mạo nút giao hơn 1.800 tỷ đồng trên quốc lộ 5",
       "summary": "Nút giao kết nối quốc lộ 17B với quốc lộ 5, đường sắt Hà Nội - Hải Phòng đã được 99% khối lượng công việc, dự kiến hoàn thành trong tháng 6.",
@@ -122,56 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Phó thủ tướng: Phải chuyển tư duy phân lô bán nền sang nhà cao tầng",
-      "summary": "Phó thủ tướng Hồ Quốc Dũng yêu cầu từng bước thay đổi tư duy phân lô bán nền sang phát triển chung cư, nhà ở cao tầng để sử dụng đất hiệu quả.",
-      "link": "https://vnexpress.net/pho-thu-tuong-phai-chuyen-tu-duy-phan-lo-ban-nen-sang-nha-cao-tang-5088552.html",
-      "date": "Mon, 22 Jun 2026 17:21:22 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Gắn biển số giả để né camera giao thông",
-      "summary": "Nhằm tránh bị hệ thống camera giao thông phát hiện, một tài xế xe ôm công nghệ ở Bắc Ninh đã gắn biển số giả để lưu thông trên đường.",
-      "link": "https://vnexpress.net/gan-bien-so-gia-de-ne-camera-giao-thong-5088454.html",
-      "date": "Mon, 22 Jun 2026 16:08:56 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Tin tức sáng 23-6: Đề xuất thay thế cán bộ có mức độ hài lòng thấp tại bộ phận một cửa",
-      "summary": "Tin tức đáng chú ý: Đề xuất thay thế cán bộ có mức độ hài lòng thấp tại bộ phận một cửa; Ủy ban Thường vụ Quốc hội xem xét, thông qua 2 nghị quyết quan trọng; Đoàn đại biểu TP.HCM...",
-      "link": "https://tuoitre.vn/tin-tuc-sang-23-6-de-xuat-thay-the-can-bo-co-muc-do-hai-long-thap-tai-bo-phan-mot-cua-100260622233243952.htm",
-      "date": "6/23/2026 4:34:00 AM",
+      "title": "Đến thành phố 'ổ chuột' lớn nhất Nam Mỹ",
+      "summary": "Qua những bộ phim về thành phố Rio de Janeiro của Brazil, tôi rất tò mò địa danh Rocinha, khu \"ổ chuột\" khét tiếng tội phạm nguy hiểm - favela lớn nhất Nam Mỹ. Với mật độ lên tới...",
+      "link": "https://tuoitre.vn/den-thanh-pho-o-chuot-lon-nhat-nam-my-100260623093016128.htm",
+      "date": "6/23/2026 10:58:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Thời tiết hôm nay 23-6: Cảnh báo miền Trung nắng nóng đặc biệt gay gắt, có nơi vượt 40 độ C",
-      "summary": "Hôm nay 23-6, nắng nóng diện rộng vẫn diễn ra trên cả nước, đặc biệt miền Trung nắng nóng rất gay gắt, nhiệt độ vượt mức 40 độ C.",
-      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-23-6-canh-bao-mien-trung-nang-nong-dac-biet-gay-gat-co-noi-vuot-40-do-c-100260622172736269.htm",
-      "date": "6/23/2026 3:07:00 AM",
+      "title": "Kiểm tra đường ngàn tỉ, Bí thư Đà Nẵng yêu cầu giải phóng mặt bằng đúng tiến độ",
+      "summary": "Sáng 23-6, Bí thư Thành ủy Đà Nẵng Lê Ngọc Quang kiểm tra tình hình thực hiện dự án đường liên kết vùng miền Trung tỉnh Quảng Nam.",
+      "link": "https://tuoitre.vn/kiem-tra-duong-ngan-ti-bi-thu-da-nang-yeu-cau-giai-phong-mat-bang-dung-tien-do-100260623095552762.htm",
+      "date": "6/23/2026 10:27:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Việt Nam chia buồn Phó thủ tướng Cuba Ramiro Valdés Menéndez từ trần",
-      "summary": "Thủ tướng Lê Minh Hưng gửi điện chia buồn khi hay tin Tư lệnh Cách mạng, Phó thủ tướng Cuba Ramiro Valdés Menéndez qua đời ngày 21-6.",
-      "link": "https://tuoitre.vn/viet-nam-chia-buon-pho-thu-tuong-cuba-ramiro-valdes-menendez-tu-tran-100260622225933762.htm",
-      "date": "6/22/2026 11:26:00 PM",
+      "title": "Nghệ An kiểm soát được vụ cháy rừng lan 2 xã trong nắng nóng",
+      "summary": "Sau gần hai ngày, lực lượng chữa cháy đã khống chế được vụ cháy rừng xảy ra tại hai xã ở Nghệ An.",
+      "link": "https://tuoitre.vn/nghe-an-kiem-soat-duoc-vu-chay-rung-lan-2-xa-trong-nang-nong-100260623092412163.htm",
+      "date": "6/23/2026 9:51:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Quyền Bộ trưởng Hung Cao dự Chương trình Đối tác Thái Bình Dương: 'Giá trị là quan hệ và lòng tin'",
-      "summary": "UBND tỉnh Quảng Trị phối hợp với Đại sứ quán Hợp chúng quốc Hoa Kỳ tại Việt Nam tổ chức khai mạc Chương trình Đối tác Thái Bình Dương - Bạn bè Thái Bình Dương năm 2026 tại tỉnh...",
-      "link": "https://tuoitre.vn/quyen-bo-truong-hung-cao-du-chuong-trinh-doi-tac-thai-binh-duong-gia-tri-la-quan-he-va-long-tin-100260622214401147.htm",
-      "date": "6/22/2026 9:33:00 PM",
+      "title": "Hà Nội nói gì về phản ánh nữ cán bộ từ chối xác nhận ủy quyền cho cán bộ tiền khởi nghĩa 97 tuổi?",
+      "summary": "Tối 22-6, mạng xã hội Facebook xuất hiện bài viết phản ánh về thái độ phục vụ công dân của một cán bộ tại Điểm phục vụ hành chính công phường Ngọc Hà (Hà Nội), thu hút sự quan tâm...",
+      "link": "https://tuoitre.vn/ha-noi-noi-gi-ve-phan-anh-nu-can-bo-tu-choi-xac-nhan-uy-quyen-cho-can-bo-tien-khoi-nghia-97-tuoi-100260623084438761.htm",
+      "date": "6/23/2026 9:41:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Chuẩn đô đốc Ấn Độ: Người dân Ấn Độ luôn khâm phục sự kiên cường của Việt Nam",
-      "summary": "Chuẩn đô đốc Alok Ananda, Tư lệnh Hạm đội Miền Đông Hải quân Ấn Độ, cho biết người dân Ấn Độ luôn khâm phục sự kiên cường của Việt Nam, đồng thời bày tỏ ấn tượng trước sự phát...",
-      "link": "https://tuoitre.vn/chuan-do-doc-an-do-nguoi-dan-an-do-luon-kham-phuc-su-kien-cuong-cua-viet-nam-100260622204758847.htm",
-      "date": "6/22/2026 9:25:00 PM",
+      "title": "Hai cha con đi tắm biển, người cha tử vong, đang tìm kiếm người con",
+      "summary": "Hai cha con đi tắm biển thì người cha bị tử vong, hiện lực lượng chức năng đang tổ chức lực lượng, phương tiện để tìm kiếm người con.",
+      "link": "https://tuoitre.vn/hai-cha-con-di-tam-bien-nguoi-cha-tu-vong-dang-tim-kiem-nguoi-con-100260623092520244.htm",
+      "date": "6/23/2026 9:19:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-23T00:09:53.188453+00:00",
+  "last_updated": "2026-06-23T04:38:03.185574+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
