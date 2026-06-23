@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Kinh tế Anh thế nào sau 10 năm rời EU",
+      "summary": "Sau 10 năm Brexit, nền kinh tế Anh nhỏ hơn tiềm năng có thể đạt được nếu vẫn thuộc EU, do rào cản giao thương, đầu tư và lao động.",
+      "link": "https://vnexpress.net/kinh-te-anh-the-nao-sau-10-nam-roi-eu-5088981.html",
+      "date": "Wed, 24 Jun 2026 00:15:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Trái cây ngoại vào Việt Nam ngày càng rẻ",
+      "summary": "Nho, táo, cam nhập khẩu ngày càng đa dạng và có giá dễ tiếp cận hơn, trong bối cảnh Việt Nam chi 1,3 tỷ USD nhập khẩu rau quả trong 5 tháng đầu năm, tăng 31% so với cùng kỳ.",
+      "link": "https://vnexpress.net/trai-cay-ngoai-vao-viet-nam-ngay-cang-re-5089009.html",
+      "date": "Wed, 24 Jun 2026 00:10:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "'Phần lớn tín dụng xanh tập trung vào các dự án lớn'",
+      "summary": "Tín dụng xanh chỉ chiếm khoảng 4,3% tổng dư nợ, phần lớn tập trung vào dự án quy mô lớn, chưa thực sự đến được khu vực doanh nghiệp vừa và nhỏ, theo đại diện Ban IV.",
+      "link": "https://vnexpress.net/phan-lon-tin-dung-xanh-tap-trung-vao-cac-du-an-lon-5089155.html",
+      "date": "Wed, 24 Jun 2026 00:01:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Khoản vay cho loạt dự án lớn không tính vào hạn mức tăng trưởng tín dụng",
       "summary": "Ngân hàng Nhà nước cho phép loại trừ dư nợ phát sinh với một số dự án của Vingroup, Sun Group và Masterise khi tính 'room' tín dụng của ngân hàng.",
       "link": "https://vnexpress.net/khoan-vay-cho-loat-du-an-lon-khong-tinh-vao-han-muc-tang-truong-tin-dung-5089165.html",
@@ -36,27 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Doanh thu Thảo Cầm Viên đạt mức kỷ lục",
-      "summary": "Quý đầu năm, Thảo Cầm Viên Sài Gòn có doanh thu gần 49 tỷ đồng, tăng 27% so cùng kỳ 2025 và đạt mức cao nhất kể từ khi công bố thông tin.",
-      "link": "https://vnexpress.net/doanh-thu-thao-cam-vien-dat-muc-ky-luc-5088964.html",
-      "date": "Tue, 23 Jun 2026 15:20:06 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Giá xăng tại Mỹ giảm 6 tuần liên tiếp",
-      "summary": "Nỗ lực ngoại giao giữa Washington và Tehran đang mang lại tín hiệu tích cực cho người Mỹ, khi giá xăng liên tục đi xuống vài tuần qua.",
-      "link": "https://vnexpress.net/gia-xang-tai-my-giam-6-tuan-lien-tiep-5088864.html",
-      "date": "Tue, 23 Jun 2026 15:13:31 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Tỷ phú Phạm Nhật Vượng mua gần 5% vốn LPBank",
-      "summary": "Ông Phạm Nhật Vượng đã sở hữu 146,2 triệu cổ phiếu LPB của LPBank, tương đương 4,894% vốn.",
-      "link": "https://vnexpress.net/ty-phu-pham-nhat-vuong-mua-gan-5-von-lpbank-5088909.html",
-      "date": "Tue, 23 Jun 2026 12:55:16 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Pacific Airlines lỗ lũy kế hơn 10.600 tỉ, Vietnam Airlines tính chuyện thoái vốn",
       "summary": "Pacific Airlines tiếp tục đối mặt khó khăn tài chính khi ghi nhận khoản lỗ trước thuế 565 tỉ đồng trong năm 2025, nâng lỗ lũy kế lên 10.675,8 tỉ đồng tính đến cuối năm.",
       "link": "https://tuoitre.vn/pacific-airlines-lo-luy-ke-hon-10600-ti-vietnam-airlines-tinh-chuyen-thoai-von-100260623173606938.htm",
@@ -87,6 +87,48 @@
   ],
   "chinh_sach": [
     {
+      "title": "5 khu vực có thể phát triển đô thị nén dọc metro Bến Thành - Tham Lương",
+      "summary": "TP HCM khoanh vùng 5 khu vực xung quanh các nhà ga của tuyến tàu điện với tổng diện tích gần 940 ha để lập quy hoạch phát triển đô thị theo mô hình TOD.",
+      "link": "https://vnexpress.net/5-khu-vuc-co-the-phat-trien-do-thi-nen-doc-metro-ben-thanh-tham-luong-5089158.html",
+      "date": "Wed, 24 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Nghiên cứu giảm tuổi hưởng trợ cấp hưu trí xã hội xuống dưới 70",
+      "summary": "Bộ Nội vụ đang đánh giá phương án giảm dần độ tuổi hưởng trợ cấp hưu trí xã hội xuống dưới 70 nhằm mở rộng diện bao phủ an sinh cho người cao tuổi.",
+      "link": "https://vnexpress.net/nghien-cuu-giam-tuoi-huong-tro-cap-huu-tri-xa-hoi-xuong-duoi-70-5089153.html",
+      "date": "Wed, 24 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Chủ xe hợp đồng phải chia sẻ dữ liệu chuyến đi cho Bộ Công an",
+      "summary": "Từ ngày 1/1/2028, đơn vị kinh doanh vận tải hành khách theo hợp đồng phải thực hiện kết nối và chia sẻ dữ liệu về hợp đồng vận tải hành khách trước khi thực hiện chuyến đi với Cục...",
+      "link": "https://vnexpress.net/chu-xe-hop-dong-phai-chia-se-du-lieu-chuyen-di-cho-bo-cong-an-5089147.html",
+      "date": "Wed, 24 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Lương viên chức cao nhất 20 triệu đồng từ 1/7",
+      "summary": "Từ 1/7, khi áp dụng lương cơ sở mới 2,53 triệu đồng, nhóm viên chức là giáo sư, giảng viên, dược sĩ, bác sĩ, kỹ sư kiến trúc sư cao cấp sẽ hưởng mức lương cao nhất 20,2 triệu đồng.",
+      "link": "https://vnexpress.net/luong-vien-chuc-cao-nhat-20-trieu-dong-tu-1-7-5089069.html",
+      "date": "Wed, 24 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Kích hoạt ứng phó khẩn cấp khi AQI vượt 300 ba ngày liên tiếp",
+      "summary": "Bộ Nông nghiệp và Môi trường sẽ xây dựng quy trình ứng phó khẩn cấp liên vùng khi chỉ số chất lượng không khí (AQI) đạt từ 300 trở lên trong ba ngày liên tiếp.",
+      "link": "https://vnexpress.net/kich-hoat-ung-pho-khan-cap-khi-aqi-vuot-300-ba-ngay-lien-tiep-5089014.html",
+      "date": "Wed, 24 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "Hà Nội cần trung tâm tránh nóng công cộng",
+      "summary": "Trước xu hướng nắng nóng ngày càng gay gắt, Hà Nội cần xây dựng các điểm tránh nóng và trung tâm làm mát công cộng để bảo vệ sức khỏe người dân, theo chuyên gia.",
+      "link": "https://vnexpress.net/ha-noi-can-trung-tam-tranh-nong-cong-cong-5088763.html",
+      "date": "Wed, 24 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "'Không coi quy hoạch là giữ chỗ cho một chức vụ'",
       "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm yêu cầu khắc phục nhận thức lệch lạc coi quy hoạch cán bộ là \"giữ chỗ\", \"xếp hàng đến lượt\" hay bảo đảm chắc chắn cho một chức vụ.",
       "link": "https://vnexpress.net/khong-coi-quy-hoach-la-giu-cho-cho-mot-chuc-vu-5089130.html",
@@ -94,46 +136,25 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Tìm thấy thi thể bé trai mất tích khi tắm biển cùng bố",
-      "summary": "Hơn một ngày bị sóng cuốn mất tích khi tắm biển Xuân Thành cùng bố, thi thể em Nguyễn Trọng Tài, 13 tuổi, được lực lượng chức năng phát hiện vào tối 23/6.",
-      "link": "https://vnexpress.net/tim-thay-thi-the-be-trai-mat-tich-khi-tam-bien-cung-bo-5089151.html",
-      "date": "Tue, 23 Jun 2026 21:56:13 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Quyền Bộ trưởng Hải quân Mỹ Hùng Cao thăm Hải quân Việt Nam",
+      "summary": "Tại Hải Phòng, Tư lệnh Hải quân Việt Nam Trần Thanh Nghiêm hội đàm với quyền Bộ trưởng Hải quân Mỹ Hùng Cao, thúc đẩy hợp tác giữa hải quân hai nước.",
+      "link": "https://tuoitre.vn/quyen-bo-truong-hai-quan-my-hung-cao-tham-hai-quan-viet-nam-100260623221422793.htm",
+      "date": "6/23/2026 11:05:00 PM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Tàu hỏa chở bác sĩ BV Bạch Mai đi Hà Nội - Phủ Lý hằng ngày",
-      "summary": "Từ 26/6, ngành đường sắt tổ chức đoàn tàu chuyên biệt đưa đón các y, bác sĩ bệnh viện Bạch Mai đi lại giữa Hà Nội và Phủ Lý (Ninh Bình) các ngày trong tuần.",
-      "link": "https://vnexpress.net/tau-hoa-cho-bac-si-bv-bach-mai-di-ha-noi-phu-ly-hang-ngay-5089116.html",
-      "date": "Tue, 23 Jun 2026 21:41:52 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Bộ Chính trị thống nhất chủ trương thành lập thành phố Bắc Ninh",
+      "summary": "Bộ Chính trị thống nhất chủ trương thành lập thành phố Bắc Ninh trên cơ sở địa giới hành chính tỉnh Bắc Ninh.",
+      "link": "https://tuoitre.vn/bo-chinh-tri-thong-nhat-chu-truong-thanh-lap-thanh-pho-bac-ninh-100260623224122224.htm",
+      "date": "6/23/2026 11:02:00 PM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Miền Bắc và Trung nắng gắt, có nơi trên 40 độ C",
-      "summary": "Nắng nóng gay gắt diễn ra hôm nay và tiếp tục bao trùm Bắc Bộ và miền Trung trong hai ngày tới, nhiều nơi ghi nhận nhiệt độ từ 38 đến trên 40 độ C.",
-      "link": "https://vnexpress.net/mien-bac-va-trung-nang-gat-co-noi-tren-40-do-c-5089131.html",
-      "date": "Tue, 23 Jun 2026 20:54:23 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Quảng Ninh định hướng trở thành đô thị di sản 3,8 triệu dân vào năm 2050",
-      "summary": "Quy hoạch chung đô thị Quảng Ninh đến năm 2050 vừa được phê duyệt đặt mục tiêu trở thành phố gắn với di sản mang tầm quốc tế với 3,8 triệu dân.",
-      "link": "https://vnexpress.net/quang-ninh-dinh-huong-tro-thanh-do-thi-di-san-3-8-trieu-dan-vao-nam-2050-5089092.html",
-      "date": "Tue, 23 Jun 2026 18:18:25 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Tai nạn liên hoàn gây ùn tắc 5 km trên đèo nối Đà Lạt - Phan Thiết",
-      "summary": "Xe tải va chạm với hai ôtô giữa đèo Đại Ninh trên quốc lộ 28B, khiến giao thông qua khu vực ùn tắc kéo dài, chiều 23/6.",
-      "link": "https://vnexpress.net/tai-nan-lien-hoan-gay-un-tac-5-km-tren-deo-noi-da-lat-phan-thiet-5089095.html",
-      "date": "Tue, 23 Jun 2026 18:05:49 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Hà Nội chấn chỉnh thái độ phục vụ toàn hệ thống hành chính công",
-      "summary": "Thành ủy yêu cầu toàn hệ thống phục vụ hành chính công rút kinh nghiệm, chấn chỉnh thái độ phục vụ người dân sau vụ việc một công chức yêu cầu cụ bà 97 tuổi lên phường làm thủ tục...",
-      "link": "https://vnexpress.net/ha-noi-chan-chinh-thai-do-phuc-vu-toan-he-thong-hanh-chinh-cong-5089074.html",
-      "date": "Tue, 23 Jun 2026 18:05:27 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Bí thư Thành ủy TP.HCM yêu cầu đẩy nhanh Chiến dịch 500 ngày đêm tìm kiếm hài cốt liệt sĩ",
+      "summary": "Bí thư Thành ủy TP.HCM Trần Lưu Quang đề nghị triển khai quyết liệt Chiến dịch 500 ngày đêm tìm kiếm, quy tập, xác định danh tính hài cốt liệt sĩ trên địa bàn.",
+      "link": "https://tuoitre.vn/bi-thu-thanh-uy-tphcm-yeu-cau-day-nhanh-chien-dich-500-ngay-dem-tim-kiem-hai-cot-liet-si-100260623212447814.htm",
+      "date": "6/23/2026 10:28:00 PM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
       "title": "Kiên quyết xử lý nhà đầu tư chậm tiến độ trạm dừng nghỉ cao tốc Bắc - Nam",
@@ -148,30 +169,9 @@
       "link": "https://tuoitre.vn/cong-an-phuong-go-cua-tung-phong-tro-xet-nghiem-ma-tuy-trong-cong-dong-100260623211753773.htm",
       "date": "6/23/2026 9:51:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Tìm thấy thi thể bé trai 13 tuổi sau vụ cha con gặp nạn trên biển Hà Tĩnh",
-      "summary": "Sau nhiều giờ cháu N.T.T. mất tích, lực lượng tìm kiếm đã tìm thấy thi thể cháu trên vùng biển Xuân Thành (xã Tiên Điền, Hà Tĩnh).",
-      "link": "https://tuoitre.vn/tim-thay-thi-the-be-trai-13-tuoi-sau-vu-cha-con-gap-nan-tren-bien-ha-tinh-100260623203457096.htm",
-      "date": "6/23/2026 9:45:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Chính phủ mở rộng khám sức khỏe miễn phí cho người cao tuổi từ năm 2026",
-      "summary": "Chính phủ quy định từ năm 2026 người cao tuổi được khám sức khỏe hoặc sàng lọc miễn phí ít nhất mỗi năm một lần, đồng thời mở rộng mạng lưới chăm sóc đến cấp xã, phường.",
-      "link": "https://tuoitre.vn/chinh-phu-mo-rong-kham-suc-khoe-mien-phi-cho-nguoi-cao-tuoi-tu-nam-2026-100260623205904989.htm",
-      "date": "6/23/2026 9:40:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Tổng Bí thư, Chủ tịch nước: Khắc phục những nhận thức lệch lạc, coi quy hoạch là giữ chỗ",
-      "summary": "Chiều 23-6, Tổng Bí thư, Chủ tịch nước Tô Lâm đã có cuộc gặp mặt cán bộ quy hoạch diện Bộ Chính trị quản lý.",
-      "link": "https://tuoitre.vn/tong-bi-thu-chu-tich-nuoc-khac-phuc-nhung-nhan-thuc-lech-lac-coi-quy-hoach-la-giu-cho-100260623202344379.htm",
-      "date": "6/23/2026 9:25:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-23T17:11:38.569687+00:00",
+  "last_updated": "2026-06-23T19:23:30.824134+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
