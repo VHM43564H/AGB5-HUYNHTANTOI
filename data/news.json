@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Xe sang Đức gặp khó",
+      "summary": "Doanh số giảm ở Trung Quốc, cùng gánh nặng thuế quan và chi phí tăng do xung đột Trung Đông, khiến hãng xe Porsche và BMW phải thắt chặt chi tiêu.",
+      "link": "https://vnexpress.net/xe-sang-duc-gap-kho-5088513.html",
+      "date": "Tue, 23 Jun 2026 06:32:24 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Phó thủ tướng: Không để lợi dụng nhập ôtô biếu tặng để trục lợi",
       "summary": "Phó thủ tướng lưu ý chính sách nhập khẩu cần bảo đảm công bằng, minh bạch, không để lợi dụng hình thức quà biếu, tặng để trục lợi.",
       "link": "https://vnexpress.net/pho-thu-tuong-khong-de-loi-dung-nhap-oto-bieu-tang-de-truc-loi-5088652.html",
@@ -50,13 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Trung Quốc áp kiểm soát xuất khẩu với 10 công ty Mỹ",
-      "summary": "Giới chức Trung Quốc vừa áp kiểm soát xuất khẩu với 10 công ty Mỹ, đáp trả việc Washington đưa nhiều doanh nghiệp nước này vào danh sách đen.",
-      "link": "https://vnexpress.net/trung-quoc-ap-kiem-soat-xuat-khau-voi-10-cong-ty-my-5088386.html",
-      "date": "Mon, 22 Jun 2026 12:05:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Tin tức sáng 23-6: Đề xuất thay thế cán bộ có mức độ hài lòng thấp tại bộ phận một cửa",
       "summary": "Tin tức đáng chú ý: Đề xuất thay thế cán bộ có mức độ hài lòng thấp tại bộ phận một cửa; Ủy ban Thường vụ Quốc hội xem xét, thông qua 2 nghị quyết quan trọng; Đoàn đại biểu TP.HCM...",
       "link": "https://tuoitre.vn/tin-tuc-sang-23-6-de-xuat-thay-the-can-bo-co-muc-do-hai-long-thap-tai-bo-phan-mot-cua-100260622233243952.htm",
@@ -88,7 +88,7 @@
   "chinh_sach": [
     {
       "title": "Diện mạo nút giao hơn 1.800 tỷ đồng trên quốc lộ 5",
-      "summary": "Nút giao kết nối quốc lộ 17B với quốc lộ 5, đường sắt Hà Nội - Hải Phòng đã hoàn thành 99% khối lượng công việc, dự kiến hoàn thành trong tháng 6.",
+      "summary": "Nút giao kết nối quốc lộ 17B với quốc lộ 5, đường sắt Hà Nội - Hải Phòng đã được 99% khối lượng công việc, dự kiến hoàn thành trong tháng 6.",
       "link": "https://vnexpress.net/dien-mao-nut-giao-hon-1-800-ty-dong-tren-quoc-lo-5-5088549.html",
       "date": "Tue, 23 Jun 2026 01:00:16 +0700",
       "source": "Thời sự - VnExpress RSS"
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-22T22:59:34.219760+00:00",
+  "last_updated": "2026-06-23T00:09:53.188453+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
