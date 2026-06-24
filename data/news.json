@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá dầu xuống thấp nhất kể từ xung đột Trung Đông",
+      "summary": "Dầu thô Brent giảm xuống dưới 75 USD một thùng, mức thấp nhất kể từ cuối tháng 2 do kỳ vọng eo biển Hormuz sớm vận hành bình thường.",
+      "link": "https://vnexpress.net/gia-dau-xuong-thap-nhat-ke-tu-xung-dot-trung-dong-5089575.html",
+      "date": "Thu, 25 Jun 2026 00:02:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Tiêu thụ điện tại miền Bắc có thể cao nhất từ đầu năm",
       "summary": "Tiêu thụ điện tại miền Bắc có thể ghi nhận công suất tiêu thụ lớn nhất gần 31.000 MW vào tối 24/6, mức cao nhất từ đầu năm do nắng nóng gay gắt, theo NSMO.",
       "link": "https://vnexpress.net/tieu-thu-dien-tai-mien-bac-co-the-cao-nhat-tu-dau-nam-5089556.html",
@@ -50,13 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Bầu Đức liên tục mua vào cổ phiếu HAG",
-      "summary": "Bầu Đức đăng ký mua thêm 4 triệu cổ phiếu HAG, qua đó nâng tổng lượng cổ phiếu gom vào trong 5 đợt liên tiếp từ đầu tháng 3 lên 21 triệu đơn vị.",
-      "link": "https://vnexpress.net/bau-duc-lien-tuc-mua-vao-co-phieu-hag-5089440.html",
-      "date": "Wed, 24 Jun 2026 16:36:51 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Giá vàng thế giới giảm về dưới 4.000 USD/ounce sau nhiều tháng",
       "summary": "Tối nay, 24-6, giá vàng thế giới có lúc đã giảm xuống dưới 4.000 USD/ounce rồi bật tăng trở lại. Đây cũng là mức giá thấp nhất kể từ tháng 10-2025.",
       "link": "https://tuoitre.vn/gia-vang-the-gioi-giam-ve-duoi-4000-usd-ounce-sau-nhieu-thang-10026062422181335.htm",
@@ -86,6 +86,13 @@
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Hành khách chỉ được mang hai sạc dự phòng lên máy bay từ 1/7",
+      "summary": "Từ ngày 1/7, mỗi hành khách chỉ được mang tối đa hai sạc dự phòng lên máy bay và phải để trong hành lý xách tay, theo quy định mới của ngành hàng không.",
+      "link": "https://vnexpress.net/hanh-khach-chi-duoc-mang-hai-sac-du-phong-len-may-bay-tu-1-7-5089557.html",
+      "date": "Thu, 25 Jun 2026 01:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Tìm được danh tính liệt sĩ sau 54 năm nhờ ADN",
       "summary": "Kết quả đối sánh ADN giúp gia đình liệt sĩ Nguyễn Trọng Cát, quê Thanh Hóa, xác định được nơi an nghỉ của ông sau 54 năm tìm kiếm.",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Thêm 6 sếu đầu đỏ từ Thái Lan về Tràm Chim",
-      "summary": "6 sếu đầu đỏ từ Thái Lan được đưa về Vườn quốc gia Tràm Chim, đánh dấu đợt tiếp nhận thứ hai trong đề án phục hồi loài chim biểu tượng của vùng Đồng Tháp Mười, chiều 24/6.",
-      "link": "https://vnexpress.net/them-6-seu-dau-do-tu-thai-lan-ve-tram-chim-5089530.html",
-      "date": "Wed, 24 Jun 2026 19:17:37 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Năng lượng, dầu khí nằm trong các trụ cột hợp tác Việt Nam và Venezuela giai đoạn mới",
       "summary": "Chương trình nghị sự Việt Nam - Venezuela giai đoạn 2026 - 2030 gồm nhiều trụ cột chính: chính trị - ngoại giao, nông nghiệp - an ninh lương thực, an ninh năng lượng và dầu khí...",
       "link": "https://tuoitre.vn/nang-luong-dau-khi-nam-trong-cac-tru-cot-hop-tac-viet-nam-va-venezuela-giai-doan-moi-100260624232712827.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-24T17:28:20.402749+00:00",
+  "last_updated": "2026-06-24T19:11:14.983985+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
