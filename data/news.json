@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Áp lực tiền lương khiến lao động ngại kết hôn, hoãn sinh con",
+      "summary": "Hơn một nửa lao động độc thân chưa muốn kết hôn vì thu nhập thấp, trong khi 73% người đã lập gia đình cho biết tiền lương hiện tại ảnh hưởng đến quyết định sinh thêm con.",
+      "link": "https://vnexpress.net/ap-luc-tien-luong-khien-lao-dong-ngai-ket-hon-hoan-sinh-con-5089497.html",
+      "date": "Thu, 25 Jun 2026 04:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Hành khách chỉ được mang hai sạc dự phòng lên máy bay từ 1/7",
       "summary": "Từ ngày 1/7, mỗi hành khách chỉ được mang tối đa hai sạc dự phòng lên máy bay và phải để trong hành lý xách tay, theo quy định mới của ngành hàng không.",
       "link": "https://vnexpress.net/hanh-khach-chi-duoc-mang-hai-sac-du-phong-len-may-bay-tu-1-7-5089557.html",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "30.000 hộ dân mất điện do cháy rừng ở Thanh Hóa",
-      "summary": "Ngành điện cắt điện khẩn cấp tại một số khu vực khi cháy rừng ở phường Đào Duy Từ có nguy cơ ảnh hưởng Trạm biến áp 110kV Tĩnh Gia 2.",
-      "link": "https://vnexpress.net/30-000-ho-dan-mat-dien-do-chay-rung-o-thanh-hoa-5089540.html",
-      "date": "Wed, 24 Jun 2026 19:20:09 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Năng lượng, dầu khí nằm trong các trụ cột hợp tác Việt Nam và Venezuela giai đoạn mới",
       "summary": "Chương trình nghị sự Việt Nam - Venezuela giai đoạn 2026 - 2030 gồm nhiều trụ cột chính: chính trị - ngoại giao, nông nghiệp - an ninh lương thực, an ninh năng lượng và dầu khí...",
       "link": "https://tuoitre.vn/nang-luong-dau-khi-nam-trong-cac-tru-cot-hop-tac-viet-nam-va-venezuela-giai-doan-moi-100260624232712827.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-24T19:11:14.983985+00:00",
+  "last_updated": "2026-06-24T21:08:06.197110+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
