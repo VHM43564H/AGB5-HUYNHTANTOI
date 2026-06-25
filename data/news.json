@@ -57,6 +57,13 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
+      "title": "Giá vàng bật tăng trở lại sau khi giảm sâu",
+      "summary": "Sau khi giảm xuống mức thấp nhất trong nhiều tháng, tối 25-6 giá vàng thế giới bật tăng trở lại, lên trên ngưỡng 4.000 USD/ounce.",
+      "link": "https://tuoitre.vn/gia-vang-bat-tang-tro-lai-sau-khi-giam-sau-100260626002013371.htm",
+      "date": "6/26/2026 1:01:00 AM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
+    },
+    {
       "title": "Diễn biến mới tại Hóa chất Đức Giang: Vẫn còn một vấn đề chưa thể tự khắc phục",
       "summary": "Hóa chất Đức Giang đưa ra lộ trình khắc phục ý kiến kiểm toán ngoại trừ đối với báo cáo tài chính năm 2025 đã được kiểm toán.",
       "link": "https://tuoitre.vn/dien-bien-moi-tai-hoa-chat-duc-giang-van-con-mot-van-de-chua-the-tu-khac-phuc-100260625220644996.htm",
@@ -75,13 +82,6 @@
       "summary": "Thanh tra Chứng khoán Nhà nước quyết định xử phạt VNECO2 92,5 triệu đồng do vi phạm quy định về thời hạn công bố thông tin và vi phạm nhiều lần.",
       "link": "https://tuoitre.vn/mot-cong-ty-nhan-an-phat-sau-gan-1-thang-do-thu-chuyen-sai-dia-chi-100260625164538225.htm",
       "date": "6/25/2026 8:39:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Đưa G-DRAGON, Faker đến Việt Nam, VPBank hướng tới điều gì?",
-      "summary": "Không chỉ đồng hành đưa những ngôi sao như G-DRAGON, Faker cùng đội tuyển T1 hay Westlife đến Việt Nam, VPBank đang phát triển VPShow như một hệ sinh thái văn hóa - giải trí để...",
-      "link": "https://tuoitre.vn/dua-g-dragon-faker-den-viet-nam-vpbank-huong-toi-dieu-gi-100260625200711242.htm",
-      "date": "6/25/2026 8:36:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-25T18:30:17.105307+00:00",
+  "last_updated": "2026-06-25T20:32:39.032501+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
