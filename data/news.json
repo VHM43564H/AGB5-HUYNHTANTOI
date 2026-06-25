@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Bộ Công Thương nghiên cứu giá điện theo giờ với hộ gia đình",
+      "summary": "Bộ Công Thương muốn từng bước tính giá điện theo thời gian sử dụng với khách hàng sinh hoạt, nhằm khuyến khích dịch chuyển nhu cầu khỏi giờ cao điểm.",
+      "link": "https://vnexpress.net/bo-cong-thuong-nghien-cuu-gia-dien-theo-gio-voi-ho-gia-dinh-5090003.html",
+      "date": "Thu, 25 Jun 2026 22:52:43 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Lạm phát Mỹ cao nhất 3 năm",
       "summary": "PCE - thước đo lạm phát ưa thích của Cục Dự trữ liên bang Mỹ (Fed) tăng hơn 4% trong tháng 5.",
       "link": "https://vnexpress.net/lam-phat-my-cao-nhat-3-nam-5089969.html",
@@ -50,11 +57,11 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Tài sản của Elon Musk chỉ còn hơn 900 tỷ USD",
-      "summary": "Sau gần hai tuần trở thành người đầu tiên trên thế giới có tài sản nghìn tỷ USD, Elon Musk đã mất danh hiệu này.",
-      "link": "https://vnexpress.net/tai-san-cua-elon-musk-chi-con-hon-900-ty-usd-5089662.html",
-      "date": "Thu, 25 Jun 2026 10:05:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Diễn biến mới tại Hóa chất Đức Giang: Vẫn còn một vấn đề chưa thể tự khắc phục",
+      "summary": "Hóa chất Đức Giang đưa ra lộ trình khắc phục ý kiến kiểm toán ngoại trừ đối với báo cáo tài chính năm 2025 đã được kiểm toán.",
+      "link": "https://tuoitre.vn/dien-bien-moi-tai-hoa-chat-duc-giang-van-con-mot-van-de-chua-the-tu-khac-phuc-100260625220644996.htm",
+      "date": "6/25/2026 10:28:00 PM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
       "title": "Apple buộc phải tăng giá MacBook, iPad vì giá chip nhớ tăng vọt theo cơn sốt AI",
@@ -76,16 +83,16 @@
       "link": "https://tuoitre.vn/dua-g-dragon-faker-den-viet-nam-vpbank-huong-toi-dieu-gi-100260625200711242.htm",
       "date": "6/25/2026 8:36:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "PC1 tiếp tục bị xử phạt sau loạt biến cố liên quan lãnh đạo",
-      "summary": "Tập đoàn PC1 vừa bị Thanh tra Ủy ban Chứng khoán Nhà nước xử phạt 92,5 triệu đồng do vi phạm quy định về công bố thông tin.",
-      "link": "https://tuoitre.vn/pc1-tiep-tuc-bi-xu-phat-sau-loat-bien-co-lien-quan-lanh-dao-10026062519434101.htm",
-      "date": "6/25/2026 8:35:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Lương sĩ quan công an tăng từ 1/7",
+      "summary": "Mức lương của sĩ quan công an sẽ tăng từ ngày 1/7 khi lương cơ sở được điều chỉnh lên 2,53 triệu đồng mỗi tháng, trong đó đại tướng có mức lương cao nhất 26,3 triệu đồng, chưa gồm...",
+      "link": "https://vnexpress.net/luong-cong-an-5089771.html",
+      "date": "Fri, 26 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Bác sĩ về Bệnh viện Bạch Mai và Việt Đức 2 được hỗ trợ tối đa 15,6 triệu đồng",
       "summary": "Bác sĩ, y sĩ làm việc tại bệnh viện Bạch Mai 2 và Việt Đức 2 tại Ninh Bình được hỗ trợ tối đa 15,6 triệu đồng mỗi tháng, theo cơ chế thu hút nhân lực về làm việc.",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "'Cấp xã gánh trách nhiệm nhưng chưa đủ quyền'",
-      "summary": "Sau khi thực hiện mô hình chính quyền địa phương hai cấp, cấp xã phải trực tiếp giải quyết phần lớn công việc nhưng nhiều chuyên gia cho rằng thẩm quyền và nguồn lực thiếu.",
-      "link": "https://vnexpress.net/cap-xa-ganh-trach-nhiem-nhung-chua-du-quyen-5089850.html",
-      "date": "Thu, 25 Jun 2026 17:07:23 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "PC1 tiếp tục bị xử phạt sau loạt biến cố liên quan lãnh đạo",
       "summary": "Tập đoàn PC1 vừa bị Thanh tra Ủy ban Chứng khoán Nhà nước xử phạt 92,5 triệu đồng do vi phạm quy định về công bố thông tin.",
       "link": "https://tuoitre.vn/pc1-tiep-tuc-bi-xu-phat-sau-loat-bien-co-lien-quan-lanh-dao-10026062519434101.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-25T16:18:06.863576+00:00",
+  "last_updated": "2026-06-25T18:30:17.105307+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
