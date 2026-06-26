@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Người dân được bán hơn 50% điện mặt trời mái nhà dư thừa",
+      "summary": "Nếu lưới điện tại khu vực còn khả năng tiếp nhận, người dân được bán trên 50% lượng điện mặt trời mái nhà tự sản, tự tiêu dư thừa lên hệ thống quốc gia.",
+      "link": "https://vnexpress.net/nguoi-dan-duoc-ban-hon-50-dien-mat-troi-mai-nha-du-thua-5090423.html",
+      "date": "Sat, 27 Jun 2026 00:38:35 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Nắng nóng đe dọa kinh tế châu Âu",
+      "summary": "Nắng nóng gay gắt làm giảm năng suất lao động, tạo thêm áp lực cho các nền kinh tế châu Âu, vốn đang gặp nhiều thách thức.",
+      "link": "https://vnexpress.net/nang-nong-de-doa-kinh-te-chau-au-5090262.html",
+      "date": "Sat, 27 Jun 2026 00:05:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Vì sao Việt Nam chưa cấm được túi nilon, nhựa một lần?",
+      "summary": "Đại diện Cục Môi trường thừa nhận chính sách hạn chế túi nilon, nhựa một lần chưa đi vào cuộc sống, và đề xuất áp thuế, phí lên các sản phẩm loại này thay vì cấm hẳn.",
+      "link": "https://vnexpress.net/vi-sao-viet-nam-chua-cam-duoc-tui-nilon-nhua-mot-lan-5090380.html",
+      "date": "Sat, 27 Jun 2026 00:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Ông Lê Viết Hải muốn lập pháp nhân mới tái cấu trúc Xây Dựng Hòa Bình",
       "summary": "Chủ tịch Xây dựng Hòa Bình Lê Viết Hải nêu kế hoạch lập công ty chiến lược về tài chính để hỗ trợ huy động vốn, và khẳng định pháp nhân này không thay thế hay chuyển nợ từ HBC.",
       "link": "https://vnexpress.net/ong-le-viet-hai-muon-lap-phap-nhan-moi-tai-cau-truc-xay-dung-hoa-binh-5090378.html",
@@ -36,27 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Hàng không Việt vào cuộc đua mở rộng đội bay",
-      "summary": "Vietnam Airlines, Vietjet và Sun PhuQuoc Airways đồng loạt bổ sung máy bay khi nhu cầu vận chuyển phục hồi, khách quốc tế tăng mạnh.",
-      "link": "https://vnexpress.net/hang-khong-viet-vao-cuoc-dua-mo-rong-doi-bay-5089978.html",
-      "date": "Fri, 26 Jun 2026 08:49:28 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Loạt doanh nghiệp trả cổ tức tiền mặt cao hơn lãi tiết kiệm ngân hàng",
-      "summary": "Hơn chục công ty niêm yết trả cổ tức tiền mặt với mức cao hơn gửi ngân hàng, dù lãi suất năm nay tăng mạnh.",
-      "link": "https://vnexpress.net/loat-doanh-nghiep-tra-co-tuc-tien-mat-cao-hon-lai-tiet-kiem-ngan-hang-5089957.html",
-      "date": "Fri, 26 Jun 2026 06:59:53 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Ồ ạt đổ vốn đầu tư 'công nghiệp tương lai' ở Trung Quốc",
-      "summary": "Sau giai đoạn trầm lắng, giới đầu tư mạo hiểm tranh nhau rót vốn vào các startup \"công nghiệp tương lai\" ở Trung Quốc như vũ trụ, lượng tử, AI.",
-      "link": "https://vnexpress.net/o-at-do-von-dau-tu-cong-nghiep-tuong-lai-o-trung-quoc-5089790.html",
-      "date": "Fri, 26 Jun 2026 07:04:49 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Điện mặt trời mái nhà được bán tối đa 50% điện dư",
       "summary": "Thay vì mức sản lượng điện dư được phát lên lưới 20%, nguồn điện mặt trời mái nhà sẽ được mua tối đa lên tới 50%.",
       "link": "https://tuoitre.vn/dien-mat-troi-mai-nha-duoc-ban-toi-da-50-dien-du-100260626212633186.htm",
@@ -86,6 +86,13 @@
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Bộ Xây dựng thống nhất vị trí nhà ga đường sắt tại sân bay Long Thành",
+      "summary": "Bộ Xây dựng thống nhất phương án kết nối tuyến metro Bến Thành - Suối Tiên kéo dài đến sân bay Long Thành và vị trí các nhà ga đường sắt theo đề xuất của UBND TP Đồng Nai.",
+      "link": "https://vnexpress.net/bo-xay-dung-thong-nhat-vi-tri-nha-ga-duong-sat-tai-san-bay-long-thanh-5090407.html",
+      "date": "Sat, 27 Jun 2026 00:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Thợ săn ong tử vong trên cổ thụ cao 40 m",
       "summary": "Đang trèo trên cổ thụ lấy mật ong trên rừng sâu ở xã Trà Bồng, ông An, 49 tuổi, tử vong.",
@@ -129,14 +136,7 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Lũ sông Bằng Giang lên nhanh, Cao Bằng sơ tán dân",
-      "summary": "Nước lũ từ thượng nguồn đổ về ngày 26/6 khiến nhiều khu vực ven sông ở Cao Bằng ngập sâu, nguy cơ vượt báo động ba. Chính quyền triển khai sơ tán dân.",
-      "link": "https://vnexpress.net/lu-song-bang-giang-len-nhanh-cao-bang-so-tan-dan-5090360.html",
-      "date": "Fri, 26 Jun 2026 17:42:20 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Từ 1-7, báo chí sử dụng AI phải gắn nhãn thông báo",
+      "title": "Từ 1-7, sử dụng AI có khả năng gây nhầm lẫn về tính xác thực, báo chí phải gắn nhãn thông báo",
       "summary": "Cơ quan báo chí phải thực hiện thông báo và gắn nhãn rõ ràng, tại vị trí dễ nhận biết đối với văn bản, hình ảnh, âm thanh, video được tạo ra hoặc chỉnh sửa bằng hệ thống trí tuệ...",
       "link": "https://tuoitre.vn/tu-1-7-bao-chi-su-dung-ai-phai-gan-nhan-thong-bao-100260626214748505.htm",
       "date": "6/26/2026 10:12:00 PM",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-26T17:14:14.625075+00:00",
+  "last_updated": "2026-06-26T19:15:14.521952+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
