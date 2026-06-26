@@ -1,9 +1,9 @@
 {
   "tin_tuc": [
     {
-      "title": "Người dân được bán hơn 50% điện mặt trời mái nhà dư thừa",
-      "summary": "Nếu lưới điện tại khu vực còn khả năng tiếp nhận, người dân được bán trên 50% lượng điện mặt trời mái nhà tự sản, tự tiêu dư thừa lên hệ thống quốc gia.",
-      "link": "https://vnexpress.net/nguoi-dan-duoc-ban-hon-50-dien-mat-troi-mai-nha-du-thua-5090423.html",
+      "title": "Người dân được bán tối đa 50% điện mặt trời mái nhà dư thừa",
+      "summary": "Người dân được bán tối đa 50% lượng điện mặt trời mái nhà tự dùng dư thừa lên lưới quốc gia, và cao hơn mức này vào cuối 2030 nếu khu vực còn khả năng tiếp nhận.",
+      "link": "https://vnexpress.net/nguoi-dan-duoc-ban-toi-da-50-dien-mat-troi-mai-nha-du-thua-5090423.html",
       "date": "Sat, 27 Jun 2026 00:38:35 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Tắc Sậy - từ vùng lau lách thành điểm hành hương nổi tiếng miền Tây",
+      "summary": "Hơn 80 năm sau khi linh mục Trương Bửu Diệp qua đời, Tắc Sậy trở thành điểm hành hương thu hút đông đảo người dân và tín hữu cả nước.",
+      "link": "https://vnexpress.net/tac-say-tu-vung-lau-lach-thanh-diem-hanh-huong-noi-tieng-mien-tay-5089595.html",
+      "date": "Sat, 27 Jun 2026 05:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Bộ Xây dựng thống nhất vị trí nhà ga đường sắt tại sân bay Long Thành",
       "summary": "Bộ Xây dựng thống nhất phương án kết nối tuyến metro Bến Thành - Suối Tiên kéo dài đến sân bay Long Thành và vị trí các nhà ga đường sắt theo đề xuất của UBND TP Đồng Nai.",
       "link": "https://vnexpress.net/bo-xay-dung-thong-nhat-vi-tri-nha-ga-duong-sat-tai-san-bay-long-thanh-5090407.html",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đà Nẵng đầu tư hơn 4.500 tỷ đồng nâng cấp quốc lộ nối cửa khẩu giáp Lào",
-      "summary": "Quốc lộ 14D kết nối với cửa khẩu Nam Giang vừa được khởi công nâng cấp với tổng vốn đầu tư hơn 4.500 tỷ đồng.",
-      "link": "https://vnexpress.net/da-nang-dau-tu-hon-4-500-ty-dong-nang-cap-quoc-lo-noi-cua-khau-giap-lao-5090361.html",
-      "date": "Fri, 26 Jun 2026 17:45:57 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Từ 1-7, sử dụng AI có khả năng gây nhầm lẫn về tính xác thực, báo chí phải gắn nhãn thông báo",
       "summary": "Cơ quan báo chí phải thực hiện thông báo và gắn nhãn rõ ràng, tại vị trí dễ nhận biết đối với văn bản, hình ảnh, âm thanh, video được tạo ra hoặc chỉnh sửa bằng hệ thống trí tuệ...",
       "link": "https://tuoitre.vn/tu-1-7-bao-chi-su-dung-ai-phai-gan-nhan-thong-bao-100260626214748505.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-26T21:03:22.027678+00:00",
+  "last_updated": "2026-06-26T22:42:21.968809+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
