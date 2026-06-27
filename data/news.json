@@ -1,6 +1,20 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá vàng thế giới lên gần 4.100 USD",
+      "summary": "Giá vàng phiên cuối tuần hồi phục nhẹ sau khi chịu sức ép đầu tuần này, có thời điểm chạm 4.094 USD một ounce.",
+      "link": "https://vnexpress.net/gia-vang-the-gioi-len-gan-4-100-usd-5090442.html",
+      "date": "Sat, 27 Jun 2026 07:30:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Ông Trump dọa áp thuế nhập khẩu 100% với nhiều nước",
+      "summary": "Tổng thống Trump cho biết sẽ áp thuế nhập khẩu 100% với hàng hóa của bất kỳ nước nào đánh thuế dịch vụ kỹ thuật số lên công ty Mỹ.",
+      "link": "https://vnexpress.net/ong-trump-doa-ap-thue-nhap-khau-100-voi-nhieu-nuoc-5090428.html",
+      "date": "Sat, 27 Jun 2026 07:21:43 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Honda tốn gần chục tỷ USD tái cơ cấu vì đầu tư vào xe điện",
       "summary": "Không tìm được chỗ đứng cho xe điện ở thị trường Trung Quốc và Mỹ, Honda lần đầu tiên lỗ sau 70 năm, tốn 9 tỷ USD để tái cơ cấu.",
       "link": "https://vnexpress.net/honda-ton-gan-chuc-ty-usd-tai-co-cau-vi-dau-tu-vao-xe-dien-5090249.html",
@@ -43,45 +57,31 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Vì sao người dân chưa sẵn sàng đổi sang xe điện?",
-      "summary": "Nhiều người dân TP HCM và Hà Nội vẫn chưa đồng thuận chuyển đổi từ xe xăng sang xe điện do hàng loạt rào cản về hạ tầng, pháp lý, chi phí và chính sách hỗ trợ.",
-      "link": "https://vnexpress.net/vi-sao-nguoi-dan-chua-san-sang-doi-sang-xe-dien-5090122.html",
-      "date": "Fri, 26 Jun 2026 11:55:04 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Vé máy bay hạ nhiệt, vì sao giá tour hè vẫn cao?",
+      "summary": "Dù giá vé bán lẻ đã giảm, giá tour hè chưa thể điều chỉnh tương ứng bởi phần lớn doanh nghiệp lữ hành đã mua trước vé đoàn, giữ phòng khách sạn, xe và dịch vụ tại điểm đến từ...",
+      "link": "https://tuoitre.vn/ve-may-bay-ha-nhiet-vi-sao-gia-tour-he-van-cao-100260627054608398.htm",
+      "date": "6/27/2026 8:20:00 AM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Fed có thể tăng lãi suất vào tháng 9",
-      "summary": "Các số liệu mới nhất về kinh tế Mỹ khiến nhà đầu tư và nhiều ngân hàng lớn đặt cược Fed bắt đầu tăng lãi suất từ tháng 9.",
-      "link": "https://vnexpress.net/fed-co-the-tang-lai-suat-vao-thang-9-5090084.html",
-      "date": "Fri, 26 Jun 2026 10:28:19 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Hai sếp lớn vừa nhận hơn 15 triệu cổ phiếu Vinhomes từ Vingroup",
+      "summary": "Vingroup vừa chuyển quyền sở hữu hơn 15,2 triệu cổ phiếu VHM của Vinhomes cho ông Phạm Nhật Vượng và bà Nguyễn Diệu Linh.",
+      "link": "https://tuoitre.vn/hai-sep-lon-vua-nhan-hon-15-trieu-co-phieu-vinhomes-tu-vingroup-10026062706594322.htm",
+      "date": "6/27/2026 8:16:00 AM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
+    },
+    {
+      "title": "Tin tức sáng 27-6: Từ 1-7, tăng mức quà Tết cho người hưởng lương hưu, trợ cấp bảo hiểm xã hội",
+      "summary": "Một số tin tức đáng chú ý tại TP.HCM: Các hoạt động văn học nghệ thuật kỷ niệm 50 năm Thành phố mang tên Bác; Tổ chức giám sát về quản lý an toàn thực phẩm trong tháng 8-2026; Gần...",
+      "link": "https://tuoitre.vn/tin-tuc-sang-27-6-tu-1-7-tang-muc-qua-tet-cho-nguoi-huong-luong-huu-tro-cap-bao-hiem-xa-hoi-100260626182747307.htm",
+      "date": "6/27/2026 6:00:00 AM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
       "title": "Vé máy bay giảm cao điểm hè, khách rục rịch lên đường",
       "summary": "Giá vé một số đường bay nội địa giảm 10 - 30% so với đầu mùa, giúp nhiều gia đình quay lại kế hoạch du lịch từng tạm hoãn.",
       "link": "https://tuoitre.vn/ve-may-bay-giam-cao-diem-he-khach-ruc-rich-len-duong-100260626233049937.htm",
       "date": "6/26/2026 11:38:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Điện mặt trời mái nhà được bán tối đa 50% điện dư",
-      "summary": "Thay vì mức sản lượng điện dư được phát lên lưới 20%, nguồn điện mặt trời mái nhà sẽ được mua tối đa lên tới 50%.",
-      "link": "https://tuoitre.vn/dien-mat-troi-mai-nha-duoc-ban-toi-da-50-dien-du-100260626212633186.htm",
-      "date": "6/26/2026 10:26:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Muốn hút đầu tư vào nông nghiệp công nghệ cao, Đắk Lắk phải dỡ các 'rào cản'",
-      "summary": "Đắk Lắk được đánh giá có nhiều lợi thế để trở thành trung tâm nông nghiệp công nghệ cao nhưng kết quả phát triển vẫn chưa tương xứng với tiềm năng.",
-      "link": "https://tuoitre.vn/muon-hut-dau-tu-vao-nong-nghiep-cong-nghe-cao-dak-lak-phai-do-cac-rao-can-1002606261739475.htm",
-      "date": "6/26/2026 10:02:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Sẽ có tiêu chuẩn Việt Nam cho nuôi cá biển công nghiệp",
-      "summary": "Tiêu chuẩn Việt Nam (TCVN) về cơ sở nuôi cá biển công nghiệp được kỳ vọng sẽ là bộ tiêu chuẩn làm nền tảng cho phát triển ngành nuôi biển theo hướng công nghiệp, hiện đại và bền...",
-      "link": "https://tuoitre.vn/se-co-tieu-chuan-viet-nam-cho-nuoi-ca-bien-cong-nghiep-100260626213036203.htm",
-      "date": "6/26/2026 9:52:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
@@ -136,6 +136,20 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
+      "title": "TP.HCM một năm hợp nhất: 24 tỉ USD và 2 hành lang vươn ra biển",
+      "summary": "Đây là một trong những chương trình đầu tư hạ tầng hướng biển lớn nhất của TP.HCM từ trước đến nay, phản ánh quyết tâm, khát vọng mở rộng không gian phát triển mới trong năm đầu...",
+      "link": "https://tuoitre.vn/tphcm-mot-nam-hop-nhat-24-ti-usd-va-2-hanh-lang-vuon-ra-bien-2026061323315174.htm",
+      "date": "6/27/2026 7:59:00 AM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
+    },
+    {
+      "title": "Tin tức sáng 27-6: Từ 1-7, tăng mức quà Tết cho người hưởng lương hưu, trợ cấp bảo hiểm xã hội",
+      "summary": "Một số tin tức đáng chú ý tại TP.HCM: Các hoạt động văn học nghệ thuật kỷ niệm 50 năm thành phố mang tên Bác; Tổ chức giám sát về quản lý an toàn thực phẩm trong tháng 8-2026; Gần...",
+      "link": "https://tuoitre.vn/tin-tuc-sang-27-6-tu-1-7-tang-muc-qua-tet-cho-nguoi-huong-luong-huu-tro-cap-bao-hiem-xa-hoi-100260626182747307.htm",
+      "date": "6/27/2026 6:00:00 AM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
+    },
+    {
       "title": "Vụ bẫy kỳ nghỉ: Có đòi lại được tiền bị lừa không?",
       "summary": "Hàng trăm người cao tuổi đã bỏ từ vài trăm triệu đến nhiều tỉ đồng mua những \"kỳ nghỉ trong mơ\" nhưng đổi lại là những tập hồ sơ khiếu nại và những cuốn sổ đỏ, sổ lương hưu phải...",
       "link": "https://tuoitre.vn/vu-bay-ky-nghi-co-doi-lai-duoc-tien-bi-lua-khong-100260627000422158.htm",
@@ -155,23 +169,9 @@
       "link": "https://tuoitre.vn/tu-1-7-bao-chi-su-dung-ai-phai-gan-nhan-thong-bao-100260626214748505.htm",
       "date": "6/26/2026 10:12:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Thợ lấy mật ong tử nạn giữa rừng, công an, quân đội băng rừng đưa thi thể ra",
-      "summary": "Sau gần một ngày vượt núi, băng rừng và leo lên thân cây cao hàng chục mét giữa rừng già hiểm trở, lực lượng công an và quân sự xã Trà Bồng (Quảng Ngãi) đã đưa thi thể người lấy...",
-      "link": "https://tuoitre.vn/tho-lay-mat-ong-tu-nan-giua-rung-cong-an-quan-doi-bang-rung-dua-thi-the-ra-100260626200144686.htm",
-      "date": "6/26/2026 9:54:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Từ 8-8, phát sai lệch bản tin dự báo thời tiết có thể bị phạt tới 40 triệu đồng",
-      "summary": "Từ 8-8 sẽ xử phạt tới 40 triệu đồng với hành vi truyền, phát sai lệch bản tin dự báo, cảnh báo khí tượng thủy văn.",
-      "link": "https://tuoitre.vn/tu-8-8-phat-sai-lech-ban-tin-du-bao-thoi-tiet-co-the-bi-phat-toi-40-trieu-dong-100260626202144132.htm",
-      "date": "6/26/2026 9:03:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-26T23:57:23.792085+00:00",
+  "last_updated": "2026-06-27T02:50:48.873176+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
