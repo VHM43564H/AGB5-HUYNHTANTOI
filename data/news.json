@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Giá vàng có thể giảm tiếp tuần này",
+      "summary": "Theo các chuyên gia, giá vàng có thể giảm tuần này do chịu áp lực từ việc lãi suất cao và đà bán tháo cổ phiếu công nghệ trên thị trường chứng khoán Mỹ.",
+      "link": "https://vnexpress.net/gia-vang-co-the-giam-tiep-tuan-nay-5090771.html",
+      "date": "Mon, 29 Jun 2026 04:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "CEO Accor tiết lộ cách siêu du thuyền giá vé tiền tỷ thu hút khách giàu",
       "summary": "CEO Accor Sebastien Bazin nói khi một người sở hữu bảy ngôi nhà, 12 ôtô và 17 đồng hồ, họ vẫn có một danh sách những điều muốn làm trong cuộc đời.",
       "link": "https://vnexpress.net/ceo-accor-tiet-lo-cach-sieu-du-thuyen-gia-ve-tien-ty-thu-hut-khach-giau-5090791.html",
@@ -47,13 +54,6 @@
       "summary": "Dù giá nhiên liệu bay Jet A1 neo cao ảnh hưởng lớn tới chi phí khai thác, Vietnam Airlines vẫn đặt mục tiêu lãi 510 tỷ đồng cả năm nay.",
       "link": "https://vnexpress.net/vietnam-airlines-van-dat-muc-tieu-co-lai-nam-nay-5090717.html",
       "date": "Sun, 28 Jun 2026 11:36:54 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Vì sao cổ phiếu công nghệ toàn cầu lao dốc?",
-      "summary": "Việc khan hiếm nguồn cung chip cùng khả năng Cục Dự trữ Liên bang Mỹ (Fed) tiếp tục nâng lãi suất khiến cổ phiếu công nghệ lao dốc.",
-      "link": "https://vnexpress.net/vi-sao-co-phieu-cong-nghe-toan-cau-lao-doc-5090680.html",
-      "date": "Sun, 28 Jun 2026 10:24:47 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-28T20:53:38.958760+00:00",
+  "last_updated": "2026-06-28T21:56:05.423089+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
