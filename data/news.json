@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "TP HCM thu hút loạt hợp tác công nghệ cao",
+      "summary": "Nhiều dự án trí tuệ nhân tạo (AI), xe tự hành, y tế công nghệ cao, robot...có thể được triển khai tại TP HCM qua loạt hợp tác mới.",
+      "link": "https://vnexpress.net/tp-hcm-thu-hut-loat-hop-tac-cong-nghe-cao-5090870.html",
+      "date": "Sun, 28 Jun 2026 23:02:32 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Quỹ đầu tư vàng lớn nhất thế giới bán gần 60 tấn trong nửa năm",
       "summary": "SPDR bán ròng 58 tấn vàng, giảm sở hữu xuống thấp nhất 9 tháng qua, khi giá vàng liên tục trượt dốc và lần đầu thủng mốc 4.000 USD kể từ đầu năm.",
       "link": "https://vnexpress.net/quy-dau-tu-vang-lon-nhat-the-gioi-ban-gan-60-tan-trong-nua-nam-5090778.html",
@@ -47,13 +54,6 @@
       "summary": "Tiền bản quyền âm nhạc được tính theo công thức quy định cụ thể, dựa trên diện tích kinh doanh của quán cà phê và nhà hàng.",
       "link": "https://vnexpress.net/cach-tinh-chi-phi-ban-quyen-am-nhac-cho-cac-quan-ca-phe-nha-hang-5090526.html",
       "date": "Sun, 28 Jun 2026 08:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Khi rơm rạ và CO₂ đều có thể bán được",
-      "summary": "Rơm rạ từng bị đốt bỏ sau mỗi vụ gặt, nay được thương lái thu mua. CO₂ phát sinh trong nhà máy cũng được chế biến thành sản phẩm thay vì thải ra môi trường.",
-      "link": "https://vnexpress.net/khi-rom-ra-va-co-deu-co-the-ban-duoc-5090528.html",
-      "date": "Sun, 28 Jun 2026 06:00:00 +0700",
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-28T15:46:27.460155+00:00",
+  "last_updated": "2026-06-28T17:00:14.376119+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
