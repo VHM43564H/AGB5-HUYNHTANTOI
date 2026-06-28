@@ -1,6 +1,13 @@
 {
   "tin_tuc": [
     {
+      "title": "Khi rơm rạ và CO₂ đều có thể bán được",
+      "summary": "Rơm rạ từng bị đốt bỏ sau mỗi vụ gặt, nay được thương lái thu mua. CO₂ phát sinh trong nhà máy cũng được chế biến thành sản phẩm thay vì thải ra môi trường.",
+      "link": "https://vnexpress.net/khi-rom-ra-va-co-deu-co-the-ban-duoc-5090528.html",
+      "date": "Sun, 28 Jun 2026 06:00:00 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Chính phủ đồng ý gia hạn 125.000 tỷ đồng tiền thuế, thuê đất",
       "summary": "Doanh nghiệp, hộ kinh doanh được gia hạn nộp thuế và tiền thuê đất năm 2026 để hỗ trợ sản xuất kinh doanh, khoảng 125.000 tỷ đồng.",
       "link": "https://vnexpress.net/chinh-phu-dong-y-gia-han-125-000-ty-dong-tien-thue-thue-dat-5090647.html",
@@ -50,13 +57,6 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Honda tốn gần chục tỷ USD tái cơ cấu vì đầu tư vào xe điện",
-      "summary": "Không tìm được chỗ đứng cho xe điện ở thị trường Trung Quốc và Mỹ, Honda lần đầu tiên lỗ sau 70 năm, tốn 9 tỷ USD để tái cơ cấu.",
-      "link": "https://vnexpress.net/honda-ton-gan-chuc-ty-usd-tai-co-cau-vi-dau-tu-vao-xe-dien-5090249.html",
-      "date": "Sat, 27 Jun 2026 06:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
       "title": "Người Trung Quốc đổ xô sang mua nhà, giá nhà ở Hong Kong tăng tháng thứ 12 liên tiếp",
       "summary": "Giá nhà ở tư nhân tại Khu hành chính đặc biệt Hong Kong (Trung Quốc) tháng 5-2026 tăng 1,4% so với tháng trước, đánh dấu tháng tăng trưởng thứ 12 liên tiếp.",
       "link": "https://tuoitre.vn/nguoi-trung-quoc-do-xo-sang-mua-nha-gia-nha-o-hong-kong-tang-thang-thu-12-lien-tiep-100260628003006007.htm",
@@ -86,6 +86,20 @@
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Tổng Bí thư: Gia đình là nền móng văn hóa và nhân cách",
+      "summary": "Nhân kỷ niệm 25 năm Ngày Gia đình Việt Nam (28/6/2001-28/6/2026), Tổng Bí thư, Chủ tịch nước Tô Lâm gửi thư chúc mừng các gia đình Việt Nam, khẳng định gia đình là nền tảng của...",
+      "link": "https://vnexpress.net/tong-bi-thu-gia-dinh-la-nen-mong-van-hoa-va-nhan-cach-5090672.html",
+      "date": "Sun, 28 Jun 2026 06:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
+      "title": "'Thay áo mới' cho nhà chờ, bến xe buýt trước ngày TP HCM miễn vé",
+      "summary": "Thành phố cải tạo hàng loạt nhà chờ, bến bãi và trạm dừng để chuẩn bị triển khai chính sách miễn vé xe buýt.",
+      "link": "https://vnexpress.net/thay-ao-moi-cho-nha-cho-ben-xe-buyt-truoc-ngay-tp-hcm-mien-ve-5090581.html",
+      "date": "Sun, 28 Jun 2026 06:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Australia và Bồ Đào Nha khép lại vòng loại DIFF 2026",
       "summary": "Đêm cuối vòng loại Lễ hội pháo hoa quốc tế Đà Nẵng là cuộc so tài giữa Australia và Bồ Đào Nha, với hai phong cách trình diễn khác biệt trên sông Hàn.",
@@ -122,18 +136,18 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "4 ôtô tông liên hoàn khi đổ dốc cầu Sài Gòn",
-      "summary": "Ba xe 4-5 chỗ cùng ôtô bán tải trong lúc đổ dốc cầu Sài Gòn bất ngờ xảy ra va chạm chắn ngang làn đường, gây ùn tắc, chiều 27/6.",
-      "link": "https://vnexpress.net/4-oto-tong-lien-hoan-khi-do-doc-cau-sai-gon-5090583.html",
-      "date": "Sat, 27 Jun 2026 15:05:54 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Tin tức sáng 28-6: TP.HCM khánh thành nhiều vườn cây đại đoàn kết; Đề xuất phạt đến 50 triệu vi phạm dạy thêm",
+      "summary": "Tin tức đáng chú ý: TP.HCM khánh thành nhiều vườn cây đại đoàn kết mừng 50 năm thành phố mang tên Bác; Đề xuất phạt đến 50 triệu đồng với vi phạm dạy thêm, học thêm...",
+      "link": "https://tuoitre.vn/tin-tuc-sang-28-6-tphcm-khanh-thanh-nhieu-vuon-cay-dai-doan-ket-de-xuat-phat-den-50-trieu-vi-pham-day-them-100260627230755729.htm",
+      "date": "6/28/2026 6:00:00 AM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Dùng radar dò tìm hài cốt liệt sĩ Mậu Thân 1968",
-      "summary": "Quân đội dùng máy radar thăm dò khu vực cửa Chánh Tây và dọc đường Xuân 68 để tìm hài cốt liệt sĩ, phát hiện địa tầng đất bị xáo trộn.",
-      "link": "https://vnexpress.net/dung-radar-do-tim-hai-cot-liet-si-mau-than-1968-5089979.html",
-      "date": "Sat, 27 Jun 2026 13:54:31 +0700",
-      "source": "Thời sự - VnExpress RSS"
+      "title": "Thời tiết hôm nay 28-6: Bắc Bộ mưa rất to, Trung Bộ nắng gay gắt",
+      "summary": "Hôm nay 28-6, thời tiết Bắc Bộ mưa to đến rất to, Nam Bộ mưa về chiều, Trung Bộ nắng nóng nhưng đang có xu hướng giảm nhiệt.",
+      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-28-6-bac-bo-mua-rat-to-trung-bo-nang-gay-gat-100260627173520305.htm",
+      "date": "6/28/2026 5:07:00 AM",
+      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
       "title": "Thủ tướng Lê Minh Hưng: Không lùi tiến độ các dự án trọng điểm nếu không có lý do chính đáng",
@@ -155,23 +169,9 @@
       "link": "https://tuoitre.vn/chu-tich-ha-noi-du-kien-xong-duong-song-hanh-du-an-vanh-dai-4-trong-thang-9-2026-10026062719501732.htm",
       "date": "6/27/2026 7:50:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Phường Nhiêu Lộc, TP.HCM sắp xếp từ 52 khu phố còn 30 khu phố",
-      "summary": "Phường Nhiêu Lộc, TP.HCM vừa tổ chức sắp xếp lại khu phố theo Nghị quyết 14 của HĐND phường, giảm từ 52 còn 30 khu phố.",
-      "link": "https://tuoitre.vn/phuong-nhieu-loc-tphcm-sap-xep-tu-52-khu-pho-con-30-khu-pho-100260627175555442.htm",
-      "date": "6/27/2026 7:03:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
-    },
-    {
-      "title": "Kỷ niệm 555 năm vua Lê Thánh Tông dừng chân tại Vạn Tường",
-      "summary": "Lễ khánh thành Đền thờ Đức vua Lê Thánh Tông (giai đoạn I), kỷ niệm 555 năm vua Lê Thánh Tông dừng chân tại Vạn Tường (1471-2026) được tổ chức tại Quảng Ngãi, tri ân vị minh quân,...",
-      "link": "https://tuoitre.vn/ky-niem-555-nam-vua-le-thanh-tong-dung-chan-tai-van-tuong-100260627163551837.htm",
-      "date": "6/27/2026 6:38:00 PM",
-      "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-27T22:58:56.199831+00:00",
+  "last_updated": "2026-06-28T00:04:10.855534+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
