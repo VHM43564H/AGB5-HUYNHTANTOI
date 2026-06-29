@@ -101,6 +101,13 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
+      "title": "8 điểm mới về quy định đăng kiểm xe từ 1/7",
+      "summary": "Chủ xe có thể xuất trình chứng nhận đăng ký xe trên ứng dụng VNeID và VNeTraffic để đăng kiểm xe, thay đổi linh kiện xe mà không phải làm hồ sơ cải tạo... theo thông tư 30.",
+      "link": "https://vnexpress.net/8-diem-moi-ve-quy-dinh-dang-kiem-xe-tu-1-7-5091299.html",
+      "date": "Tue, 30 Jun 2026 06:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Hàng nghìn người xem sa bàn quy hoạch Hà Nội tầm nhìn 100 năm",
       "summary": "Chiều 29/6, Triển lãm Quy hoạch tổng thể Thủ đô tầm nhìn 100 năm tại Bảo tàng Hà Nội thu hút hàng nghìn người dân đến tham quan, tra cứu thông tin và tìm hiểu định hướng phát...",
       "link": "https://vnexpress.net/hang-nghin-nguoi-xem-sa-ban-quy-hoach-ha-noi-tam-nhin-100-nam-5091247.html",
@@ -126,13 +133,6 @@
       "summary": "Tượng \"nữ thần khai phóng\" cao hơn 9 m cùng các hạng mục tại khu đô thị E.City Tân Đức, xã Đức Hòa, đã bị tháo dỡ do xây dựng không đúng quy hoạch.",
       "link": "https://vnexpress.net/tuong-nu-than-khai-phong-xay-trai-phep-bi-thao-do-5091198.html",
       "date": "Mon, 29 Jun 2026 17:00:54 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Loạt tàu cá bị thiêu rụi ở đầm Thị Nại",
-      "summary": "Lửa bùng lên từ một tàu cá neo ven đầm Thị Nại rồi lan sang các phương tiện liền kề, khiến hơn 10 tàu bị cháy, trưa 29/6.",
-      "link": "https://vnexpress.net/loat-tau-ca-bi-thieu-rui-o-dam-thi-nai-5091226.html",
-      "date": "Mon, 29 Jun 2026 16:36:51 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-29T22:35:05.707246+00:00",
+  "last_updated": "2026-06-29T23:56:02.063049+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
