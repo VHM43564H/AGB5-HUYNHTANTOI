@@ -1,6 +1,41 @@
 {
   "tin_tuc": [
     {
+      "title": "Các nước Trung Đông tăng tốc bán dầu",
+      "summary": "Dữ liệu theo dõi cho thấy vài ngày qua, các nước Trung Đông đang tích cực chất dầu thô, khí hóa lỏng (LNG) lên tàu để xuất khẩu.",
+      "link": "https://vnexpress.net/cac-nuoc-trung-dong-tang-toc-ban-dau-5091152.html",
+      "date": "Mon, 29 Jun 2026 15:45:05 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "VN-Index lao dốc đầu tuần",
+      "summary": "Nhà đầu tư xả hàng cổ phiếu \"họ\" Vingroup khiến VN-Index giảm gần 17 điểm, mức giảm mạnh nhất ba tuần, xuống sát 1.850 điểm.",
+      "link": "https://vnexpress.net/vn-index-lao-doc-dau-tuan-5091192.html",
+      "date": "Mon, 29 Jun 2026 15:38:45 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Hà Nội quyết định chủ trương đầu tư 138 dự án vốn 3,6 triệu tỷ đồng nửa đầu năm",
+      "summary": "Chủ tịch Hà Nội cho biết Thủ đô tiếp tục hấp dẫn nhà đầu tư khi đã quyết định chủ trương đầu tư 138 dự án với tổng vốn 3,6 triệu tỷ đồng nửa đầu năm.",
+      "link": "https://vnexpress.net/ha-noi-quyet-dinh-chu-truong-dau-tu-138-du-an-von-3-6-trieu-ty-dong-nua-dau-nam-5091071.html",
+      "date": "Mon, 29 Jun 2026 12:45:04 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Việt Nam ghi nhận giao dịch carbon đầu tiên, giá 136.000 đồng một tấn CO2e",
+      "summary": "Sàn giao dịch carbon vừa chính thức vận hành ngày 29/6, với sản phẩm hạn ngạch phát thải khí nhà kính, giá giao dịch có thời điểm lên tới 136.000 đồng một tấn CO2e.",
+      "link": "https://vnexpress.net/viet-nam-ghi-nhan-giao-dich-carbon-dau-tien-gia-136-000-dong-mot-tan-co2e-5091078.html",
+      "date": "Mon, 29 Jun 2026 11:53:53 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Chính phủ muốn tăng tiền gửi của Kho bạc tại ngân hàng",
+      "summary": "Chính phủ giao nghiên cứu nâng tỷ lệ tiền gửi của Kho bạc Nhà nước tại các ngân hàng nhằm bổ sung thanh khoản cho hệ thống.",
+      "link": "https://vnexpress.net/chinh-phu-muon-tang-tien-gui-cua-kho-bac-tai-ngan-hang-5091002.html",
+      "date": "Mon, 29 Jun 2026 11:45:21 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Những địa phương cần tăng trưởng kinh tế cao nhất đến 2030",
       "summary": "12 địa phương được Chính phủ giao mục tiêu tăng trưởng GRDP ít nhất 11%, trong đó, Hải Phòng cao nhất khi cần phấn đấu đạt 14%.",
       "link": "https://vnexpress.net/nhung-dia-phuong-can-tang-truong-kinh-te-cao-nhat-den-2030-5090956.html",
@@ -22,156 +57,121 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Giá vàng có thể giảm tiếp tuần này",
-      "summary": "Theo các chuyên gia, giá vàng có thể giảm tuần này do chịu áp lực từ việc lãi suất cao và đà bán tháo cổ phiếu công nghệ trên thị trường chứng khoán Mỹ.",
-      "link": "https://vnexpress.net/gia-vang-co-the-giam-tiep-tuan-nay-5090771.html",
-      "date": "Mon, 29 Jun 2026 04:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "CEO Accor tiết lộ cách siêu du thuyền giá vé tiền tỷ thu hút khách giàu",
-      "summary": "CEO Accor Sebastien Bazin nói khi một người sở hữu bảy ngôi nhà, 12 ôtô và 17 đồng hồ, họ vẫn có một danh sách những điều muốn làm trong cuộc đời.",
-      "link": "https://vnexpress.net/ceo-accor-tiet-lo-cach-sieu-du-thuyen-gia-ve-tien-ty-thu-hut-khach-giau-5090791.html",
-      "date": "Mon, 29 Jun 2026 00:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Doanh nghiệp do nữ làm chủ đối diện khoảng trống vốn 5 tỷ USD",
-      "summary": "Khoảng 5-6 tỷ USD nhu cầu vốn của doanh nghiệp do phụ nữ làm chủ ở Việt Nam chưa được đáp ứng, theo nghiên cứu của các tổ chức Australia.",
-      "link": "https://vnexpress.net/doanh-nghiep-do-nu-lam-chu-doi-dien-khoang-trong-von-5-ty-usd-5089903.html",
-      "date": "Mon, 29 Jun 2026 09:01:48 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "DNSE hoàn tất chuẩn bị cho phiên giao dịch đầu tiên của thị trường carbon",
-      "summary": "DNSE đã hoàn tất hạ tầng giao dịch, lưu ký và thanh toán trước phiên giao dịch chính thức đầu tiên của thị trường carbon Việt Nam diễn ra ngày 29/6.",
-      "link": "https://vnexpress.net/dnse-hoan-tat-chuan-bi-cho-phien-giao-dich-dau-tien-cua-thi-truong-carbon-5090578.html",
-      "date": "Mon, 29 Jun 2026 08:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Chứng khoán Shinhan trao giải cuộc thi 'Chứng trường huyền thoại'",
-      "summary": "Sau 15 tuần tranh tài, cuộc thi \"Chứng trường huyền thoại\" do Chứng khoán Shinhan Việt Nam (SSV) tổ chức khép lại với lễ trao giải vinh danh các nhà đầu tư có hiệu suất giao dịch...",
-      "link": "https://vnexpress.net/chung-khoan-shinhan-trao-giai-cuoc-thi-chung-truong-huyen-thoai-5090576.html",
-      "date": "Mon, 29 Jun 2026 08:00:00 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "YouTube vô tư vi phạm quy định?",
-      "summary": "Mặc dù quy định bắt buộc các quảng cáo phải cho phép tắt sau tối đa 5 giây, nhưng nhiều người xem YouTube vẫn bị bắt xem quảng cáo kéo dài đến hàng chục giây mới được bấm bỏ qua.",
-      "link": "https://tuoitre.vn/youtube-vo-tu-vi-pham-quy-dinh-100260629083224363.htm",
-      "date": "6/29/2026 9:23:00 AM",
+      "title": "Hàn Quốc: Hàng trăm ngàn con chó 'bốc hơi' gây bối rối",
+      "summary": "Chỉ trong vài năm trở lại đây, ngành công nghiệp thịt chó tại Hàn Quốc gần như đã biến mất ngay trước khi lệnh cấm chính thức có hiệu lực vào năm 2027.",
+      "link": "https://tuoitre.vn/han-quoc-hang-tram-ngan-con-cho-boc-hoi-gay-boi-roi-100260629140201675.htm",
+      "date": "6/29/2026 2:43:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Bộ trưởng Trịnh Việt Hùng trả lời ý kiến đại biểu Quốc hội Nguyễn Kim Sơn",
-      "summary": "Bộ trưởng Bộ Nông nghiệp và Môi trường Trịnh Việt Hùng đã ký công văn trả lời ý kiến của đại biểu Quốc hội Nguyễn Kim Sơn, Phó trưởng Ban Chính sách, Chiến lược Trung ương, Đoàn...",
-      "link": "https://tuoitre.vn/bo-truong-trinh-viet-hung-tra-loi-y-kien-dai-bieu-quoc-hoi-nguyen-kim-son-10026062907574341.htm",
-      "date": "6/29/2026 9:13:00 AM",
+      "title": "Các hãng tính bay quốc tế từ Long Thành cuối năm nay ra sao?",
+      "summary": "Vietnam Airlines đề xuất chuyển bốn đường bay quốc tế, Vietjet tính bố trí đến 10 máy bay, còn Vietravel Airlines dự kiến khai thác từ cuối năm 2026.",
+      "link": "https://tuoitre.vn/cac-hang-tinh-bay-quoc-te-tu-long-thanh-cuoi-nam-nay-ra-sao-100260629134046323.htm",
+      "date": "6/29/2026 2:31:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Chứng khoán tuần mới: Chờ cú hích mới, VN-Index có vượt 1.900 điểm?",
-      "summary": "Nhiều chuyên gia dự báo VN-Index sẽ tiếp tục dao động trong vùng tích lũy khi thị trường thiếu thông tin hỗ trợ mới. Động lực đáng chú ý trong thời gian tới được kỳ vọng đến từ...",
-      "link": "https://tuoitre.vn/chung-khoan-tuan-moi-cho-cu-hich-moi-vn-index-co-vuot-1900-diem-100260629081534562.htm",
-      "date": "6/29/2026 9:06:00 AM",
+      "title": "Luật sư Ý và cuộc giải cứu cả trăm container hạt điều cho các doanh nghiệp Việt",
+      "summary": "Hơn 4 năm, một luật sư Ý đã tự bỏ tiền túi theo đuổi vụ lừa đảo 100 container hạt điều, trong khi 5/6 doanh nghiệp Việt từng là nạn nhân đã lặng lẽ rút lui.",
+      "link": "https://tuoitre.vn/luat-su-y-va-cuoc-giai-cuu-ca-tram-container-hat-dieu-cho-cac-doanh-nghiep-viet-100260629100017835.htm",
+      "date": "6/29/2026 2:28:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Đọc nhanh 29-6: Giá vàng lại giảm; cổ phiếu một bệnh viện ở TP.HCM tăng mạnh hơn 175%",
-      "summary": "Đồng USD mạnh lên làm gia tăng áp lực lên thị trường kim loại quý. Giá vàng giảm 24 USD khi mở cửa phiên sáng nay, về 4.057 USD/ounce. Trong nước, nhiều tin tức khối doanh nghiệp...",
-      "link": "https://tuoitre.vn/doc-nhanh-29-6-gia-vang-lai-giam-co-phieu-mot-benh-vien-o-tphcm-tang-manh-hon-175-10026062906581703.htm",
-      "date": "6/29/2026 7:53:00 AM",
+      "title": "GELEX thăng hạng Top 500 doanh nghiệp lớn nhất Đông Nam Á",
+      "summary": "GELEX tiếp tục ghi dấu ấn trên bản đồ doanh nghiệp khu vực khi năm thứ ba liên tiếp góp mặt trong bảng xếp hạng Fortune Southeast Asia 500 - danh sách 500 doanh nghiệp lớn nhất...",
+      "link": "https://tuoitre.vn/gelex-thang-hang-top-500-doanh-nghiep-lon-nhat-dong-nam-a-10026062911295679.htm",
+      "date": "6/29/2026 2:17:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
     {
-      "title": "Bộ Chính trị yêu cầu giảm phạt tù lĩnh vực kinh tế, công nghệ",
-      "summary": "Bộ Chính trị yêu cầu sửa đổi chính sách hình sự lĩnh vực kinh tế, công nghệ theo hướng giảm hình phạt tù, tăng chế tài xử lý kinh tế, khuyến khích nguồn lực đầu tư vào kinh tế.",
-      "link": "https://vnexpress.net/bo-chinh-tri-yeu-cau-giam-phat-tu-linh-vuc-kinh-te-cong-nghe-5091026.html",
-      "date": "Mon, 29 Jun 2026 10:56:39 +0700",
+      "title": "Loạt tàu cá bị thiêu rụi ở đầm Thị Nại",
+      "summary": "Lửa bùng lên từ một tàu cá neo ven đầm Thị Nại rồi lan sang các phương tiện liền kề, khiến hơn 10 tàu bị cháy, chiều 29/6.",
+      "link": "https://vnexpress.net/loat-tau-ca-bi-thieu-rui-o-dam-thi-nai-5091226.html",
+      "date": "Mon, 29 Jun 2026 16:36:51 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Nửa thế kỷ đổi thay của TP HCM qua ảnh",
-      "summary": "Triển lãm ảnh tái hiện các bước ngoặt của TP HCM trong 50 năm, từ ngày mang tên Chủ tịch Hồ Chí Minh (2/7/1976) đến những công trình hạ tầng, công nghiệp hiện đại.",
-      "link": "https://vnexpress.net/nua-the-ky-doi-thay-cua-tp-hcm-qua-anh-5091017.html",
-      "date": "Mon, 29 Jun 2026 10:43:38 +0700",
+      "title": "'Pháo binh và tên lửa phải là trụ cột sức mạnh tác chiến'",
+      "summary": "Tổng Bí thư, Chủ tịch nước Tô Lâm yêu cầu Bộ đội Pháo binh - Tên lửa trở thành trụ cột của sức mạnh tác chiến, xây dựng lực lượng hiện đại, làm chủ công nghệ.",
+      "link": "https://vnexpress.net/phao-binh-va-ten-lua-phai-la-tru-cot-suc-manh-tac-chien-5091131.html",
+      "date": "Mon, 29 Jun 2026 16:27:06 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Đường xuyên rừng Mã Đà trước ngày thi công 13 km trên cao",
-      "summary": "Đường xuyên rừng được thiết kế 8 làn xe đi trên cao rừng nguyên sinh với hệ thống chống ồn và ánh sáng nhằm tránh ảnh hưởng động vật hoang dã.",
-      "link": "https://vnexpress.net/duong-xuyen-rung-ma-da-truoc-ngay-thi-cong-13-km-tren-cao-5090263.html",
-      "date": "Mon, 29 Jun 2026 05:00:00 +0700",
+      "title": "Hà Nội muốn nằm trong top 10 thủ đô hạnh phúc nhất thế giới vào năm 2065",
+      "summary": "Hà Nội sẽ không phát triển như đô thị độc lập mà chuyển sang chùm đô thị hướng tâm, liên kết vùng, mục tiêu trở thành một trong 10 thủ đô hạnh phúc nhất thế giới.",
+      "link": "https://vnexpress.net/ha-noi-muon-nam-trong-top-10-thu-do-hanh-phuc-nhat-the-gioi-vao-nam-2065-5091094.html",
+      "date": "Mon, 29 Jun 2026 14:41:51 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Hôm nay trưng bày sa bàn quy hoạch Hà Nội tầm nhìn 100 năm",
-      "summary": "14h ngày 29/6, triển lãm Quy hoạch tổng thể Thủ đô tầm nhìn 100 năm được khai mạc tại Bảo tàng Hà Nội, đường Phạm Hùng, phường Từ Liêm.",
-      "link": "https://vnexpress.net/hom-nay-trung-bay-sa-ban-quy-hoach-ha-noi-tam-nhin-100-nam-5090882.html",
-      "date": "Mon, 29 Jun 2026 00:09:22 +0700",
+      "title": "Khai quật 'thành nhà Hồ thu nhỏ'",
+      "summary": "Tỉnh Thanh Hóa khai quật đền cổ hơn 400 năm tuổi thờ Nguyễn Văn Nghi - vị quan từng là thầy dạy hai vua nhà Hậu Lê, làm cơ sở khoa học bảo tồn, phục dựng di tích.",
+      "link": "https://vnexpress.net/khai-quat-thanh-nha-ho-thu-nho-5091148.html",
+      "date": "Mon, 29 Jun 2026 14:35:30 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Nghề làm muối 2.000 năm trên đá ở Sa Huỳnh",
-      "summary": "Trên bãi đá ở làng Gò Cỏ, diêm dân đổ từng gàu nước biển đã phơi nắng vào các ô đá để muối kết tinh. Sản phẩm được dùng làm quà tặng du khách.",
-      "link": "https://vnexpress.net/nghe-lam-muoi-2-000-nam-tren-da-o-sa-huynh-5089286.html",
-      "date": "Mon, 29 Jun 2026 00:00:00 +0700",
+      "title": "Tra cứu bảng lương mới của bác sĩ, y tá",
+      "summary": "Từ 1/7, khi Chính phủ áp dụng mức lương cơ sở mới 2,53 triệu đồng, lương bác sĩ sẽ tăng tương ứng, trong đó nhóm cao nhất 20,2 triệu, thấp nhất 5,9 triệu đồng mỗi tháng.",
+      "link": "https://vnexpress.net/luong-bac-si-5091100.html",
+      "date": "Mon, 29 Jun 2026 13:51:27 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Máy bay Vietnam Airlines đưa 124 chiến sĩ đi cứu hộ động đất tại Venezuela",
-      "summary": "Dự kiến 23h30 hôm nay, máy bay Airbus A350 của Vietnam Airlines cất cánh từ Nội Bài sẽ đưa 124 cán bộ, chiến sĩ đi cứu hộ động đất tại Venezuela.",
-      "link": "https://vnexpress.net/may-bay-vietnam-airlines-dua-124-chien-si-di-cuu-ho-dong-dat-tai-venezuela-5090875.html",
-      "date": "Sun, 28 Jun 2026 22:22:00 +0700",
+      "title": "Hạn chế xe vào 9 đường trung tâm TP HCM ngày 2/7",
+      "summary": "Ôtô từ 9 chỗ trở lên, xe tải nặng, xe buýt bị hạn chế vào một số tuyến đường quanh Dinh Độc Lập, trụ sở UBND TP HCM trong hai khung giờ ngày 2/7.",
+      "link": "https://vnexpress.net/han-che-xe-vao-9-duong-trung-tam-tp-hcm-ngay-2-7-5091103.html",
+      "date": "Mon, 29 Jun 2026 12:46:40 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Xe đầu kéo cơi nới thùng tháo chạy trên quốc lộ 21B",
-      "summary": "Bị yêu cầu dừng xe kiểm tra trên quốc lộ 21B, tài xế xe đầu kéo bỏ chạy, buộc cảnh sát giao thông phải bám đuổi, dùng loa chuyên dụng ép phương tiện dừng lại.",
-      "link": "https://vnexpress.net/xe-dau-keo-coi-noi-thung-thao-chay-tren-quoc-lo-21b-5090851.html",
-      "date": "Sun, 28 Jun 2026 20:36:30 +0700",
+      "title": "TP HCM bổ nhiệm, điều động loạt lãnh đạo sở, ngành",
+      "summary": "Cùng với việc thay giám đốc hai sở Khoa học - Công nghệ, Dân tộc và Tôn giáo, TP HCM điều động 22 phó giám đốc các sở về địa phương, đơn vị sự nghiệp và Thành ủy.",
+      "link": "https://vnexpress.net/tp-hcm-bo-nhiem-dieu-dong-loat-lanh-dao-so-nganh-5091061.html",
+      "date": "Mon, 29 Jun 2026 12:29:01 +0700",
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Cháy lớn tại Khu công nghiệp An Hiệp ở Vĩnh Long",
-      "summary": "Rạng sáng 29-6, một vụ cháy lớn xảy ra tại Công ty cổ phần G.Đ, thuộc Khu công nghiệp An Hiệp, xã Phú Túc, tỉnh Vĩnh Long, gây thiệt hại lớn về tài sản.",
-      "link": "https://tuoitre.vn/chay-lon-tai-khu-cong-nghiep-an-hiep-o-vinh-long-100260629104319011.htm",
-      "date": "6/29/2026 10:56:00 AM",
+      "title": "Ngắm phối cảnh, flycam thực địa cao tốc nối đô thị nghỉ dưỡng Hồ Tràm - sân bay Long Thành trước giờ khởi công",
+      "summary": "Dự án cao tốc Hồ Tràm - sân bay Long thành là một trong những công trình hạ tầng giao thông tạo động lực, cụ thể hóa các định hướng phát triển không gian kinh tế đô thị và hạ tầng...",
+      "link": "https://tuoitre.vn/ngam-phoi-canh-flycam-thuc-dia-cao-toc-noi-do-thi-nghi-duong-ho-tram-san-bay-long-thanh-truoc-gio-khoi-cong-20260615100330142.htm",
+      "date": "6/29/2026 5:00:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Vụ xe máy chở hàng chục ống nhôm đâm xuyên kính ô tô: Người chạy xe máy mới 16 tuổi",
-      "summary": "Chiếc xe máy do thiếu niên 16 tuổi cầm lái chở theo nhiều thanh nhôm va chạm, đâm xuyên kính ô tô, rất may tài xế ô tô không bị các thanh nhôm đâm trúng.",
-      "link": "https://tuoitre.vn/vu-xe-may-cho-hang-chuc-ong-nhom-dam-xuyen-kinh-o-to-nguoi-chay-xe-may-moi-16-tuoi-100260629100850477.htm",
-      "date": "6/29/2026 10:55:00 AM",
+      "title": "Đổi rác nhựa lấy cây xanh, ngăn rác thải ra biển, sông, bảo vệ môi trường Cần Giờ",
+      "summary": "Xã Bình Khánh vừa phối hợp Tổ chức môi trường Yunus Environment Hub Việt Nam và Tập đoàn BASF tổ chức lễ phát động hưởng ứng phong trào \"Toàn dân chung tay bảo vệ môi trường, vì...",
+      "link": "https://tuoitre.vn/doi-rac-nhua-lay-cay-xanh-ngan-rac-thai-ra-bien-song-bao-ve-moi-truong-can-gio-100260629152445549.htm",
+      "date": "6/29/2026 4:56:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Công bố định hướng quy hoạch thủ đô Hà Nội tầm nhìn 100 năm",
-      "summary": "Sáng 29-6, tại Trung tâm Hội nghị Quốc gia (đường Phạm Hùng), UBND TP Hà Nội đã tổ chức hội nghị công bố quy hoạch tổng thể thủ đô Hà Nội tầm nhìn 100 năm và xúc tiến đầu tư năm...",
-      "link": "https://tuoitre.vn/cong-bo-dinh-huong-quy-hoach-thu-do-ha-noi-tam-nhin-100-nam-100260629103523561.htm",
-      "date": "6/29/2026 10:53:00 AM",
+      "title": "Viettel, FPT, VNPT dẫn đầu tốp 10 công ty công nghệ - viễn thông uy tín 2026",
+      "summary": "Tốp 10 công ty công nghệ - viễn thông uy tín 2026 của Vietnam Report ghi nhận những doanh nghiệp tiên phong tái thiết mô hình vận hành, làm chủ AI và kiến tạo lợi thế cạnh tranh...",
+      "link": "https://tuoitre.vn/viettel-fpt-vnpt-dan-dau-top-10-cong-ty-cong-nghe-vien-thong-uy-tin-2026-100260629155957597.htm",
+      "date": "6/29/2026 4:21:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Bí thư Cần Thơ: ‘Không để tình trạng né tránh, đùn đẩy làm chậm sự phát triển của thành phố’",
-      "summary": "Phát biểu trước HĐND thành phố tại phiên khai mạc, Bí thư Thành ủy Cần Thơ Lê Quang Tùng 'đặt hàng' các đại biểu HĐND thành phố cùng góp phần vào mục tiêu tăng trưởng hai con số,...",
-      "link": "https://tuoitre.vn/bi-thu-can-tho-khong-de-tinh-trang-ne-tranh-dun-day-lam-cham-su-phat-trien-cua-thanh-pho-100260629101610067.htm",
-      "date": "6/29/2026 10:45:00 AM",
+      "title": "TP.HCM tiếp tục chuyển trụ sở dôi dư thành trường học, nghiên cứu thêm các trụ sở khác",
+      "summary": "Khảo sát hai trụ sở chuẩn bị chuyển thành trường học, Phó bí thư Thành ủy TP.HCM Nguyễn Phước Lộc yêu cầu tiếp tục tận dụng trụ sở dôi dư để phát triển giáo dục.",
+      "link": "https://tuoitre.vn/tphcm-tiep-tuc-chuyen-tru-so-doi-du-thanh-truong-hoc-nghien-cuu-them-tru-so-quan-5-cu-10026062915373848.htm",
+      "date": "6/29/2026 4:13:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Tổng Bí thư, Chủ tịch nước Tô Lâm dự lễ kỷ niệm 80 năm Bộ đội Pháo binh - Tên lửa",
-      "summary": "Sáng 29-6, Tổng Bí thư, Chủ tịch nước Tô Lâm, Bí thư Quân ủy Trung ương, đã dự lễ kỷ niệm 80 năm Ngày truyền thống Bộ đội Pháo binh - Tên lửa.",
-      "link": "https://tuoitre.vn/tong-bi-thu-chu-tich-nuoc-to-lam-du-le-ky-niem-80-nam-bo-doi-phao-binh-ten-lua-100260629102804631.htm",
-      "date": "6/29/2026 10:43:00 AM",
+      "title": "Cả chục chiếc tàu cá đang neo đậu ở Gia Lai bị lửa thiêu rụi",
+      "summary": "Đám cháy bùng phát trưa 29-6 tại khu neo đậu tàu thuyền trên đầm Thị Nại (xã Tuy Phước Đông, Gia Lai), gây hư hại nặng nhiều tàu cá của người dân.",
+      "link": "https://tuoitre.vn/ca-chuc-chiec-tau-ca-dang-neo-dau-o-gia-lai-bi-lua-thieu-rui-100260629152151988.htm",
+      "date": "6/29/2026 3:45:00 PM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-29T05:09:12.007647+00:00",
+  "last_updated": "2026-06-29T10:04:55.898852+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
