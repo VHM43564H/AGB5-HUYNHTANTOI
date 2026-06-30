@@ -1,6 +1,27 @@
 {
   "tin_tuc": [
     {
+      "title": "Sàn giao dịch carbon vận hành thế nào?",
+      "summary": "Việt Nam vừa khai trương sàn giao dịch carbon, đây là một trong 4 thị trường trao đổi quyền phát thải, mở ra kênh hút vốn mới cho doanh nghiệp chuyển đổi xanh.",
+      "link": "https://vnexpress.net/san-giao-dich-carbon-van-hanh-the-nao-5091338.html",
+      "date": "Tue, 30 Jun 2026 09:16:06 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Giá vàng thế giới rời mốc 4.000 USD",
+      "summary": "Giá mỗi ounce vàng quay đầu giảm, hiện xuống 3.992 USD, khi căng thẳng Mỹ - Iran tái bùng phát cuối tuần qua.",
+      "link": "https://vnexpress.net/gia-vang-the-gioi-roi-moc-4-000-usd-5091380.html",
+      "date": "Tue, 30 Jun 2026 07:54:42 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
+      "title": "Loạt ngân hàng có thể tăng trưởng lợi nhuận hai chữ số trong quý II",
+      "summary": "Nhiều ngân hàng như VietinBank, Vietcombank, BIDV Techcombank... có thể tăng trưởng lợi nhuận hai chữ số ở quý II, trong đó VPBank có sự cải thiện lớn nhất.",
+      "link": "https://vnexpress.net/loat-ngan-hang-co-the-tang-truong-loi-nhuan-hai-chu-so-trong-quy-ii-5091290.html",
+      "date": "Tue, 30 Jun 2026 07:06:16 +0700",
+      "source": "Kinh doanh - VnExpress RSS"
+    },
+    {
       "title": "Công ty sản xuất cáp điện muốn 'lột xác' khi ông Đỗ Thành Nhân làm lãnh đạo",
       "summary": "VKC Holdings - công ty chuyên sản xuất dây cáp điện - muốn đổi tên, tăng vốn 9 lần và vay 3.000 tỷ đồng để chuyển sang may mặc khi ông Đỗ Thành Nhân tham gia Hội đồng quản trị.",
       "link": "https://vnexpress.net/cong-ty-san-xuat-cap-dien-muon-lot-xac-khi-ong-do-thanh-nhan-lam-lanh-dao-5091343.html",
@@ -36,25 +57,18 @@
       "source": "Kinh doanh - VnExpress RSS"
     },
     {
-      "title": "Người Philippines đổ xô lắp điện mặt trời mái nhà",
-      "summary": "Để tiết kiệm, người Philippines đổ xô lắp điện mặt trời mái nhà, đưa nước này thành thị trường nhập khẩu pin mặt trời hàng đầu thế giới.",
-      "link": "https://vnexpress.net/nguoi-philippines-do-xo-lap-dien-mat-troi-mai-nha-5091102.html",
-      "date": "Mon, 29 Jun 2026 17:34:11 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Đọc nhanh 30-6: Giá vàng giảm tiếp; Phát Đạt vay MBBank 8.835 tỉ rót vào siêu dự án ở Thủ Thiêm",
+      "summary": "Giá vàng giảm tới 90 USD, thủng mốc 4.000 USD/ounce sáng nay. Giá bạc biên độ giảm cũng mạnh, -1,24%, về 57,5 USD/ounce.",
+      "link": "https://tuoitre.vn/doc-nhanh-30-6-gia-vang-giam-tiep-phat-dat-vay-mbbank-8835-ti-rot-vao-sieu-du-an-o-thu-thiem-100260630080809839.htm",
+      "date": "6/30/2026 8:20:00 AM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
-      "title": "Chứng khoán VIX thay cả Chủ tịch lẫn Tổng giám đốc",
-      "summary": "Chứng khoán VIX bổ nhiệm ông Hà Huy Hùng làm Chủ tịch và ông Nguyễn Tuấn Dũng làm Tổng giám đốc.",
-      "link": "https://vnexpress.net/chung-khoan-vix-thay-ca-chu-tich-lan-tong-giam-doc-5091220.html",
-      "date": "Mon, 29 Jun 2026 16:53:02 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
-    },
-    {
-      "title": "Các nước Trung Đông tăng tốc bán dầu",
-      "summary": "Dữ liệu theo dõi cho thấy vài ngày qua, các nước Trung Đông đang tích cực chất dầu thô, khí hóa lỏng (LNG) lên tàu để xuất khẩu.",
-      "link": "https://vnexpress.net/cac-nuoc-trung-dong-tang-toc-ban-dau-5091152.html",
-      "date": "Mon, 29 Jun 2026 15:45:05 +0700",
-      "source": "Kinh doanh - VnExpress RSS"
+      "title": "Chứng khoán 30-6: Nhóm ngành nào là động lực dẫn dắt thị trường nửa cuối năm 2026?",
+      "summary": "Các ngành được dự báo là động lực tăng trưởng thị trường chứng khoán nửa cuối năm gồm xây dựng hạ tầng, vật liệu xây dựng và ngân hàng.",
+      "link": "https://tuoitre.vn/chung-khoan-30-6-nhom-nganh-nao-la-dong-luc-dan-dat-thi-truong-nua-cuoi-nam-2026-10026063003064431.htm",
+      "date": "6/30/2026 8:08:00 AM",
+      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     },
     {
       "title": "Lương bình quân người lao động công ty mẹ EVN gần 480 triệu đồng/năm",
@@ -69,23 +83,16 @@
       "link": "https://tuoitre.vn/toi-nay-gia-vang-the-gioi-giam-ve-sat-nguong-4000-usd-ounce-100260629231011306.htm",
       "date": "6/29/2026 11:27:00 PM",
       "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Phó thủ tướng thường trực Chính phủ: Chủ động khai thác khoáng sản trong nước, tránh phụ thuộc nhập khẩu",
-      "summary": "Ngày 29-6, Phó thủ tướng thường trực Chính phủ Phạm Gia Túc đã làm việc với Tập đoàn Công nghiệp than - khoáng sản Việt Nam (Vinacomin).",
-      "link": "https://tuoitre.vn/pho-thu-tuong-thuong-truc-chinh-phu-chu-dong-khai-thac-khoang-san-trong-nuoc-tranh-phu-thuoc-nhap-khau-100260629214110153.htm",
-      "date": "6/29/2026 10:22:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
-    },
-    {
-      "title": "Thủ tướng bổ nhiệm Tổng giám đốc Ngân hàng Chính sách xã hội",
-      "summary": "Bà Nguyễn Thị Hằng được Thủ tướng Chính phủ bổ nhiệm giữ chức Ủy viên hội đồng quản trị, Tổng giám đốc Ngân hàng Chính sách xã hội.",
-      "link": "https://tuoitre.vn/thu-tuong-bo-nhiem-tong-giam-doc-ngan-hang-chinh-sach-xa-hoi-100260629210449457.htm",
-      "date": "6/29/2026 10:04:00 PM",
-      "source": "TUOI TRE ONLINE - Kinh doanh - RSS Feed"
     }
   ],
   "chinh_sach": [
+    {
+      "title": "Chở trẻ em không có thiết bị an toàn sẽ bị xử phạt cảnh cáo",
+      "summary": "Từ ngày 15/8, người điều khiển ôtô chở trẻ em dưới 10 tuổi và có chiều cao dưới 1,35m mà không sử dụng thiết bị an toàn phù hợp sẽ bị phạt cảnh cáo.",
+      "link": "https://vnexpress.net/cho-tre-em-khong-co-thiet-bi-an-toan-se-bi-xu-phat-canh-cao-5091418.html",
+      "date": "Tue, 30 Jun 2026 09:33:23 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
     {
       "title": "Khuôn viên 5 ha tổ chức tuyên Chân phước linh mục Trương Bửu Diệp",
       "summary": "Lễ đài 10.000 chỗ ngồi, khuôn viên đối diện nhà thờ Tắc Sậy đã hoàn thiện 95%, sẵn sàng phục vụ giáo dân, khách hành hương dự buổi tuyên chân phước linh mục Trương Bửu Diệp.",
@@ -129,49 +136,42 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Tượng 'nữ thần khai phóng' xây trái phép bị tháo dỡ",
-      "summary": "Tượng \"nữ thần khai phóng\" cao hơn 9 m cùng các hạng mục tại khu đô thị E.City Tân Đức, xã Đức Hòa, đã bị tháo dỡ do xây dựng không đúng quy hoạch.",
-      "link": "https://vnexpress.net/tuong-nu-than-khai-phong-xay-trai-phep-bi-thao-do-5091198.html",
-      "date": "Mon, 29 Jun 2026 17:00:54 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
-      "title": "Thời tiết hôm nay 30-6: Bắc Bộ và Nam Bộ đều mưa to chiều tối",
-      "summary": "Hôm nay 30-6, thời tiết hai miền Bắc - Nam có mưa to, tập trung về chiều tối ngay giờ tan tầm, người dân cần chú ý.",
-      "link": "https://tuoitre.vn/thoi-tiet-hom-nay-30-6-bac-bo-va-nam-bo-deu-mua-to-chieu-toi-10026062920494401.htm",
-      "date": "6/30/2026 5:07:00 AM",
+      "title": "Quảng Trị tuyển sinh thêm 10 lớp 10, tăng cơ hội cho học sinh trượt công lập",
+      "summary": "Tỉnh Quảng Trị vừa quyết định tuyển sinh bổ sung thêm 10 lớp 10 công lập với tổng số 450 học sinh. Sẽ có thêm nhiều học sinh trượt công lập trong đợt tuyển sinh vừa qua có cơ hội...",
+      "link": "https://tuoitre.vn/quang-tri-tuyen-sinh-them-10-lop-10-tang-co-hoi-cho-hoc-sinh-truot-cong-lap-100260630084907491.htm",
+      "date": "6/30/2026 9:13:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Chuẩn bị công tác quy hoạch cán bộ cấp chiến lược nhiệm kỳ Đại hội XV và xa hơn",
-      "summary": "Trưởng Ban Tổ chức Trung ương Nguyễn Duy Ngọc đề nghị chuẩn bị công tác quy hoạch cán bộ cấp chiến lược nhiệm kỳ Đại hội XV và xa hơn theo lộ trình, chương trình làm việc của Ban...",
-      "link": "https://tuoitre.vn/chuan-bi-cong-tac-quy-hoach-can-bo-cap-chien-luoc-nhiem-ky-dai-hoi-xv-va-xa-hon-100260629214349636.htm",
-      "date": "6/29/2026 10:37:00 PM",
+      "title": "Đoàn cứu nạn, cứu hộ Việt Nam đã tới Venezuela",
+      "summary": "Trong hành trình bay dài hơn 22 tiếng, các thành viên trong đoàn được chỉ đạo tích cực nghỉ ngơi để chuẩn bị cho nhiệm vụ cứu nạn, cứu hộ được đánh giá là rất vất vả phía trước....",
+      "link": "https://tuoitre.vn/doan-cuu-nan-cuu-ho-viet-nam-da-toi-venezuela-100260630080419152.htm",
+      "date": "6/30/2026 9:10:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Phó bí thư Thành ủy TP.HCM Đặng Minh Thông: Cần Giờ, Thạnh An cần gỡ vướng đất đai, đẩy nhanh đầu tư công",
-      "summary": "Ngày 29-6, Phó bí thư Thành ủy TP.HCM Đặng Minh Thông dẫn đầu đoàn công tác đến làm việc với Ban Thường vụ Đảng ủy xã Cần Giờ và xã Thạnh An.",
-      "link": "https://tuoitre.vn/pho-bi-thu-thanh-uy-tphcm-dang-minh-thong-can-gio-thanh-an-can-go-vuong-dat-dai-day-nhanh-dau-tu-cong-100260629141501798.htm",
-      "date": "6/29/2026 10:06:00 PM",
+      "title": "Tổng Bí thư, Chủ tịch nước Tô Lâm và nhiều lãnh đạo dự hội nghị quán triệt nghị quyết mới về FDI",
+      "summary": "Sáng 30-6, Tổng Bí thư, Chủ tịch nước Tô Lâm và nhiều lãnh đạo dự hội nghị quán triệt Nghị quyết 10 của Bộ Chính trị về phát triển kinh tế có vốn đầu tư nước ngoài.",
+      "link": "https://tuoitre.vn/tong-bi-thu-chu-tich-nuoc-to-lam-va-nhieu-lanh-dao-du-hoi-nghi-quan-triet-nghi-quyet-moi-ve-fdi-100260630083940558.htm",
+      "date": "6/30/2026 9:05:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Tiễn biệt GS Nguyễn Đình Hối, một tượng đài của ngành y",
-      "summary": "Từ 3 giờ chiều ngày 29-6, tại Nhà tang lễ quốc gia phía Nam, dòng người lặng lẽ nối dài không dứt. Những vòng hoa trắng, những bước chân chậm rãi, những cái cúi đầu thật sâu…",
-      "link": "https://tuoitre.vn/tien-biet-gs-nguyen-dinh-hoi-mot-tuong-dai-cua-nganh-y-100260629210948971.htm",
-      "date": "6/29/2026 9:32:00 PM",
+      "title": "Sứ mệnh không bao giờ khép lại",
+      "summary": "Ngày 30-6-2026, Tuổi Trẻ ra số nhật báo cuối cùng. Đây sẽ là một ngày đặc biệt không chỉ đối với những người làm báo Tuổi Trẻ, mà còn đối với nhiều thế hệ bạn đọc Việt Nam.",
+      "link": "https://tuoitre.vn/su-menh-khong-bao-gio-khep-lai-100260630054705921.htm",
+      "date": "6/30/2026 8:54:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     },
     {
-      "title": "Công an TP Hà Nội vận hành thêm 2.460 camera AI từ 1-7, nâng cấp toàn diện về năng lực công nghệ",
-      "summary": "Trong số đó có 1.107 camera AI xử lý vi phạm giao thông, 960 camera đo đếm lưu lượng phương tiện, 112 camera quan sát toàn cảnh nút giao, 251 camera PTZ giám sát an ninh, trật tự...",
-      "link": "https://tuoitre.vn/cong-an-tp-ha-noi-van-hanh-them-2460-camera-ai-tu-1-7-nang-cap-toan-dien-ve-nang-luc-cong-nghe-100260629201541363.htm",
-      "date": "6/29/2026 8:54:00 PM",
+      "title": "Chuyến bay thứ hai chở 46,8 tấn hàng của Việt Nam cất cánh tới Venezuela",
+      "summary": "Lúc 23h30 đêm 29-6, Vietnam Airlines tiếp tục thực hiện chuyến bay đặc biệt thứ hai chở 46,8 tấn hàng của Việt Nam tới Venezuela để hỗ trợ nhân đạo sau các trận động đất.",
+      "link": "https://tuoitre.vn/chuyen-bay-thu-hai-cho-468-tan-hang-cua-viet-nam-cat-canh-toi-venezuela-100260630085448388.htm",
+      "date": "6/30/2026 8:52:00 AM",
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-29T23:56:02.063049+00:00",
+  "last_updated": "2026-06-30T02:42:06.805671+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
