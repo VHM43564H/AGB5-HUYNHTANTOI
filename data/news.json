@@ -87,6 +87,13 @@
   ],
   "chinh_sach": [
     {
+      "title": "Chính sách nổi bật có hiệu lực từ tháng 7",
+      "summary": "Tăng lương cơ sở, phụ nữ sinh con thứ hai được nghỉ thai sản 7 tháng, quy định mới về quản lý viên chức là những chính sách nổi bật có hiệu lực từ tháng 7.",
+      "link": "https://vnexpress.net/chinh-sach-noi-bat-co-hieu-luc-tu-thang-7-5091390.html",
+      "date": "Wed, 01 Jul 2026 05:00:00 +0700",
+      "source": "Thời sự - VnExpress RSS"
+    },
+    {
       "title": "Chợ Nhà Xanh trước thông tin di dời",
       "summary": "Chợ Nhà Xanh 40 năm tuổi, nằm cạnh các đại học lớn ở Hà Nội, từng buôn bán sầm uất nhiều năm, nay xuống cấp mất mỹ quan, đang được xem xét di dời để mở rộng đường.",
       "link": "https://vnexpress.net/cho-nha-xanh-truoc-thong-tin-di-doi-5091096.html",
@@ -129,13 +136,6 @@
       "source": "Thời sự - VnExpress RSS"
     },
     {
-      "title": "Cụ ông tử vong sau khi đốt thực bì gây cháy rừng",
-      "summary": "Cụ ông 70 tuổi tử vong sau khi đốt thực bì làm cháy lan rừng keo tràm ở xã Quế Sơn; cơ quan chức năng bước đầu nhận định nạn nhân ngạt khói khi tìm cách khống chế đám cháy.",
-      "link": "https://vnexpress.net/cu-ong-tu-vong-sau-khi-dot-thuc-bi-gay-chay-rung-5091794.html",
-      "date": "Tue, 30 Jun 2026 20:15:32 +0700",
-      "source": "Thời sự - VnExpress RSS"
-    },
-    {
       "title": "Báo Tuổi Trẻ tiếp nhận và quản lý hệ thống dữ liệu của 7 cơ quan báo chí",
       "summary": "Thực hiện Đề án sắp xếp cơ quan báo chí trên địa bàn TP.HCM, Báo điện tử Tuổi Trẻ đã và đang triển khai công tác tiếp nhận, quản lý và vận hành hệ thống dữ liệu trên nền tảng số...",
       "link": "https://tuoitre.vn/bao-tuoi-tre-tiep-nhan-va-quan-ly-he-thong-du-lieu-cua-7-co-quan-bao-chi-100260630134733226.htm",
@@ -171,7 +171,7 @@
       "source": "TUOI TRE ONLINE - Thời sự - RSS Feed"
     }
   ],
-  "last_updated": "2026-06-30T21:13:00.023747+00:00",
+  "last_updated": "2026-06-30T22:48:40.416971+00:00",
   "meta": {
     "tin_tuc_sources": [
       "VnExpress Kinh doanh",
